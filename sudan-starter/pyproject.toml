@@ -9,6 +9,9 @@ description = "Preliminary, source-traceable regional dispatch model for Sudan"
 requires-python = ">=3.11"
 dependencies = ["pypsa==1.0.6", "highspy==1.12.0", "pandas", "numpy", "geopandas", "matplotlib", "plotly", "requests", "networkx"]
 
+[project.optional-dependencies]
+notebooks = ["nbformat>=5", "nbclient>=0.10", "nbconvert>=7", "ipykernel>=6", "jupyterlab>=4", "cartopy>=0.23"]
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

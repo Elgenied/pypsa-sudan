@@ -4,6 +4,26 @@
 
 2022 is the latest year in the current UNSD Electricity Profiles edition with Sudan's headline and major generation categories not flagged as UN estimates. Consumption and Other capacity still have estimate flags. This is a defensible statistical starting point, not a complete or validated plant-level reconstruction.
 
+## Open the visual notebooks
+
+Both notebooks include executed outputs, so the charts are visible immediately:
+
+- **[Regional visual atlas](notebooks/01_explore_sudan.ipynb)** — native PyPSA capacity and generation pie maps, donuts for all 19 model regions, regional service charts, an editable region-dispatch view and a scenario heatmap. This uses the separately labelled legacy 2024 illustration.
+- **[2022 reference in pictures](notebooks/02_reference_2022.ipynb)** — national capacity/supply donuts, annual electricity accounting and an editable dispatch window. No 2022 regional allocation is invented.
+
+Read-only browser previews: [regional atlas](notebooks/01_explore_sudan.html) and [2022 reference](notebooks/02_reference_2022.html). Open these locally; GitHub renders `.ipynb` files, while raw HTML needs a local browser. Figures are also exported to `results/notebook_figures/`.
+
+To edit and run interactively from this folder:
+
+```shell
+conda activate pypsa
+python -m jupyterlab notebooks
+```
+
+Choose **Python (pypsa)** as the kernel. Change `SCENARIO` or `REGION` in the regional notebook, or `WEEK_START` in the 2022 notebook, then rerun the relevant cells. On a fresh environment, install notebook tools with `python -m pip install ".[notebooks]"`; register the kernel with `python -m ipykernel install --user --name pypsa --display-name "Python (pypsa)"` if it is missing. These tools are already available in the original conda environment.
+
+To refresh saved outputs and HTML previews without opening Jupyter: `python scripts/execute_visual_notebooks.py`. Use `--kernel python3` if that is your installed kernel. `scripts/build_visual_notebooks.py` regenerates notebook source and discards notebook edits/outputs, so use it only when intentionally rebuilding the templates.
+
 ## Run the reference model
 
 From this folder, with the supplied environment or the existing `pypsa` conda environment:
