@@ -1,0 +1,9 @@
+{
+  "reference_year": 2022,
+  "time_basis": "Africa/Khartoum local standard time; 8760 consecutive hours",
+  "marginal_cost_usd_mwh": {"hydro": 5, "combustible": 120, "other": 0, "import": 70, "unserved": 10000},
+  "cost_status": "Illustrative merit-order assumptions, not measured 2022 prices; no investment analysis",
+  "hydro_energy_scale": 1.0,
+  "demand_scale": 1.0,
+  "warning": "National aggregate calibration benchmark. Synthetic hourly demand, flat imports and Other output, unrestricted national transfers, no outages or seasonal water constraints. Not a validated 2022 regional network or adequacy estimate."
+}

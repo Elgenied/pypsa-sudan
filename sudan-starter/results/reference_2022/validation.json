@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "errors": {
+    "balance_mw": 2.2737367544323206e-13,
+    "generator_upper_mw": 0.0,
+    "generator_lower_mw": 0.0,
+    "hydro_budget_mwh": 0.0,
+    "unserved_bound_mw": 0.0,
+    "imports_mwh": 1.1641532182693481e-10
+  },
+  "objective_error_usd": 0.00027167797088623047,
+  "interpretation": "Numerical/accounting checks, not independent empirical validation."
+}

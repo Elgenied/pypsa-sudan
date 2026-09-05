@@ -1,5 +1,7 @@
 # Model definition and limitations
 
+> **Reference update:** The default is now the [2022 national benchmark](REFERENCE_YEAR_2022.md). Descriptions of the 19-region model, 2024 fleet status and six scenarios below refer to the separate legacy illustration.
+
 ## Scope
 
 The study boundary is Sudan, separate from South Sudan. The model is a lossless regional economic-dispatch linear program. It covers a **synthetic 168-hour week beginning 1 August 2024**, anchored to a documented fleet-status snapshot of that month. Dates identify the modelling horizon; they do not turn synthetic profiles into observations.

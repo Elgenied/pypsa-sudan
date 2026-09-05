@@ -1,12 +1,14 @@
 # From starter model to a publishable PyPSA-Sudan study
 
+**Study decision:** Use [2022 as the historical reference year](REFERENCE_YEAR_2022.md). The full-year national benchmark is solved; regional reconstruction and independent validation are outstanding. Current-year capacity and recovery scenarios are outside the selected baseline.
+
 ## The contribution to aim for
 
 A new country name and an optimization that solves are not sufficient novelty. A strong contribution would combine a validated, reusable Sudan dataset with a question whose answer depends on Sudan's geography, conflict damage, fuel constraints, hydro dependence and dispersed electricity needs.
 
-**Suggested question:** Which mix of transmission restoration, fuel-supply recovery and distributed solar/storage most robustly reduces unserved electricity under uncertainty in hydrology, plant availability and population displacement?
+**Suggested question for the selected baseline:** How do hydro seasonality, fuel availability and transmission constraints affect Sudan's 2022 electricity dispatch, and how robust are the results to uncertain system data?
 
-Possible contribution: an openly documented reconstruction of dated Sudan system states, with uncertainty bounds and repair-versus-local-supply comparisons. Establish novelty through a systematic literature search before choosing a final title or claiming this is the first Sudan model. The starter's repair and recovery cases are demonstrations, not investment recommendations.
+Possible contribution: an openly documented and validated 2022 regional network, with quantified uncertainty in hydro, demand, plant availability and network parameters. Establish novelty through a systematic literature search before choosing a final title or claiming this is the first Sudan model. The legacy starter's repair and recovery cases are demonstrations outside this historical baseline.
 
 ## Similar projects to learn from
 
@@ -20,9 +22,9 @@ This starter intentionally remains a small independent Python model. It is not a
 
 ## Publication gates
 
-### 1. Define the historical and current cases
+### 1. Reconstruct the selected 2022 historical case
 
-Choose and defend the study date. A sensible design is a pre-conflict reference year with better statistics, a dated 2024 conflict case, and a separately verified 2026/recovery case. Keep physical damage, fuel shortage, disconnected load, suppressed demand and plant retirement separate. Ask local engineers to review the reconstructed system. Do not label August 2024 status as current 2026 operations.
+Build a dated 2022 unit and network inventory. Reconcile net installed capacity, nameplate capacity, main activity producers and autoproducers. Ask local engineers to review the reconstruction. The legacy 2024 status ledger can provide names and source leads, but does not establish 2022 availability or connectivity.
 
 **Deliverable:** dated asset-status ledger with uncertainty and named source documents, plus an explanation of what has changed between cases.
 

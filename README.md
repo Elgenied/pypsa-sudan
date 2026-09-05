@@ -6,17 +6,15 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 
 # PyPSA-Sudan
 
-The runnable Sudan research model is in **[sudan-starter](sudan-starter/README.md)**. It includes source-audited plant data, six solved hourly dispatch scenarios, maps, a notebook and a publication roadmap. **Fleet status is dated August 2024; demand and transfer limits remain assumptions.**
+The runnable model is in **[sudan-starter](sudan-starter/README.md)**. Its default is a full-year **2022 national dispatch benchmark**, anchored to UNSD statistics with source estimate flags preserved. The earlier 19-region 2024 illustration remains available separately. A validated 2022 regional network still requires dated plant and transmission records.
 
-Start with the [Sudan quick guide](sudan-starter/README.md), [model code](sudan-starter/src/pypsa_sudan/model.py), [data gaps](sudan-starter/docs/PUBLICATION_ROADMAP.md) and [CCG paper assessment](sudan-starter/docs/CCG_STARTER_KIT_REVIEW.md). The standalone starter does not run through the upstream Snakefile.
-
-To run after cloning:
+Start with the [year selection and data gaps](sudan-starter/docs/REFERENCE_YEAR_2022.md), [2022 model code](sudan-starter/src/pypsa_sudan/reference.py), [solved results](sudan-starter/results/reference_2022/summary.json) and [CCG paper assessment](sudan-starter/docs/CCG_STARTER_KIT_REVIEW.md).
 
 ```shell
 cd sudan-starter
 conda activate pypsa
-python run_model.py --scenario all
-python scripts/make_report.py
+python run_model.py
+python scripts/make_reference_report.py
 ```
 
 This repository retains its PyPSA-Earth fork below; upstream documentation and licenses still apply to the upstream files.

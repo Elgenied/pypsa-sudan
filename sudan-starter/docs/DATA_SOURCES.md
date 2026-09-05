@@ -1,5 +1,7 @@
 # Data sources and acquisition log
 
+> **Reference update:** The default is now the [2022 national benchmark](REFERENCE_YEAR_2022.md). Descriptions of the 19-region model, 2024 fleet status and six scenarios below refer to the separate legacy illustration.
+
 Sources checked 5 September 2026. Download timestamps, exact URLs, byte sizes and SHA-256 values are in `data/raw/download_manifest.json`. `scripts/fetch_data.py` validates the archived inputs or fetches missing copies. Source update dates must not be confused with the dates of the assets they describe.
 
 | ID | Primary source | Used for | Important limitation |

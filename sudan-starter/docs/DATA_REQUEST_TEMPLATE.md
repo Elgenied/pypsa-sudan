@@ -1,10 +1,10 @@
 # Utility/research-partner data request template
 
-**Draft only. Fill in your name, affiliation, study period and recipient before sending.**
+**Draft only. Reference period: January–December 2022. Fill in your name, affiliation and recipient before sending.**
 
 Subject: Research collaboration and electricity-system data request for PyPSA-Sudan
 
-I am developing a transparent research model of Sudan's electricity system using PyPSA. The aim is to compare ways to restore reliable supply under constraints on generation, transmission and fuel. I would appreciate collaboration on validating the system representation and, where permitted, access to the following data for [study dates].
+I am developing an open historical model of Sudan's electricity system using PyPSA, with calendar year 2022 as the reference period. The first goal is to reconstruct and validate generation, demand and transmission before studying future options. I would appreciate collaboration on validating the system representation and, where permitted, access to the following data for January–December 2022. National UNSD statistics provide an initial benchmark, but unit-level and network records are still needed.
 
 | Dataset | Requested fields and units |
 |---|---|

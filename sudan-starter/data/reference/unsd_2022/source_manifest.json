@@ -1,0 +1,20 @@
+{
+  "file": "un_electricity_profiles_2023.pdf",
+  "url": "https://unstats.un.org/unsd/energystats/pubs/eprofiles/2023/prt.pdf",
+  "sha256": "f776b0474c53ac1b3590fcd4c51d879a61a40a1d43ee765c60dea82a3f2a77dc",
+  "retrieved_utc": "2026-09-05T14:30:37.938908+00:00",
+  "publication": "United Nations Statistics Division, Electricity Profiles 2023",
+  "country": "Sudan",
+  "reference_year": 2022,
+  "printed_page": 196,
+  "pdf_page_one_based": 30,
+  "transcription": "Manually transcribed 2022 column, visually checked against PDF page",
+  "flags": {
+    "not_flagged": "No asterisk in source; not independently verified",
+    "UNSD_estimate": "Asterisk in source",
+    "not_available_or_not_applicable": "Two dots in source"
+  },
+  "symbols_url": "https://unstats.un.org/unsd/energystats/pubs/eprofiles/2023/04.pdf",
+  "definitions_url": "https://unstats.un.org/unsd/energystats/pubs/eprofiles/2023/03.pdf",
+  "rights": "UN source facts attributed; original report not redistributed or relicensed as MIT"
+}

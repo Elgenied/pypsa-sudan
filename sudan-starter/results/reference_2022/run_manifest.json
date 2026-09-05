@@ -1,0 +1,14 @@
+{
+  "packages": {
+    "pypsa": "1.0.6",
+    "linopy": "0.6.1",
+    "highspy": "1.12.0",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5"
+  },
+  "input_sha256": {
+    "config/reference_2022.json": "27301785c6e53fb2c0751519bd48c91394202d242701ab91bc7149818d739b5a",
+    "data/reference/unsd_2022/statistics.csv": "e18198fd293e0425438273c847bc5fa3a2ff1cfbdabce5a7ba4f3de95aab0101",
+    "src/pypsa_sudan/reference.py": "0b406a70223610ac0f6eb8c64d85b324ba9ce3f58aac82639225142a6ddf95f5"
+  }
+}

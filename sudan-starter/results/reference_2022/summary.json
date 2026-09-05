@@ -1,0 +1,23 @@
+{
+  "reference_year": 2022,
+  "status": "optimal",
+  "hours": 8760,
+  "buses": 1,
+  "net_installed_capacity_mw": 4209.0,
+  "net_generation_mwh": 16030999.999999998,
+  "imports_mwh": 882000.0000000001,
+  "unserved_mwh": 0.0,
+  "loads_mwh": {
+    "supplied_consumption": 13261000.0,
+    "system_losses": 3652000.0
+  },
+  "dispatch_energy_mwh": {
+    "hydro": 11282490.102551822,
+    "combustible": 4628076.675411449,
+    "other": 120433.22203672785,
+    "imports": 882000.0000000001,
+    "unserved": 0.0
+  },
+  "illustrative_objective_usd": 673521651.5618613,
+  "warning": "National aggregate calibration benchmark. Synthetic hourly demand, flat imports and Other output, unrestricted national transfers, no outages or seasonal water constraints. Not a validated 2022 regional network or adequacy estimate."
+}

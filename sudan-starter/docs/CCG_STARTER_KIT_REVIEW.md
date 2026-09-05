@@ -1,5 +1,7 @@
 # Assessment of the CCG Sudan starter dataset
 
+> **Reference update:** The default is now the [2022 national benchmark](REFERENCE_YEAR_2022.md). Descriptions of the 19-region model, 2024 fleet status and six scenarios below refer to the separate legacy illustration.
+
 Reviewed 5 September 2026. Source: Cannone and colleagues, [Selected 'Starter Kit' energy system modelling data for Sudan, version 2](https://www.researchsquare.com/article/rs-479952/v2), DOI [10.21203/rs.3.rs-479952/v2](https://doi.org/10.21203/rs.3.rs-479952/v2).
 
 **Useful for a historical planning reference and better parameter provenance; insufficient to reconstruct current grid operation.** The model's solved baseline has not been changed by this review. Reference inputs are kept separate until their meaning, dates and units are reconciled.
