@@ -1,0 +1,18 @@
+# Allow starter assets despite upstream generated-data ignore patterns.
+!*/
+!*
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.venv/
+data/raw/*.pdf
+data/raw/*.zip
+data/raw/gppd_global.csv
+data/raw/natural_earth_countries.geojson
+data/raw/*error.txt
+*.log
+
+# Local delivery inventory; regenerate release checksums separately.
+DELIVERY_MANIFEST.json

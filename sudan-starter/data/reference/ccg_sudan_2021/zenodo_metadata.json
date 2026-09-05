@@ -1,0 +1,345 @@
+{
+  "created": "2021-05-13T09:40:02.449047+00:00",
+  "modified": "2021-05-13T13:48:09.335823+00:00",
+  "id": 4756665,
+  "conceptrecid": "4725460",
+  "doi": "10.5281/zenodo.4756665",
+  "conceptdoi": "10.5281/zenodo.4725460",
+  "doi_url": "https://doi.org/10.5281/zenodo.4756665",
+  "metadata": {
+    "title": "CCG Starter Data Kit: Sudan",
+    "doi": "10.5281/zenodo.4756665",
+    "publication_date": "2021-05-13",
+    "description": "<p>A starter data kit for Sudan</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Cannone, Carla",
+        "affiliation": "Loughborough University, United Kingdom",
+        "orcid": "0000-0002-1214-8913"
+      },
+      {
+        "name": "Allington, Lucy",
+        "affiliation": "Climate Compatible Growth",
+        "orcid": "0000-0003-1801-899X"
+      },
+      {
+        "name": "Pappis, Ioannis",
+        "affiliation": "KTH Royal Institute of Technology",
+        "orcid": "0000-0001-7537-5470"
+      },
+      {
+        "name": "Cervantes Barron, Karla",
+        "affiliation": "University of Cambridge",
+        "orcid": "0000-0001-9185-3022"
+      },
+      {
+        "name": "Usher, Will",
+        "affiliation": "KTH Royal Institute of Technology",
+        "orcid": "0000-0001-9367-1791"
+      },
+      {
+        "name": "Pye, Steve",
+        "affiliation": "University College London",
+        "orcid": "0000-0003-1793-2552"
+      },
+      {
+        "name": "Howells, Mark",
+        "affiliation": "Loughborough University; Imperial College London",
+        "orcid": "0000-0001-6419-4957"
+      },
+      {
+        "name": "Zachau Walker, Miriam",
+        "affiliation": "University of Oxford",
+        "orcid": "0000-0002-4757-3688"
+      },
+      {
+        "name": "Ahsan, Aniq",
+        "affiliation": "University of Oxford",
+        "orcid": "0000-0002-6027-4818"
+      },
+      {
+        "name": "Charbonnier, Flora",
+        "affiliation": "University of Oxford",
+        "orcid": "0000-0003-3174-0362"
+      },
+      {
+        "name": "Halloran, Claire",
+        "affiliation": "University of Oxford",
+        "orcid": "0000-0002-0308-5623"
+      },
+      {
+        "name": "Hirmer, Stephanie",
+        "affiliation": "University of Oxford",
+        "orcid": "0000-0001-7628-9259"
+      },
+      {
+        "name": "Taliotis, Constantinos",
+        "affiliation": "KTH Royal Institute of Technology; Cyprus Institute, Nicosia",
+        "orcid": "0000-0003-4022-5506"
+      },
+      {
+        "name": "Sundin, Caroline",
+        "affiliation": null
+      },
+      {
+        "name": "Sridharan, Vignesh",
+        "affiliation": "KTH Royal Institute of Technology",
+        "orcid": "0000-0003-0764-2615"
+      },
+      {
+        "name": "Ramos, Eunice",
+        "affiliation": "KTH Royal Institute of Technology",
+        "orcid": "0000-0001-9061-8485"
+      },
+      {
+        "name": "Brinkerink, Maarten",
+        "affiliation": "University College Cork",
+        "orcid": "0000-0002-8980-9062"
+      },
+      {
+        "name": "Deane, Paul",
+        "affiliation": "University College Cork",
+        "orcid": "0000-0002-4681-7791"
+      },
+      {
+        "name": "Gritsevskyi, Andrii",
+        "affiliation": "International Atomic Energy Agency"
+      },
+      {
+        "name": "Moura, Gustavo",
+        "affiliation": "Federal University of Ouro Preto"
+      },
+      {
+        "name": "Rouget, Arnaud",
+        "affiliation": "International Energy Agency"
+      },
+      {
+        "name": "Wogan, David",
+        "affiliation": "Asia Pacific Energy Research Centre"
+      },
+      {
+        "name": "Barcelona, Edito",
+        "affiliation": "Asia Pacific Energy Research Centre"
+      },
+      {
+        "name": "Rogner, Holger",
+        "affiliation": "KTH Royal Institute of Technology",
+        "orcid": "0000-0002-1045-9830"
+      }
+    ],
+    "keywords": [
+      "energy",
+      "OSeMOSYS",
+      "#CCG",
+      "clicSAND",
+      "energy system modelling",
+      "GNUMathProg",
+      "GLPK",
+      "linear programming",
+      "Sudan"
+    ],
+    "version": "v1.2.0",
+    "language": "eng",
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-zero"
+    },
+    "communities": [
+      {
+        "id": "ccg"
+      }
+    ],
+    "relations": {
+      "version": [
+        {
+          "index": 2,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "4725460"
+          }
+        }
+      ]
+    }
+  },
+  "title": "CCG Starter Data Kit: Sudan",
+  "links": {
+    "self": "https://zenodo.org/api/records/4756665",
+    "self_html": "https://zenodo.org/records/4756665",
+    "preview_html": "https://zenodo.org/records/4756665?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.4756665",
+    "self_doi": "https://doi.org/10.5281/zenodo.4756665",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.4756665",
+    "reserve_doi": "https://zenodo.org/api/records/4756665/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/4725460",
+    "parent_html": "https://zenodo.org/records/4725460",
+    "parent_doi": "https://doi.org/10.5281/zenodo.4725460",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.4725460",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:4756665/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:4756665/sequence/default",
+    "files": "https://zenodo.org/api/records/4756665/files",
+    "media_files": "https://zenodo.org/api/records/4756665/media-files",
+    "archive": "https://zenodo.org/api/records/4756665/files-archive",
+    "archive_media": "https://zenodo.org/api/records/4756665/media-files-archive",
+    "latest": "https://zenodo.org/api/records/4756665/versions/latest",
+    "latest_html": "https://zenodo.org/records/4756665/latest",
+    "versions": "https://zenodo.org/api/records/4756665/versions",
+    "draft": "https://zenodo.org/api/records/4756665/draft",
+    "access_links": "https://zenodo.org/api/records/4756665/access/links",
+    "access_grants": "https://zenodo.org/api/records/4756665/access/grants",
+    "access_users": "https://zenodo.org/api/records/4756665/access/users",
+    "access_request": "https://zenodo.org/api/records/4756665/access/request",
+    "access": "https://zenodo.org/api/records/4756665/access",
+    "communities": "https://zenodo.org/api/records/4756665/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/4756665/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/4756665/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/4756665/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/4756665/quota-increase",
+    "requests": "https://zenodo.org/api/records/4756665/requests"
+  },
+  "updated": "2021-05-13T13:48:09.335823+00:00",
+  "recid": "4756665",
+  "revision": 2,
+  "files": [
+    {
+      "id": "fe38cc08-eb55-44fe-a309-cb88daf872d8",
+      "key": "Table4_SDN.csv",
+      "size": 547,
+      "checksum": "md5:0f797591949e58e3b1ca6ed6c5d7a960",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/Table4_SDN.csv/content"
+      }
+    },
+    {
+      "id": "4acd68a3-68e2-4aee-a4da-f0f6dd17556f",
+      "key": "Table7_SDN.csv",
+      "size": 320,
+      "checksum": "md5:f8637ada6444a478a703b9291b0b4856",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/Table7_SDN.csv/content"
+      }
+    },
+    {
+      "id": "2ebc41ad-5647-45ff-ab30-600810a813f1",
+      "key": "Table2_SDN.csv",
+      "size": 4954,
+      "checksum": "md5:c9581d01f63b8d6a850f95cec1daeb06",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/Table2_SDN.csv/content"
+      }
+    },
+    {
+      "id": "2bca91b1-e3f0-4819-90fc-434fd35a7852",
+      "key": "Table6_SDN.csv",
+      "size": 3607,
+      "checksum": "md5:c0d9ae8f4df0b2166ca0618f6c940b2a",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/Table6_SDN.csv/content"
+      }
+    },
+    {
+      "id": "aaf57584-0249-42c9-ae5a-c4ea61634ead",
+      "key": "Table5_SDN.csv",
+      "size": 518,
+      "checksum": "md5:0b4e00adf29f090063ce255158951078",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/Table5_SDN.csv/content"
+      }
+    },
+    {
+      "id": "33e1be57-7a94-4b45-b7f6-6f7948a3ab65",
+      "key": "Table1_SDN.csv",
+      "size": 1814,
+      "checksum": "md5:e940aea5030c3b8cbd0d34f14d00f7a2",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/Table1_SDN.csv/content"
+      }
+    },
+    {
+      "id": "c26967fb-316e-4418-b44c-b9ec641a326d",
+      "key": "references.bib",
+      "size": 8436,
+      "checksum": "md5:642926aa4d5d6bac6539a6ef08dec8e8",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/references.bib/content"
+      }
+    },
+    {
+      "id": "f9b6b6ed-f863-47ec-b840-6cf41e109755",
+      "key": "Table3_SDN.csv",
+      "size": 3465,
+      "checksum": "md5:cb8c25ca93d86d4f9b329c58bd44ae85",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/Table3_SDN.csv/content"
+      }
+    },
+    {
+      "id": "491db745-b2a6-45f7-b669-c6576593a9e4",
+      "key": "resid_cap_SDN.csv",
+      "size": 1423,
+      "checksum": "md5:be5f2a606802ee453b3770e44ac87a3e",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/resid_cap_SDN.csv/content"
+      }
+    },
+    {
+      "id": "db69506a-7bee-4c44-a572-5a5c39ac415a",
+      "key": "Sudan Base SAND.xlsm",
+      "size": 43010314,
+      "checksum": "md5:5ead97932e5b96a34280663beb4ef789",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/Sudan%20Base%20SAND.xlsm/content"
+      }
+    },
+    {
+      "id": "ca6c1926-6a41-4e38-9686-aa987cde48f9",
+      "key": "Table9_SDN.csv",
+      "size": 253,
+      "checksum": "md5:8381a78947d4e0efb9b21740a31c83a9",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/Table9_SDN.csv/content"
+      }
+    },
+    {
+      "id": "c2c25dd9-e700-4194-bb1b-9487ad6255b5",
+      "key": "readme.txt",
+      "size": 1480,
+      "checksum": "md5:0b44ae5cd093d15f15f89905f0047567",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/readme.txt/content"
+      }
+    },
+    {
+      "id": "72ad2fae-4667-4387-9695-0aa79cbeaf82",
+      "key": "Table8_SDN.csv",
+      "size": 536,
+      "checksum": "md5:8ce7874790a1d5d6725d91f2ac740d8a",
+      "links": {
+        "self": "https://zenodo.org/api/records/4756665/files/Table8_SDN.csv/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "201770"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 2067,
+    "unique_downloads": 1907,
+    "views": 847,
+    "unique_views": 815,
+    "version_downloads": 973,
+    "version_unique_downloads": 858,
+    "version_unique_views": 389,
+    "version_views": 413
+  },
+  "state": "done",
+  "submitted": true
+}

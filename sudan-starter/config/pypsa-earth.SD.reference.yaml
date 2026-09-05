@@ -1,0 +1,11 @@
+# REFERENCE ONLY: not executed and not used by this standalone model.
+# Adapted from the official country-baseline tutorial; confirm against pinned upstream revision.
+countries: ["SD"]
+run:
+  name: "SD"
+  shared_cutouts: false
+scenario:
+  opts: ["6h"]
+solving:
+  solver:
+    name: highs

@@ -1,0 +1,31 @@
+COUNTRY,CNTRY_NAME,VOLTAGE_KV,FROM_NM,TO_NM,STATUS,SOURCES,PROJECT_NM,source_feature_id,used_as_electrical_line,review_action
+SDN,SUDAN,60,Khartoum North,Umm Durman,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_000,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,60,Umm Durman,Khartoum,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_001,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,60,Khartoum North,Khartoum,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_002,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,220,Khartoum,Rabak,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_003,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,220,Rabak,Sennar junction,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_004,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,220,Khartoum,Sid,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_005,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,220,Sid,Sennar junction,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_006,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,60,Sennar junction,Singa,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_007,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,220,Sennar junction,Roseires,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_008,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,60,Sid,El Fau,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_009,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,60,El Fau,Gedaref,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_010,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,60,Gedaref,Khashm El Girba,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_011,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,60,Khashm El Girba,New Halfa,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_012,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,60,Khashm El Girba,Kassala,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_013,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,60,,,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_014,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,800,Grand Inga,Cairo,Missing,"WEC, 2008: How to make the Grand Inga Hydropower Project happen for Africa",Inga Northern Highway,WB_AICD_015,False,excluded hypothetical project
+SDN,SUDAN,0,Grand Inga,Cairo,Missing,"WEC, 2008: How to make the Grand Inga Hydropower Project happen for Africa",Inga Northern Highway,WB_AICD_016,False,excluded hypothetical project
+SDN,Sudan,230,Shehedi,Gedaref,Planned,"Intl Water Power and dam Construction, 2006",Ethiopia-Sudan Interconnector,WB_AICD_017,False,historically planned; requires later commissioning evidence
+SDN,SUDAN,500,Atbara,Khartoum,Planned,"Nile Basin Initiative WB map IBRD #35378, Nov 2007",Merowe Hydropower Project,WB_AICD_018,False,historically planned; requires later commissioning evidence
+SDN,SUDAN,500,Merowe,Atbara,Planned,"Nile Basin Initiative WB map IBRD #35378, Nov 2007",Merowe Hydropower Project,WB_AICD_019,False,historically planned; requires later commissioning evidence
+SDN,SUDAN,220,Merowe,Port Sudan,Planned,"Nile Basin Initiative WB map IBRD #35378, Nov 2007",Merowe Hydropower Project,WB_AICD_020,False,historically planned; requires later commissioning evidence
+SDN,SUDAN,220,Atbara,Abu Hamad,Planned,"Nile Basin Initiative WB map IBRD #35378, Nov 2007",Merowe Hydropower Project,WB_AICD_021,False,historically planned; requires later commissioning evidence
+SDN,SUDAN,500,Merowe,Khartoum,Planned,"Nile Basin Initiative WB map IBRD #35378, Nov 2007",Merowe Hydropower Project,WB_AICD_022,False,historically planned; requires later commissioning evidence
+SDN,SUDAN,220,Merowe,Dongola,Planned,"Nile Basin Initiative WB map IBRD #35378, Nov 2007",Merowe Hydropower Project,WB_AICD_023,False,historically planned; requires later commissioning evidence
+SDN,SUDAN,220,Karuma,Juba,Under Study,"East Africa Power Market, WB map IBRD #35558, Sep 2007","Nile Basin Initiative, East Africa Power Pool",WB_AICD_024,False,excluded study project
+SDN,SUDAN,220,Dongola,Low Dal,Planned,"Nile Basin Initiative WB map IBRD #35378, Nov 2007",Merowe Hydropower Project,WB_AICD_025,False,historically planned; requires later commissioning evidence
+SDN,SUDAN,220,Dal Low,Aswan,Planned,,,WB_AICD_026,False,historically planned; requires later commissioning evidence
+SDN,Sudan,230,Singa,Gedaref,Existing,Nile Basin Initiative WB map #35378,Ethiopia-Sudan Interconnector,WB_AICD_027,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,220,Sennar junction,Roseires,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_028,False,historical geometry only; operating state and rating unverified
+SDN,SUDAN,60,,,Existing,WB map archive IBRD #32740; Jan 2004,,WB_AICD_029,False,historical geometry only; operating state and rating unverified

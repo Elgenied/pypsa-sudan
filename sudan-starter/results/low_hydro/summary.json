@@ -1,0 +1,19 @@
+{
+  "scenario": "low_hydro",
+  "status": "optimal",
+  "hours": 168,
+  "domestic_buses": 19,
+  "physical_plant_records": 20,
+  "domestic_nameplate_mw": 3647.4,
+  "demand_mwh": 235032.0,
+  "peak_demand_mw": 1854.888106879386,
+  "served_mwh": 191849.5319999999,
+  "unserved_mwh": 43182.46800000011,
+  "unserved_percent": 18.373016440314558,
+  "hours_with_unserved_demand": 168,
+  "import_mwh": 18480.0,
+  "operating_cost_usd": 7264077.66,
+  "unserved_penalty_usd": 431824680.0000011,
+  "objective_usd": 439088757.6599977,
+  "warning": "Research starter. Synthetic hourly load and hydro energy; assumed transfer capacities. Not a verified 2026 system or calibrated reliability estimate."
+}

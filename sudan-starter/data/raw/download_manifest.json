@@ -1,0 +1,58 @@
+[
+  {
+    "file": "wb_status_2024.pdf",
+    "url": "https://documents1.worldbank.org/curated/en/099080625100525928/pdf/P171810-aceaafc9-7439-4838-974c-81284effd33a.pdf",
+    "retrieved_utc": "2026-09-05T12:54:49.792623+00:00",
+    "sha256": "818c933d2d4220a48721091b3fc8a108a13404cccde29b0256d56482730ff30c",
+    "bytes": 571786
+  },
+  {
+    "file": "wb_transmission.zip",
+    "url": "https://datacatalogfiles.worldbank.org/ddh-published/0041735/1/DR0052166/sudan-electricity-transmission-network.zip",
+    "retrieved_utc": "2026-09-05T12:54:50.400929+00:00",
+    "sha256": "d99c23ffb7a983ced8bcf47a7b21b3fb42f44eb44da1655369d55063187c8587",
+    "bytes": 8662
+  },
+  {
+    "file": "wb_transmission_metadata.xml",
+    "url": "https://datacatalogfiles.worldbank.org/ddh-published/0041735/1/DR0052165/sudan-electricity-transmission-network.shp.xml",
+    "retrieved_utc": "2026-09-05T12:54:51.067510+00:00",
+    "sha256": "34223ded34aa24e2d8ea69a5c4f18e621a98b3d86a8863efda51e637ecc2f309",
+    "bytes": 15067
+  },
+  {
+    "file": "gppd_global.csv",
+    "url": "https://raw.githubusercontent.com/wri/global-power-plant-database/master/output_database/global_power_plant_database.csv",
+    "retrieved_utc": "2026-09-05T12:54:51.626353+00:00",
+    "sha256": "4b1f93e0fd93664f18684d9b05d0a52ed9658c6a8cf0d21ff2520791379ba7fc",
+    "bytes": 11973385
+  },
+  {
+    "file": "energydata_catalog.json",
+    "url": "https://energydata.info/api/3/action/package_show?id=sudan-electricity-transmission-network",
+    "retrieved_utc": "2026-09-05T12:54:52.183207+00:00",
+    "sha256": "a36145e5658814b12f12a3a5e1a812fb0d3b171ad2e623f3c51ecd6bb51507fb",
+    "bytes": 4502
+  },
+  {
+    "file": "wb_diagnostic_2019.pdf",
+    "url": "https://documents1.worldbank.org/curated/en/486961588608080192/pdf/From-Subsidy-to-Sustainability-Diagnostic-Review-of-Sudan-Electricity-Sector.pdf",
+    "retrieved_utc": "2026-09-05T12:54:52.603058+00:00",
+    "sha256": "d4f419c5dcfab38fe989b9949e165a624fe18cbb3155dbcbfc13f9a06578bca2",
+    "bytes": 1623140
+  },
+  {
+    "file": "natural_earth_countries.geojson",
+    "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson",
+    "retrieved_utc": "2026-09-05T12:56:28.736488+00:00",
+    "sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+    "bytes": 838726
+  },
+  {
+    "file": "gppd_readme.md",
+    "url": "https://raw.githubusercontent.com/wri/global-power-plant-database/master/README.md",
+    "retrieved_utc": "2026-09-05T12:56:29.616893+00:00",
+    "sha256": "9d2661ad16d7abde0e2cf64aa78034824e6249357c977109eb84bf16cc65f1b9",
+    "bytes": 8450
+  }
+]

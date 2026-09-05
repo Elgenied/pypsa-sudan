@@ -1,0 +1,13 @@
+{
+  "start": "2024-08-01 00:00",
+  "hours": 168,
+  "time_basis": "Africa/Khartoum local standard time (UTC+02), stored timezone-naive for NetCDF",
+  "solver": "highs",
+  "load_shedding_cost_usd_per_mwh": 10000.0,
+  "hydro_energy_capacity_factor": 0.65,
+  "partial_diesel_availability_assumption": 0.5,
+  "evidence_date": "2024-08",
+  "research_date": "2026-09-05",
+  "model_type": "Lossless regional transport dispatch using PyPSA Links; no AC or DC power flow",
+  "warning": "Research starter. Synthetic hourly load and hydro energy; assumed transfer capacities. Not a verified 2026 system or calibrated reliability estimate."
+}

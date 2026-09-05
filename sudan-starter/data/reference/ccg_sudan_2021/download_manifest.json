@@ -1,0 +1,86 @@
+[
+  {
+    "file": "Table4_SDN.csv",
+    "url": "https://zenodo.org/api/records/4756665/files/Table4_SDN.csv/content",
+    "sha256": "090a6ee53d9eb983fc47719eb895708cd3ff47a5f4969e9fd64f2dea789dc43d",
+    "zenodo_checksum": "md5:0f797591949e58e3b1ca6ed6c5d7a960",
+    "retrieved_utc": "2026-09-05T14:21:58.374840+00:00"
+  },
+  {
+    "file": "Table7_SDN.csv",
+    "url": "https://zenodo.org/api/records/4756665/files/Table7_SDN.csv/content",
+    "sha256": "4ca4fd9b38317691eed934029c65119fcdc070651e93a663e5459740f62f5d59",
+    "zenodo_checksum": "md5:f8637ada6444a478a703b9291b0b4856",
+    "retrieved_utc": "2026-09-05T14:21:58.750628+00:00"
+  },
+  {
+    "file": "Table2_SDN.csv",
+    "url": "https://zenodo.org/api/records/4756665/files/Table2_SDN.csv/content",
+    "sha256": "6a4bdfaaf5170e9c071bcaf9e57c978a5c702e37dcd33f16efe1d06bf48c3f36",
+    "zenodo_checksum": "md5:c9581d01f63b8d6a850f95cec1daeb06",
+    "retrieved_utc": "2026-09-05T14:21:58.994825+00:00"
+  },
+  {
+    "file": "Table6_SDN.csv",
+    "url": "https://zenodo.org/api/records/4756665/files/Table6_SDN.csv/content",
+    "sha256": "302fdc32802fc05290554d81a4f830ab57648dd65714a3c2694673a8c946d3ac",
+    "zenodo_checksum": "md5:c0d9ae8f4df0b2166ca0618f6c940b2a",
+    "retrieved_utc": "2026-09-05T14:21:59.215187+00:00"
+  },
+  {
+    "file": "Table5_SDN.csv",
+    "url": "https://zenodo.org/api/records/4756665/files/Table5_SDN.csv/content",
+    "sha256": "1d5e7b9526fd5b1ba47450fd2a8dc5f407e9b6552e416533c0c3d61b60470082",
+    "zenodo_checksum": "md5:0b4e00adf29f090063ce255158951078",
+    "retrieved_utc": "2026-09-05T14:21:59.494824+00:00"
+  },
+  {
+    "file": "Table1_SDN.csv",
+    "url": "https://zenodo.org/api/records/4756665/files/Table1_SDN.csv/content",
+    "sha256": "1f915b5707d7a7adb609f0bc8c6230155f80e2b0ef1c9bfaf8e63d51c2de9b6a",
+    "zenodo_checksum": "md5:e940aea5030c3b8cbd0d34f14d00f7a2",
+    "retrieved_utc": "2026-09-05T14:21:59.736163+00:00"
+  },
+  {
+    "file": "references.bib",
+    "url": "https://zenodo.org/api/records/4756665/files/references.bib/content",
+    "sha256": "b637ad40bede465780213cdbe3f4f1e5a579353397f786d0b54631ab3016c33b",
+    "zenodo_checksum": "md5:642926aa4d5d6bac6539a6ef08dec8e8",
+    "retrieved_utc": "2026-09-05T14:22:00.018777+00:00"
+  },
+  {
+    "file": "Table3_SDN.csv",
+    "url": "https://zenodo.org/api/records/4756665/files/Table3_SDN.csv/content",
+    "sha256": "9a37bfc99e090f25d5aa42ec6f1929f2f12e7f4379cabd2675f27298d817dae4",
+    "zenodo_checksum": "md5:cb8c25ca93d86d4f9b329c58bd44ae85",
+    "retrieved_utc": "2026-09-05T14:22:00.295644+00:00"
+  },
+  {
+    "file": "resid_cap_SDN.csv",
+    "url": "https://zenodo.org/api/records/4756665/files/resid_cap_SDN.csv/content",
+    "sha256": "2df4d025b5a2cbfca6f955d0affb04a1afcea3663c6c04fcca034bd1d2dbc9a4",
+    "zenodo_checksum": "md5:be5f2a606802ee453b3770e44ac87a3e",
+    "retrieved_utc": "2026-09-05T14:22:00.522587+00:00"
+  },
+  {
+    "file": "Table9_SDN.csv",
+    "url": "https://zenodo.org/api/records/4756665/files/Table9_SDN.csv/content",
+    "sha256": "dd5cf23621b10f7a9c128b338a2ceb11d05a15dcd2e2e7593a2ea2e832e9f3ae",
+    "zenodo_checksum": "md5:8381a78947d4e0efb9b21740a31c83a9",
+    "retrieved_utc": "2026-09-05T14:22:00.776821+00:00"
+  },
+  {
+    "file": "readme.txt",
+    "url": "https://zenodo.org/api/records/4756665/files/readme.txt/content",
+    "sha256": "916fe47a3c51ac427a32e07000b80f513fb6997b2eb654425d328443e63add6f",
+    "zenodo_checksum": "md5:0b44ae5cd093d15f15f89905f0047567",
+    "retrieved_utc": "2026-09-05T14:22:01.014759+00:00"
+  },
+  {
+    "file": "Table8_SDN.csv",
+    "url": "https://zenodo.org/api/records/4756665/files/Table8_SDN.csv/content",
+    "sha256": "479a8d51b0fc2f010290598feec8d1335940614f598f790e114743a07176c577",
+    "zenodo_checksum": "md5:8ce7874790a1d5d6725d91f2ac740d8a",
+    "retrieved_utc": "2026-09-05T14:22:01.279686+00:00"
+  }
+]

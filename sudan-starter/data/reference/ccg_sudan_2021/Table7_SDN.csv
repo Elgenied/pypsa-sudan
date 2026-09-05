@@ -1,0 +1,7 @@
+Fuel,Parameter,Value
+Crude oil,CO2 Emissions Factor (kg CO2/GJ),73.3
+Biomass,CO2 Emissions Factor (kg CO2/GJ),100
+Coal,CO2 Emissions Factor (kg CO2/GJ),94.6
+Light Fuel Oil,CO2 Emissions Factor (kg CO2/GJ),69.3
+Heavy Fuel Oil,CO2 Emissions Factor (kg CO2/GJ),77.4
+Natural Gas,CO2 Emissions Factor (kg CO2/GJ),56.1

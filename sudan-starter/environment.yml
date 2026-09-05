@@ -1,0 +1,17 @@
+name: pypsa-sudan
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pypsa=1.0.6
+  - highspy=1.12.0
+  - pandas
+  - numpy
+  - geopandas
+  - matplotlib
+  - plotly
+  - requests
+  - pytest
+  - networkx
+  - netcdf4
+  - jupyterlab

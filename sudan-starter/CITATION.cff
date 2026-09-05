@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Preliminary local research software. Replace collective author metadata with agreed authors and add the release DOI before publication."
+title: "PyPSA-Sudan: a preliminary regional electricity dispatch model"
+type: software
+version: 0.1.0
+authors:
+  - name: "PyPSA-Sudan contributors"
+license: MIT
+abstract: "A source-traceable starter using August 2024 plant status with explicit assumptions for regional transport dispatch. Not a validated reconstruction of 2026 operation. Data licenses are separate."

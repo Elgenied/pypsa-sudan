@@ -1,0 +1,21 @@
+name: Sudan starter tests
+on:
+  push:
+    paths: ['sudan-starter/**', '.github/workflows/sudan-starter-tests.yml']
+  pull_request:
+    paths: ['sudan-starter/**', '.github/workflows/sudan-starter-tests.yml']
+permissions:
+  contents: read
+jobs:
+  starter:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sudan-starter
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install . pytest
+      - run: python -m pytest -q

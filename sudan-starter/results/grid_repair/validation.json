@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "max_nodal_balance_error_mw": 2.2737367544323206e-13,
+  "max_generator_upper_violation_mw": 1.7763568394002505e-15,
+  "max_transfer_violation_mw": 0.0,
+  "max_hydro_energy_violation_mwh": 1.3642420526593924e-12,
+  "objective_recalculation_error_usd": 8.940696716308594e-08
+}

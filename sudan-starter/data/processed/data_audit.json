@@ -1,0 +1,10 @@
+{
+  "wri_sdn_rows": 19,
+  "wri_outside_boundary": 3,
+  "historical_grid_features_original": 30,
+  "historical_features_intersecting_sudan": 28,
+  "curated_plant_records": 20,
+  "installed_capacity_mw": 3647.4,
+  "location_proxy_count": 9,
+  "boundary_caveat": "Natural Earth 1:110m is a coarse reference, not a legal or detailed border determination."
+}

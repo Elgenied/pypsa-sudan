@@ -1,0 +1,9 @@
+Technology,Parameter,Value
+Crude Oil Refinery Option 1,Capital Cost ($/kW in 2020),24.1
+Crude Oil Refinery Option 2,Capital Cost ($/kW in 2020),24.1
+Crude Oil Refinery Option 1,Variable Cost ($/GJ in 2020),0.71775
+Crude Oil Refinery Option 2,Variable Cost ($/GJ in 2020),0.71775
+Crude Oil Refinery Option 1,Operational Life (years),35
+Crude Oil Refinery Option 2,Operational Life (years),35
+Crude Oil Refinery Option 1,Output Ratio,0.9 LFO : 0.1 HFO
+Crude Oil Refinery Option 2,Output Ratio,0.8 LFO : 0.2 HFO

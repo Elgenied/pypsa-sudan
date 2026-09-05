@@ -1,0 +1,20 @@
+bus,label,longitude,latitude,grid_group,mean_load_mw,source_id,notes
+Dongola,Dongola,30.48,19.17,north,100,ASSUMPTION,Approximate regional location; synthetic load
+Merowe,Merowe,32.05,18.67,north,45,ASSUMPTION,Approximate regional location; synthetic load
+Atbara,Atbara,33.98,17.70,north,170,ASSUMPTION,Approximate regional location; synthetic load
+PortSudan,Port Sudan,37.22,19.62,north,240,ASSUMPTION,Approximate regional location; synthetic load
+Khartoum,Khartoum region,32.56,15.65,north,150,ASSUMPTION,Aggregate residual regional load including Omdurman; not disconnected Khartoum city alone
+WadMedani,Wad Medani,33.52,14.40,south,80,ASSUMPTION,Small residual regional load scenario; not observed energized demand
+Kosti,Kosti and Rabak,32.66,13.17,south,130,ASSUMPTION,Approximate regional location; synthetic load
+Sennar,Sennar,33.63,13.57,south,90,ASSUMPTION,Approximate regional location; synthetic load
+Roseires,Roseires,34.39,11.80,south,60,ASSUMPTION,Approximate regional location; synthetic load
+Gedaref,Gedaref,35.38,14.03,south,135,ASSUMPTION,Upper Atbara and Setit plant aggregated here; plant coordinates remain unknown
+Kassala,Kassala region,35.99,15.45,south,100,ASSUMPTION,Includes Khashm El Girba generation
+ElObeid,El Obeid,30.22,13.18,south,45,ASSUMPTION,Regional connection is schematic
+ElFasher,El Fasher,25.35,13.63,isolated,15,ASSUMPTION,Synthetic isolated-grid demand
+Nyala,Nyala,24.88,12.05,isolated,10,ASSUMPTION,Synthetic isolated-grid demand
+ElGeneina,El Geneina,22.45,13.45,isolated,8,ASSUMPTION,Synthetic isolated-grid demand
+Kadugli,Kadugli,29.72,11.01,isolated,6,ASSUMPTION,Synthetic isolated-grid demand
+EnNahud,En Nahud,28.43,12.69,isolated,6,ASSUMPTION,Synthetic isolated-grid demand
+EdDaein,Ed Daein,26.13,11.46,isolated,6,ASSUMPTION,Synthetic isolated-grid demand
+Zalingei,Zalingei,23.47,12.91,isolated,3,ASSUMPTION,Synthetic isolated-grid demand

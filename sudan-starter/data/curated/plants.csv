@@ -1,0 +1,21 @@
+plant_id,name,bus,carrier,p_nom_mw,available_mw_2024,availability_basis,marginal_cost_usd_mwh,wri_location_id,source_id,source_pdf_page,notes
+merowe,Merowe,Merowe,hydro,1250,1250,reported available interpreted as full power capability,5,WRI1023179,WB_STATUS_2024,11,Energy budget assumed separately
+kosti,Kosti / Um Dabaker,Kosti,oil,500,125,reported one unit operating,150,,WB_STATUS_2024,11,500 MW report basis; other sources may quote 520 MW
+garri12,Garri 1 and 2,Khartoum,oil,469,0,reported shut down,130,WRI1023169,WB_STATUS_2024,11,El Jaili WRI location proxy for complex; liquid fuel CCGT rather than domestic natural gas
+garri4,Garri 4,Khartoum,coal,110,0,reported shut down,100,WRI1023169,WB_STATUS_2024,11,Coal/SC label follows report; verify petroleum coke or fuel details
+bahri_st,Mahmoud Sharif steam,Khartoum,oil,380,0,reported shut down,160,WRI1023173,WB_STATUS_2024,11,Khartoum North complex location; separate steam and gas turbines
+bahri_gt,Mahmoud Sharif gas turbine,Khartoum,oil,150,0,reported shut down,220,WRI1023173,WB_STATUS_2024,11,Liquid fuel gas turbine; no gas infrastructure assumed
+roseires,Roseires,Roseires,hydro,280,280,reported available interpreted as full power capability,5,WRI1023183,WB_STATUS_2024,11,WRI older capacity not used
+port_barge,Port Sudan Turkish barge,PortSudan,oil,35,35,reported available but intermittent payments,200,,WB_STATUS_2024,11,Port city coordinate proxy; continuous availability is optimistic
+jabal_awlia,Jabal Awlia,Sennar,hydro,30.4,0,reported unavailable,5,WRI1023167,WB_STATUS_2024,12,Aggregated southern connection; two WRI 15.2 MW entries not added twice
+sennar,Sinnar / Sennar,Sennar,hydro,15,7.5,reported one generator available,5,WRI1023184,WB_STATUS_2024,12,
+khashm,Khashm El Girba,Kassala,hydro,17.8,7.8,reported available MW,5,WRI1023174,WB_STATUS_2024,12,
+el_obeid,El Obeid diesel,ElObeid,diesel,12.7,0,reported out of service,260,WRI1023170,WB_STATUS_2024,12,
+upper_atbara,Setit and Upper Atbara,Gedaref,hydro,320,320,reported available interpreted as full power capability,5,,WB_STATUS_2024,12,South follows report page 7 prose; annex says North; unresolved contradiction
+el_fasher,Al Fasir diesel,ElFasher,diesel,31,0,reported destroyed,260,,WB_STATUS_2024,13,
+nyala,Nyala diesel,Nyala,diesel,10,,partial availability not quantified in source,260,WRI1023180,WB_STATUS_2024,13,Model applies configurable 50 percent assumption
+geneina,El Ginena diesel,ElGeneina,diesel,10,,partial availability not quantified in source,260,,WB_STATUS_2024,13,Model applies configurable 50 percent assumption
+kadugli,Kadogli diesel,Kadugli,diesel,8,,partial availability not quantified in source,260,,WB_STATUS_2024,13,Model applies configurable 50 percent assumption
+nahud,El Nohod diesel,EnNahud,diesel,8.4,,partial availability not quantified in source,260,,WB_STATUS_2024,13,Model applies configurable 50 percent assumption
+ed_daein,El Diain diesel,EdDaein,diesel,7.5,,partial availability not quantified in source,260,,WB_STATUS_2024,13,Model applies configurable 50 percent assumption
+zalingei,Zalingei diesel,Zalingei,diesel,2.6,,partial availability not quantified in source,260,,WB_STATUS_2024,13,Model applies configurable 50 percent assumption

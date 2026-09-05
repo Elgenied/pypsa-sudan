@@ -4,6 +4,25 @@ SPDX-FileCopyrightText:  PyPSA-Earth and PyPSA-Eur Authors
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
+# PyPSA-Sudan
+
+The runnable Sudan research model is in **[sudan-starter](sudan-starter/README.md)**. It includes source-audited plant data, six solved hourly dispatch scenarios, maps, a notebook and a publication roadmap. **Fleet status is dated August 2024; demand and transfer limits remain assumptions.**
+
+Start with the [Sudan quick guide](sudan-starter/README.md), [model code](sudan-starter/src/pypsa_sudan/model.py), [data gaps](sudan-starter/docs/PUBLICATION_ROADMAP.md) and [CCG paper assessment](sudan-starter/docs/CCG_STARTER_KIT_REVIEW.md). The standalone starter does not run through the upstream Snakefile.
+
+To run after cloning:
+
+```shell
+cd sudan-starter
+conda activate pypsa
+python run_model.py --scenario all
+python scripts/make_report.py
+```
+
+This repository retains its PyPSA-Earth fork below; upstream documentation and licenses still apply to the upstream files.
+
+---
+
 # PyPSA-Earth. A Flexible Python-based Open Optimisation Model to Study Energy System Futures around the World.
 
 <p align="left">

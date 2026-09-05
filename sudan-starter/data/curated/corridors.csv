@@ -1,0 +1,14 @@
+corridor,bus0,bus1,transfer_mw,baseline_active,topology_source,capacity_source,notes
+merowe_dongola,Merowe,Dongola,250,1,WB_STATUS_2024_map_and_WB_AICD_023,ASSUMPTION,Regional corridor; old GIS planned status not treated as current evidence
+merowe_atbara,Merowe,Atbara,700,1,WB_STATUS_2024_map_and_WB_AICD_019,ASSUMPTION,Aggregated transfer corridor
+merowe_khartoum,Merowe,Khartoum,700,1,WB_STATUS_2024_map_and_WB_AICD_022,ASSUMPTION,Residual northern metropolitan connection
+atbara_khartoum,Atbara,Khartoum,450,1,WB_STATUS_2024_map_and_WB_AICD_018,ASSUMPTION,Aggregated transfer corridor
+atbara_portsudan,Atbara,PortSudan,180,1,WB_STATUS_2024_map_schematic,ASSUMPTION,Illustrative eastern bottleneck; not a measured NTC
+khartoum_kosti,Khartoum,Kosti,300,0,WB_AICD_003_and_report_grid_split,ASSUMPTION,Hypothetical restoration candidate; exact outage location unverified
+khartoum_medani,Khartoum,WadMedani,300,0,WB_AICD_005_and_report_grid_split,ASSUMPTION,Hypothetical restoration candidate; exact outage location unverified
+medani_sennar,WadMedani,Sennar,250,1,WB_AICD_006_schematic,ASSUMPTION,Sid mapped approximately to regional Wad Medani bus
+kosti_sennar,Kosti,Sennar,250,1,WB_AICD_004,ASSUMPTION,Rabak mapped to Kosti regional bus
+sennar_roseires,Sennar,Roseires,300,1,WB_AICD_008_and_028,ASSUMPTION,Parallel historic features aggregated without claiming circuit count
+sennar_gedaref,Sennar,Gedaref,250,1,WB_AICD_027_schematic,ASSUMPTION,Regional aggregation via Singa
+gedaref_kassala,Gedaref,Kassala,180,1,WB_AICD_011_and_013_schematic,ASSUMPTION,Regional aggregation via Khashm El Girba
+kosti_elobeid,Kosti,ElObeid,100,1,WB_STATUS_2024_map_schematic,ASSUMPTION,Operating connectivity unverified

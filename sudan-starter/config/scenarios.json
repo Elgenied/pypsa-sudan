@@ -1,0 +1,8 @@
+{
+  "baseline_2024": {"description": "August 2024 documented fleet status with illustrative demand, hydro energy and corridor limits", "demand_scale": 1.0, "hydro_scale": 1.0, "transfer_scale": 1.0, "repair_grid": false, "thermal_recovery": false},
+  "high_demand": {"description": "Same baseline with 25 percent more demand", "demand_scale": 1.25, "hydro_scale": 1.0, "transfer_scale": 1.0, "repair_grid": false, "thermal_recovery": false},
+  "low_hydro": {"description": "Same baseline with 30 percent less hydro energy", "demand_scale": 1.0, "hydro_scale": 0.7, "transfer_scale": 1.0, "repair_grid": false, "thermal_recovery": false},
+  "weak_transmission": {"description": "Same baseline with domestic transfer limits halved", "demand_scale": 1.0, "hydro_scale": 1.0, "transfer_scale": 0.5, "repair_grid": false, "thermal_recovery": false},
+  "grid_repair": {"description": "Hypothetical reconnection of central corridors and doubling of active domestic transfer limits", "demand_scale": 1.0, "hydro_scale": 1.0, "transfer_scale": 2.0, "repair_grid": true, "thermal_recovery": false},
+  "thermal_recovery": {"description": "Hypothetical availability of 70 percent of all thermal nameplate capacity, baseline grid", "demand_scale": 1.0, "hydro_scale": 1.0, "transfer_scale": 1.0, "repair_grid": false, "thermal_recovery": true}
+}
