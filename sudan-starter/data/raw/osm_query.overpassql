@@ -1,1 +1,0 @@
-[out:json][timeout:45];area["ISO3166-1"="SD"]["admin_level"="2"]->.a;(way["power"="line"](area.a);nwr["power"="substation"](area.a););out geom;

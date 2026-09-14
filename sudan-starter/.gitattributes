@@ -1,2 +1,0 @@
-# Preserve exact source/input bytes so recorded SHA-256 values survive checkout.
-* -text

@@ -1,0 +1,21 @@
+{
+  "year": 2022,
+  "hours": 8760,
+  "nodes": 19,
+  "corridors": 13,
+  "physical_net_capacity_MW": 4209.0,
+  "consumer_input_GWh": 13261.0,
+  "accounting_losses_GWh": 3652.0,
+  "energy_GWh": {
+    "combustible": 4628.076675411399,
+    "hydro": 11282.490102551868,
+    "imports": 882.0000000000002,
+    "other": 120.43322203672788,
+    "shortage": 3.717663024621807e-12
+  },
+  "max_nodal_imbalance_MW": 3.552713678800501e-13,
+  "solver_status": "optimal",
+  "pypsa_version": "1.0.6",
+  "pandas_version": "2.3.3",
+  "regional_data_status": "assumed allocation; not independently validated"
+}

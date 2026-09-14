@@ -1,0 +1,21 @@
+plant_id,name,bus,nameplate_weight_mw,pdf_page,technology,source
+merowe,Merowe,Merowe,1250.0,11,hydro,WB status Annex (2024); historical weight only
+kosti,Kosti / Um Dabaker,Kosti,500.0,11,combustible,WB status Annex (2024); historical weight only
+garri12,Garri 1 and 2,Khartoum,469.0,11,combustible,WB status Annex (2024); historical weight only
+garri4,Garri 4,Khartoum,110.0,11,combustible,WB status Annex (2024); historical weight only
+bahri_st,Mahmoud Sharif steam,Khartoum,380.0,11,combustible,WB status Annex (2024); historical weight only
+bahri_gt,Mahmoud Sharif gas turbine,Khartoum,150.0,11,combustible,WB status Annex (2024); historical weight only
+roseires,Roseires,Roseires,280.0,11,hydro,WB status Annex (2024); historical weight only
+port_barge,Port Sudan rental (2019 evidence),PortSudan,150.0,16,combustible,WB diagnostic (2019); 2022 status unverified
+jabal_awlia,Jabal Awlia,Khartoum,30.4,12,hydro,WB status Annex (2024); historical weight only
+sennar,Sinnar / Sennar,Sennar,15.0,12,hydro,WB status Annex (2024); historical weight only
+khashm,Khashm El Girba,Kassala,17.8,12,hydro,WB status Annex (2024); historical weight only
+el_obeid,El Obeid diesel,ElObeid,12.7,12,combustible,WB status Annex (2024); historical weight only
+upper_atbara,Setit and Upper Atbara,Gedaref,320.0,12,hydro,WB status Annex (2024); historical weight only
+el_fasher,Al Fasir diesel,ElFasher,31.0,13,combustible,WB status Annex (2024); historical weight only
+nyala,Nyala diesel,Nyala,10.0,13,combustible,WB status Annex (2024); historical weight only
+geneina,El Ginena diesel,ElGeneina,10.0,13,combustible,WB status Annex (2024); historical weight only
+kadugli,Kadogli diesel,Kadugli,8.0,13,combustible,WB status Annex (2024); historical weight only
+nahud,El Nohod diesel,EnNahud,8.4,13,combustible,WB status Annex (2024); historical weight only
+ed_daein,El Diain diesel,EdDaein,7.5,13,combustible,WB status Annex (2024); historical weight only
+zalingei,Zalingei diesel,Zalingei,2.6,13,combustible,WB status Annex (2024); historical weight only

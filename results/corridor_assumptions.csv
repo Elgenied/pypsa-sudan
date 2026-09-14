@@ -1,0 +1,14 @@
+corridor,bus0,bus1,transfer_mw,evidence
+merowe_dongola,Merowe,Dongola,250,AICD 023 (then planned)
+merowe_atbara,Merowe,Atbara,700,AICD 019 (then planned)
+merowe_khartoum,Merowe,Khartoum,700,AICD 022 (then planned)
+atbara_khartoum,Atbara,Khartoum,450,AICD 018 (then planned)
+atbara_portsudan,Atbara,PortSudan,180,WB map; schematic
+khartoum_kosti,Khartoum,Kosti,300,AICD 003; regional aggregation
+khartoum_medani,Khartoum,WadMedani,300,AICD 005; Sid proxy
+medani_sennar,WadMedani,Sennar,250,AICD 006; Sid proxy
+kosti_sennar,Kosti,Sennar,250,AICD 004; Rabak proxy
+sennar_roseires,Sennar,Roseires,300,AICD 008/028 aggregated
+sennar_gedaref,Sennar,Gedaref,250,AICD 027; via Singa
+gedaref_kassala,Gedaref,Kassala,180,AICD 011/013; via Khashm
+kosti_elobeid,Kosti,ElObeid,100,WB map; schematic
