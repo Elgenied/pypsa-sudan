@@ -1,0 +1,14 @@
+issue,finding,pdf_pages,treatment
+Annual versus monthly energy,"Maximum difference 1,022 GWh/year",132–133,Different annex dates; do not combine without reconciliation
+State versus national peak,Maximum difference 237 MW,126–131,Retain separate series; not rounding alone
+Base versus output midpoint,Maximum billed-energy difference 258.5 GWh,"126,128,130",Base is not exactly the arithmetic midpoint of all published outputs
+Monthly reserve,273–277 MW early years; 534 MW from 2017,"103,132–133",Annual annex uses 15%; compare explicit reserve policies
+2016 available capacity,"Annual annex: 2,940 MW; monthly August and main Table 7-1: 2,810 MW","109,132–133",Retain both source values; mixed revisions or assumptions require clarification
+Missing capacity,February–December 2031: 11 months blank for each scenario,133,Preserve missing values; no automatic imputation
+Hydro annual reconciliation,Roseires and Sennar monthly mean energy differs materially from annual planned mean,120–121,Use a declared source hierarchy; calibrate annual energy separately
+Hydro capacity basis,"Merowe dependable 1,250 MW exceeds tabulated net maximum 1,237.5 MW",120–121,Do not use unchecked p_max_pu > 1; resolve gross/net basis
+Thermal efficiency,Al Fula and Kosti heat-rate-derived full-load efficiencies differ from listed 36.7%,120–121,Preserve both values until technical validation
+Off-grid target,Moderate narrative minimum 50%; annex minimum 60% in 2031,"87,127",State the chosen interpretation
+Planned assets,"Red Sea, Al Fula and Sennar upgrading were not started as of the 2019 cross-check",120; external WB Table 1.1,Do not treat 2012 committed status as evidence of operation in 2022
+Asset replacement,Roseires heightening and Sennar upgrading repeat original plant locations/capacity configurations,120–121,Choose one configuration per asset and year
+Geographic definitions,15 historical states; population and household totals vary with table scope,"114–115,123–124",Reconcile boundaries and source years; no fabricated current-state allocation

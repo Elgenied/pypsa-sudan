@@ -1,0 +1,11 @@
+check,maximum_absolute_error,tolerance,unit,n_compared,passed
+Sequential loss reconstruction,0.8716490268088819,1.0,GWh,60,True
+Printed energy accounting,1.0,1.0,GWh,60,True
+Sector consumption adds to national,2.0,3.0,GWh,60,True
+Load factor agrees within printed precision,0.3452878120649743,0.51,percentage points,60,True
+Historical state sums versus national by year/sector,3.0,8.0,GWh,30,True
+Annual reserve = 15% peak,0.5499999999999545,0.6,MW,60,True
+Annual power gap arithmetic,1.0,1.0,MW,60,True
+Annual energy gap arithmetic,1.0,1.0,GWh,60,True
+Monthly power gap arithmetic where capacity exists,1.0,1.0,MW,687,True
+Monthly energy gap arithmetic,1.0,1.0,GWh,720,True

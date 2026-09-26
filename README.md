@@ -40,8 +40,18 @@ The 2022 anchors are 4,209 MW of national **net** capacity, 16,031 GWh of net do
 
 The key sources are UNSD Electricity Profiles and World Bank Sudan electricity reports, linked with page references in the notebook. No claim of PyPSA community endorsement is made. For publication, first validate the 2022 fleet, regional demand and network, then obtain independent operational data and quantify input uncertainty.
 
+## Data collection and historical research
+
+The [versioned data catalog](data/README.md) now includes the **2012 Sudan power-system forecasting report**: plant engineering parameters, 131 localities, state-sector consumption, hydro profiles, heat rates, transmission plans and three forecast scenarios through 2031.
+
+Read the executed [forecasting replication notebook](research/forecasting_2012/Sudan_Forecasting_Replication.ipynb), its [source register](research/forecasting_2012/SOURCE_REGISTER.md) and [data dictionary](research/forecasting_2012/DATA_DICTIONARY.md). The analysis reconstructs visible energy-loss and adequacy calculations and records discrepancies in the source. It is a supporting research notebook, separate from the single 2022 model notebook above.
+
+**2012 projections are not observed 2022 or post-war data.** Existing and committed assets, replacement configurations, gross/net capacity and the historical 15-state geography remain explicitly distinguished. The source PDF and raw page exports are not included. See [source and rights notes](research/forecasting_2012/DATA_SOURCES_AND_RIGHTS.md).
+
+GitHub Actions checks the catalog checksums and executes the research notebook independently of the baseline model. Dataset update instructions are in [data/README.md](data/README.md).
+
 ## Project history
 
-The earlier PyPSA-Earth fork files, national-only notebook and 2024 examples are preserved in Git history at tag `legacy-before-single-notebook-20260914`. The current working tree has one entry point and one reference year.
+The earlier PyPSA-Earth fork files, national-only notebook and 2024 examples are preserved in Git history at tag `legacy-before-single-notebook-20260914`. The model retains one entry point and the 2022 reference year; historical research datasets are maintained separately.
 
 Original code is MIT licensed. Source attribution and data qualifications are in the notebook; the Natural Earth outline is public domain. Please cite both this model version and the underlying sources when using it.

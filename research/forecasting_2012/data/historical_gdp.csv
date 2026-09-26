@@ -1,0 +1,133 @@
+﻿series,year,value,pdf_page,unit,table,primary_estimate,source_id
+Agriculture,2000,5.6,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Agriculture,2001,6.1,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Agriculture,2002,6.1,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Agriculture,2003,6.3,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Agriculture,2004,6.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Agriculture,2005,6.5,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Agriculture,2006,6.9,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Agriculture,2007,7.5,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Agriculture,2008,8.1,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Agriculture,2009,8.6,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Agriculture,2010,9.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Agriculture,2011,9.5,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2000,0.7,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2001,0.9,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2002,1.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2003,1.1,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2004,1.3,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2005,1.5,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2006,1.6,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2007,2.4,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2008,2.3,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2009,2.3,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2010,2.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Mining(ofwhich>95%ispetroleum),2011,1.6,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2000,0.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2001,0.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2002,0.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2003,0.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2004,0.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2005,0.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2006,0.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2007,0.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2008,0.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2009,0.1,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2010,0.1,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+OtherMiningandQuarrying,2011,0.1,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Industry,2000,2.1,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Industry,2001,2.4,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Industry,2002,2.5,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Industry,2003,2.6,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Industry,2004,3.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Industry,2005,3.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Industry,2006,3.5,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Industry,2007,3.9,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Industry,2008,4.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Industry,2009,4.5,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Industry,2010,4.9,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Industry,2011,5.4,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Services(private),2000,4.7,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(private),2001,5.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(private),2002,5.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(private),2003,5.6,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(private),2004,5.8,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(private),2005,6.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(private),2006,6.7,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(private),2007,7.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(private),2008,7.8,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(private),2009,8.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(private),2010,8.8,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Services(private),2011,9.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Services(government),2000,1.6,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(government),2001,1.9,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(government),2002,2.7,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(government),2003,2.7,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(government),2004,2.9,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(government),2005,2.9,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(government),2006,3.6,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(government),2007,3.8,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(government),2008,4.1,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(government),2009,4.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Services(government),2010,4.3,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Services(government),2011,4.4,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+TOTAL,2000,14.7,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+TOTAL,2001,16.3,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+TOTAL,2002,17.2,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+TOTAL,2003,18.3,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+TOTAL,2004,19.3,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+TOTAL,2005,20.3,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+TOTAL,2006,22.4,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+TOTAL,2007,24.8,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+TOTAL,2008,26.4,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+TOTAL,2009,28.0,117,million SDG at 1981/82 prices (printed unit),sector_gdp,False,MWRE_Lahmeyer_2012_260690
+TOTAL,2010,29.4,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+TOTAL,2011,30.1,117,million SDG at 1981/82 prices (printed unit),sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Growth(annual),2000,8.4,117,percent,sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Growth(annual),2001,10.8,117,percent,sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Growth(annual),2002,6.0,117,percent,sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Growth(annual),2003,6.3,117,percent,sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Growth(annual),2004,5.1,117,percent,sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Growth(annual),2005,5.6,117,percent,sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Growth(annual),2006,9.9,117,percent,sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Growth(annual),2007,10.9,117,percent,sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Growth(annual),2008,6.4,117,percent,sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Growth(annual),2009,5.9,117,percent,sector_gdp,False,MWRE_Lahmeyer_2012_260690
+Growth(annual),2010,5.2,117,percent,sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Growth(annual),2011,2.5,117,percent,sector_gdp,True,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2000,8.38,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2001,10.8,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2002,6.0,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2003,6.29,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2004,5.14,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2005,5.65,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2006,9.87,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2007,10.89,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2008,6.44,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2009,5.94,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2010,5.2,117,percent,growth_comparison,True,MWRE_Lahmeyer_2012_260690
+Historic(source:CBS),2011,2.5,117,percent,growth_comparison,True,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2000,,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2001,,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2002,,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2003,,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2004,3.9,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2005,7.5,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2006,10.1,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2007,11.5,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2008,3.2,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2009,3.0,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2010,4.5,117,percent,growth_comparison,True,MWRE_Lahmeyer_2012_260690
+"Historic(source:WEO2012,IMF)",2011,-3.9,117,percent,growth_comparison,True,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2000,,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2001,,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2002,,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2003,,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2004,1.24,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2005,-1.85,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2006,-0.23,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2007,-0.61,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2008,3.24,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2009,2.94,117,percent,growth_comparison,False,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2010,0.7,117,percent,growth_comparison,True,MWRE_Lahmeyer_2012_260690
+Difference(CBS-IMF),2011,6.4,117,percent,growth_comparison,True,MWRE_Lahmeyer_2012_260690

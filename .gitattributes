@@ -4,3 +4,5 @@
 *.svg text -whitespace
 results/** linguist-generated=true
 Sudan_2022.html linguist-generated=true
+research/forecasting_2012/results/** linguist-generated=true
+research/forecasting_2012/Sudan_Forecasting_Replication.html linguist-generated=true

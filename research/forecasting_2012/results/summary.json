@@ -1,0 +1,15 @@
+{
+  "report_date": "2012-10-18",
+  "plant_configuration_records": 19,
+  "localities": 131,
+  "national_scenario_years": 60,
+  "monthly_scenario_records": 720,
+  "national_metrics": 59,
+  "raw_tables": 98,
+  "max_loss_reconstruction_error_gwh": 0.8716490268088819,
+  "max_annual_monthly_energy_difference_gwh": 1022.0,
+  "max_state_national_peak_difference_mw": 237.0,
+  "checks_passed": 10,
+  "checks_total": 10,
+  "scope": "Partial replication of published outputs and visible arithmetic; not a complete forecasting-workbook or optimization replication"
+}

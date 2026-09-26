@@ -1,0 +1,37 @@
+name: Check historical data and replication
+on:
+  push:
+    paths:
+      - 'research/forecasting_2012/**'
+      - 'data/**'
+      - 'scripts/data_catalog.py'
+      - '.github/workflows/historical-data.yml'
+  pull_request:
+    paths:
+      - 'research/forecasting_2012/**'
+      - 'data/**'
+      - 'scripts/data_catalog.py'
+      - '.github/workflows/historical-data.yml'
+  workflow_dispatch:
+jobs:
+  replicate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: research/forecasting_2012/requirements.txt
+      - run: python -m pip install -r research/forecasting_2012/requirements.txt
+      - run: python -m ipykernel install --user --name python3
+      - run: python scripts/data_catalog.py --check
+      - run: python research/forecasting_2012/run_notebook.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: historical-forecast-replication
+          path: |
+            research/forecasting_2012/Sudan_Forecasting_Replication.ipynb
+            research/forecasting_2012/Sudan_Forecasting_Replication.html
+            research/forecasting_2012/results/

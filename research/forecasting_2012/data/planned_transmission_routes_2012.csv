@@ -1,0 +1,38 @@
+﻿state,route,length_km,voltage_kv,status_in_2012,thermal_rating_mw,pdf_page,source_id
+Al Gezira,Mashkur - Managil,80,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Al Gezira,Managil - Marinjan,65,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Red Sea,PortSudan-1 - PortSudan-2,30,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Red Sea,PortSudan-1 - FreeZone,30,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Red Sea,FreeZone - Swaken,31,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Red Sea,Swaken - Tokar,100,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Red Sea,Tokar - Groura,105,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Red Sea,Sinkat - Haya,75,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Red Sea,Arkeyi - Portsudan-2,75,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Red Sea,Aroma - Durdeab,195,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Blue Nile,Roseires - Karnkarn,90,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Blue Nile,Karnkarn - Kurmuk,60,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+Blue Nile,Gully - Al Gablin,150,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Kordufan,Al Fula - Ghbesh,125,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Kordufan,Obeid - Bara,60,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Kordufan,Bara - Sodari,155,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Kordufan,Sodari - Ham. Elwiz,125,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Kordufan,Sodari - Ham. Elshekh,130,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+South Kordufan,Babanosa - Al Mujlad,35,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+South Kordufan,Kadogli - Heban,80,110,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+South Kordufan,Al Mujlad - Abye,170,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+South Kordufan,Nama - Hejlej,90,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Darfur,Ghebesh- Um kadada,200,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Darfur,Um kadada - Al Fasher,140,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Darfur,Al Fasher - Melit,145,110,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Darfur,Melit - Kutum,65,110,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Darfur,Milet - Al Malaha,150,110,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Darfur,Al Fasher - Tawila,60,110,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+North Darfur,Tawila - Kebkabiya,75,110,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+West Darfur,Geneneina - Kolbus,70,110,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+West Darfur,Kolbus - Al Tina,60,110,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+West Darfur,Zalienge - Garsila,80,110,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+South Darfur,Nyala Airport - Nyala Industrial,10,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+South Darfur,Nyala Airport - Nyala Broadcast,12,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+South Darfur,Nyala - Sheariya,75,110,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+South Darfur,Nyala - Eid Alfursan,80,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690
+South Darfur,Eid Alfursan - Rahad Elberdi,70,220,"planned, not evidence of construction",,62,MWRE_Lahmeyer_2012_260690

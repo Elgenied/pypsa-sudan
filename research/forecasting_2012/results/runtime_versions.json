@@ -1,0 +1,9 @@
+{
+  "python": "3.13.11",
+  "pandas": "2.3.3",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "nbformat": "5.10.4",
+  "nbclient": "0.10.4",
+  "nbconvert": "7.16.6"
+}

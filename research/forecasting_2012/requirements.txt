@@ -1,0 +1,11 @@
+# Notebook execution (already available in the user's pypsa conda environment)
+pandas==2.3.3
+numpy==2.3.5
+matplotlib==3.10.8
+nbformat==5.10.4
+nbclient==0.10.4
+nbconvert==7.16.6
+ipykernel>=6,<8
+# Only needed to rebuild extracted data from the original PDF
+pypdf>=5,<7
+pdfplumber>=0.11,<0.12

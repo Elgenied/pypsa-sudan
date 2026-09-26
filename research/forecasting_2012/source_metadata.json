@@ -1,0 +1,17 @@
+{
+  "title": "Long and Medium Term Power System Plans Sudan: Demand Forecast Report, FINAL Revision",
+  "report_number": "260690",
+  "report_date": "2012-10-18",
+  "author": "Lahmeyer International",
+  "client": "Ministry of Water Resources and Electricity, Republic of Sudan",
+  "pdf_pages": 139,
+  "source_id": "MWRE_Lahmeyer_2012_260690",
+  "source_filename": "Sudan_electricity_forecasting.pdf",
+  "sha256": "57491cf1117890c76626b0b5518a9d99ce1c566d10b981303638d24e2d2d93a5",
+  "extracted_on": "2026-09-26",
+  "page_numbering": "Physical PDF page, starting at 1; printed numbering restarts",
+  "classification": "Mixed historical observations, assumptions and forecasts; not observed 2022 data",
+  "original_workbook_embedded": false,
+  "raw_table_count": 98,
+  "geography": "Historical 15 states and 131 localities; not modern 18-state boundaries"
+}
