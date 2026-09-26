@@ -1,12 +1,64 @@
-# PyPSA-Sudan · 2022
+# PyPSA-Sudan
 
-**Start with [Sudan_2022.ipynb](Sudan_2022.ipynb).** It is the only model notebook and includes the source tables, assumptions, network construction, full-year optimization, checks, regional pie charts and sensitivity analysis. Its saved outputs can be read directly on GitHub. [Sudan_2022.html](Sudan_2022.html) is an offline reading copy: download it and open it in a browser.
+**Research direction: least-cost electricity recovery and expansion of access in Sudan.**
 
-This is a **regional transport-dispatch prototype**, calibrated to Sudan's 2022 national annual electricity statistics. It has 19 regional nodes, 13 schematic corridors and 8,760 hourly snapshots. It is not a verified reconstruction of historical dispatch. Regional capacity allocation, load shares, hourly profiles and corridor limits are explicitly assumed. The 2024 shutdowns and grid split are not applied to 2022.
+The question is: **Where should Sudan rehabilitate or extend the grid, where should it build mini-grids, and where are standalone systems more economical—at a specified level of service?**
+
+**Current stage:** a nationally calibrated 2022 dispatch prototype and a historical evidence collection. A settlement-level electrification optimizer and recommendation map have **not yet been built**.
+
+## Start here
+
+| Read in this order | What it tells you |
+|---|---|
+| **1. [Overall study plan](docs/STUDY_PLAN.md)** | Research question, grid / mini-grid / standalone comparison, PyPSA's role and milestones |
+| **2. [Evidence, validation and gaps](docs/EVIDENCE_AND_GAPS.md)** | What we have, what was checked, what is assumed and what is missing |
+| **3. [2022 system notebook](Sudan_2022.ipynb)** | Running dispatch model, national calibration, regional maps and stress tests |
+| **4. [Historical evidence notebook](research/forecasting_2012/Sudan_Forecasting_Replication.ipynb)** | Recovered 2012-report data, replicated calculations, regional sector pies and source conflicts |
+
+There are **two notebooks with different jobs**. Each begins with a reader guide and ends with its role in the next study. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html) and [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html) are downloadable browser reading copies of those same notebooks.
+
+## What exists today
+
+| Workstream | Available | Validation status | What it can answer |
+|---|---|---|---|
+| **2022 system reference** | 19 regional nodes, 13 schematic corridors, 8,760 hours; fixed-capacity dispatch | Numerical feasibility checked; national annual totals calibrated; regional/hourly operation not independently validated | How dispatch changes under the stated hydro/corridor assumptions |
+| **Historical evidence** | 20 cataloged datasets; 19 plant/configuration records; 131 historical localities; consumption, hydro, heat rates and forecasts | Ten arithmetic checks passed; source inconsistencies retained | What the report contains, how its visible calculations work and which inputs could improve the baseline |
+| **Post-war electrification planning** | Research design and prioritized gaps | **Planned; not implemented** | Intended: which service option, where, when, capacity and cost |
+
+**Calibration is not independent validation.** Matching inputs does not confirm the network or operation. The 2012 report's forecasts for 2022 are not observations. Its locality table is not a settlement GIS dataset.
+
+## Find the right files
+
+```text
+README.md                         Project map and reading order
+docs/
+  STUDY_PLAN.md                   Research design, PyPSA role and milestones
+  EVIDENCE_AND_GAPS.md            Evidence status, checks and missing inputs
+Sudan_2022.ipynb                  Main 2022 model; inputs embedded here
+Sudan_2022.html                   Reading copy of the same notebook
+results/                         Generated model outputs, not new observations
+data/
+  README.md                      Dataset navigation and update instructions
+  catalog.json                   Index/checksums; does not duplicate CSVs
+research/forecasting_2012/
+  Sudan_Forecasting_Replication.ipynb   Historical analysis notebook
+  data/                          Canonical extracted historical CSVs
+  results/                       Recalculated outputs and source issues
+  SOURCE_REGISTER.md             Original data owners and links
+  DATA_DICTIONARY.md             Units, definitions and extraction rules
+scripts/                         Catalog maintenance
+.github/workflows/               Automated execution and integrity checks
+```
+
+Use the [data collection](data/README.md) for input evidence. Use [2022 results](results/) or [historical results](research/forecasting_2012/results/) for calculated outputs. **Historical CSVs are not yet integrated into the 2022 model.** The evidence register identifies the remaining reconciliation work.
+
+## Next milestone
+
+Prepare a **small settlement-level comparison of grid connection, mini-grid and standalone supply**, with matched service requirements and documented costs. In parallel, reconcile the 2022 fleet and introduce evidence-based hydro seasonality. The pilot must explain its costs and expose missing inputs before producing a national recommendation map. See the [milestones and completion criteria](docs/STUDY_PLAN.md#milestones-and-completion-criteria).
 
 ## Run
 
-From this folder, using the existing conda environment:
+With the existing environment:
 
 ```shell
 conda activate pypsa
@@ -14,44 +66,23 @@ python -m ipykernel install --user --name pypsa --display-name "Python (pypsa)"
 jupyter lab Sudan_2022.ipynb
 ```
 
-Select **Python (pypsa)** and **Run All**. For a complete batch run, including the HTML preview:
+Select **Python (pypsa)** and **Run All**. Batch commands from the repository root:
 
 ```shell
-python run_notebook.py
+# Baseline plus two full-year stress tests; allow a few minutes
+python run_notebook.py --kernel pypsa
+
+# Historical replication: included CSVs; no PDF or internet needed
+python research/forecasting_2012/run_notebook.py --kernel pypsa
+
+# Historical data integrity
+python scripts/data_catalog.py --check
 ```
 
-The notebook solves the baseline and two full-year stress tests. Allow a few minutes. To install the tested dependencies in a new environment:
+For a new environment, use Python 3.13 and install `requirements.txt`; extracting a local PDF also needs the historical package's requirements. Add `--export-only` to either runner to refresh its HTML after a markdown-only notebook edit. See [dataset maintenance](data/README.md) for data updates.
 
-```shell
-conda create -n sudan2022 python=3.13 pip
-conda activate sudan2022
-python -m pip install -r requirements.txt
-python -m ipykernel install --user --name sudan2022
-python run_notebook.py --kernel sudan2022
-```
+## Sources and project history
 
-No source downloads are needed to run: small factual input tables and the map outline are embedded in the notebook. `run_notebook.py` only executes and exports the notebook; it contains no separate model logic.
+The baseline uses UNSD and World Bank sources cited in its notebook. Historical inputs have a [source register](research/forecasting_2012/SOURCE_REGISTER.md) and [rights/qualification notes](research/forecasting_2012/DATA_SOURCES_AND_RIGHTS.md). Original project code is MIT licensed; third-party material is not relicensed. The original PDF and raw page exports remain outside the public repository.
 
-## Results and interpretation
-
-`results/` contains the solved PyPSA network, hourly dispatch, input audit, annual and regional summaries, sensitivities and PNG/SVG figures. All are regenerated by the notebook. See its final section for missing data and the path to a paper.
-
-The 2022 anchors are 4,209 MW of national **net** capacity, 16,031 GWh of net domestic generation, 882 GWh of imports, 13,261 GWh of consumer electricity and 3,652 GWh of accounting losses. Regional capacities are allocated from historical plant weights and normalized to national totals. Annual agreement is calibration, not independent validation. Model costs are illustrative. Numerical feasibility does not establish historical accuracy.
-
-The key sources are UNSD Electricity Profiles and World Bank Sudan electricity reports, linked with page references in the notebook. No claim of PyPSA community endorsement is made. For publication, first validate the 2022 fleet, regional demand and network, then obtain independent operational data and quantify input uncertainty.
-
-## Data collection and historical research
-
-The [versioned data catalog](data/README.md) now includes the **2012 Sudan power-system forecasting report**: plant engineering parameters, 131 localities, state-sector consumption, hydro profiles, heat rates, transmission plans and three forecast scenarios through 2031.
-
-Read the executed [forecasting replication notebook](research/forecasting_2012/Sudan_Forecasting_Replication.ipynb), its [source register](research/forecasting_2012/SOURCE_REGISTER.md) and [data dictionary](research/forecasting_2012/DATA_DICTIONARY.md). The analysis reconstructs visible energy-loss and adequacy calculations and records discrepancies in the source. It is a supporting research notebook, separate from the single 2022 model notebook above.
-
-**2012 projections are not observed 2022 or post-war data.** Existing and committed assets, replacement configurations, gross/net capacity and the historical 15-state geography remain explicitly distinguished. The source PDF and raw page exports are not included. See [source and rights notes](research/forecasting_2012/DATA_SOURCES_AND_RIGHTS.md).
-
-GitHub Actions checks the catalog checksums and executes the research notebook independently of the baseline model. Dataset update instructions are in [data/README.md](data/README.md).
-
-## Project history
-
-The earlier PyPSA-Earth fork files, national-only notebook and 2024 examples are preserved in Git history at tag `legacy-before-single-notebook-20260914`. The model retains one entry point and the 2022 reference year; historical research datasets are maintained separately.
-
-Original code is MIT licensed. Source attribution and data qualifications are in the notebook; the Natural Earth outline is public domain. Please cite both this model version and the underlying sources when using it.
+Earlier exploratory files are preserved in Git history at `legacy-before-single-notebook-20260914`. Active work is the two notebooks above. PyPSA-Sudan is an independent research project, without implied PyPSA endorsement. A paper release still needs claim-appropriate validation, uncertainty analysis and an archived reproducible version.

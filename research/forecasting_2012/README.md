@@ -1,5 +1,9 @@
 # Sudan forecasting report: extracted data and partial replication
 
+**Notebook B — supporting historical evidence.** [Project start page](../../README.md) · [Evidence and gaps](../../docs/EVIDENCE_AND_GAPS.md) · [Study plan](../../docs/STUDY_PLAN.md) · [Notebook A: 2022 reference](../../Sudan_2022.ipynb)
+
+Use this notebook to understand the source data and its limitations. Its checks validate visible arithmetic, not future outcomes. The extracted data have not yet replaced the assumptions in the 2022 model, and this notebook does not choose grid, mini-grid or standalone service for settlements.
+
 Open **[Sudan_Forecasting_Replication.html](Sudan_Forecasting_Replication.html)** to read the executed analysis, charts and findings. Open **[Sudan_Forecasting_Replication.ipynb](Sudan_Forecasting_Replication.ipynb)** to inspect or rerun the code.
 
 The source is Lahmeyer International / Sudan Ministry of Water Resources and Electricity, *Long and Medium Term Power System Plans: Demand Forecast Report*, report 260690, final revision 18 October 2012. The source PDF has 139 pages. Its checksum and provenance are in `source_metadata.json`.

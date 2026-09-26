@@ -7517,17 +7517,51 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="PyPSA-Sudan-%C2%B7-2022">PyPSA-Sudan · 2022<a class="anchor-link" href="#PyPSA-Sudan-%C2%B7-2022">¶</a></h1><h3 id="A-transparent-regional-electricity-dispatch-model">A transparent regional electricity dispatch model<a class="anchor-link" href="#A-transparent-regional-electricity-dispatch-model">¶</a></h3><p><strong>One notebook · 19 regional nodes · 13 schematic corridors · 8,760 hours</strong></p>
-<p>This notebook contains the complete model: source tables, editable assumptions, network construction,
-optimization, checks and figures. Select the <strong>pypsa</strong> kernel and <strong>Run All</strong>. No data downloads or hidden
-model modules are required. The last sections explain the results and the work needed for a paper.</p>
-<p><strong>What it represents.</strong> A stylized regional reconstruction of Sudan's <strong>2022</strong> electricity supply,
-anchored to national annual statistics. Regional plant allocation, demand, transmission limits and
-hourly profiles are estimates. The solution is a feasible economic dispatch under those assumptions,
-not a reconstruction of observed hourly operation. Regional nodes are city/area proxies, not state boundaries.</p>
-<p><strong>Reference year.</strong> 2022 is the selected pre-conflict reference, not a claim that it is the latest statistical year.
-The 2024 report contributes historical plant identities and nameplate weights only; its shutdowns,
-available-MW column and wartime grid split are excluded.</p>
+<h1 id="Notebook-A-%E2%80%94-Sudan's-2022-electricity-system-reference">Notebook A — Sudan's 2022 electricity-system reference<a class="anchor-link" href="#Notebook-A-%E2%80%94-Sudan's-2022-electricity-system-reference">¶</a></h1><p><strong>Role in the project:</strong> understand regional dispatch before adding recovery and electrification investments.</p>
+<p><a href="https://github.com/Elgenied/pypsa-sudan/blob/main/README.md">Project home</a> · <a href="https://github.com/Elgenied/pypsa-sudan/blob/main/docs/EVIDENCE_AND_GAPS.md">Evidence and gaps</a> · <a href="https://github.com/Elgenied/pypsa-sudan/blob/main/docs/STUDY_PLAN.md">Overall study plan</a> · <a href="https://github.com/Elgenied/pypsa-sudan/blob/main/research/forecasting_2012/Sudan_Forecasting_Replication.ipynb">Notebook B: historical evidence</a></p>
+<h2 id="Read-this-first">Read this first<a class="anchor-link" href="#Read-this-first">¶</a></h2><table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer for this notebook</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What do we have?</strong></td>
+<td>One executable fixed-capacity dispatch model: 19 regional nodes, 13 schematic corridors and 8,760 hours, anchored to national 2022 statistics</td>
+</tr>
+<tr>
+<td><strong>What is checked?</strong></td>
+<td>Solver feasibility, hourly balances, generator/corridor limits and hydro budgets; two stress tests are solved</td>
+</tr>
+<tr>
+<td><strong>What is calibrated?</strong></td>
+<td>Annual national capacity and electricity accounting; matching these inputs is not independent validation</td>
+</tr>
+<tr>
+<td><strong>What is assumed?</strong></td>
+<td>Regional plant allocation, demand shares, hourly profiles, corridor limits, operating costs, thermal availability and import allocation</td>
+</tr>
+<tr>
+<td><strong>What is missing?</strong></td>
+<td>Verified topology/fleet and independent operational observations; seasonal hydro constraints; settlement access/demand, repair and connection costs; investment/technology-choice decisions</td>
+</tr>
+<tr>
+<td><strong>What can we do now?</strong></td>
+<td>Explore dispatch and sensitivities conditional on these inputs; identify influential assumptions</td>
+</tr>
+<tr>
+<td><strong>What can we not conclude?</strong></td>
+<td>Which settlement should connect, which needs a mini-grid or standalone supply, or what a national recovery plan costs</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read in order:</strong> <a href="#baseline-1">1. Evidence</a> → <a href="#baseline-2">2. Inputs and assumptions</a> → <a href="#baseline-3">3. Solve</a> → <a href="#baseline-4">4. Checks</a> → <a href="#baseline-5">5. Figures</a> → <a href="#baseline-6">6. Sensitivities</a> → <a href="#baseline-7">7. Next study</a>.</p>
+<p><strong>Interpretation:</strong> regional nodes are city/area proxies, not state boundaries. Capacity pies are allocated capacity; generation pies are modeled production. Neither is a least-cost electrification recommendation map. Zero modeled shortage covers the supplied-demand input, not unconnected households or suppressed demand.</p>
+<p><strong>Evidence not yet integrated:</strong> Notebook B's plant engineering, 2011 regional consumption and monthly hydro tables remain separate. They need year, scope and asset reconciliation before replacing these inputs.</p>
+<p><strong>Run:</strong> select the <strong>pypsa</strong> kernel and Run All. Inputs, model code and outputs are contained here; no source downloads are required. The solution is a feasible economic dispatch under assumptions, not observed hourly operation.</p>
+<p><strong>Reference year:</strong> 2022 is the selected pre-war reference, not a claim that it is the latest statistical year. The later World Bank report contributes historical plant identities/nameplate weights only; its 2024 shutdowns, available-MW column and grid split are excluded.</p>
 </div>
 </div>
 </div>
@@ -7539,6 +7573,7 @@ available-MW column and wartime grid split are excluded.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="baseline-1"></a></p>
 <h2 id="1.-Evidence-and-annual-accounting">1. Evidence and annual accounting<a class="anchor-link" href="#1.-Evidence-and-annual-accounting">¶</a></h2><table>
 <thead>
 <tr>
@@ -7798,6 +7833,7 @@ unconnected demand. A shortage result below refers only to this modeled supply r
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="baseline-2"></a></p>
 <h2 id="2.-Regional-inputs-and-explicit-assumptions">2. Regional inputs and explicit assumptions<a class="anchor-link" href="#2.-Regional-inputs-and-explicit-assumptions">¶</a></h2><p><strong>Capacity allocation.</strong> The table below is a historical <strong>allocation inventory</strong>, not a verified 2022
 unit register. We aggregate nameplate weights by region and broad technology, then scale each technology
 to the 2022 UNSD <strong>net</strong> capacity. This reconciles incompatible coverage and capacity definitions without
@@ -8514,6 +8550,7 @@ or interconnector ratings. Other production is also flat. Both fixed supplies ex
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="baseline-3"></a></p>
 <h2 id="3.-Build-and-solve-the-PyPSA-network">3. Build and solve the PyPSA network<a class="anchor-link" href="#3.-Build-and-solve-the-PyPSA-network">¶</a></h2><p>At every hour and region, generation plus net imports through corridors must equal consumer electricity
 plus accounting losses. A high-cost <strong>shortage</strong> generator keeps an undersupplied case solvable; it is
 a mathematical slack variable and is excluded from physical capacity and generation pies.</p>
@@ -8536,6 +8573,7 @@ tie-break, not a tariff. Reported illustrative operating costs exclude this pena
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="baseline-4"></a></p>
 <h2 id="4.-Check-the-solution-before-interpreting-it">4. Check the solution before interpreting it<a class="anchor-link" href="#4.-Check-the-solution-before-interpreting-it">¶</a></h2><p>These checks test physical accounting and feasibility. Agreement with annual inputs used for calibration
 is <strong>not independent validation</strong>. In particular, the hydro target is a budget and consumption is an input.
 An independent 2022 peak, monthly generation series, regional sales or dispatch sample is still needed.</p>
@@ -8664,6 +8702,7 @@ An independent 2022 peak, monthly generation series, regional sales or dispatch 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="baseline-5"></a></p>
 <h2 id="5.-Read-the-system-in-pictures">5. Read the system in pictures<a class="anchor-link" href="#5.-Read-the-system-in-pictures">¶</a></h2><p>The capacity map uses PyPSA's bus pies. Pie <strong>area</strong> scales with regional MW; corridor width scales
 with the assumed transfer limit. The smaller systems are easier to read in the regional panel below.
 Physical domestic capacity excludes imports and the shortage slack variable. Lines show modeled
@@ -9096,6 +9135,7 @@ the center gives each region's annual production. Imports and shortage are exclu
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="baseline-6"></a></p>
 <h2 id="6.-Test-the-assumptions">6. Test the assumptions<a class="anchor-link" href="#6.-Test-the-assumptions">¶</a></h2><p>Two one-at-a-time sensitivities use the <strong>same 8,760 hours</strong>: 20% less hydro energy, and 50% lower
 corridor limits. These are stress tests, not forecasts or reconstructions of particular events.
 Annual imports, demand and installed capacity remain fixed. Greater thermal output or shortage
@@ -9182,35 +9222,46 @@ cover uncertainty in regional demand shares, fleet allocation, fuel supply or im
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="7.-Save-results-and-define-the-paper">7. Save results and define the paper<a class="anchor-link" href="#7.-Save-results-and-define-the-paper">¶</a></h2><p>The following cell writes the solved baseline network, hourly dispatch, source/assumption tables and
-summary tables to <code>results/</code>. PNG and SVG figures are already saved there. All are regenerated by
-this notebook. The HTML preview is produced by the short notebook runner; no second notebook is needed.</p>
-<p><strong>What can be claimed now:</strong> a reproducible, nationally calibrated 2022 regional <strong>transport-dispatch
-prototype</strong>, with transparent capacity reconciliation and explicit uncertainty. Annual matching is calibration.
-Modeled regional congestion and shortages are conditional on assumptions. They are not measured facts
-about Sudan in 2022. No optimal investment plan, AC security result, renewable potential assessment or
-historical system cost is established.</p>
-<p><strong>For a publishable national case study, the next evidence priorities are:</strong></p>
-<ol>
-<li><strong>Validate the 2022 fleet and geography:</strong> unit capacities, fuel, commissioning/retirement, net versus
-gross rating, autoproducers, rental plants and coordinates. Resolve the Port Sudan rental and the
-residual capacity currently spread across regions.</li>
-<li><strong>Replace the most influential spatial assumptions:</strong> 2022 substations, line endpoints, operating
-voltage, circuits and thermal ratings; regional sales/load shares and isolated-system connectivity.
-Impedances are needed if moving to a DC/AC electrical network.</li>
-<li><strong>Validate operation independently:</strong> monthly plant generation, regional or national hourly demand
-and peak load, fuel availability/prices, outages, hydro inflows and reservoir constraints, and bilateral
-import time series. Test against information not used for calibration.</li>
-<li><strong>State one research question and quantify uncertainty:</strong> for example, how hydro variability and
-transmission constraints affect thermal generation and adequacy. Extend the tests to demand allocation,
-thermal availability, missing capacity, imports and demand suppressed by supply shortages.</li>
-<li><strong>Release a documented version:</strong> keep source dates, licenses and assumptions; add independent
-validation and reproducible environments, then archive the paper's release with a DOI. For a renewable
-expansion paper, add weather-derived wind/solar profiles, siting exclusions, technology costs and an
-investment formulation. Those are additional model components, not available observations here.</li>
-</ol>
-<p>This provides a clear starting point for a PyPSA community contribution. It does not imply affiliation,
-review or endorsement by PyPSA, or equivalence to a fully validated PyPSA-Earth country model.</p>
+<p><a id="baseline-7"></a></p>
+<h2 id="7.-Save-results-and-connect-this-reference-to-the-study-plan">7. Save results and connect this reference to the study plan<a class="anchor-link" href="#7.-Save-results-and-connect-this-reference-to-the-study-plan">¶</a></h2><p>The next cell writes the solved network, hourly dispatch, source/assumption tables and summaries to <code>results/</code>. PNG/SVG figures and the HTML are alternative views of this same analysis.</p>
+<h3 id="What-the-existing-results-establish">What the existing results establish<a class="anchor-link" href="#What-the-existing-results-establish">¶</a></h3><p>The saved model is a nationally calibrated regional <strong>transport-dispatch prototype</strong>. Numerical checks pass, and the two stress tests show dependence on assumed hydro availability and corridor capacity. These results do not independently validate the network, establish historical costs or select new investments.</p>
+<h3 id="The-research-question-from-here">The research question from here<a class="anchor-link" href="#The-research-question-from-here">¶</a></h3><p><strong>Where should post-war Sudan repair or extend the grid, where should it build mini-grids, and where can standalone systems meet the chosen service standard economically?</strong></p>
+<table>
+<thead>
+<tr>
+<th>Next work</th>
+<th>Why it is needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reconcile the 2022 asset register and regional geography</td>
+<td>Replace allocation weights where evidence supports actual capacities and avoid counting upgrades twice</td>
+</tr>
+<tr>
+<td>Add calibrated hydro seasonality and independent operating comparisons</td>
+<td>Reduce unrealistic flexibility and separate calibration from validation</td>
+</tr>
+<tr>
+<td>Build a georeferenced pilot demand/route/cost table</td>
+<td>Locate households, businesses and critical loads and establish feasible connections</td>
+</tr>
+<tr>
+<td>Compare grid, mini-grid and standalone alternatives at equal service</td>
+<td>Add investment, repair, distribution, connection, storage and replacement costs</td>
+</tr>
+<tr>
+<td>Couple local choices to regional supply and shared routes</td>
+<td>Avoid a local cheap option creating infeasible or uncounted upstream costs</td>
+</tr>
+<tr>
+<td>Scale only after pilot checks and uncertainty tests</td>
+<td>Make national maps defensible and distinguish robust from assumption-sensitive choices</td>
+</tr>
+</tbody>
+</table>
+<p>These are <strong>planned extensions</strong>, not components hidden in the dispatch model. A constrained corridor in this notebook is not a recommendation to build a line. The historical locality table is not a ready-made village map.</p>
+<p>The <a href="https://github.com/Elgenied/pypsa-sudan/blob/main/docs/STUDY_PLAN.md">overall plan</a> describes the GIS, option-selection and PyPSA layers, milestones and intended paper outputs. The <a href="https://github.com/Elgenied/pypsa-sudan/blob/main/docs/EVIDENCE_AND_GAPS.md">evidence register</a> prioritizes the missing inputs. The immediate deliverable is a small, cost-complete comparison that explains why each option wins.</p>
 </div>
 </div>
 </div>

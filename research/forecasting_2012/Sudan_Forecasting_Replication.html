@@ -7524,6 +7524,47 @@ Prepared for the PyPSA-Sudan research project · analysis date 26 September 2026
 <strong>What is still unavailable:</strong> the original forecasting workbook and complete underlying utility time series. Replotting published outputs is labelled separately from recalculating them. This is not a new least-cost optimization or an observed 2022 system reconstruction.</p>
 <p>The report combines <strong>2006–2011 electricity observations, 2008 census inputs, 2012 asset assessments and 2012–2031 projections</strong>. Its 15 states and 131 localities use historical boundaries. Every source page below means the physical PDF page, starting at 1, because printed page numbers restart.</p>
 <p>Run all cells in order using the existing <code>pypsa</code> conda environment. The supplied CSVs make this notebook independent of the original PDF and of internet access. The extraction script can rebuild them when given the original file.</p>
+<h2 id="Reader-guide-%E2%80%94-Notebook-B:-historical-evidence">Reader guide — Notebook B: historical evidence<a class="anchor-link" href="#Reader-guide-%E2%80%94-Notebook-B:-historical-evidence">¶</a></h2><p><a href="https://github.com/Elgenied/pypsa-sudan/blob/main/README.md">Project home</a> · <a href="https://github.com/Elgenied/pypsa-sudan/blob/main/Sudan_2022.ipynb">Notebook A: 2022 reference</a> · <a href="https://github.com/Elgenied/pypsa-sudan/blob/main/docs/EVIDENCE_AND_GAPS.md">Evidence and gaps</a> · <a href="https://github.com/Elgenied/pypsa-sudan/blob/main/docs/STUDY_PLAN.md">Study plan</a></p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer for this notebook</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What do we have?</strong></td>
+<td>Historical data recovered from a 2012 report: 19 plant/configuration records, 131 localities, regional consumption, hydro/heat-rate data and three forecast scenarios</td>
+</tr>
+<tr>
+<td><strong>What is checked?</strong></td>
+<td>Ten visible arithmetic/rounding checks; source spot-checks, dataset keys and missing values; separate catalog integrity checks</td>
+</tr>
+<tr>
+<td><strong>What is not independently validated?</strong></td>
+<td>The underlying forecasting workbook, projected outcomes, current plant condition or applicability after the war</td>
+</tr>
+<tr>
+<td><strong>What did we learn?</strong></td>
+<td>Usable engineering and regional evidence exists, but some annual/monthly balances, capacity bases and reserve conventions disagree</td>
+</tr>
+<tr>
+<td><strong>What can we use it for?</strong></td>
+<td>Improve historical priors for the 2022 model after reconciling years, geography, status and definitions</td>
+</tr>
+<tr>
+<td><strong>What is missing for our study?</strong></td>
+<td>Settlement coordinates and current demand/access; usable grid routes; repair/connection and technology costs; recovery/service scenarios</td>
+</tr>
+<tr>
+<td><strong>What is not built here?</strong></td>
+<td>PyPSA dispatch, investment optimization or a grid-versus-mini-grid-versus-standalone map</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Navigate:</strong> <a href="#historical-1">Inventory</a> · <a href="#historical-4">Historical regional consumption</a> · <a href="#historical-5">Plants</a> · <a href="#historical-6">Hydro and efficiency</a> · <a href="#historical-10">Validation and conflicts</a> · <a href="#historical-11">Sources</a> · <a href="#historical-12">Use in our study</a>.</p>
+<p><strong>Keep the vintages separate:</strong> the report's 2022 entries are forecasts made in 2012. The 131 localities lack coordinates in this table and are not individual settlements. Their distance and grid-status fields do not establish a least-cost service option. The extracted CSVs have not yet been integrated into Notebook A.</p>
 </div>
 </div>
 </div>
@@ -7637,6 +7678,7 @@ Prepared for the PyPSA-Sudan research project · analysis date 26 September 2026
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-1"></a></p>
 <h2 id="1.-What-was-extracted">1. What was extracted<a class="anchor-link" href="#1.-What-was-extracted">¶</a></h2><table>
 <thead>
 <tr>
@@ -7879,6 +7921,7 @@ Prepared for the PyPSA-Sudan research project · analysis date 26 September 2026
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-2"></a></p>
 <h2 id="2.-Recreate-the-published-demand-scenarios">2. Recreate the published demand scenarios<a class="anchor-link" href="#2.-Recreate-the-published-demand-scenarios">¶</a></h2><p>The study combined historical trends with bottom-up connections and grid extension, rather than estimating an econometric demand model. Planned-line construction rates were 100/150/200 km per year per project path for Moderate/Base/High; committed projects used twice those rates (pp.86–87). It assumed sufficient generation and transmission capacity when forecasting demand.</p>
 <p>The following figures <strong>replot recovered outputs</strong>. They do not regenerate the unavailable connection workbook. A large industrial step in 2017 is linked to assumed connection of 150 MW of captive load in Port Sudan and 65 MW near Atbara (p.87 and demand discussion). At a 90% load factor, these loads correspond to about 1,695 GWh/year; the reported industrial jump can also include ordinary growth.</p>
 </div>
@@ -7917,6 +7960,7 @@ Prepared for the PyPSA-Sudan research project · analysis date 26 September 2026
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-3"></a></p>
 <h2 id="3.-Independently-reconstruct-losses-and-load-factor">3. Independently reconstruct losses and load factor<a class="anchor-link" href="#3.-Independently-reconstruct-losses-and-load-factor">¶</a></h2><p>Transmission loss is measured against sent-out generation, while distribution loss is measured after transmission. Consequently:</p>
 <p>[
 G_y=\frac{C_y}{(1-t)(1-d_y)},\qquad
@@ -7997,6 +8041,7 @@ d_y=\max(0.12,\ 0.134-(y-2011),0.014/5).
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-4"></a></p>
 <h2 id="4.-Historical-demand-by-region-and-sector">4. Historical demand by region and sector<a class="anchor-link" href="#4.-Historical-demand-by-region-and-sector">¶</a></h2><p>These are <strong>2011 observations</strong>, not 2022 regional consumption. They offer evidence for regional demand allocation where more recent readings are unavailable. Modern boundary changes and post-war population displacement require separate treatment.</p>
 <p>The 15 charts use equal-size pies to compare sector shares; the title of each chart gives its absolute annual consumption, so a small state is not mistaken for a large load centre. Annex 4, p.119.</p>
 </div>
@@ -8030,6 +8075,7 @@ Khartoum + Al Gezira share: 74.89%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-5"></a></p>
 <h2 id="5.-Plant-locations-and-performance-inputs">5. Plant locations and performance inputs<a class="anchor-link" href="#5.-Plant-locations-and-performance-inputs">¶</a></h2><p>The table distinguishes gross nameplate capacity from net maximum capacity. The 19 entries are not 19 separate operating stations: some are unit groups at the same location, six are committed projects in the 2012 assessment, and Roseires dam heightening and Sennar upgrading are replacement configurations. <strong>Never add the original and replacement capacity together.</strong></p>
 <p>The plot below uses only records marked existing in 2012 and aggregates co-located units. Coordinates are rounded report coordinates, not surveyed locations. No transmission connections are inferred from this scatter plot.</p>
 <p>The O&amp;M costs are reported USD/kW/year and USD/MWh; they do not include fuel, investment or post-war repair costs. Their price basis needs verification before economic reuse. Annex 4, p.120.</p>
@@ -8282,6 +8328,7 @@ Khartoum + Al Gezira share: 74.89%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-6"></a></p>
 <h2 id="6.-Reconstruct-hydro-seasonality-and-thermal-efficiency">6. Reconstruct hydro seasonality and thermal efficiency<a class="anchor-link" href="#6.-Reconstruct-hydro-seasonality-and-thermal-efficiency">¶</a></h2><p>The report separates minimum power, dependable maximum power, firm power and mean daily energy. These describe different planning quantities and must not be used interchangeably as PyPSA availability factors. In particular, a monthly mean energy budget is not a mandatory hourly generation profile or a reservoir inflow series.</p>
 <p>The calculation below integrates mean daily energy using a 365-day reference year and compares it with the annual planned mean. Merowe and several other rows agree closely, but Roseires and Sennar do not reconcile. We preserve those discrepancies. The profiles predate later upstream developments and cannot establish post-war hydrology.</p>
 </div>
@@ -8519,6 +8566,7 @@ Khartoum + Al Gezira share: 74.89%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-7"></a></p>
 <h2 id="7.-Recalculate-annual-adequacy-and-reproduce-the-supply-gap-charts">7. Recalculate annual adequacy and reproduce the supply-gap charts<a class="anchor-link" href="#7.-Recalculate-annual-adequacy-and-reproduce-the-supply-gap-charts">¶</a></h2><p>The annual annex uses a 15% peak reserve. For each scenario we independently calculate:</p>
 <p>[
 R=0.15P,\quad P_{required}=1.15P,\quad
@@ -8597,6 +8645,7 @@ R=0.15P,\quad P_{required}=1.15P,\quad
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-8"></a></p>
 <h2 id="8.-Monthly-analysis-and-discrepancies-in-the-source">8. Monthly analysis and discrepancies in the source<a class="anchor-link" href="#8.-Monthly-analysis-and-discrepancies-in-the-source">¶</a></h2><p>The monthly annex is dated <strong>16 August 2012</strong>, while national forecast annexes are dated <strong>18 October 2012</strong>. This may explain some differences, but the exact workbook revision history is unavailable.</p>
 <p>Monthly required capacity implies about 273–274 MW reserve in 2012–2015, 276–277 MW in 2016 and 534 MW from 2017. That resembles the contingency-based interpretation discussed in the prose and <strong>differs from a consistent 15% margin</strong>. We reproduce the printed arithmetic and separately calculate the 15% alternative; we do not silently overwrite the report.</p>
 <p>Available monthly capacity is blank for February–December 2031 in the PDF. Those entries remain missing. The printed power-gap rows still exist; reverse-solving capacity from them would be a derived estimate, not an extracted observation.</p>
@@ -8833,6 +8882,7 @@ R=0.15P,\quad P_{required}=1.15P,\quad
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-9"></a></p>
 <h2 id="9.-Electrification-and-locality-inputs">9. Electrification and locality inputs<a class="anchor-link" href="#9.-Electrification-and-locality-inputs">¶</a></h2><p>The source contains location-level population, household size, grid status, route distance and planned/committed labels. It does <strong>not</strong> provide locality coordinates or a cost-optimal choice between grid, mini-grid and standalone systems.</p>
 <p>Zero route distance for an unconnected locality with no listed project must not be interpreted as free connection. Off-grid access in the forecast is a target-filling assumption, not a technology-selection result. The text states state-level minimum access of 50/60/70% for Moderate/Base/High (p.87), whereas the annex's lowest final values are checked below. “Grid-connected” in this report also includes large isolated grids (p.31), not only the interconnected national network.</p>
 </div>
@@ -9228,6 +9278,7 @@ R=0.15P,\quad P_{required}=1.15P,\quad
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-10"></a></p>
 <h2 id="10.-Validation-results-and-unresolved-source-conflicts">10. Validation results and unresolved source conflicts<a class="anchor-link" href="#10.-Validation-results-and-unresolved-source-conflicts">¶</a></h2><p>Arithmetic checks allow for rounding of independently printed totals. They validate extraction and visible identities, not the underlying forecast's predictive accuracy. Cross-table disagreements are reported separately and must not be made to disappear by adjusting source numbers.</p>
 </div>
 </div>
@@ -9495,6 +9546,7 @@ R=0.15P,\quad P_{required}=1.15P,\quad
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-11"></a></p>
 <h2 id="11.-Independent-reality-check-and-source-register">11. Independent reality check and source register<a class="anchor-link" href="#11.-Independent-reality-check-and-source-register">¶</a></h2><p>The <a href="https://documents1.worldbank.org/curated/en/486961588608080192/pdf/From-Subsidy-to-Sustainability-Diagnostic-Review-of-Sudan-Electricity-Sector.pdf">World Bank's 2019 diagnostic</a>, Table 1.1, provides a later implementation check. Kosti entered service in 2015 and Upper Atbara in 2018; Red Sea, Al Fula and Sennar upgrading were listed as not started. The table also distinguishes Roseires dam heightening from a separate proposed capacity upgrade. This confirms that planned commissioning dates cannot serve as observed asset data.</p>
 <p>The register below identifies the original owners and where their data appear in the supplied PDF. Public links are explicitly labelled as related sources when they are not the exact original utility workbooks. No original calculation workbook is embedded in the supplied PDF.</p>
 </div>
@@ -9720,6 +9772,7 @@ R=0.15P,\quad P_{required}=1.15P,\quad
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a id="historical-12"></a></p>
 <h2 id="12.-How-this-improves-the-post-war-least-cost-electrification-study">12. How this improves the post-war least-cost electrification study<a class="anchor-link" href="#12.-How-this-improves-the-post-war-least-cost-electrification-study">¶</a></h2><p>The report materially improves the <strong>historical evidence base</strong>: plant-level engineering assumptions, hydro seasonality, regional consumption and a locality framework. It does not supply post-war damage or the investment-cost inputs needed to solve least-cost electrification.</p>
 <table>
 <thead>
@@ -9771,6 +9824,20 @@ R=0.15P,\quad P_{required}=1.15P,\quad
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output" data-mime-type="text/markdown" tabindex="0">
 <p><strong>Completed:</strong> 10/10 arithmetic checks within stated rounding tolerances. Source discrepancies are retained in <code>results/source_issues.csv</code>.</p>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c03cfc23">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Where-this-leaves-the-project">Where this leaves the project<a class="anchor-link" href="#Where-this-leaves-the-project">¶</a></h2><p><strong>Completed here:</strong> structured extraction, reproduction of published charts, checks of visible arithmetic, and a source-conflict register. These checks validate calculation consistency within stated tolerances; they do not validate the source's forecasts or a future investment plan.</p>
+<p><strong>Use next:</strong> reconcile asset identities/status and gross/net ratings, calibrate hydro seasonality, and assess historical regional demand shares against the 2022 reference. For local access planning, georeference actual demand clusters and build candidate route/service/cost tables.</p>
+<p><strong>Still missing:</strong> credible repair/availability assumptions, comparable lifecycle costs, spatial demand/access evidence and explicit service requirements. We have not identified which Sudanese settlements should receive grid, mini-grid or standalone supply.</p>
+<p>The <a href="https://github.com/Elgenied/pypsa-sudan/blob/main/docs/STUDY_PLAN.md">study plan</a> sets out the next milestone: a small fair comparison of those three arrangements, followed by coupling to regional supply and shared routes. The national maps and paper conclusions follow validated pilot comparisons and uncertainty tests.</p>
 </div>
 </div>
 </div>

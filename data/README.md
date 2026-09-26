@@ -1,5 +1,7 @@
 # PyPSA-Sudan data collection
 
+[Project start page](../README.md) · [Evidence and missing inputs](../docs/EVIDENCE_AND_GAPS.md) · [Overall study plan](../docs/STUDY_PLAN.md)
+
 This is a versioned collection of CSV datasets, indexed by [catalog.json](catalog.json). Each entry records its path, row count, columns, source, SHA256 checksum and vintage. The canonical CSVs are under [`research/forecasting_2012/data/`](../research/forecasting_2012/data/); they are not duplicated here.
 
 Checksums normalize CRLF to LF, matching Git's text normalization, so the same data verify on Windows and Linux.
@@ -15,6 +17,8 @@ Checksums normalize CRLF to LF, matching Git's text normalization, so the same d
 - [Source and rights notes](../research/forecasting_2012/DATA_SOURCES_AND_RIGHTS.md)
 
 The root `Sudan_2022.ipynb` remains the main dispatch model. Its input tables and national calibration remain unchanged by the addition of this collection. Historical data should be matched and validated before replacing baseline assumptions.
+
+The study's planned settlement-level grid / mini-grid / standalone comparison is not implemented in either notebook yet. In particular, the 131 historical localities do not provide a georeferenced settlement map or validated post-war access inventory.
 
 ## Maintain or update the collection
 
