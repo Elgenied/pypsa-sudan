@@ -143,7 +143,7 @@ def main() -> None:
     dictionary = pd.read_excel(args.dictionary, sheet_name="Overview")
     for column in dictionary.select_dtypes(include="object"):
         dictionary[column] = dictionary[column].str.strip()
-    dictionary.to_csv(out / "attribute_dictionary.csv", index=False)
+    dictionary.to_csv(out / "attribute_dictionary.csv", index=False, lineterminator="\n")
     report["source_sha256"] = source_hashes
     report["derived_sha256"] = {p.name: digest(p) for p in sorted(out.iterdir()) if p.is_file() and p.name != "validation_report.json"}
     (out / "validation_report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
