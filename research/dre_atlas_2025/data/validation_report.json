@@ -1,0 +1,37 @@
+{
+  "settlements": 33891,
+  "unique_ids": 33891,
+  "attributes_per_settlement_including_id": 41,
+  "geometry_type": {
+    "Polygon": 33891
+  },
+  "connections_estimated_potential": 17589336,
+  "population_modelled": 50042901,
+  "demand_kwh_per_day_source_rounded_sum": 6276952.8,
+  "demand_kwh_per_day_formula_sum": 6276996.3,
+  "max_settlement_demand_rounding_error_kwh_day": 0.05,
+  "risk_class_counts_2020_2022": {
+    "high": 14382,
+    "medium": 9928,
+    "low": 9581
+  },
+  "nightlight_source_flag_vs_overlap_disagreements": 1,
+  "road_flag_vs_rounded_half_km_disagreements": 7,
+  "density_above_100_percent_records": 4,
+  "wealth_index_nonmissing": 23,
+  "admin_1_missing": 21,
+  "source_geometry_type": {
+    "MultiPolygon": 33891
+  },
+  "source_csv_geojson_polygons_match_within_1e_6_degrees": 33891,
+  "source_sha256": {
+    "csv": "63c23d9920cc7faebc800fda2256ac857b2971fd10c321b66c810595853723e3",
+    "geojson": "d49923f7091db61dd41f6995afa615fc87d67c848139128701dc3bfe988ffcc9",
+    "dictionary": "fd49f1e0d2ace31b7e5dda27a648f1f1f15a187da04c7539646a44064b219905"
+  },
+  "derived_sha256": {
+    "attribute_dictionary.csv": "b74bd3a04729928ba3e7d1bf647d4202a915f3f3cf73e4daccb256b0707e6cad",
+    "settlement_attributes.csv.gz": "0e07b95eebd88a65e5483b069b472c20bd91cc7fd936476921c009f486716643",
+    "settlement_boundaries_100m.parquet": "de95f63ed9bd3e75ed1ce897196b819e58a950b791d72d8bcaef2914a3420b7b"
+  }
+}

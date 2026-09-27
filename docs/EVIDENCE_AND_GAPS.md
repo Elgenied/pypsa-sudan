@@ -2,7 +2,7 @@
 
 [Start here](../README.md) · [Study plan](STUDY_PLAN.md) · [Data catalog](../data/README.md)
 
-Status reviewed **26 September 2026**. This page distinguishes evidence quality from successful software execution. For current run status see [GitHub Actions](https://github.com/Elgenied/pypsa-sudan/actions).
+Status reviewed **27 September 2026**. This page distinguishes evidence quality from successful software execution. For current run status see [GitHub Actions](https://github.com/Elgenied/pypsa-sudan/actions).
 
 ## The four labels we use
 
@@ -26,6 +26,8 @@ The current notebooks have sourced inputs, calibration and numerical checks. **N
 | Regional demand | 2011 state-sector consumption; assumed 2022 node shares | Historical data not yet integrated | Historical 15-state geography differs from the 19 regional proxies and modern states |
 | Hydro | Annual budget in baseline; monthly characteristics for eight historical configurations | Monthly data available for a future upgrade | Not measured 2022 inflows; gross/net and annual/monthly conflicts; no reservoir model |
 | Local access | 131 historical localities, 2008 demographics, 2012 grid status and estimated distances | Starting evidence for spatial work | No locality coordinates in this table; localities are not individual settlements; proximity is not household access |
+| Spatial settlements | World Bank/VIDA DRE release: 33,891 georeferenced clusters; potential building connections, modeled demand, polygons, roads, PV, distance to grid and nightlights | Source files checked and mapped in [Notebook C](../research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb) | Mixed layer vintages; no metered access, feasible routes, post-war line status or hourly loads |
+| Historical conflict exposure | DRE 2020–2022 ACLED fatality buffers at 25 and 50 km | Category formula reproduced for all 33,891 settlements | **Not a current security or damage assessment** |
 | Demand projections | Three 2012–2031 scenarios, 60 national scenario-years and 720 monthly records | Published outputs plus partial arithmetic replication | Not actual 2022 or post-war demand; not an optimal investment plan |
 | Economic inputs | Historical plant O&M and illustrative baseline marginal costs | Reference values, not a planning cost database | Repairs, connections, distribution, solar, storage, fuel delivery, price basis and financing not established |
 | Recovery and service targets | Research design only | No implemented scenario dataset | Damage, restoration time, displacement, critical loads, service standards and horizons need explicit evidence/assumptions |
@@ -57,11 +59,17 @@ The [source-issue register](../research/forecasting_2012/results/source_issues.c
 
 Catalog checks establish data integrity. They do not certify forecasts, asset status or post-war applicability. Successful GitHub execution is a reproducibility check, not peer review or independent system validation.
 
+### Notebook C: spatial source checks
+
+The public CSV and GeoJSON have identical **33,891 unique `geohash` IDs** and matching attribute values. The original geometries are valid; the repository stores 100 m simplified display polygons and the full non-geometry attributes. Recalculating `1.1 × large + 0.65 × medium + 0.335 × small` matches every demand row within **0.05 kWh/day** of one-decimal source rounding. The 2020–2022 25/50 km fatality rule exactly reproduces every historical risk label. The [validation report](../research/dre_atlas_2025/data/validation_report.json) records original and derived hashes and the retained source anomalies.
+
+The **6.277 million kWh/day** atlas total would be about **2.291 TWh/year** if repeated daily, far below the 2022 national consumer-electricity figure of 13.261 TWh. They have different service levels and coverage, so this is a scale warning rather than a calibration failure. The atlas's **17.59 million potential connections** are buildings, not customer records. Only **23** of 33,891 clusters have a wealth index value.
+
 ## Prioritized gaps for the electrification question
 
 | Priority | Needed input / decision | Why it matters | Minimum useful next deliverable |
 |---|---|---|---|
-| **1** | Georeferenced settlements/demand clusters, households, access and productive/critical loads | Defines who is served and demand size/location | Pilot table with coordinates, provenance, date and demand/service ranges |
+| **1** | Verified access and households, productive/critical loads and hourly demand for mapped clusters | DRE provides geometry and a low-service building estimate but not true access or the required service | Pilot table joining DRE clusters to local evidence and multiple service scenarios |
 | **1** | Usable/repairable grid, candidate routes, capacity and condition | Defines feasible connections, not merely nearest distance | Route table with endpoints, length, capacity and repair/extension assumptions |
 | **1** | Comparable lifecycle costs | Determines economic choice | One price year/currency; CAPEX, O&M, replacements, fuel, finance, distribution and connections |
 | **1** | Service and reliability requirements | Prevents an unfair comparison of a small solar-home system with continuous grid service | Quantity, peak capability, service hours and critical-load/shortage requirements |
@@ -74,7 +82,7 @@ Missing exact damage records do not prevent scenario analysis. The claim becomes
 
 ## Claims today
 
-**Supported:** a reproducible, nationally calibrated regional dispatch prototype; traceable historical datasets; replicated visible arithmetic; documented sensitivity to selected assumptions.
+**Supported:** a reproducible, nationally calibrated regional dispatch prototype; traceable historical datasets; mapped DRE clusters and reproducible source arithmetic; documented sensitivity to selected assumptions.
 
 **Not yet supported:** settlement-specific technology choices, universal-access cost, optimal repair priorities, a validated post-war grid map, electrical security certification or treating 2012 projections as observations.
 

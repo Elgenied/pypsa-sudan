@@ -1,0 +1,32 @@
+name: Check Sudan DRE spatial notebook
+on:
+  push:
+    paths:
+      - 'research/dre_atlas_2025/**'
+      - '.github/workflows/dre-spatial.yml'
+  pull_request:
+    paths:
+      - 'research/dre_atlas_2025/**'
+      - '.github/workflows/dre-spatial.yml'
+  workflow_dispatch:
+jobs:
+  spatial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: research/dre_atlas_2025/requirements.txt
+      - run: python -m pip install -r research/dre_atlas_2025/requirements.txt
+      - run: python -m ipykernel install --user --name python3
+      - run: python research/dre_atlas_2025/check_data.py
+      - run: python research/dre_atlas_2025/run_notebook.py --kernel python3
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sudan-dre-spatial-analysis
+          path: |
+            research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb
+            research/dre_atlas_2025/Sudan_DRE_Settlements.html

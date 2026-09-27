@@ -2,11 +2,11 @@
 
 [Project start page](../README.md) · [Evidence and missing inputs](../docs/EVIDENCE_AND_GAPS.md) · [Overall study plan](../docs/STUDY_PLAN.md)
 
-This is a versioned collection of CSV datasets, indexed by [catalog.json](catalog.json). Each entry records its path, row count, columns, source, SHA256 checksum and vintage. The canonical CSVs are under [`research/forecasting_2012/data/`](../research/forecasting_2012/data/); they are not duplicated here.
+This directory indexes two evidence collections. [catalog.json](catalog.json) covers 20 historical CSVs, with paths, row counts, columns, sources, SHA256 checksums and vintages. The [DRE spatial collection](../research/dre_atlas_2025/README.md) has its own [source and derived checksum register](../research/dre_atlas_2025/data/validation_report.json). Canonical files stay with their notebooks.
 
 Checksums normalize CRLF to LF, matching Git's text normalization, so the same data verify on Windows and Linux.
 
-## Available collection
+## Historical collection
 
 **Sudan forecasting report, 2012:** 19 plant/configuration records, 131 localities, state-sector consumption from 2006–2011, historical demographics and GDP, hydro and heat-rate curves, transmission information, and three sets of forecasts for 2012–2031. There are also source metadata and a separately attributed 2019 implementation cross-check.
 
@@ -18,9 +18,13 @@ Checksums normalize CRLF to LF, matching Git's text normalization, so the same d
 
 The root `Sudan_2022.ipynb` remains the main dispatch model. Its input tables and national calibration remain unchanged by the addition of this collection. Historical data should be matched and validated before replacing baseline assumptions.
 
-The study's planned settlement-level grid / mini-grid / standalone comparison is not implemented in either notebook yet. In particular, the 131 historical localities do not provide a georeferenced settlement map or validated post-war access inventory.
+## Spatial settlement collection
 
-## Maintain or update the collection
+The [DRE Atlas notebook](../research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb) uses 33,891 georeferenced clusters, complete non-geometry source attributes and simplified display polygons. The raw full-resolution data remain at the [World Bank catalog](https://energydata.info/dataset/sudan-distributed-renewable-energy-dre). Demand is a low-service building formula, not measured electricity or a uniform 2022 snapshot. Historical conflict labels use 2020–2022.
+
+The grid / mini-grid / standalone cost comparison is not yet implemented. The 131 historical localities and 33,891 DRE clusters are different spatial units; there is no validated crosswalk or post-war access inventory.
+
+## Maintain or update historical data
 
 1. Change the extraction script or source data with an explicit source/page reference. Preserve missing values and distinguish observations, assumptions and forecasts.
 2. If re-extracting, provide the original PDF locally to `research/forecasting_2012/extract_data.py`. Do not commit the PDF or raw page exports; these are excluded from this public collection. The extraction cache is document-specific.
@@ -36,3 +40,5 @@ The study's planned settlement-level grid / mini-grid / standalone comparison is
 4. Review the executed notebook, figures, validation results, source-issue register and catalog diff before committing. Update the dictionary and source metadata when definitions or sources change.
 
 The `Check historical data and replication` workflow verifies file integrity and reruns the notebook on relevant changes. These checks detect catalog drift and calculation regressions; they do not prove the source's historical accuracy or automatically fetch new data. New evidence requires a reviewed update.
+
+For a DRE update, follow [the spatial collection's rebuild instructions](../research/dre_atlas_2025/README.md), review changes to original checksums and source definitions, then rerun the spatial notebook. Its workflow checks committed data and notebook output without downloading the original large files.

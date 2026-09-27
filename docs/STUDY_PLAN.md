@@ -22,7 +22,7 @@ flowchart TD
     F --> G[Validate pilot cases and test sensitivity before national conclusions]
 ```
 
-Two scales must connect: the **national/regional electricity system** and **local settlement access**. The current 19-node model represents the first approximately. A locality table is context; village-scale choices need georeferenced demand clusters and viable routes.
+Two scales must connect: the **national/regional electricity system** and **local settlement access**. The current 19-node model represents the first approximately. The [DRE settlement notebook](../research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb) now provides 33,891 georeferenced clusters and low-service demand estimates; viable routes and verified access remain to be established. The older locality table is contextual evidence at a different scale.
 
 ## What each option means
 
@@ -70,13 +70,13 @@ A staged approach can iterate local choices with regional supply/network costs. 
 | Stage | Deliverable | Complete when | Status |
 |---|---|---|---|
 | **0. Make the project readable** | Project map, evidence register and notebook guides | Evidence, calibrated results, assumptions and proposed work are visibly distinguished | **Available** |
-| **1. Prepare reference and pilot inputs** | Reconciled 2022 fleet; hydro-seasonality upgrade; small mapped settlement sample; service and cost tables | Years/definitions/units agree; unknowns have bounds; assets and demand are not double counted | **Next** |
+| **1. Prepare reference and pilot inputs** | Reconciled 2022 fleet; hydro-seasonality upgrade; mapped settlement sample; service and cost tables | Years/definitions/units agree; unknowns have bounds; assets and demand are not double counted | **In progress: DRE spatial input available; route, service and cost inputs remain** |
 | **2. Demonstrate a fair comparison** | Representative clusters with grid, mini-grid and standalone alternatives | Feasible options meet service targets; costs reconcile; limiting cases behave plausibly; shared routes and upstream assumptions are exposed | **Planned** |
 | **3. Couple access and regional supply** | Repair, capacity, network and connection decisions | Balances, service, capacity and budgets pass; small cases are checked independently; screening is distinguished from joint optimization | **Planned** |
 | **4. Scale and stress-test** | Regional/national maps across recovery, demand, fuel, hydro, cost and finance cases | Robust/uncertain choices are visible; chronological storage and seasonal adequacy are checked; spatial coverage is reported | **Planned** |
 | **5. Paper release** | Archived data/version, methods, validation and reproducible notebook | Claims match evidence; holdout/local checks, uncertainty, limitations and source rights are documented | **Planned** |
 
-Choose pilot clusters after reviewing actual locations and coverage. Near-grid, dense remote and dispersed rural are useful **case types**, not conclusions about named regions. Synthetic cases can test software but must be labelled and cannot validate geographic recommendations.
+Choose pilot clusters from the DRE atlas after reviewing actual locations and coverage. Near-grid, dense remote and dispersed rural are useful **case types**, not conclusions about named regions. The source grid-distance column is straight-line proximity to mixed/unknown-voltage grid data, not a verified route. The 2020–2022 conflict categories are historical exposure, not current safety. Synthetic cases can test software but must be labelled and cannot validate geographic recommendations.
 
 ## Results for the paper
 
@@ -89,4 +89,4 @@ Choose pilot clusters after reviewing actual locations and coverage. Near-grid, 
 
 The immediate goal is **a transparent, cost-complete pilot explaining why each option wins**. A national coloured map follows a credible comparison.
 
-The existing pies show capacity or dispatch, not optimal electrification technologies. The report's projected access is not an optimized result. There is currently no measured post-war damage inventory or settlement-level choice optimizer in this repository. The stages above describe future work.
+The existing pies show capacity or dispatch, not optimal electrification technologies. The report's projected access is not an optimized result. The DRE maps show settlement evidence, not the cheapest service option. There is currently no measured post-war damage inventory or settlement-level choice optimizer in this repository. The stages above describe future work.
