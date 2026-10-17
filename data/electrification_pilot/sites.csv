@@ -1,0 +1,4 @@
+pilot_type,geohash,village_name,admin_cgaz_1,admin_cgaz_2,lat,lon,num_connections,demand,hull_area,building_density_percent,distance_to_existing_transmission_lines,pv_value,has_nightlight
+near_grid,scbmu9pc3u,Al Kurumuk,Blue Nile,Al Kurmuk,10.860225,34.310041,196,65.7,0.492,1.22,1.54,1674.352,False
+remote_dense,sdxk3ns4zh,Ash Shiqeyyab,Gezira,Al Hasahisa,14.845771,32.745058,132,44.2,0.021,22.9,30.88,1803.093,False
+remote_sparse,sfcc38ee31,Al Gash,Kassala,Reifi Aroma,15.691789,36.281707,123,41.2,0.283,1.17,24.91,1835.929,False

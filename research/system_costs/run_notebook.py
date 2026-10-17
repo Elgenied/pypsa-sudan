@@ -13,7 +13,7 @@ args=parser.parse_args()
 path=ROOT/'Sudan_System_Costs.ipynb'
 nb=nbformat.read(path,as_version=4)
 if not args.export_only:
-    NotebookClient(nb,timeout=300,kernel_name=args.kernel,resources={'metadata':{'path':str(ROOT)}}).execute()
+    NotebookClient(nb,timeout=1800,kernel_name=args.kernel,resources={'metadata':{'path':str(ROOT)}}).execute()
     nbformat.write(nb,path)
 exporter=HTMLExporter(template_name='lab');exporter.exclude_input=True
 body,_=exporter.from_notebook_node(nb)

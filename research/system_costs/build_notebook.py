@@ -6,23 +6,23 @@ cells=[]
 def md(text): cells.append(nbf.v4.new_markdown_cell(text.strip()))
 def code(text): cells.append(nbf.v4.new_code_cell(text.strip()))
 
-md('''# Sudan electrification: complete system-cost accounting
+md('''# Sudan electrification: system costs and hourly pilot study
 
-**A working cost model for grid extension, mini-grids and standalone supply.**
+**A working cost model and optimized three-cluster pilot for grid extension, mini-grids and standalone supply.** [Jump to the new hourly study](#optimized-pilot).
 
 This notebook assembles equipment, installed networks, connections, delivery, installation, project development, tax allowances, annual operation, replacements, disposal and finance. It is the cost layer for the post-war electrification study, separate from the existing 2022 dispatch model.
 
-**Read the results as provisional budgets for fixed example designs.** We have dated Sudan equipment/fuel evidence, but no complete, comparable supplier quotations. Every numeric USD modelling input is an editable analyst assumption. Historical regional benchmarks are retained separately. No observed Sudan price is silently converted to USD, and no damage is inferred from a conflict-risk category.
+**Sections 1–6 explain provisional budgets for fixed example designs. Section 7 optimizes capacities and dispatch for three real atlas clusters.** We have dated Sudan equipment/fuel evidence, but no complete, comparable supplier quotations. Every numeric USD modelling input is an editable analyst assumption. Historical regional benchmarks are retained separately. No observed Sudan price is silently converted to USD, and no damage is inferred from a conflict-risk category.
 
 | Available and checked | Still needed |
 |---|---|
-| Four costed examples; three cost/finance cases; annual cash flows; source register; arithmetic tests | Actual settlement design, route survey, quotations, dated FX and finance offers |
-| Same annual demand target: 100 homes × 1 kWh/day = 36,500 kWh/year | Hourly/seasonal adequacy, comparable peak power, outage service and productive loads |
+| Four fixed cost examples and an 18-run hourly pilot; lifecycle costs, source register and numerical tests | Verified settlement design, routes, quotations, dated FX and finance offers |
+| Fixed budgets use 100 homes; the pilot uses source cluster sizes and checks identical hourly service across options | Measured diversity/peaks, critical and productive loads, field reliability and multiple weather years |
 | Transparent upfront and 20-year costs | A validated least-cost technology recommendation or national budget |
 
-The examples are **not optimized**. Their peak capabilities and reliability have not been matched. Lower cost here cannot establish a preferred technology.
+The fixed examples in sections 1–6 are **not optimized**. Section 7 separately matches assumed demand across options and checks hourly adequacy. Its conditional rankings depend on provisional routes, equipment prices, service profiles and grid availability; they are not field-validated recommendations.
 
-**Reading order:** 1 Results → 2 Cost breakdown → 3 Cash flows and finance → 4 Sensitivities → 5 Evidence and assumptions → 6 Validation and next use.
+**Reading order:** 1 Fixed budgets → 2 Cost breakdown → 3 Cash flows and finance → 4 Sensitivities → 5 Evidence and assumptions → 6 Accounting checks → **7 Optimized settlement pilot, recovery stresses and findings**.
 
 [Project map](https://github.com/Elgenied/pypsa-sudan) · [Editable inputs and accounting rules](../../data/system_costs/README.md) · [Study plan](https://github.com/Elgenied/pypsa-sudan/blob/main/docs/STUDY_PLAN.md)
 ''')
@@ -230,7 +230,7 @@ For a one-year PyPSA objective, `capital_cost` must be periodized, not raw USD/k
 
 At the central fuel assumptions, diesel's simple variable electric-output cost is `(1.5 USD/litre × 0.32 litre/kWh + 0.03 USD/kWh) × 1,000 = 510 USD/MWh`. This already uses electrical-output fuel consumption; do not divide by efficiency again. The per-litre input remains provisional and the annual diesel share used in this notebook must be replaced by dispatch.
 
-**This notebook does not change the 2022 model or claim a least-cost Sudan map. It supplies the cost accounting needed to build and audit that comparison.**
+**Sections 1–6 provide the cost accounting. Section 7 below now applies it to an hourly three-cluster optimization pilot. The 2022 national dispatch model is unchanged and no national least-cost map is claimed.**
 
 ### References
 
@@ -239,6 +239,8 @@ At the central fuel assumptions, diesel's simple variable electric-output cost i
 - [Sudan report evidence source register](../../data/report_evidence/source_register.csv): R17, UNDP 2026 solar value-chain study, PDF pages 29 and 31; R12, World Bank August 2024 electricity snapshot, PDF pages 9–10.
 - [PyPSA 1.0.6 Generator](https://docs.pypsa.org/v1.0.6/user-guide/components/generators/) and [Store](https://docs.pypsa.org/v1.0.6/user-guide/components/stores/) component documentation.
 ''')
+from pilot_notebook_sections import sections
+cells.extend(sections())
 nb=nbf.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python (pypsa)','language':'python','name':'pypsa'},'language_info':{'name':'python'}})
 nbf.write(nb,ROOT/'Sudan_System_Costs.ipynb')
 print('Built',ROOT/'Sudan_System_Costs.ipynb')

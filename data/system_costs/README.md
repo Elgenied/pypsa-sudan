@@ -4,6 +4,8 @@
 
 Prepared 17 October 2026. Every USD model input is a **provisional analyst assumption**, with lower-input, central and higher-input cases. Historical regional benchmarks and dated Sudan evidence are kept separate. The assigned **constant-2025-USD** basis is an explicit scenario convention, not a verified normalization of older prices. No actual or forecast currency exchange rate is assumed. Price and FX normalization remain necessary for a paper's central cost estimates.
 
+**Next study step implemented:** section 7 of the same notebook now uses these costs in an [hourly three-cluster PyPSA pilot](../electrification_pilot/README.md). The fixed examples described below remain unchanged; the pilot separately sizes equipment and reconstructs full costs from dispatch. It produces conditional local rankings, with explicit service and route assumptions, not a field-validated plan.
+
 ## Files to edit and files to read
 
 | File | Role |

@@ -1,0 +1,189 @@
+run_id,component,group,quantity,quantity_unit,unit_cost,cost,life,om_fraction,imported,transport_eligible,labour_eligible
+scbmu9pc3u_standalone_base,pv_module,PV,197.09699422548096,kWp,375.0,73911.37283455535,25,0.01,1.0,1.0,1.0
+scbmu9pc3u_standalone_base,battery,Storage,179.7428509412278,kWh_nominal,437.5,78637.49728678717,8,0.005,1.0,1.0,1.0
+scbmu9pc3u_standalone_base,pv_bos,PV,197.09699422548096,kWp,150.0,29564.549133822144,25,0.01,1.0,1.0,1.0
+scbmu9pc3u_standalone_base,house_wiring,Connections,196.0,connection,100.0,19600.0,20,0.01,0.0,0.0,0.0
+scbmu9pc3u_standalone_base,pv_inverter,PV,197.09699422548096,kW_AC,187.5,36955.68641727768,10,0.01,1.0,1.0,1.0
+scbmu9pc3u_standalone_base,battery_inverter,Power electronics,28.8367816091954,kW_AC,525.0,15139.310344827583,10,0.01,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_base,pv_module,PV,56.81407665127309,kWp,300.0,17044.222995381926,25,0.01,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_base,pv_inverter,PV,56.81407665127309,kW_AC,150.0,8522.111497690963,10,0.01,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_base,battery,Storage,174.4645113535788,kWh_nominal,350.0,61062.578973752585,8,0.005,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_base,battery_inverter,Power electronics,26.225292208989668,kW_AC,420.0,11014.62272777566,10,0.01,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_base,pv_bos,PV,56.81407665127309,kWp,120.0,6817.689198152771,25,0.01,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_base,diesel_genset,Backup,5.119035627092293,kW_electric,650.0,3327.3731576099904,10,0.03,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_base,fuel_tank_ats,Backup,1.0,system,1200.0,1200.0,15,0.02,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_base,lv_line,Network,12.765973523394134,route_km,10000.0,127659.73523394133,30,0.02,0.0,0.0,0.0
+scbmu9pc3u_mini_grid_base,service_meter,Connections,196.0,connection,120.0,23520.0,10,0.01,0.0,0.0,0.0
+scbmu9pc3u_mini_grid_base,house_wiring,Connections,196.0,connection,100.0,19600.0,20,0.01,0.0,0.0,0.0
+scbmu9pc3u_mini_grid_base,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+scbmu9pc3u_mini_grid_base,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_base,mv_line,Network,2.0020000000000002,route_km,20000.0,40040.00000000001,30,0.02,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_base,lv_line,Network,12.765973523394134,route_km,10000.0,127659.73523394133,30,0.02,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_base,transformer_100kVA,Network,1.0,unit_100kVA,12000.0,12000.0,30,0.015,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_base,service_meter,Connections,196.0,connection,120.0,23520.0,10,0.01,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_base,house_wiring,Connections,196.0,connection,100.0,19600.0,20,0.01,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_base,grid_protection,Network,1.0,site,3000.0,3000.0,20,0.01,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_base,pv_module,PV,10.82511461665724,kWp,300.0,3247.534384997172,25,0.01,1.0,1.0,1.0
+scbmu9pc3u_grid_extension_base,pv_inverter,PV,10.82511461665724,kW_AC,150.0,1623.767192498586,10,0.01,1.0,1.0,1.0
+scbmu9pc3u_grid_extension_base,pv_bos,PV,10.82511461665724,kWp,120.0,1299.0137539988689,25,0.01,1.0,1.0,1.0
+scbmu9pc3u_grid_extension_base,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_base,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+sdxk3ns4zh_standalone_base,pv_module,PV,56.77837060698398,kWp,375.0,21291.88897761899,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_standalone_base,battery,Storage,119.45316367705578,kWh_nominal,437.5,52260.75910871191,8,0.005,1.0,1.0,1.0
+sdxk3ns4zh_standalone_base,pv_bos,PV,56.77837060698398,kWp,150.0,8516.755591047597,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_standalone_base,house_wiring,Connections,132.0,connection,100.0,13200.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_standalone_base,pv_inverter,PV,56.77837060698398,kW_AC,187.5,10645.944488809495,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_standalone_base,battery_inverter,Power electronics,19.42068965517241,kW_AC,525.0,10195.862068965514,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_base,pv_module,PV,34.118681768873664,kWp,300.0,10235.6045306621,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_base,pv_inverter,PV,34.118681768873664,kW_AC,150.0,5117.80226533105,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_base,battery,Storage,120.20927017546154,kWh_nominal,350.0,42073.24456141154,8,0.005,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_base,battery_inverter,Power electronics,19.11491411225434,kW_AC,420.0,8028.263927146822,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_base,pv_bos,PV,34.118681768873664,kWp,120.0,4094.2418122648396,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_base,diesel_genset,Backup,1.9945311651069784,kW_electric,650.0,1296.445257319536,10,0.03,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_base,fuel_tank_ats,Backup,1.0,system,1200.0,1200.0,15,0.02,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_base,lv_line,Network,2.164412160379811,route_km,10000.0,21644.121603798114,30,0.02,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_base,service_meter,Connections,132.0,connection,120.0,15840.0,10,0.01,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_base,house_wiring,Connections,132.0,connection,100.0,13200.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_base,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_base,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_base,mv_line,Network,40.144,route_km,20000.0,802880.0,30,0.02,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_base,lv_line,Network,2.164412160379811,route_km,10000.0,21644.121603798114,30,0.02,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_base,transformer_100kVA,Network,1.0,unit_100kVA,12000.0,12000.0,30,0.015,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_base,service_meter,Connections,132.0,connection,120.0,15840.0,10,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_base,house_wiring,Connections,132.0,connection,100.0,13200.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_base,grid_protection,Network,1.0,site,3000.0,3000.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_base,pv_module,PV,7.153560112584472,kWp,300.0,2146.0680337753415,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_base,pv_inverter,PV,7.153560112584472,kW_AC,150.0,1073.0340168876708,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_base,pv_bos,PV,7.153560112584472,kWp,120.0,858.4272135101367,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_base,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_base,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+sfcc38ee31_standalone_base,pv_module,PV,90.65016750216746,kWp,375.0,33993.8128133128,25,0.01,1.0,1.0,1.0
+sfcc38ee31_standalone_base,battery,Storage,111.01792026239112,kWh_nominal,437.5,48570.34011479611,8,0.005,1.0,1.0,1.0
+sfcc38ee31_standalone_base,pv_bos,PV,90.65016750216746,kWp,150.0,13597.525125325119,25,0.01,1.0,1.0,1.0
+sfcc38ee31_standalone_base,house_wiring,Connections,123.0,connection,100.0,12300.0,20,0.01,0.0,0.0,0.0
+sfcc38ee31_standalone_base,pv_inverter,PV,90.65016750216746,kW_AC,187.5,16996.9064066564,10,0.01,1.0,1.0,1.0
+sfcc38ee31_standalone_base,battery_inverter,Power electronics,19.923223682947544,kW_AC,525.0,10459.692433547461,10,0.01,1.0,1.0,1.0
+sfcc38ee31_mini_grid_base,pv_module,PV,31.573854741368994,kWp,300.0,9472.156422410699,25,0.01,1.0,1.0,1.0
+sfcc38ee31_mini_grid_base,pv_inverter,PV,31.573854741368994,kW_AC,150.0,4736.078211205349,10,0.01,1.0,1.0,1.0
+sfcc38ee31_mini_grid_base,battery,Storage,111.28720958086159,kWh_nominal,350.0,38950.523353301556,8,0.005,1.0,1.0,1.0
+sfcc38ee31_mini_grid_base,battery_inverter,Power electronics,16.783497867041483,kW_AC,420.0,7049.069104157423,10,0.01,1.0,1.0,1.0
+sfcc38ee31_mini_grid_base,pv_bos,PV,31.573854741368994,kWp,120.0,3788.862568964279,25,0.01,1.0,1.0,1.0
+sfcc38ee31_mini_grid_base,diesel_genset,Backup,2.886667050499748,kW_electric,650.0,1876.3335828248362,10,0.03,1.0,1.0,1.0
+sfcc38ee31_mini_grid_base,fuel_tank_ats,Backup,1.0,system,1200.0,1200.0,15,0.02,1.0,1.0,1.0
+sfcc38ee31_mini_grid_base,lv_line,Network,7.669889829717243,route_km,10000.0,76698.89829717243,30,0.02,0.0,0.0,0.0
+sfcc38ee31_mini_grid_base,service_meter,Connections,123.0,connection,120.0,14760.0,10,0.01,0.0,0.0,0.0
+sfcc38ee31_mini_grid_base,house_wiring,Connections,123.0,connection,100.0,12300.0,20,0.01,0.0,0.0,0.0
+sfcc38ee31_mini_grid_base,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+sfcc38ee31_mini_grid_base,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+sfcc38ee31_grid_extension_base,mv_line,Network,32.383,route_km,20000.0,647660.0,30,0.02,0.0,0.0,0.0
+sfcc38ee31_grid_extension_base,lv_line,Network,7.669889829717243,route_km,10000.0,76698.89829717243,30,0.02,0.0,0.0,0.0
+sfcc38ee31_grid_extension_base,transformer_100kVA,Network,1.0,unit_100kVA,12000.0,12000.0,30,0.015,0.0,0.0,0.0
+sfcc38ee31_grid_extension_base,service_meter,Connections,123.0,connection,120.0,14760.0,10,0.01,0.0,0.0,0.0
+sfcc38ee31_grid_extension_base,house_wiring,Connections,123.0,connection,100.0,12300.0,20,0.01,0.0,0.0,0.0
+sfcc38ee31_grid_extension_base,grid_protection,Network,1.0,site,3000.0,3000.0,20,0.01,0.0,0.0,0.0
+sfcc38ee31_grid_extension_base,pv_module,PV,6.714829077701305,kWp,300.0,2014.4487233103914,25,0.01,1.0,1.0,1.0
+sfcc38ee31_grid_extension_base,pv_inverter,PV,6.714829077701305,kW_AC,150.0,1007.2243616551957,10,0.01,1.0,1.0,1.0
+sfcc38ee31_grid_extension_base,pv_bos,PV,6.714829077701305,kWp,120.0,805.7794893241565,25,0.01,1.0,1.0,1.0
+sfcc38ee31_grid_extension_base,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+sfcc38ee31_grid_extension_base,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_evening_outage,mv_line,Network,2.0020000000000002,route_km,20000.0,40040.00000000001,30,0.02,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_evening_outage,lv_line,Network,12.765973523394134,route_km,10000.0,127659.73523394133,30,0.02,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_evening_outage,transformer_100kVA,Network,1.0,unit_100kVA,12000.0,12000.0,30,0.015,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_evening_outage,service_meter,Connections,196.0,connection,120.0,23520.0,10,0.01,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_evening_outage,house_wiring,Connections,196.0,connection,100.0,19600.0,20,0.01,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_evening_outage,grid_protection,Network,1.0,site,3000.0,3000.0,20,0.01,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_evening_outage,pv_module,PV,41.916241904372015,kWp,300.0,12574.872571311604,25,0.01,1.0,1.0,1.0
+scbmu9pc3u_grid_extension_evening_outage,pv_inverter,PV,41.916241904372015,kW_AC,150.0,6287.436285655802,10,0.01,1.0,1.0,1.0
+scbmu9pc3u_grid_extension_evening_outage,battery,Storage,150.19157088122603,kWh_nominal,350.0,52567.04980842911,8,0.005,1.0,1.0,1.0
+scbmu9pc3u_grid_extension_evening_outage,battery_inverter,Power electronics,32.040868454661556,kW_AC,420.0,13457.164750957854,10,0.01,1.0,1.0,1.0
+scbmu9pc3u_grid_extension_evening_outage,pv_bos,PV,41.916241904372015,kWp,120.0,5029.949028524642,25,0.01,1.0,1.0,1.0
+scbmu9pc3u_grid_extension_evening_outage,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+scbmu9pc3u_grid_extension_evening_outage,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_evening_outage,mv_line,Network,40.144,route_km,20000.0,802880.0,30,0.02,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_evening_outage,lv_line,Network,2.164412160379811,route_km,10000.0,21644.121603798114,30,0.02,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_evening_outage,transformer_100kVA,Network,1.0,unit_100kVA,12000.0,12000.0,30,0.015,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_evening_outage,service_meter,Connections,132.0,connection,120.0,15840.0,10,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_evening_outage,house_wiring,Connections,132.0,connection,100.0,13200.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_evening_outage,grid_protection,Network,1.0,site,3000.0,3000.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_evening_outage,pv_module,PV,27.192485541520686,kWp,300.0,8157.7456624562055,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_evening_outage,pv_inverter,PV,27.192485541520686,kW_AC,150.0,4078.8728312281028,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_evening_outage,battery,Storage,101.14942528735631,kWh_nominal,350.0,35402.298850574705,8,0.005,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_evening_outage,battery_inverter,Power electronics,21.57854406130268,kW_AC,420.0,9062.988505747126,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_evening_outage,pv_bos,PV,27.192485541520686,kWp,120.0,3263.0982649824823,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_evening_outage,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_evening_outage,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+sfcc38ee31_grid_extension_evening_outage,mv_line,Network,32.383,route_km,20000.0,647660.0,30,0.02,0.0,0.0,0.0
+sfcc38ee31_grid_extension_evening_outage,lv_line,Network,7.669889829717243,route_km,10000.0,76698.89829717243,30,0.02,0.0,0.0,0.0
+sfcc38ee31_grid_extension_evening_outage,transformer_100kVA,Network,1.0,unit_100kVA,12000.0,12000.0,30,0.015,0.0,0.0,0.0
+sfcc38ee31_grid_extension_evening_outage,service_meter,Connections,123.0,connection,120.0,14760.0,10,0.01,0.0,0.0,0.0
+sfcc38ee31_grid_extension_evening_outage,house_wiring,Connections,123.0,connection,100.0,12300.0,20,0.01,0.0,0.0,0.0
+sfcc38ee31_grid_extension_evening_outage,grid_protection,Network,1.0,site,3000.0,3000.0,20,0.01,0.0,0.0,0.0
+sfcc38ee31_grid_extension_evening_outage,pv_module,PV,25.185187131049776,kWp,300.0,7555.556139314933,25,0.01,1.0,1.0,1.0
+sfcc38ee31_grid_extension_evening_outage,pv_inverter,PV,25.185187131049776,kW_AC,150.0,3777.7780696574664,10,0.01,1.0,1.0,1.0
+sfcc38ee31_grid_extension_evening_outage,battery,Storage,94.25287356321837,kWh_nominal,350.0,32988.50574712643,8,0.005,1.0,1.0,1.0
+sfcc38ee31_grid_extension_evening_outage,battery_inverter,Power electronics,20.10727969348659,kW_AC,420.0,8445.057471264368,10,0.01,1.0,1.0,1.0
+sfcc38ee31_grid_extension_evening_outage,pv_bos,PV,25.185187131049776,kWp,120.0,3022.2224557259733,25,0.01,1.0,1.0,1.0
+sfcc38ee31_grid_extension_evening_outage,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+sfcc38ee31_grid_extension_evening_outage,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+scbmu9pc3u_mini_grid_no_diesel,pv_module,PV,214.23586328856618,kWp,300.0,64270.758986569854,25,0.01,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_no_diesel,pv_inverter,PV,214.23586328856618,kW_AC,150.0,32135.379493284927,10,0.01,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_no_diesel,battery,Storage,195.37266406655195,kWh_nominal,350.0,68380.43242329318,8,0.005,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_no_diesel,battery_inverter,Power electronics,31.344327836081952,kW_AC,420.0,13164.617691154419,10,0.01,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_no_diesel,pv_bos,PV,214.23586328856618,kWp,120.0,25708.30359462794,25,0.01,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_no_diesel,fuel_tank_ats,Backup,1.0,system,1200.0,1200.0,15,0.02,1.0,1.0,1.0
+scbmu9pc3u_mini_grid_no_diesel,lv_line,Network,12.765973523394134,route_km,10000.0,127659.73523394133,30,0.02,0.0,0.0,0.0
+scbmu9pc3u_mini_grid_no_diesel,service_meter,Connections,196.0,connection,120.0,23520.0,10,0.01,0.0,0.0,0.0
+scbmu9pc3u_mini_grid_no_diesel,house_wiring,Connections,196.0,connection,100.0,19600.0,20,0.01,0.0,0.0,0.0
+scbmu9pc3u_mini_grid_no_diesel,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+scbmu9pc3u_mini_grid_no_diesel,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_no_diesel,pv_module,PV,61.71562022498258,kWp,300.0,18514.686067494775,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_no_diesel,pv_inverter,PV,61.71562022498258,kW_AC,150.0,9257.343033747387,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_no_diesel,battery,Storage,129.84039530114762,kWh_nominal,350.0,45444.138355401665,8,0.005,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_no_diesel,battery_inverter,Power electronics,21.109445277361317,kW_AC,420.0,8865.967016491753,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_no_diesel,pv_bos,PV,61.71562022498258,kWp,120.0,7405.87442699791,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_no_diesel,fuel_tank_ats,Backup,1.0,system,1200.0,1200.0,15,0.02,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_no_diesel,lv_line,Network,2.164412160379811,route_km,10000.0,21644.121603798114,30,0.02,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_no_diesel,service_meter,Connections,132.0,connection,120.0,15840.0,10,0.01,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_no_diesel,house_wiring,Connections,132.0,connection,100.0,13200.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_no_diesel,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_no_diesel,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+sfcc38ee31_mini_grid_no_diesel,pv_module,PV,98.53279076322549,kWp,300.0,29559.837228967648,25,0.01,1.0,1.0,1.0
+sfcc38ee31_mini_grid_no_diesel,pv_inverter,PV,98.53279076322549,kW_AC,150.0,14779.918614483824,10,0.01,1.0,1.0,1.0
+sfcc38ee31_mini_grid_no_diesel,battery,Storage,120.67165245912082,kWh_nominal,350.0,42235.078360692285,8,0.005,1.0,1.0,1.0
+sfcc38ee31_mini_grid_no_diesel,battery_inverter,Power electronics,21.655677916247328,kW_AC,420.0,9095.384724823878,10,0.01,1.0,1.0,1.0
+sfcc38ee31_mini_grid_no_diesel,pv_bos,PV,98.53279076322549,kWp,120.0,11823.93489158706,25,0.01,1.0,1.0,1.0
+sfcc38ee31_mini_grid_no_diesel,fuel_tank_ats,Backup,1.0,system,1200.0,1200.0,15,0.02,1.0,1.0,1.0
+sfcc38ee31_mini_grid_no_diesel,lv_line,Network,7.669889829717243,route_km,10000.0,76698.89829717243,30,0.02,0.0,0.0,0.0
+sfcc38ee31_mini_grid_no_diesel,service_meter,Connections,123.0,connection,120.0,14760.0,10,0.01,0.0,0.0,0.0
+sfcc38ee31_mini_grid_no_diesel,house_wiring,Connections,123.0,connection,100.0,12300.0,20,0.01,0.0,0.0,0.0
+sfcc38ee31_mini_grid_no_diesel,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+sfcc38ee31_mini_grid_no_diesel,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+sdxk3ns4zh_standalone_double_demand,pv_module,PV,113.55674121396795,kWp,375.0,42583.77795523798,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_standalone_double_demand,battery,Storage,238.90632735411157,kWh_nominal,437.5,104521.51821742381,8,0.005,1.0,1.0,1.0
+sdxk3ns4zh_standalone_double_demand,pv_bos,PV,113.55674121396795,kWp,150.0,17033.511182095193,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_standalone_double_demand,house_wiring,Connections,132.0,connection,100.0,13200.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_standalone_double_demand,pv_inverter,PV,113.55674121396795,kW_AC,187.5,21291.88897761899,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_standalone_double_demand,battery_inverter,Power electronics,38.84137931034482,kW_AC,525.0,20391.72413793103,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_double_demand,pv_module,PV,68.23736353774733,kWp,300.0,20471.2090613242,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_double_demand,pv_inverter,PV,68.23736353774733,kW_AC,150.0,10235.6045306621,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_double_demand,battery,Storage,240.41854035092308,kWh_nominal,350.0,84146.48912282308,8,0.005,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_double_demand,battery_inverter,Power electronics,38.22982822450868,kW_AC,420.0,16056.527854293645,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_double_demand,pv_bos,PV,68.23736353774733,kWp,120.0,8188.483624529679,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_double_demand,diesel_genset,Backup,3.9890623302139567,kW_electric,650.0,2592.890514639072,10,0.03,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_double_demand,fuel_tank_ats,Backup,1.0,system,1200.0,1200.0,15,0.02,1.0,1.0,1.0
+sdxk3ns4zh_mini_grid_double_demand,lv_line,Network,2.164412160379811,route_km,10000.0,21644.121603798114,30,0.02,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_double_demand,service_meter,Connections,132.0,connection,120.0,15840.0,10,0.01,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_double_demand,house_wiring,Connections,132.0,connection,100.0,13200.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_double_demand,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+sdxk3ns4zh_mini_grid_double_demand,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_double_demand,mv_line,Network,40.144,route_km,20000.0,802880.0,30,0.02,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_double_demand,lv_line,Network,2.164412160379811,route_km,10000.0,21644.121603798114,30,0.02,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_double_demand,transformer_100kVA,Network,1.0,unit_100kVA,12000.0,12000.0,30,0.015,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_double_demand,service_meter,Connections,132.0,connection,120.0,15840.0,10,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_double_demand,house_wiring,Connections,132.0,connection,100.0,13200.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_double_demand,grid_protection,Network,1.0,site,3000.0,3000.0,20,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_double_demand,pv_module,PV,14.307120225168944,kWp,300.0,4292.136067550683,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_double_demand,pv_inverter,PV,14.307120225168944,kW_AC,150.0,2146.0680337753415,10,0.01,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_double_demand,pv_bos,PV,14.307120225168944,kWp,120.0,1716.8544270202733,25,0.01,1.0,1.0,1.0
+sdxk3ns4zh_grid_extension_double_demand,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+sdxk3ns4zh_grid_extension_double_demand,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0

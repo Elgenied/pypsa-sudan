@@ -69,7 +69,9 @@ The **6.277 million kWh/day** atlas total would be about **2.291 TWh/year** if r
 
 ### Notebook D: system costs
 
-The [cost notebook](../research/system_costs/Sudan_System_Costs.ipynb) accounts for 17 component types and 24 cost/finance parameters across four fixed 100-home designs. It calculates upfront budgets, annual operations, replacements, disposal, 20-year NPC, debt-service illustrations and sensitivities. Nine tests cover independent hand-calculated cash flows, unit/loss conversions, installed-cost exclusions, financing separation and invalid inputs. These are software/accounting checks, **not** validation of price assumptions, capacities or hourly adequacy. Every numeric USD price is provisional; source SDG quotations retain their dates without an inferred FX conversion. Conditional cost per target kWh is not a feasibility-validated LCOE.
+Sections 1–6 of the [cost notebook](../research/system_costs/Sudan_System_Costs.ipynb) account for 17 component types and 24 cost/finance parameters across four fixed 100-home designs. Nine tests cover hand-calculated cash flows, units, installed-cost scope and finance separation. Those fixed examples' cost per target kWh is not a feasibility-validated LCOE.
+
+**Section 7 now adds a three-cluster hourly electrification pilot:** 18 optimal PyPSA cases, complete 2022 NASA POWER weather, identical assumed service targets, PV/storage/converter sizing and grid/diesel operation. Independent reconstruction checks 157,680 hourly case snapshots, energy and SOC balances, component/fuel/grid limits, lifecycle objective reconciliation and monotonic responses to removed supply options. Modelled LCOE uses hourly feasible delivery for this stylized system. Prices, routes, household counts and service profiles are **not independently field-validated**. Source SDG quotations remain separate from provisional USD prices; no actual exchange-rate conversion or current damage inventory is inferred. See [pilot assumptions and provenance](../data/electrification_pilot/README.md).
 
 ### October 2026 report review
 
@@ -92,8 +94,8 @@ Missing exact damage records do not prevent scenario analysis. The claim becomes
 
 ## Claims today
 
-**Supported:** a reproducible, nationally calibrated regional dispatch prototype; traceable historical datasets; mapped DRE clusters and reproducible source arithmetic; lifecycle-cost accounting for explicitly illustrative designs; documented sensitivity to selected assumptions.
+**Supported:** a reproducible, nationally calibrated regional dispatch prototype; traceable historical datasets; mapped DRE clusters and reproducible source arithmetic; full lifecycle-cost accounting; conditional technology rankings and hourly capacity/dispatch optimization for three atlas clusters under documented assumptions.
 
-**Not yet supported:** settlement-specific technology choices, universal-access cost, optimal repair priorities, a validated post-war grid map, electrical security certification or treating 2012 projections as observations.
+**Not yet supported:** field-validated settlement recommendations, universal-access cost, joint national investment optimality, optimal repair priorities, a validated post-war grid map, distribution/security certification or treating 2012 projections as observations.
 
 Use the [study plan](STUDY_PLAN.md) to move from these inputs to the intended planning results.
