@@ -4,7 +4,7 @@
 
 The question is: **Where should Sudan rehabilitate or extend the grid, where should it build mini-grids, and where are standalone systems more economical—at a specified level of service?**
 
-**Current stage:** a nationally calibrated 2022 dispatch prototype, a historical evidence collection, and a validated 2025-release settlement atlas with 33,891 mapped clusters. A settlement-level electrification optimizer and recommendation map have **not yet been built**.
+**Current stage:** a nationally calibrated 2022 dispatch prototype, historical/report evidence, a checked 2025-release settlement atlas with 33,891 mapped clusters, and a working lifecycle-cost notebook for illustrative service options. A settlement-level electrification optimizer and recommendation map have **not yet been built**.
 
 ## Start here
 
@@ -16,8 +16,9 @@ The question is: **Where should Sudan rehabilitate or extend the grid, where sho
 | **4. [Historical evidence notebook](research/forecasting_2012/Sudan_Forecasting_Replication.ipynb)** | Recovered 2012-report data, replicated calculations, regional sector pies and source conflicts |
 | **5. [Settlement atlas notebook](research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb)** | Settlement maps, source formula checks, state summaries, grid-distance screens and spatial gaps |
 | **6. [Report evidence and usage guide](data/report_evidence/README.md)** | October 2026 review: dated equipment/fuel prices, plant status, sector sales, published assumptions, source conflicts and modelling uses |
+| **7. [System-cost notebook](research/system_costs/Sudan_System_Costs.ipynb)** | Complete cost accounting for four illustrative designs: upfront investment, O&M, replacements, finance, sensitivity, sources and remaining gaps |
 
-There are **three notebooks with different jobs**. Each begins with a reader guide and ends with its role in the next study. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html), [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html) and [settlement HTML](research/dre_atlas_2025/Sudan_DRE_Settlements.html) are browser reading copies of those notebooks.
+There are **four notebooks with different jobs**. Each begins with a reader guide and ends with its role in the next study. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html), [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html), [settlement HTML](research/dre_atlas_2025/Sudan_DRE_Settlements.html) and [cost HTML](research/system_costs/Sudan_System_Costs.html) are browser reading copies of those notebooks.
 
 ## What exists today
 
@@ -27,6 +28,7 @@ There are **three notebooks with different jobs**. Each begins with a reader gui
 | **Historical evidence** | 20 cataloged datasets; 19 plant/configuration records; 131 historical localities; consumption, hydro, heat rates and forecasts | Ten arithmetic checks passed; source inconsistencies retained | What the report contains, how its visible calculations work and which inputs could improve the baseline |
 | **Settlement atlas** | 33,891 clusters; 41 source attribute columns and display polygons | Source CSV/GeoJSON IDs and values match; demand and 2020–2022 risk rules reproduce; anomalies logged | Where mapped clusters and screening indicators are; no technology choice |
 | **Report evidence** | 23 evidence tables from 19 supplied PDF files (18 distinct documents); source, issue and data-lead registers | Source/page attribution, hashes, schema checks and 23 arithmetic comparisons; two arithmetic discrepancies retained | Historical cross-checks and dated recovery/cost scenario evidence; not approved model inputs |
+| **System costs** | 17 component costs, 24 parameters, four fixed 100-home designs, three cost/finance cases; one cost notebook | Accounting and limiting-case tests pass; prices are provisional analyst assumptions and adequacy is untested | Traceable full-scope budgets and sensitivities; no feasible least-cost winner or country total |
 | **Post-war electrification planning** | Research design and prioritized gaps | **Planned; not implemented** | Intended: which service option, where, when, capacity and cost |
 
 **Calibration is not independent validation.** Matching inputs does not confirm the network or operation. The 2012 report's forecasts for 2022 are not observations. The 2025 Atlas combines inputs from different years: demand is a building formula and conflict labels describe 2020–2022, not current safety.
@@ -45,6 +47,7 @@ data/
   README.md                      Dataset navigation and update instructions
   catalog.json                   Index/checksums; does not duplicate CSVs
   report_evidence/               Curated PDF evidence, usage guide, source issues and checks
+  system_costs/                  Editable component costs, quantities, scenarios, sources and cost coverage
 research/forecasting_2012/
   Sudan_Forecasting_Replication.ipynb   Historical analysis notebook
   data/                          Canonical extracted historical CSVs
@@ -56,6 +59,10 @@ research/dre_atlas_2025/
   data/                          Settlement attributes and display polygons
   SOURCE_REGISTER.md             Layer dates, rights and limitations
   prepare_data.py                Rebuild from original public downloads
+research/system_costs/
+  Sudan_System_Costs.ipynb       Single notebook for system-cost accounting and sensitivities
+  cost_model.py                  Reusable fixed-design lifecycle-cost engine
+  results/                       Budgets, annual ledger, sensitivities and numerical checks
 scripts/                         Catalog maintenance
 .github/workflows/               Automated execution and integrity checks
 ```
@@ -64,7 +71,7 @@ Use the [data collection](data/README.md) for input evidence. Use [2022 results]
 
 ## Next milestone
 
-Prepare a **small settlement-level comparison of grid connection, mini-grid and standalone supply**, with matched service requirements and documented costs. In parallel, reconcile the 2022 fleet and introduce evidence-based hydro seasonality. The pilot must explain its costs and expose missing inputs before producing a national recommendation map. See the [milestones and completion criteria](docs/STUDY_PLAN.md#milestones-and-completion-criteria).
+Use the [assembled cost model](data/system_costs/README.md) to prepare a **small settlement-level comparison of grid connection, mini-grid and standalone supply**. Replace provisional prices with scoped quotes and optimize/check hourly supply at matched service requirements. In parallel, reconcile the 2022 fleet and introduce evidence-based hydro seasonality. A recommendation map follows a feasible, validated pilot. See the [milestones and completion criteria](docs/STUDY_PLAN.md#milestones-and-completion-criteria).
 
 ## Run
 
@@ -91,6 +98,10 @@ python scripts/data_catalog.py --check
 # Spatial atlas integrity and maps
 python research/dre_atlas_2025/check_data.py
 python research/dre_atlas_2025/run_notebook.py --kernel pypsa
+
+# System-cost accounting and the single cost notebook
+python research/system_costs/check_costs.py
+python research/system_costs/run_notebook.py --kernel pypsa
 ```
 
 For a new environment, use Python 3.13 and install `requirements.txt` plus the [spatial notebook requirements](research/dre_atlas_2025/requirements.txt); extracting a local PDF also needs the historical package's requirements. Add `--export-only` to a notebook runner to refresh its HTML after a markdown-only notebook edit. See [dataset maintenance](data/README.md) for data updates.
@@ -99,4 +110,4 @@ For a new environment, use Python 3.13 and install `requirements.txt` plus the [
 
 The baseline uses UNSD and World Bank sources cited in its notebook. Historical inputs have a [source register](research/forecasting_2012/SOURCE_REGISTER.md) and [rights/qualification notes](research/forecasting_2012/DATA_SOURCES_AND_RIGHTS.md). The [DRE source register](research/dre_atlas_2025/SOURCE_REGISTER.md) gives CC BY 4.0 attribution, layer dates and transformations. Original project code is MIT licensed; third-party material is not relicensed. Source PDF reports and raw page exports remain outside the public repository.
 
-Earlier exploratory files are preserved in Git history at `legacy-before-single-notebook-20260914`. Active work is the three notebooks above. PyPSA-Sudan is an independent research project, without implied PyPSA endorsement. A paper release still needs claim-appropriate validation, uncertainty analysis and an archived reproducible version.
+Earlier exploratory files are preserved in Git history at `legacy-before-single-notebook-20260914`. Active work is the four notebooks above. PyPSA-Sudan is an independent research project, without implied PyPSA endorsement. A paper release still needs claim-appropriate validation, uncertainty analysis and an archived reproducible version.

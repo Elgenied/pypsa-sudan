@@ -1,0 +1,24 @@
+name: Check system cost accounting
+on:
+  push:
+    paths:
+      - 'data/system_costs/**'
+      - 'research/system_costs/**'
+      - '.github/workflows/system-costs.yml'
+  pull_request:
+    paths:
+      - 'data/system_costs/**'
+      - 'research/system_costs/**'
+      - '.github/workflows/system-costs.yml'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install 'pandas>=2.3,<3' 'numpy>=2.1,<3' 'matplotlib>=3.9,<4' 'nbformat>=5.10,<6' 'nbclient>=0.10,<1' 'nbconvert>=7.16,<8' 'ipykernel>=6,<8'
+      - run: python research/system_costs/check_costs.py
+      - run: python research/system_costs/run_notebook.py --kernel python3

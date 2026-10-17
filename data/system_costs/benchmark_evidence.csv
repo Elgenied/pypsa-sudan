@@ -1,0 +1,8 @@
+benchmark_id,source_id,pdf_page,reference,geography,item,lower,central,upper,unit,qualification,model_use
+B01,ESMAP2022,85,Table 1.4; printed p57,Multi-country mini-grid survey,PV including PV inverter,388,441,599,USD/kWp,"25th/median/75th percentiles; historical inflation-adjusted dollars, not a 2025 Sudan quotation",Use only for scope/scale check of module plus PV inverter
+B02,ESMAP2022,85,Table 1.4; printed p57,Multi-country mini-grid survey,Lithium-ion battery,271,314,414,USD/kWh,Historical component costs; nominal versus usable capacity needs supplier check,Anchor only; not a complete installed battery system
+B03,ESMAP2022,85,Table 1.4; printed p57,Multi-country mini-grid survey,Inverter plus EMS,325,415,716,USD/kW,Table 1.7 elsewhere uses kVA; keep Table 1.4 kW basis,Anchor for mini-grid battery inverter; not PV inverter
+B04,ESMAP2022,85,Table 1.4; printed p57,Multi-country mini-grid survey,Distribution and meters,,250,331,USD/customer,25th percentile unit is printed USD/kWp and is excluded as ambiguous,Cross-check only; not added to explicit line and connection costs
+B05,WB_SOUTH_SUDAN2023,27,Annex Table 4; printed p26,"South Sudan, not Sudan",MV line,,7500,,USD/km,Historical model assumption; price year and detailed installed scope unspecified,Context only; not imported as current Sudan quote
+B06,WB_SOUTH_SUDAN2023,28,Annex Table 4; printed p27,"South Sudan, not Sudan",LV line,,4450,,USD/km,Historical model assumption; price year and detailed installed scope unspecified,Context only
+B07,WB_SOUTH_SUDAN2023,27,Annex Table 4; printed p26,"South Sudan, not Sudan",Mini-grid diesel,,650,,USD/kW,Historical planning assumption; not equipment survey,Provisional central assumption; fuel and maintenance separate

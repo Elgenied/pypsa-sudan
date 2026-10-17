@@ -1,0 +1,94 @@
+case,scenario,component,group,quantity,quantity_unit,unit_cost,cost,life,om_fraction,imported,transport_eligible,labour_eligible
+standalone,lower_input,pv_module,PV,100.0,kWp,200.0,20000.0,25,0.01,1.0,1.0,1.0
+standalone,lower_input,battery,Storage,300.0,kWh_nominal,250.0,75000.0,12,0.005,1.0,1.0,1.0
+standalone,lower_input,shs_hybrid_inverter,Power electronics,100.0,kW_AC,200.0,20000.0,10,0.01,1.0,1.0,1.0
+standalone,lower_input,pv_bos,PV,100.0,kWp,60.0,6000.0,25,0.01,1.0,1.0,1.0
+standalone,lower_input,house_wiring,Connections,100.0,connection,50.0,5000.0,20,0.01,0.0,0.0,0.0
+mini_grid,lower_input,pv_module,PV,50.0,kWp,200.0,10000.0,25,0.01,1.0,1.0,1.0
+mini_grid,lower_input,pv_inverter,PV,50.0,kW_AC,80.0,4000.0,10,0.01,1.0,1.0,1.0
+mini_grid,lower_input,battery,Storage,150.0,kWh_nominal,250.0,37500.0,12,0.005,1.0,1.0,1.0
+mini_grid,lower_input,battery_inverter,Power electronics,40.0,kW_AC,300.0,12000.0,10,0.01,1.0,1.0,1.0
+mini_grid,lower_input,pv_bos,PV,50.0,kWp,60.0,3000.0,25,0.01,1.0,1.0,1.0
+mini_grid,lower_input,diesel_genset,Backup,30.0,kW_electric,450.0,13500.0,10,0.03,1.0,1.0,1.0
+mini_grid,lower_input,fuel_tank_ats,Backup,1.0,system,500.0,500.0,15,0.02,1.0,1.0,1.0
+mini_grid,lower_input,lv_line,Network,2.0,route_km,5000.0,10000.0,30,0.02,0.0,0.0,0.0
+mini_grid,lower_input,service_meter,Connections,100.0,connection,60.0,6000.0,10,0.01,0.0,0.0,0.0
+mini_grid,lower_input,house_wiring,Connections,100.0,connection,50.0,5000.0,20,0.01,0.0,0.0,0.0
+mini_grid,lower_input,civil_site,Civil and site,1.0,site,3000.0,3000.0,25,0.01,0.0,0.0,0.0
+mini_grid,lower_input,land_right,Civil and site,1.0,site_20year,500.0,500.0,20,0.0,0.0,0.0,0.0
+grid_extension,lower_input,mv_line,Network,5.0,route_km,12000.0,60000.0,30,0.02,0.0,0.0,0.0
+grid_extension,lower_input,lv_line,Network,2.0,route_km,5000.0,10000.0,30,0.02,0.0,0.0,0.0
+grid_extension,lower_input,transformer_100kVA,Network,1.0,unit_100kVA,7000.0,7000.0,30,0.015,0.0,0.0,0.0
+grid_extension,lower_input,service_meter,Connections,100.0,connection,60.0,6000.0,10,0.01,0.0,0.0,0.0
+grid_extension,lower_input,house_wiring,Connections,100.0,connection,50.0,5000.0,20,0.01,0.0,0.0,0.0
+grid_extension,lower_input,grid_protection,Network,1.0,site,1500.0,1500.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,lower_input,mv_line,Network,5.0,route_km,12000.0,60000.0,30,0.02,0.0,0.0,0.0
+grid_repair_extension,lower_input,lv_line,Network,2.0,route_km,5000.0,10000.0,30,0.02,0.0,0.0,0.0
+grid_repair_extension,lower_input,transformer_100kVA,Network,1.0,unit_100kVA,7000.0,7000.0,30,0.015,0.0,0.0,0.0
+grid_repair_extension,lower_input,service_meter,Connections,100.0,connection,60.0,6000.0,10,0.01,0.0,0.0,0.0
+grid_repair_extension,lower_input,house_wiring,Connections,100.0,connection,50.0,5000.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,lower_input,grid_protection,Network,1.0,site,1500.0,1500.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,lower_input,upstream_repair,Recovery,1.0,allowance_unit,10000.0,10000.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,lower_input,mv_repair,Recovery,2.0,repaired_route_km,6000.0,12000.0,20,0.02,0,0,0
+standalone,central,pv_module,PV,100.0,kWp,300.0,30000.0,25,0.01,1.0,1.0,1.0
+standalone,central,battery,Storage,300.0,kWh_nominal,350.0,105000.0,8,0.005,1.0,1.0,1.0
+standalone,central,shs_hybrid_inverter,Power electronics,100.0,kW_AC,350.0,35000.0,10,0.01,1.0,1.0,1.0
+standalone,central,pv_bos,PV,100.0,kWp,120.0,12000.0,25,0.01,1.0,1.0,1.0
+standalone,central,house_wiring,Connections,100.0,connection,100.0,10000.0,20,0.01,0.0,0.0,0.0
+mini_grid,central,pv_module,PV,50.0,kWp,300.0,15000.0,25,0.01,1.0,1.0,1.0
+mini_grid,central,pv_inverter,PV,50.0,kW_AC,150.0,7500.0,10,0.01,1.0,1.0,1.0
+mini_grid,central,battery,Storage,150.0,kWh_nominal,350.0,52500.0,8,0.005,1.0,1.0,1.0
+mini_grid,central,battery_inverter,Power electronics,40.0,kW_AC,420.0,16800.0,10,0.01,1.0,1.0,1.0
+mini_grid,central,pv_bos,PV,50.0,kWp,120.0,6000.0,25,0.01,1.0,1.0,1.0
+mini_grid,central,diesel_genset,Backup,30.0,kW_electric,650.0,19500.0,10,0.03,1.0,1.0,1.0
+mini_grid,central,fuel_tank_ats,Backup,1.0,system,1200.0,1200.0,15,0.02,1.0,1.0,1.0
+mini_grid,central,lv_line,Network,2.0,route_km,10000.0,20000.0,30,0.02,0.0,0.0,0.0
+mini_grid,central,service_meter,Connections,100.0,connection,120.0,12000.0,10,0.01,0.0,0.0,0.0
+mini_grid,central,house_wiring,Connections,100.0,connection,100.0,10000.0,20,0.01,0.0,0.0,0.0
+mini_grid,central,civil_site,Civil and site,1.0,site,6000.0,6000.0,25,0.01,0.0,0.0,0.0
+mini_grid,central,land_right,Civil and site,1.0,site_20year,1500.0,1500.0,20,0.0,0.0,0.0,0.0
+grid_extension,central,mv_line,Network,5.0,route_km,20000.0,100000.0,30,0.02,0.0,0.0,0.0
+grid_extension,central,lv_line,Network,2.0,route_km,10000.0,20000.0,30,0.02,0.0,0.0,0.0
+grid_extension,central,transformer_100kVA,Network,1.0,unit_100kVA,12000.0,12000.0,30,0.015,0.0,0.0,0.0
+grid_extension,central,service_meter,Connections,100.0,connection,120.0,12000.0,10,0.01,0.0,0.0,0.0
+grid_extension,central,house_wiring,Connections,100.0,connection,100.0,10000.0,20,0.01,0.0,0.0,0.0
+grid_extension,central,grid_protection,Network,1.0,site,3000.0,3000.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,central,mv_line,Network,5.0,route_km,20000.0,100000.0,30,0.02,0.0,0.0,0.0
+grid_repair_extension,central,lv_line,Network,2.0,route_km,10000.0,20000.0,30,0.02,0.0,0.0,0.0
+grid_repair_extension,central,transformer_100kVA,Network,1.0,unit_100kVA,12000.0,12000.0,30,0.015,0.0,0.0,0.0
+grid_repair_extension,central,service_meter,Connections,100.0,connection,120.0,12000.0,10,0.01,0.0,0.0,0.0
+grid_repair_extension,central,house_wiring,Connections,100.0,connection,100.0,10000.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,central,grid_protection,Network,1.0,site,3000.0,3000.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,central,upstream_repair,Recovery,1.0,allowance_unit,20000.0,20000.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,central,mv_repair,Recovery,2.0,repaired_route_km,10000.0,20000.0,20,0.02,0,0,0
+standalone,higher_input,pv_module,PV,100.0,kWp,500.0,50000.0,25,0.01,1.0,1.0,1.0
+standalone,higher_input,battery,Storage,300.0,kWh_nominal,550.0,165000.0,5,0.005,1.0,1.0,1.0
+standalone,higher_input,shs_hybrid_inverter,Power electronics,100.0,kW_AC,600.0,60000.0,10,0.01,1.0,1.0,1.0
+standalone,higher_input,pv_bos,PV,100.0,kWp,220.0,22000.0,25,0.01,1.0,1.0,1.0
+standalone,higher_input,house_wiring,Connections,100.0,connection,200.0,20000.0,20,0.01,0.0,0.0,0.0
+mini_grid,higher_input,pv_module,PV,50.0,kWp,500.0,25000.0,25,0.01,1.0,1.0,1.0
+mini_grid,higher_input,pv_inverter,PV,50.0,kW_AC,250.0,12500.0,10,0.01,1.0,1.0,1.0
+mini_grid,higher_input,battery,Storage,150.0,kWh_nominal,550.0,82500.0,5,0.005,1.0,1.0,1.0
+mini_grid,higher_input,battery_inverter,Power electronics,40.0,kW_AC,700.0,28000.0,10,0.01,1.0,1.0,1.0
+mini_grid,higher_input,pv_bos,PV,50.0,kWp,220.0,11000.0,25,0.01,1.0,1.0,1.0
+mini_grid,higher_input,diesel_genset,Backup,30.0,kW_electric,1000.0,30000.0,10,0.03,1.0,1.0,1.0
+mini_grid,higher_input,fuel_tank_ats,Backup,1.0,system,2500.0,2500.0,15,0.02,1.0,1.0,1.0
+mini_grid,higher_input,lv_line,Network,2.0,route_km,18000.0,36000.0,30,0.02,0.0,0.0,0.0
+mini_grid,higher_input,service_meter,Connections,100.0,connection,220.0,22000.0,10,0.01,0.0,0.0,0.0
+mini_grid,higher_input,house_wiring,Connections,100.0,connection,200.0,20000.0,20,0.01,0.0,0.0,0.0
+mini_grid,higher_input,civil_site,Civil and site,1.0,site,12000.0,12000.0,25,0.01,0.0,0.0,0.0
+mini_grid,higher_input,land_right,Civil and site,1.0,site_20year,4000.0,4000.0,20,0.0,0.0,0.0,0.0
+grid_extension,higher_input,mv_line,Network,5.0,route_km,35000.0,175000.0,30,0.02,0.0,0.0,0.0
+grid_extension,higher_input,lv_line,Network,2.0,route_km,18000.0,36000.0,30,0.02,0.0,0.0,0.0
+grid_extension,higher_input,transformer_100kVA,Network,1.0,unit_100kVA,20000.0,20000.0,30,0.015,0.0,0.0,0.0
+grid_extension,higher_input,service_meter,Connections,100.0,connection,220.0,22000.0,10,0.01,0.0,0.0,0.0
+grid_extension,higher_input,house_wiring,Connections,100.0,connection,200.0,20000.0,20,0.01,0.0,0.0,0.0
+grid_extension,higher_input,grid_protection,Network,1.0,site,6000.0,6000.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,higher_input,mv_line,Network,5.0,route_km,35000.0,175000.0,30,0.02,0.0,0.0,0.0
+grid_repair_extension,higher_input,lv_line,Network,2.0,route_km,18000.0,36000.0,30,0.02,0.0,0.0,0.0
+grid_repair_extension,higher_input,transformer_100kVA,Network,1.0,unit_100kVA,20000.0,20000.0,30,0.015,0.0,0.0,0.0
+grid_repair_extension,higher_input,service_meter,Connections,100.0,connection,220.0,22000.0,10,0.01,0.0,0.0,0.0
+grid_repair_extension,higher_input,house_wiring,Connections,100.0,connection,200.0,20000.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,higher_input,grid_protection,Network,1.0,site,6000.0,6000.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,higher_input,upstream_repair,Recovery,1.0,allowance_unit,50000.0,50000.0,20,0.01,0.0,0.0,0.0
+grid_repair_extension,higher_input,mv_repair,Recovery,2.0,repaired_route_km,17500.0,35000.0,20,0.02,0,0,0

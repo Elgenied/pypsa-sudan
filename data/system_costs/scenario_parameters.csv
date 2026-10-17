@@ -1,0 +1,25 @@
+parameter,lower_input,central,higher_input,unit,meaning
+horizon_years,20,20,20,year,Common commissioning-to-retirement horizon
+real_discount_rate,0.06,0.1,0.18,fraction,"Real project discount rate; opportunity cost of finance, not an observed Sudan WACC"
+international_freight,0.04,0.08,0.15,fraction_imported_hardware,Freight to entry point; percentage applies only to imported equipment
+nonrecoverable_tax,0,0.05,0.15,fraction_imported_plus_international_freight,Illustrative cash tax/duty allowance; not Sudan tax law; excluded from resource-cost view
+inland_logistics,0.03,0.1,0.25,fraction_transport_eligible_hardware,Extra delivery/storage allowance on equipment; installed network rates already include ordinary transport
+equipment_installation,0.08,0.15,0.25,fraction_labour_eligible_hardware,Installation/commissioning labour; excludes items already priced installed
+engineering_development,0.04,0.08,0.12,fraction_direct_resource_cost,"Survey, design, permits, owner management and initial training; not applied to tax"
+contingency,0.05,0.1,0.2,fraction_direct_plus_engineering,"Expected resource cost allowance, not a quantified conflict probability"
+battery_life_years,12,8,5,year,Effective calendar/cycle life assumption; requires operating-temperature and warranty checks
+insurance_fraction,0,0.005,0.02,fraction_component_purchase_cost_per_year,Illustrative asset insurance/coverage allowance; actual availability and exclusions unknown
+annual_admin_network,5,12,25,USD_per_connection_year,"Metering/billing, operator management and routine visits; technical O&M separate"
+annual_admin_standalone,4,8,16,USD_per_connection_year,Distributed service visits and programme administration
+annual_security_network,0,1000,4000,USD_per_site_year,Site protection allowance for grid/mini-grid; not a security assessment
+diesel_delivered_price,1,1.5,3,USD_per_litre,Planning assumption inclusive of delivery; dated Sudan SDG prices retained separately without FX
+diesel_specific_fuel,0.27,0.32,0.4,litre_per_kWh_electric,Simple average fuel consumption; replace with part-load curve
+diesel_variable_om,0.015,0.03,0.06,USD_per_kWh_electric,Runtime servicing in addition to calendar maintenance; scope must be checked with supplier
+bulk_grid_supply,0.08,0.15,0.3,USD_per_kWh_at_tie_in,Planning full supply-service cost at grid tie-in; not retail tariff or generation-only price
+retirement_fraction,0.01,0.02,0.04,fraction_hardware_or_installed_item_cost,"Removal, recycling and site restoration allowance on every retired physical component"
+salvage_fraction,0,0,0,fraction_straight_line_remaining_value,Baseline assumes no recoverable resale value; linear residual value sensitivity available in API
+collection_fraction,0.95,0.9,0.8,fraction,Billing collection assumption; used only for illustrative recovery charge
+debt_share,0.7,0.7,0.7,fraction_initial_budget,Optional financing illustration; no claim that debt is available
+grant_share,0,0,0,fraction_initial_budget,"Optional grant; affects sponsor funding, never resource system cost"
+real_loan_rate,0.06,0.1,0.18,fraction,"Real amortizing-loan illustration, separate from project NPC"
+loan_tenor_years,10,10,10,year,Loan debt service shown separately and never added to unlevered NPC

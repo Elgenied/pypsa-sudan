@@ -1,0 +1,5 @@
+case,label,connections,daily_kWh_per_connection,distribution_loss_fraction,diesel_generation_fraction,repair_mv_route_km,repair_cost_fraction,design_note
+standalone,100 separate solar-home systems,100,1,0,0,0,0,"Each home: 1 kWp PV, 3 kWh nominal battery, 1 kW hybrid inverter. No sharing between homes."
+mini_grid,Solar-battery-diesel mini-grid,100,1,0.08,0.1,0,0,"Shared 50 kWp PV, 150 kWh nominal battery, 40 kW battery inverter, 30 kW diesel; 2 km LV."
+grid_extension,Grid extension: usable upstream system,100,1,0.1,0,0,0,"5 km new MV, one 100 kVA transformer, 2 km LV. Upstream source has spare capacity by scenario definition; reliability unverified."
+grid_repair_extension,Grid extension plus illustrative repair,100,1,0.1,0,2,0.5,Same new connection as grid example plus 2 km existing MV repaired at 50% of new-build rate and an upstream repair allowance.

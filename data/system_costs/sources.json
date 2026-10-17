@@ -1,0 +1,47 @@
+[
+  {
+    "source_id": "ESMAP2022",
+    "title": "Mini Grids for Half a Billion People: Market Outlook and Handbook for Decision Makers",
+    "publisher": "World Bank / ESMAP",
+    "publication_year": 2022,
+    "reviewed_pages": "Physical PDF page 85, Table 1.4; page 96 scope notes",
+    "url": "https://documents1.worldbank.org/curated/en/099635009232259510/pdf/P1751510dd4ab407e083a6098d1905fa94f.pdf",
+    "sha256": "4ef47760025a22cb846603fe65666093706be67f319972d9df3b450ffcbca4a8",
+    "accessed": "2026-10-17"
+  },
+  {
+    "source_id": "WB_SOUTH_SUDAN2023",
+    "title": "High-level Least-Cost Electrification Prospectus: South Sudan",
+    "publisher": "World Bank / GEPAR",
+    "publication_year_note": "World Bank archive URL dated June 2023; document price year unspecified",
+    "reviewed_pages": "Physical PDF pages 27-28, Annex Table 4",
+    "url": "https://documents1.worldbank.org/curated/en/099062423121020382/pdf/P175227003a74408f0bc3a075ae51a5747e.pdf",
+    "sha256": "2687b1987153c3762f864ce7464e5f52c1f515254a222e5fc22dbbdb34e5ab19",
+    "accessed": "2026-10-17"
+  },
+  {
+    "source_id": "R17",
+    "title": "UNDP Sudan Solar Energy Value Chain Study (2026); 2025 quotations",
+    "catalog": "../report_evidence/source_register.csv",
+    "tables": [
+      "market_prices_2025.csv",
+      "interview_prices.csv",
+      "import_cost_shares_2025.csv"
+    ],
+    "model_use": "Local evidence; no automatic USD conversion"
+  },
+  {
+    "source_id": "R12",
+    "title": "World Bank electricity snapshot, August 2024",
+    "catalog": "../report_evidence/source_register.csv",
+    "tables": [
+      "fuel_prices_2024.csv"
+    ],
+    "model_use": "Dated SDG fuel/access evidence; no automatic USD conversion"
+  },
+  {
+    "source_id": "A01",
+    "title": "PyPSA-Sudan analyst assumptions, 2026-10-17",
+    "model_use": "Editable constant-2025-USD scenario assumptions; not quotations or measured damage"
+  }
+]

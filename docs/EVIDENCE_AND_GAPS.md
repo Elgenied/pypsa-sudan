@@ -13,7 +13,7 @@ Evidence status updated **17 October 2026**; model results below retain their pr
 | **Numerically checked** | Accounting, bounds or replicated arithmetic passed stated checks |
 | **Independently validated** | A result agrees with suitable evidence not used to set or fit that result |
 
-The current notebooks have sourced inputs, calibration and numerical checks. **Neither establishes independent validation of a national post-war electrification plan.**
+The current notebooks have sourced inputs, calibration and numerical checks. **These do not establish independent validation of a national post-war electrification plan.**
 
 ## Evidence and model inventory
 
@@ -29,7 +29,7 @@ The current notebooks have sourced inputs, calibration and numerical checks. **N
 | Spatial settlements | World Bank/VIDA DRE release: 33,891 georeferenced clusters; potential building connections, modeled demand, polygons, roads, PV, distance to grid and nightlights | Source files checked and mapped in [Notebook C](../research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb) | Mixed layer vintages; no metered access, feasible routes, post-war line status or hourly loads |
 | Historical conflict exposure | DRE 2020–2022 ACLED fatality buffers at 25 and 50 km | Category formula reproduced for all 33,891 settlements | **Not a current security or damage assessment** |
 | Demand projections | Three 2012–2031 scenarios, 60 national scenario-years and 720 monthly records | Published outputs plus partial arithmetic replication | Not actual 2022 or post-war demand; not an optimal investment plan |
-| Economic inputs | Historical O&M; dated 2025 SDG equipment quotes, August 2024 indicative fuel prices, shipment shares and published study assumptions in [report evidence](../data/report_evidence/README.md) | Evidence tables; no automatic replacement of baseline costs | Full installed scope, dated FX/price basis, repair and distribution costs, battery specifications and financing still needed |
+| Economic inputs | Historical O&M; dated Sudan quotations and [full-scope system-cost accounting](../data/system_costs/README.md) with four illustrative designs | Original evidence separate from provisional USD assumptions; no automatic replacement of baseline costs | Comparable quotations, dated FX/price normalization, repair and distribution prices, battery specifications, finance and feasible supply still needed |
 | Recovery and service targets | August 2024 status for 20 plant records; five electricity-related NDC measures; programme outputs and qualitative mechanisms | Dated evidence available; no implemented recovery optimization | Asset repair cost/time, present condition, hourly service requirements and demand displacement still require explicit evidence/assumptions |
 
 ## What passed, and what that proves
@@ -67,6 +67,10 @@ The **6.277 million kWh/day** atlas total would be about **2.291 TWh/year** if r
 
 ## Prioritized gaps for the electrification question
 
+### Notebook D: system costs
+
+The [cost notebook](../research/system_costs/Sudan_System_Costs.ipynb) accounts for 17 component types and 24 cost/finance parameters across four fixed 100-home designs. It calculates upfront budgets, annual operations, replacements, disposal, 20-year NPC, debt-service illustrations and sensitivities. Nine tests cover independent hand-calculated cash flows, unit/loss conversions, installed-cost exclusions, financing separation and invalid inputs. These are software/accounting checks, **not** validation of price assumptions, capacities or hourly adequacy. Every numeric USD price is provisional; source SDG quotations retain their dates without an inferred FX conversion. Conditional cost per target kWh is not a feasibility-validated LCOE.
+
 ### October 2026 report review
 
 The [new collection](../data/report_evidence/README.md) contains 23 evidence tables, plus source, issue and underlying-data-lead registers. It reviews 19 supplied PDFs (18 distinct documents), reusing the existing forecasting and DRE extractions. The [report-by-report review](../data/report_evidence/REVIEW.md) explains what was extracted and excluded.
@@ -77,7 +81,7 @@ Twenty-three arithmetic comparisons are recorded. Two source discrepancies remai
 |---|---|---|---|
 | **1** | Verified access and households, productive/critical loads and hourly demand for mapped clusters | DRE provides geometry and a low-service building estimate but not true access or the required service | Pilot table joining DRE clusters to local evidence and multiple service scenarios |
 | **1** | Usable/repairable grid, candidate routes, capacity and condition | Defines feasible connections, not merely nearest distance | Route table with endpoints, length, capacity and repair/extension assumptions |
-| **1** | Comparable lifecycle costs | Determines economic choice | One price year/currency; CAPEX, O&M, replacements, fuel, finance, distribution and connections |
+| **1** | Validate the assembled lifecycle-cost inputs | Determines economic choice | Replace provisional prices with comparable installed-scope quotes, dated currency conversion, actual battery lives, repair/network costs and finance offers |
 | **1** | Service and reliability requirements | Prevents an unfair comparison of a small solar-home system with continuous grid service | Quantity, peak capability, service hours and critical-load/shortage requirements |
 | **2** | Renewable profiles/siting limits; seasonal hydro | Determines feasible generation and storage | Documented profiles; final candidates tested against fuller chronology |
 | **2** | Recovery scenarios and implementation limits | Changes usable assets, timing and cost | Explicit low/central/high repair and demand assumptions, not an invented damage inventory |
@@ -88,7 +92,7 @@ Missing exact damage records do not prevent scenario analysis. The claim becomes
 
 ## Claims today
 
-**Supported:** a reproducible, nationally calibrated regional dispatch prototype; traceable historical datasets; mapped DRE clusters and reproducible source arithmetic; documented sensitivity to selected assumptions.
+**Supported:** a reproducible, nationally calibrated regional dispatch prototype; traceable historical datasets; mapped DRE clusters and reproducible source arithmetic; lifecycle-cost accounting for explicitly illustrative designs; documented sensitivity to selected assumptions.
 
 **Not yet supported:** settlement-specific technology choices, universal-access cost, optimal repair priorities, a validated post-war grid map, electrical security certification or treating 2012 projections as observations.
 

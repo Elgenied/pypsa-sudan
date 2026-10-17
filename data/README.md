@@ -22,7 +22,7 @@ The root `Sudan_2022.ipynb` remains the main dispatch model. Its input tables an
 
 The [DRE Atlas notebook](../research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb) uses 33,891 georeferenced clusters, complete non-geometry source attributes and simplified display polygons. The raw full-resolution data remain at the [World Bank catalog](https://energydata.info/dataset/sudan-distributed-renewable-energy-dre). Demand is a low-service building formula, not measured electricity or a uniform 2022 snapshot. Historical conflict labels use 2020–2022.
 
-The grid / mini-grid / standalone cost comparison is not yet implemented. The 131 historical localities and 33,891 DRE clusters are different spatial units; there is no validated crosswalk or post-war access inventory.
+The grid / mini-grid / standalone **cost accounting** is implemented for fixed illustrative designs in [system_costs](system_costs/README.md), with a [single cost notebook](../research/system_costs/Sudan_System_Costs.ipynb). It has not been coupled to settlement-level sizing, dispatch, routes or option selection. The 131 historical localities and 33,891 DRE clusters are different spatial units; there is no validated crosswalk or post-war access inventory.
 
 ## Maintain or update historical data
 

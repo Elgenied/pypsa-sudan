@@ -70,7 +70,7 @@ A staged approach can iterate local choices with regional supply/network costs. 
 | Stage | Deliverable | Complete when | Status |
 |---|---|---|---|
 | **0. Make the project readable** | Project map, evidence register and notebook guides | Evidence, calibrated results, assumptions and proposed work are visibly distinguished | **Available** |
-| **1. Prepare reference and pilot inputs** | Reconciled 2022 fleet; hydro-seasonality upgrade; mapped settlement sample; service and cost tables | Years/definitions/units agree; unknowns have bounds; assets and demand are not double counted | **In progress: DRE spatial input available; route, service and cost inputs remain** |
+| **1. Prepare reference and pilot inputs** | Reconciled 2022 fleet; hydro-seasonality upgrade; mapped settlement sample; service and cost tables | Years/definitions/units agree; unknowns have bounds; assets and demand are not double counted | **In progress: DRE and full-scope cost accounting available; cost quotations, routes and service inputs still need validation** |
 | **2. Demonstrate a fair comparison** | Representative clusters with grid, mini-grid and standalone alternatives | Feasible options meet service targets; costs reconcile; limiting cases behave plausibly; shared routes and upstream assumptions are exposed | **Planned** |
 | **3. Couple access and regional supply** | Repair, capacity, network and connection decisions | Balances, service, capacity and budgets pass; small cases are checked independently; screening is distinguished from joint optimization | **Planned** |
 | **4. Scale and stress-test** | Regional/national maps across recovery, demand, fuel, hydro, cost and finance cases | Robust/uncertain choices are visible; chronological storage and seasonal adequacy are checked; spatial coverage is reported | **Planned** |
@@ -88,5 +88,7 @@ Choose pilot clusters from the DRE atlas after reviewing actual locations and co
 - Choices stable across uncertainty, and locations needing better evidence.
 
 The immediate goal is **a transparent, cost-complete pilot explaining why each option wins**. A national coloured map follows a credible comparison.
+
+The [system-cost notebook](../research/system_costs/Sudan_System_Costs.ipynb) now implements the accounting layer: component costs, delivery/installation, network/connections, operation, replacements, disposal, finance and sensitivity. Its four 100-home designs are synthetic and its USD prices are provisional analyst assumptions. It does not complete the feasible option comparison in stage 2. Next: choose real pilot clusters, obtain scoped quotations and routes, and optimize their hourly supply against the same service target.
 
 The existing pies show capacity or dispatch, not optimal electrification technologies. The report's projected access is not an optimized result. The DRE maps show settlement evidence, not the cheapest service option. There is currently no measured post-war damage inventory or settlement-level choice optimizer in this repository. The stages above describe future work.

@@ -1,0 +1,18 @@
+component,group,quantity_unit,low_USD,base_USD,high_USD,life_years,annual_om_fraction,imported,transport_eligible,labour_eligible,scope,anchor_id,basis_note
+pv_module,PV,kWp,200,300,500,25,0.01,1,1,1,"Module hardware only; no inverter, mounting, freight or labour",B01,Analyst module allocation; compare module plus PV inverter to the bundled historical benchmark
+pv_inverter,PV,kW_AC,80,150,250,10,0.01,1,1,1,Grid-following PV inverter; excludes battery inverter,B01,"Assumed split of a bundled benchmark, not a sourced component quotation"
+battery,Storage,kWh_nominal,250,350,550,8,0.005,1,1,1,"Nominal battery energy with BMS; excludes PCS, installation and usable-energy derating",B02;R17,Historical regional anchor and separate Sudan SDG quotations; no inferred exchange rate
+battery_inverter,Power electronics,kW_AC,300,420,700,10,0.01,1,1,1,Grid-forming battery inverter plus EMS; excludes PV inverter,B03,"Rounded historical mini-grid benchmark; kW basis from Table 1.4, not kVA from Table 1.7"
+shs_hybrid_inverter,Power electronics,kW_AC,200,350,600,10,0.01,1,1,1,Standalone hybrid inverter with MPPT; do not add a PV inverter,R17,Analyst USD allowance; Sudan 3 kW SDG interview price has no matched FX
+pv_bos,PV,kWp,60,120,220,25,0.01,1,1,1,"Mounting, DC cabling, combiner, protection and earthing hardware",A01,Analyst allowance; electrical BOS separated from panels and labour
+diesel_genset,Backup,kW_electric,450,650,1000,10,0.03,1,1,1,Generator hardware; fuel tank/ATS and civil works separate,B07,Central value matches an older South Sudan planning input; not a Sudan vendor quote
+fuel_tank_ats,Backup,system,500,1200,2500,15,0.02,1,1,1,"Tank, fuel containment hardware and transfer switch",A01,Analyst allowance for the 30 kW example
+mv_line,Network,route_km,12000,20000,35000,30,0.02,0,0,0,"Installed overhead MV feeder including poles, conductor, routine wayleave and erection; no transformer",B05,Analyst planning range above a dated South Sudan model value; no automatic inflation conversion
+lv_line,Network,route_km,5000,10000,18000,30,0.02,0,0,0,"Installed LV feeder with poles, conductors and erection; service drops and meters excluded",B06,Analyst range above a dated South Sudan input; actual voltage drop and route not designed
+transformer_100kVA,Network,unit_100kVA,7000,12000,20000,30,0.015,0,0,0,Installed 100 kVA MV/LV transformer with normal plinth and protection,A01,Analyst allowance; not the HV/MV transformer in the regional report
+service_meter,Connections,connection,60,120,220,10,0.01,0,0,0,"Installed service drop, meter and customer protection; interior wiring separate",B04,"Analyst split; historical distribution-and-meter benchmark is only a cross-check, never added"
+house_wiring,Connections,connection,50,100,200,20,0.01,0,0,0,Basic safe internal wiring and distribution board; appliances excluded,A01,Same minimum household connection scope in every example
+civil_site,Civil and site,site,3000,6000,12000,25,0.01,0,0,0,"Installed enclosure, civil works and fencing for the mini-grid example",A01,Analyst allowance; site survey needed
+land_right,Civil and site,site_20year,500,1500,4000,20,0,0,0,0,Upfront 20-year site-use allowance; not a property valuation,A01,Analyst allowance; no assumed free land
+grid_protection,Network,site,1500,3000,6000,20,0.01,0,0,0,Installed feeder connection and protection works at tie-in point,A01,No upstream generation capital: bulk supply cost includes generation and upstream network service
+upstream_repair,Recovery,allowance_unit,10000,20000,50000,20,0.01,0,0,0,Synthetic one-off upstream restoration allowance for repair example only,A01,Not an observed Sudan repair bill; exclude historic sunk asset value

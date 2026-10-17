@@ -1,0 +1,15 @@
+cost_or_requirement,status,treatment,needed_to_upgrade
+"PV, storage and conversion",included_provisional,"Separate kWp, kW and nominal kWh; inverter scopes avoid overlap","Supplier quotations, DoD, efficiency, heat derating, warranties"
+"Freight, port and inland delivery",included_provisional,Separate imported hardware bases and inland hardware allowance,"Actual shipment value, route, cargo scope and cost; source shipment shares cannot be applied as markup"
+Installation and commissioning,included_provisional,Applied only to hardware not already priced installed,BOM/EPC offer and contractor scope
+"MV/LV, transformer and connection",included_provisional,"Explicit route km, 100 kVA transformer, drops/meters and home wiring","Route, conductor, poles, voltage drop, protection and quotes"
+"Engineering, permits and contingency",included_provisional,Transparent resource-cost fractions; nonrecoverable tax separately visible,Actual project development and fiscal treatment
+"Fuel, energy, O&M and administration",included_provisional,Annual operating quantities and separate technical/nontechnical costs,"Hourly dispatch, delivered fuel, upstream supply cost and service contract"
+Replacements and disposal,included_provisional,"Component life, repeated replacements before year 20, disposal and optional residual value","Cycle/temperature life, actual spares and recycling offers"
+Finance and collections,included_provisional,Real discount sensitivity; separate debt service and recovery-charge illustration,"Finance offer, subsidy design, affordability and collection evidence"
+Conflict damage and repair,synthetic_case_only,2 km repaired at 50% plus USD allowance; no observed damage inferred,Asset condition survey and repair BOM/time; never infer from DRE risk class
+Grid reliability and upstream expansion,unvalidated_boundary,Assumes usable source with spare capacity; bulk energy cost includes upstream supply service,"Available MW, hourly outages, source rehabilitation and backup adequacy"
+Demand and renewable adequacy,unvalidated,100 homes at 1 kWh/day each; capacities and diesel share fixed for accounting,"Settlement load profiles, seasonal solar, dispatch and loss-of-load checks"
+National total and technology-choice map,outside_current_scope,No scaling illustrative cost per home to all DRE buildings,"Validated customers, access, routes, shared infrastructure and optimized options"
+"Appliances, productive equipment and major resettlement",outside_current_scope,Connection-to-safe-wiring boundary; these assets are not supplied by this example,Define demand-side/programme scope and add explicit cost rows if required
+Construction timing and delay financing,not_modelled,All construction booked at commissioning; no escalation or construction interest,Dated drawdown schedule and financing offer; extend model if multi-year implementation
