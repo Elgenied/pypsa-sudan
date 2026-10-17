@@ -2,7 +2,7 @@
 
 [Start here](../README.md) · [Study plan](STUDY_PLAN.md) · [Data catalog](../data/README.md)
 
-Status reviewed **27 September 2026**. This page distinguishes evidence quality from successful software execution. For current run status see [GitHub Actions](https://github.com/Elgenied/pypsa-sudan/actions).
+Evidence status updated **17 October 2026**; model results below retain their previous runs. This page distinguishes evidence quality from successful software execution. For current run status see [GitHub Actions](https://github.com/Elgenied/pypsa-sudan/actions).
 
 ## The four labels we use
 
@@ -29,8 +29,8 @@ The current notebooks have sourced inputs, calibration and numerical checks. **N
 | Spatial settlements | World Bank/VIDA DRE release: 33,891 georeferenced clusters; potential building connections, modeled demand, polygons, roads, PV, distance to grid and nightlights | Source files checked and mapped in [Notebook C](../research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb) | Mixed layer vintages; no metered access, feasible routes, post-war line status or hourly loads |
 | Historical conflict exposure | DRE 2020–2022 ACLED fatality buffers at 25 and 50 km | Category formula reproduced for all 33,891 settlements | **Not a current security or damage assessment** |
 | Demand projections | Three 2012–2031 scenarios, 60 national scenario-years and 720 monthly records | Published outputs plus partial arithmetic replication | Not actual 2022 or post-war demand; not an optimal investment plan |
-| Economic inputs | Historical plant O&M and illustrative baseline marginal costs | Reference values, not a planning cost database | Repairs, connections, distribution, solar, storage, fuel delivery, price basis and financing not established |
-| Recovery and service targets | Research design only | No implemented scenario dataset | Damage, restoration time, displacement, critical loads, service standards and horizons need explicit evidence/assumptions |
+| Economic inputs | Historical O&M; dated 2025 SDG equipment quotes, August 2024 indicative fuel prices, shipment shares and published study assumptions in [report evidence](../data/report_evidence/README.md) | Evidence tables; no automatic replacement of baseline costs | Full installed scope, dated FX/price basis, repair and distribution costs, battery specifications and financing still needed |
+| Recovery and service targets | August 2024 status for 20 plant records; five electricity-related NDC measures; programme outputs and qualitative mechanisms | Dated evidence available; no implemented recovery optimization | Asset repair cost/time, present condition, hourly service requirements and demand displacement still require explicit evidence/assumptions |
 
 ## What passed, and what that proves
 
@@ -66,6 +66,12 @@ The public CSV and GeoJSON have identical **33,891 unique `geohash` IDs** and ma
 The **6.277 million kWh/day** atlas total would be about **2.291 TWh/year** if repeated daily, far below the 2022 national consumer-electricity figure of 13.261 TWh. They have different service levels and coverage, so this is a scale warning rather than a calibration failure. The atlas's **17.59 million potential connections** are buildings, not customer records. Only **23** of 33,891 clusters have a wealth index value.
 
 ## Prioritized gaps for the electrification question
+
+### October 2026 report review
+
+The [new collection](../data/report_evidence/README.md) contains 23 evidence tables, plus source, issue and underlying-data-lead registers. It reviews 19 supplied PDFs (18 distinct documents), reusing the existing forecasting and DRE extractions. The [report-by-report review](../data/report_evidence/REVIEW.md) explains what was extracted and excluded.
+
+Twenty-three arithmetic comparisons are recorded. Two source discrepancies remain: the rooftop-PV paper's formula inputs give 3,285 rather than 3,523 kWh/year, and the CSP paper's existing transmission lengths sum to 10,020.1 rather than 10,010.1 km. Other issues include a panel labelled 590 kW, contradictory grid assignment and unreconciled fleet scope. These checks improve traceability; they do not establish current conditions or independently validate published model results. No notebook capacities, costs or dispatch results were changed by this extraction.
 
 | Priority | Needed input / decision | Why it matters | Minimum useful next deliverable |
 |---|---|---|---|

@@ -1,0 +1,7 @@
+record_id,source_id,pdf_page,reference,data_period,evidence_kind,plant,installed_capacity_MW,available_capacity_MW,customers,is_total,notes
+darfur_plants_2012_001,R02,31,Table 2.6; printed p18; DJAM 2012 Power Report,2012,reported_inventory,El Fashir,22.48,15.4,18500,False,"Historical availability, not war damage. Zalingei narrative on same page instead says 0.8 MW."
+darfur_plants_2012_002,R02,31,Table 2.6; printed p18; DJAM 2012 Power Report,2012,reported_inventory,Nyala,29.19,17.6,21915,False,"Historical availability, not war damage. Zalingei narrative on same page instead says 0.8 MW."
+darfur_plants_2012_003,R02,31,Table 2.6; printed p18; DJAM 2012 Power Report,2012,reported_inventory,El Daein,7.9,1.5,1600,False,"Historical availability, not war damage. Zalingei narrative on same page instead says 0.8 MW."
+darfur_plants_2012_004,R02,31,Table 2.6; printed p18; DJAM 2012 Power Report,2012,reported_inventory,El Geneina,10.365,7,7500,False,"Historical availability, not war damage. Zalingei narrative on same page instead says 0.8 MW."
+darfur_plants_2012_005,R02,31,Table 2.6; printed p18; DJAM 2012 Power Report,2012,reported_inventory,Zalingei,3.2,1,890,False,"Historical availability, not war damage. Zalingei narrative on same page instead says 0.8 MW."
+darfur_plants_2012_006,R02,31,Table 2.6; printed p18; DJAM 2012 Power Report,2012,reported_inventory,Total,73.135,42.5,50405,True,"Historical availability, not war damage. Zalingei narrative on same page instead says 0.8 MW."

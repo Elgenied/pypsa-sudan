@@ -1,0 +1,7 @@
+record_id,source_id,pdf_page,reference,data_period,evidence_kind,fuel,quantity_tonnes,share_percent,notes
+thermal_fuel_use_2017_001,R19,19,Table 1.4,2017,reported_utility_statistics,HFO,198420,11.7,Mass consumption; heat content and plant allocation needed for energy or emissions conversion.
+thermal_fuel_use_2017_002,R19,19,Table 1.4,2017,reported_utility_statistics,HCGO,158663,9.3,Mass consumption; heat content and plant allocation needed for energy or emissions conversion.
+thermal_fuel_use_2017_003,R19,19,Table 1.4,2017,reported_utility_statistics,Diesel,25845,1.5,Mass consumption; heat content and plant allocation needed for energy or emissions conversion.
+thermal_fuel_use_2017_004,R19,19,Table 1.4,2017,reported_utility_statistics,LDO,448861,26.4,Mass consumption; heat content and plant allocation needed for energy or emissions conversion.
+thermal_fuel_use_2017_005,R19,19,Table 1.4,2017,reported_utility_statistics,SC,136181,8,Mass consumption; heat content and plant allocation needed for energy or emissions conversion.
+thermal_fuel_use_2017_006,R19,19,Table 1.4,2017,reported_utility_statistics,Crude oil,731962,43.1,Mass consumption; heat content and plant allocation needed for energy or emissions conversion.

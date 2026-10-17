@@ -1,0 +1,23 @@
+name: Check report evidence
+on:
+  push:
+    paths:
+      - 'data/report_evidence/**'
+      - '.github/workflows/report-evidence.yml'
+  pull_request:
+    paths:
+      - 'data/report_evidence/**'
+      - '.github/workflows/report-evidence.yml'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python data/report_evidence/check_data.py
+      - run: python data/report_evidence/build_data.py
+      - run: python data/report_evidence/check_data.py
+      - run: git diff --exit-code -- data/report_evidence

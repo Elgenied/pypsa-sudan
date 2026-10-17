@@ -2,7 +2,7 @@
 
 [Project start page](../README.md) · [Evidence and missing inputs](../docs/EVIDENCE_AND_GAPS.md) · [Overall study plan](../docs/STUDY_PLAN.md)
 
-This directory indexes two evidence collections. [catalog.json](catalog.json) covers 20 historical CSVs, with paths, row counts, columns, sources, SHA256 checksums and vintages. The [DRE spatial collection](../research/dre_atlas_2025/README.md) has its own [source and derived checksum register](../research/dre_atlas_2025/data/validation_report.json). Canonical files stay with their notebooks.
+This directory indexes three evidence collections. [catalog.json](catalog.json) covers 20 historical CSVs, with paths, row counts, columns, sources, SHA256 checksums and vintages. The [DRE spatial collection](../research/dre_atlas_2025/README.md) has its own [source and derived checksum register](../research/dre_atlas_2025/data/validation_report.json). The [report evidence collection](report_evidence/README.md) adds dated prices, fleet status, demand, policy targets and published study assumptions from the October 2026 PDF review. Historical and DRE files stay with their notebooks; the new tables live here under `report_evidence/`.
 
 Checksums normalize CRLF to LF, matching Git's text normalization, so the same data verify on Windows and Linux.
 

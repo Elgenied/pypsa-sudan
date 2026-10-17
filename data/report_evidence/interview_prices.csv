@@ -1,0 +1,10 @@
+record_id,source_id,pdf_page,reference,data_period,evidence_kind,item,value,unit,notes
+interview_prices_001,R17,31,Section 6.3; printed p29,pre-war,interview_estimate,550 W panel,75000,SDG/item,Approximate retrospective interview quote; exact date and location absent.
+interview_prices_002,R17,31,Section 6.3; printed p29,2025,interview_estimate,550 W panel,330000,SDG/item,Approximate interview quote; exact date and location absent.
+interview_prices_003,R17,31,Section 6.3; printed p29,pre-war,interview_estimate,200 Ah battery,250000,SDG/item,Voltage and chemistry absent; cannot convert Ah to kWh.
+interview_prices_004,R17,31,Section 6.3; printed p29,2025,interview_estimate,200 Ah battery,900000,SDG/item,Voltage and chemistry absent; cannot convert Ah to kWh.
+interview_prices_005,R17,31,Section 6.3; printed p29,pre-war,interview_estimate,3 kW inverter,120000,SDG/item,"Brand, system scope and exact date absent."
+interview_prices_006,R17,31,Section 6.3; printed p29,2025,interview_estimate,3 kW inverter,600000,SDG/item,"Brand, system scope and exact date absent."
+interview_prices_007,R17,31,Section 6.3; printed p29,2025 interview context,interview_estimate,580 W panel minimum quote,300000,SDG/item,Range lower endpoint; not a representative price distribution.
+interview_prices_008,R17,31,Section 6.3; printed p29,2025 interview context,interview_estimate,580 W panel maximum quote,350000,SDG/item,Range upper endpoint; exact observation date absent.
+interview_prices_009,R17,31,Section 6.3; printed p29,2025 interview context,interview_estimate,Cable,1000,SDG/m,Approximate; cross-section and conductor absent; not distribution line cost.

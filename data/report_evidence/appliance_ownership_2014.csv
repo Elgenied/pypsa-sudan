@@ -1,0 +1,7 @@
+record_id,source_id,pdf_page,reference,data_period,evidence_kind,appliance,households_owning_percent,average_units_as_printed,notes
+appliance_ownership_2014_001,R19,18,Table 1.3,2014,reported_survey_statistic,TV,78.7,1.1,Grid-connected households only. Average-unit denominator not further specified; power ratings and usage hours absent.
+appliance_ownership_2014_002,R19,18,Table 1.3,2014,reported_survey_statistic,Radio,27,1,Grid-connected households only. Average-unit denominator not further specified; power ratings and usage hours absent.
+appliance_ownership_2014_003,R19,18,Table 1.3,2014,reported_survey_statistic,Computer,8.4,1.2,Grid-connected households only. Average-unit denominator not further specified; power ratings and usage hours absent.
+appliance_ownership_2014_004,R19,18,Table 1.3,2014,reported_survey_statistic,Refrigerator,59.8,1.1,Grid-connected households only. Average-unit denominator not further specified; power ratings and usage hours absent.
+appliance_ownership_2014_005,R19,18,Table 1.3,2014,reported_survey_statistic,Fan,73.9,2.7,Grid-connected households only. Average-unit denominator not further specified; power ratings and usage hours absent.
+appliance_ownership_2014_006,R19,18,Table 1.3,2014,reported_survey_statistic,Air conditioning,22.6,1.5,Grid-connected households only. Average-unit denominator not further specified; power ratings and usage hours absent.

@@ -1,0 +1,707 @@
+{
+  "review_date": "2026-10-17",
+  "source_files": 19,
+  "distinct_documents": 18,
+  "registered_pdf_pages": 688,
+  "scope": "Energy-relevant sections reviewed; prior forecasting and DRE extractions reused. Not every page of broad development reports transcribed.",
+  "data_tables": 23,
+  "support_tables": [
+    "source_register",
+    "source_issues",
+    "data_source_leads"
+  ],
+  "records_excluding_source_register": 444,
+  "checks": [
+    {
+      "check": "R17 Table6.2 listed shipment shares percent",
+      "calculated": 99.98,
+      "source_or_expected": 100,
+      "difference": -0.02,
+      "tolerance": 0.11,
+      "result": "matches_within_tolerance",
+      "notes": "22 rounded percentages; not an equipment-price markup."
+    },
+    {
+      "check": "R02 Table2.6 installed_capacity_MW",
+      "calculated": 73.135,
+      "source_or_expected": 73.135,
+      "difference": 0.0,
+      "tolerance": 1e-08,
+      "result": "matches_within_tolerance",
+      "notes": ""
+    },
+    {
+      "check": "R02 Table2.6 available_capacity_MW",
+      "calculated": 42.5,
+      "source_or_expected": 42.5,
+      "difference": 0.0,
+      "tolerance": 1e-08,
+      "result": "matches_within_tolerance",
+      "notes": ""
+    },
+    {
+      "check": "R02 Table2.6 customers",
+      "calculated": 50405.0,
+      "source_or_expected": 50405.0,
+      "difference": 0.0,
+      "tolerance": 1e-08,
+      "result": "matches_within_tolerance",
+      "notes": ""
+    },
+    {
+      "check": "R19 Annex3 2015 sales_MWh",
+      "calculated": 10580614.0,
+      "source_or_expected": 10580614.0,
+      "difference": 0.0,
+      "tolerance": 0,
+      "result": "matches_within_tolerance",
+      "notes": "Preserve reported totals; small differences are not silently repaired."
+    },
+    {
+      "check": "R19 Annex3 2015 customer_accounts",
+      "calculated": 2303058.0,
+      "source_or_expected": 2303058.0,
+      "difference": 0.0,
+      "tolerance": 0,
+      "result": "matches_within_tolerance",
+      "notes": "Preserve reported totals; small differences are not silently repaired."
+    },
+    {
+      "check": "R19 Annex3 2016 sales_MWh",
+      "calculated": 11795530.0,
+      "source_or_expected": 11795530.0,
+      "difference": 0.0,
+      "tolerance": 0,
+      "result": "matches_within_tolerance",
+      "notes": "Preserve reported totals; small differences are not silently repaired."
+    },
+    {
+      "check": "R19 Annex3 2016 customer_accounts",
+      "calculated": 2392065.0,
+      "source_or_expected": 2392065.0,
+      "difference": 0.0,
+      "tolerance": 0,
+      "result": "matches_within_tolerance",
+      "notes": "Preserve reported totals; small differences are not silently repaired."
+    },
+    {
+      "check": "R19 Annex3 2017 sales_MWh",
+      "calculated": 12986616.0,
+      "source_or_expected": 12986616.0,
+      "difference": 0.0,
+      "tolerance": 0,
+      "result": "matches_within_tolerance",
+      "notes": "Preserve reported totals; small differences are not silently repaired."
+    },
+    {
+      "check": "R19 Annex3 2017 customer_accounts",
+      "calculated": 2528729.0,
+      "source_or_expected": 2528729.0,
+      "difference": 0.0,
+      "tolerance": 0,
+      "result": "matches_within_tolerance",
+      "notes": "Preserve reported totals; small differences are not silently repaired."
+    },
+    {
+      "check": "R19 Table1.4 fuel total tonnes",
+      "calculated": 1699932.0,
+      "source_or_expected": 1699932,
+      "difference": 0.0,
+      "tolerance": 1e-08,
+      "result": "matches_within_tolerance",
+      "notes": ""
+    },
+    {
+      "check": "R19 Table1.4 fuel shares percent",
+      "calculated": 100.0,
+      "source_or_expected": 100,
+      "difference": 0.0,
+      "tolerance": 0.05,
+      "result": "matches_within_tolerance",
+      "notes": ""
+    },
+    {
+      "check": "R03 Equation2 annual PV yield kWh",
+      "calculated": 3285.0,
+      "source_or_expected": 3523,
+      "difference": -238.0,
+      "tolerance": 0,
+      "result": "source_discrepancy_retained",
+      "notes": "Published parameters do not reproduce the table yield."
+    },
+    {
+      "check": "R06 Table5 existing line length km",
+      "calculated": 10020.1,
+      "source_or_expected": 10010.1,
+      "difference": 10.0,
+      "tolerance": 0,
+      "result": "source_discrepancy_retained",
+      "notes": "Source total retained in check; detailed rows differ by10km."
+    },
+    {
+      "check": "R02 Annex8 budget_2013_2016_million_USD",
+      "calculated": 507.1,
+      "source_or_expected": 507.1,
+      "difference": 0.0,
+      "tolerance": 0.01,
+      "result": "matches_within_tolerance",
+      "notes": ""
+    },
+    {
+      "check": "R02 Annex8 budget_2017_2019_million_USD",
+      "calculated": 492.9,
+      "source_or_expected": 492.9,
+      "difference": 0.0,
+      "tolerance": 0.01,
+      "result": "matches_within_tolerance",
+      "notes": ""
+    },
+    {
+      "check": "R02 Annex8 total_budget_million_USD",
+      "calculated": 1000.0,
+      "source_or_expected": 1000,
+      "difference": 0.0,
+      "tolerance": 0.01,
+      "result": "matches_within_tolerance",
+      "notes": ""
+    },
+    {
+      "check": "R15 programme budget million USD",
+      "calculated": 250.0,
+      "source_or_expected": 250,
+      "difference": 0.0,
+      "tolerance": 1e-08,
+      "result": "matches_within_tolerance",
+      "notes": ""
+    },
+    {
+      "check": "R15 programme beneficiaries million",
+      "calculated": 6.05,
+      "source_or_expected": 6.05,
+      "difference": 0.0,
+      "tolerance": 1e-08,
+      "result": "matches_within_tolerance",
+      "notes": ""
+    },
+    {
+      "check": "R19 Table3.2 least_cost_capacity_MW",
+      "calculated": 7911.0,
+      "source_or_expected": 7911.0,
+      "difference": 0.0,
+      "tolerance": 0,
+      "result": "matches_within_tolerance",
+      "notes": "Forecast outcomes, not observations; rounding differences retained."
+    },
+    {
+      "check": "R19 Table3.2 government_capacity_MW",
+      "calculated": 8771.0,
+      "source_or_expected": 8771.0,
+      "difference": 0.0,
+      "tolerance": 0,
+      "result": "matches_within_tolerance",
+      "notes": "Forecast outcomes, not observations; rounding differences retained."
+    },
+    {
+      "check": "R19 Table3.2 least_cost_generation_GWh",
+      "calculated": 27965.0,
+      "source_or_expected": 27965.0,
+      "difference": 0.0,
+      "tolerance": 0,
+      "result": "matches_within_tolerance",
+      "notes": "Forecast outcomes, not observations; rounding differences retained."
+    },
+    {
+      "check": "R19 Table3.2 government_generation_GWh",
+      "calculated": 27965.0,
+      "source_or_expected": 27965.0,
+      "difference": 0.0,
+      "tolerance": 0,
+      "result": "matches_within_tolerance",
+      "notes": "Forecast outcomes, not observations; rounding differences retained."
+    }
+  ],
+  "validation": "Schema and arithmetic checked; not independent validation of source facts or simulation outputs.",
+  "files": {
+    "appliance_ownership_2014.csv": {
+      "rows": 6,
+      "sha256_LF": "71b9f3a6a992960f338f8ca7e4205ac6fa9f4be7816fa492adec4ed3de47c63a",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "appliance",
+        "households_owning_percent",
+        "average_units_as_printed",
+        "notes"
+      ]
+    },
+    "csp_candidate_zones.csv": {
+      "rows": 6,
+      "sha256_LF": "770535ac64b85a3edb249fc12c55fd1c1a2221e68943e61aac969268b50cbec6",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "zone",
+        "state",
+        "latitude",
+        "longitude",
+        "elevation_m",
+        "DNI_kWh_per_m2_day",
+        "wind_at_2m_m_per_s",
+        "temperature_C",
+        "daylight_hours",
+        "water_source",
+        "notes"
+      ]
+    },
+    "csp_model_results.csv": {
+      "rows": 12,
+      "sha256_LF": "591cd2b455151b6f56efafe8400b43a9ef300ca8215d1e2128663ecf14c7c611",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "zone",
+        "reference_technology",
+        "solar_only_generation_GWh",
+        "solar_only_capacity_factor_percent",
+        "solar_only_real_LCOE_2021_costs_USD_per_kWh",
+        "solar_only_water_m3_per_year",
+        "notes"
+      ]
+    },
+    "darfur_investment_plan.csv": {
+      "rows": 16,
+      "sha256_LF": "d161115d64836ae8ab0130b081685d131e84f9ca73ba03d05ca2540f607919f9",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "project",
+        "budget_2013_2016_million_USD",
+        "budget_2017_2019_million_USD",
+        "total_budget_million_USD",
+        "proposed_capacity_MW",
+        "notes"
+      ]
+    },
+    "darfur_plants_2012.csv": {
+      "rows": 6,
+      "sha256_LF": "f33e5040274c0fec1630b9746bf285bb5d9e819fb49c5ff8d89d15106e71fc6a",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "plant",
+        "installed_capacity_MW",
+        "available_capacity_MW",
+        "customers",
+        "is_total",
+        "notes"
+      ]
+    },
+    "data_source_leads.csv": {
+      "rows": 17,
+      "sha256_LF": "26306d1899fb00cf3e1728b973767190db367492c89d0d4b6a9d5c834cb1e515",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "data_owner_or_resource",
+        "url",
+        "content",
+        "next_action",
+        "acquisition_status",
+        "notes"
+      ]
+    },
+    "fuel_prices_2024.csv": {
+      "rows": 12,
+      "sha256_LF": "1969fce508543d17d5ce553a4f6f771821e49b70ffd4df30e50c62bb01fa21c3",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "location",
+        "fuel",
+        "price_SDG_per_litre",
+        "availability",
+        "notes"
+      ]
+    },
+    "generation_plan_comparison.csv": {
+      "rows": 10,
+      "sha256_LF": "b7f849c337f9399e3b5248c90008b07de9324dcbc279acdf3f9e8094795dee96",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "carrier",
+        "least_cost_capacity_MW",
+        "government_capacity_MW",
+        "least_cost_generation_GWh",
+        "government_generation_GWh",
+        "is_total",
+        "notes"
+      ]
+    },
+    "import_cost_shares_2025.csv": {
+      "rows": 22,
+      "sha256_LF": "0e9ab4b4c2cf003529cde6864f8e2016d81608b39fb7c1090036b0a80a56d013",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "item_number",
+        "item",
+        "share_percent",
+        "notes"
+      ]
+    },
+    "interview_prices.csv": {
+      "rows": 9,
+      "sha256_LF": "0ab94c3293ebaedc3d5b5a73757f24a22b67dc9a4b9a25a1a9d0761d11a35aa0",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "item",
+        "value",
+        "unit",
+        "notes"
+      ]
+    },
+    "irrigation_model_results.csv": {
+      "rows": 24,
+      "sha256_LF": "b363484e554ccd626d71cee3bbf965693e527ac388b32e87445674b1dddb8cb3",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "site_number",
+        "case",
+        "PV_kW",
+        "wind_kW",
+        "battery_count",
+        "converter_kW",
+        "NPC_USD",
+        "COE_USD_per_kWh",
+        "excess_generation_percent",
+        "notes"
+      ]
+    },
+    "irrigation_weather_sites.csv": {
+      "rows": 12,
+      "sha256_LF": "5b079d65399adc0b10cd70bcfc2eac2deaa16aab205a769d521e96d9cd1adef2",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "site_number",
+        "sample_location",
+        "weather_station",
+        "longitude",
+        "latitude",
+        "climate",
+        "soil",
+        "notes"
+      ]
+    },
+    "market_prices_2025.csv": {
+      "rows": 24,
+      "sha256_LF": "f9520d39fb9e2a83cab4998d4b16bee0e4d8de489c01986d0f7587ca78e1db48",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "city",
+        "product",
+        "specification_as_printed",
+        "source_price_thousand_SDG",
+        "price_SDG",
+        "nominal_energy_kWh",
+        "derived_SDG_per_nominal_kWh",
+        "quote_status",
+        "conversion_status",
+        "notes"
+      ]
+    },
+    "ndc_electricity_targets.csv": {
+      "rows": 5,
+      "sha256_LF": "ce62904d22bd02ca704940db9b93099d2d58dac9a3676260944b5e1136b1c0bb",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "measure_number",
+        "measure",
+        "electricity_displaced_GWh",
+        "emission_reduction_tCO2e",
+        "programme_cost_million_USD",
+        "notes"
+      ]
+    },
+    "network_evidence.csv": {
+      "rows": 16,
+      "sha256_LF": "33d7769847391f262948d222c22ec35896d74320c42dec5d02839d43af2e2fba",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "geography",
+        "metric",
+        "value",
+        "unit",
+        "voltage_kV",
+        "status",
+        "notes"
+      ]
+    },
+    "plant_inventory_2019.csv": {
+      "rows": 32,
+      "sha256_LF": "f598e981b75468f997ee7753cbdb3625a76ffce4549be6e860026e27eb767521",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "asset_name",
+        "year_as_printed",
+        "technology",
+        "fuel_as_printed",
+        "installed_capacity_MW",
+        "category",
+        "notes"
+      ]
+    },
+    "plant_status_2024.csv": {
+      "rows": 20,
+      "sha256_LF": "72f682e7c30e65f1fcdadda0d6df7a9e97864c7d0ba3e0e13634eefb3e8763c6",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "asset_name",
+        "year_as_printed",
+        "technology",
+        "fuel_as_printed",
+        "installed_capacity_MW",
+        "grid_as_printed",
+        "status_category",
+        "explicitly_reported_available_MW",
+        "derived_available_fraction",
+        "notes"
+      ]
+    },
+    "programmes_and_projects.csv": {
+      "rows": 16,
+      "sha256_LF": "eab6c559007f44624e276b3a0c26d77e07f682831a155e87f908c8e17a122cd5",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "project",
+        "location",
+        "quantity",
+        "quantity_unit",
+        "budget_million_USD",
+        "beneficiaries_million",
+        "notes"
+      ]
+    },
+    "scenario_evidence.csv": {
+      "rows": 15,
+      "sha256_LF": "802fe9711ef889769b912062174e0da6060c3665c988d81e62dfbb3d2a772842",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "location",
+        "model_application",
+        "notes"
+      ]
+    },
+    "sector_sales_customers.csv": {
+      "rows": 21,
+      "sha256_LF": "c041d3b4b6abf478d5e31ada39a0bbb6ba535680ff44452a25895ccf02144110",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "sector",
+        "sales_MWh",
+        "customer_accounts",
+        "is_total",
+        "derived_kWh_per_account_month",
+        "notes"
+      ]
+    },
+    "source_issues.csv": {
+      "rows": 25,
+      "sha256_LF": "4417084fdc4a2a962b92c03a7c8cd97e47f853948206e82e5fd3a8deb56bad95",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "issue_code",
+        "handling",
+        "notes"
+      ]
+    },
+    "source_register.csv": {
+      "rows": 19,
+      "sha256_LF": "50a020eec7641bedb221357a2bf584947b68c4290b9e621ad11cdec04ddfbef1",
+      "columns": [
+        "source_id",
+        "filename",
+        "title",
+        "author",
+        "publication_date",
+        "pdf_pages",
+        "sha256",
+        "normalized_text_sha256",
+        "source_url",
+        "source_type",
+        "duplicate_of",
+        "reviewed_sections",
+        "notes",
+        "existing_collection",
+        "reviewed_on",
+        "redistribution"
+      ]
+    },
+    "study_parameters.csv": {
+      "rows": 47,
+      "sha256_LF": "32c17e3056c7be09f43929ae8e695b52e67c0d9538efdfdf008687707818c2f2",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "technology",
+        "parameter",
+        "value",
+        "unit",
+        "price_year",
+        "model_use",
+        "notes"
+      ]
+    },
+    "system_indicators.csv": {
+      "rows": 42,
+      "sha256_LF": "63ddc90d16dafbad1b5bb7f3f632bf3110d6e5ef912fc12531330c9cca2525a2",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "geography",
+        "metric",
+        "value",
+        "unit",
+        "notes"
+      ]
+    },
+    "tariffs_2018.csv": {
+      "rows": 23,
+      "sha256_LF": "a25f5811ec010181dd9842b5df6ddf85fe285f87911171b77e3563b8aed7c9c4",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "sector",
+        "tranche_as_printed",
+        "SDG_per_kWh",
+        "USD_per_kWh_as_printed",
+        "source_exchange_rate_SDG_per_USD",
+        "notes"
+      ]
+    },
+    "thermal_fuel_use_2017.csv": {
+      "rows": 6,
+      "sha256_LF": "cdbb218e57a667ef11fffc4f04c8f4ff446e8261b57d69f1b1e424c7851a96be",
+      "columns": [
+        "record_id",
+        "source_id",
+        "pdf_page",
+        "reference",
+        "data_period",
+        "evidence_kind",
+        "fuel",
+        "quantity_tonnes",
+        "share_percent",
+        "notes"
+      ]
+    }
+  }
+}
