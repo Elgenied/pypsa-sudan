@@ -1,0 +1,33 @@
+{
+  "atlas_clusters": 33891,
+  "eligible_clusters": 6843,
+  "selected_clusters": 18,
+  "states_selected": 18,
+  "missing_state_clusters": 21,
+  "source_file": "research/dre_atlas_2025/data/settlement_attributes.csv.gz",
+  "source_sha256": "0e07b95eebd88a65e5483b069b472c20bd91cc7fd936476921c009f486716643",
+  "licence": "World Bank Group / VIDA DRE Atlas 2025 release, CC BY 4.0",
+  "source_url": "https://energydata.info/dataset/sudan-distributed-renewable-energy-dre",
+  "selection": {
+    "minimum_connections": 80,
+    "maximum_connections": 250,
+    "maximum_building_density_percent": 25,
+    "require_no_detected_nightlight": true,
+    "features": [
+      "num_connections",
+      "hull_area",
+      "distance_to_existing_transmission_lines",
+      "pv_value"
+    ],
+    "log1p_features": [
+      "num_connections",
+      "hull_area",
+      "distance_to_existing_transmission_lines"
+    ],
+    "rule": "One actual source cluster per nonmissing state, minimizing sum of squared deviations from within-state feature medians after log1p transforms and IQR scaling; tie-break by geohash. No cost-based selection."
+  },
+  "selected_file_sha256": "7b54011aa94cd1f3924ea2e8ea7485f52353df24cac5b9d945895447e4219e23",
+  "coverage_file_sha256": "4a6c550ed58b4b28def5e484cc216bae90783f68167aea73d0cbd0e8720e8b66",
+  "context_points_sha256": "9690147d522e045be0cd31be50476bc4769782c7826499f6c24b833347fc180b",
+  "note": "Geographic breadth only: one deterministic median-profile cluster per state, not random sampling or state representation. No inference of present access or safety."
+}

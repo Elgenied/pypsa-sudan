@@ -4,7 +4,7 @@
 
 The question is: **Where should Sudan rehabilitate or extend the grid, where should it build mini-grids, and where are standalone systems more economical—at a specified level of service?**
 
-**Current stage:** a nationally calibrated 2022 dispatch prototype, historical/report evidence, a checked 2025-release settlement atlas, and an **hourly electrification pilot for three real atlas clusters**, using the lifecycle-cost notebook. Section 7 contains the 18-case pilot; **section 8 adds re-optimized uncertainty, route and demand break-even thresholds, and joint-scenario decision stability**. A coupled national electrification optimizer and validated recommendation map have **not yet been built**.
+**Current stage:** a nationally calibrated 2022 dispatch prototype, historical/report evidence, a checked 2025-release settlement atlas, and an available-data electrification scenario study in one cost notebook. Section 7 contains the three-cluster pilot; section 8 adds uncertainty/break-even analysis; **section 9 expands to 18 selected clusters, one per state, using atlas building-demand proxies and recovery-service targets**. Measured settlement demand is not a prerequisite for these conditional scenarios. A coupled national electrification optimizer and field-validated recommendation map have **not yet been built**.
 
 ## Start here
 
@@ -16,7 +16,7 @@ The question is: **Where should Sudan rehabilitate or extend the grid, where sho
 | **4. [Historical evidence notebook](research/forecasting_2012/Sudan_Forecasting_Replication.ipynb)** | Recovered 2012-report data, replicated calculations, regional sector pies and source conflicts |
 | **5. [Settlement atlas notebook](research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb)** | Settlement maps, source formula checks, state summaries, grid-distance screens and spatial gaps |
 | **6. [Report evidence and usage guide](data/report_evidence/README.md)** | October 2026 review: dated equipment/fuel prices, plant status, sector sales, published assumptions, source conflicts and modelling uses |
-| **7. [System-cost and pilot notebook](research/system_costs/Sudan_System_Costs.ipynb)** | Cost accounting; section 7 hourly pilot; **section 8 uncertainty curves, break-even thresholds, joint-scenario cost penalties and data priorities** |
+| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | Cost accounting; section 7 hourly pilot; section 8 uncertainty/break-even; **section 9 point maps and demand scenarios for 18 state-spanning clusters** |
 
 There are **four notebooks with different jobs**. Each begins with a reader guide and ends with its role in the next study. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html), [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html), [settlement HTML](research/dre_atlas_2025/Sudan_DRE_Settlements.html) and [cost HTML](research/system_costs/Sudan_System_Costs.html) are browser reading copies of those notebooks.
 
@@ -31,6 +31,7 @@ There are **four notebooks with different jobs**. Each begins with a reader guid
 | **System costs** | 17 component costs, 24 parameters, four fixed 100-home designs, three cost/finance cases; one cost notebook | Accounting and limiting-case tests pass; prices are provisional analyst assumptions and adequacy is untested | Traceable full-scope budgets and sensitivities; no feasible least-cost winner or country total |
 | **Electrification pilot** | Three real DRE clusters; complete 2022 NASA POWER weather; 18 full-year PyPSA sizing/dispatch cases in the cost notebook | Hourly balance, SOC, operating limits, service equality and lifecycle-objective reconciliation checked; no field validation | Conditional local sizing and option rankings; tests grid interruption, unavailable diesel and higher demand |
 | **Uncertainty and break-even** | Ten single-input sensitivities; eight joint scenarios per cluster; refined demand crossings and exact fixed-loss MV route thresholds | Saved hourly outputs and lifecycle costs independently reconstructed; scenario counts are not probabilities | Which assumptions can overturn local rankings; where to target evidence collection; no fixed-design robustness or national optimum |
+| **Spatial proxy-demand study** | 18 clusters, one per source state; location-specific 2022 hourly weather; atlas/1/2 kWh daily service cases; 168 distinct hourly solves | Source building formula, selection, equal service, hourly balances and lifecycle costs checked; no measured demand or national extrapolation | Cheapest assessed option at each selected point; grid considered conditionally at ten sites and not assessed at eight beyond the 50 km local-study scope |
 
 **Calibration is not independent validation.** Matching inputs does not confirm the network or operation. The 2012 report's forecasts for 2022 are not observations. The 2025 Atlas combines inputs from different years: demand is a building formula and conflict labels describe 2020–2022, not current safety.
 
@@ -51,6 +52,7 @@ data/
   system_costs/                  Editable component costs, quantities, scenarios, sources and cost coverage
   electrification_pilot/         Three source clusters, cached hourly weather, provenance and pilot assumptions
   electrification_uncertainty/   Experiment ranges, joint scenarios and interpretation rules
+  spatial_proxy_study/           18-state sample, building-demand scenarios, cached weather and coverage
 research/forecasting_2012/
   Sudan_Forecasting_Replication.ipynb   Historical analysis notebook
   data/                          Canonical extracted historical CSVs
@@ -67,6 +69,7 @@ research/system_costs/
   cost_model.py                  Reusable fixed-design lifecycle-cost engine
   pilot_model.py                 Hourly capacity optimization using full lifecycle costs
   uncertainty_model.py           Cached re-optimization and break-even calculations
+  spatial_proxy_model.py         Full-year comparison across selected state-spanning source clusters
   results/                       Budgets, annual ledger, sensitivities and numerical checks
 scripts/                         Catalog maintenance
 .github/workflows/               Automated execution and integrity checks
@@ -76,7 +79,7 @@ Use the [data collection](data/README.md) for input evidence. Use [2022 results]
 
 ## Next milestone
 
-The [three-cluster pilot](data/electrification_pilot/README.md) demonstrates matched-demand hourly comparison. The [uncertainty study](data/electrification_uncertainty/README.md) now identifies decision-sensitive assumptions and conditional thresholds. Next, use those results to target validation of service points, loads, usable tie-ins, routes and comparable quotations; then check distribution engineering, modular equipment and additional weather years before expanding the sample. In parallel, reconcile the 2022 fleet and hydro seasonality. A recommendation map follows a field-reviewed pilot. See the [milestones and completion criteria](docs/STUDY_PLAN.md#milestones-and-completion-criteria).
+The [spatial proxy-demand study](data/spatial_proxy_study/README.md) now continues with available evidence across 18 states, following the [pilot](data/electrification_pilot/README.md) and [uncertainty analysis](data/electrification_uncertainty/README.md). Next computational steps are alternative hourly activity profiles at matched daily energy, multi-year weather/fixed-design tests, and larger spatial strata with shared-route decisions. These can proceed without measured settlement demand. Local demand, quotations and engineering evidence can strengthen later claims; their absence must remain explicit. See the [milestones and completion criteria](docs/STUDY_PLAN.md#milestones-and-completion-criteria).
 
 ## Run
 
@@ -109,6 +112,7 @@ python research/system_costs/check_costs.py
 python research/system_costs/run_notebook.py --kernel pypsa
 python research/system_costs/check_pilot.py
 python research/system_costs/check_uncertainty.py
+python research/system_costs/check_spatial_proxy.py
 ```
 
 For a new environment, use Python 3.13 and install `requirements.txt` plus the [spatial notebook requirements](research/dre_atlas_2025/requirements.txt); extracting a local PDF also needs the historical package's requirements. Add `--export-only` to a notebook runner to refresh its HTML after a markdown-only notebook edit. See [dataset maintenance](data/README.md) for data updates.

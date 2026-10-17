@@ -1,0 +1,36 @@
+{
+  "sampled_clusters": 18,
+  "states": 18,
+  "sample_connections": 2293,
+  "grid_conditionally_assessed": 10,
+  "grid_not_assessed": 8,
+  "demand_case_changes": {
+    "continuous": 15,
+    "evening_interruption": 15
+  },
+  "counts": {
+    "atlas_proxy/continuous": {
+      "standalone": 18
+    },
+    "atlas_proxy/evening_interruption": {
+      "standalone": 18
+    },
+    "recovery_1/continuous": {
+      "standalone": 13,
+      "mini_grid": 5
+    },
+    "recovery_1/evening_interruption": {
+      "standalone": 13,
+      "mini_grid": 5
+    },
+    "recovery_2/continuous": {
+      "mini_grid": 15,
+      "standalone": 3
+    },
+    "recovery_2/evening_interruption": {
+      "mini_grid": 15,
+      "standalone": 3
+    }
+  },
+  "interpretation": "Counts refer only to selected clusters; no state technology allocation or national investment total."
+}

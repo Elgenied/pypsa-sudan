@@ -1,0 +1,23 @@
+{
+  "status": "Exploratory state-spanning sample using available public proxies; no measured settlement demand or national extrapolation",
+  "weather_year": 2022,
+  "selection": {
+    "minimum_connections": 80,
+    "maximum_connections": 250,
+    "maximum_building_density_percent": 25,
+    "require_no_detected_nightlight": true,
+    "features": ["num_connections", "hull_area", "distance_to_existing_transmission_lines", "pv_value"],
+    "log1p_features": ["num_connections", "hull_area", "distance_to_existing_transmission_lines"],
+    "rule": "One actual source cluster per nonmissing state, minimizing sum of squared deviations from within-state feature medians after log1p transforms and IQR scaling; tie-break by geohash. No cost-based selection."
+  },
+  "demand_cases": {
+    "atlas_proxy": {"daily_kWh_per_connection": null, "definition": "Use source total daily demand divided by potential connections, retaining source rounding; not observed consumption"},
+    "recovery_1": {"daily_kWh_per_connection": 1, "definition": "Assumed 1 kWh per potential connection per day, same hourly profile"},
+    "recovery_2": {"daily_kWh_per_connection": 2, "definition": "Assumed 2 kWh per potential connection per day, same hourly profile"}
+  },
+  "grid_cases": {"continuous": 0, "evening_interruption": 6},
+  "grid_max_straight_distance_km": 50,
+  "grid_scope_note": "Analyst scope cutoff only, not an engineering feasibility boundary. Above 50 km atlas line proximity, grid is not assessed; shared trunk expansion or regional reconstruction could change the comparison. Below cutoff, tie-in and route are still unverified.",
+  "near_tie_fraction": 0.05,
+  "worker_processes": 3
+}

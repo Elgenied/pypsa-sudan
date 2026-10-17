@@ -1,0 +1,19 @@
+state,atlas_clusters,eligible_clusters,selected_clusters,selected_geohash,grid_in_local_scope,eligible_median_grid_distance_km
+Blue Nile,542,107,1,sf08v5b9z9,True,17.8
+Central Darfur,951,243,1,sd2g41z66t,False,628.21
+East Darfur,1981,338,1,sd42qskjwv,False,436.655
+Gedaref,835,145,1,sf2q2xxtwf,True,34.93
+Gezira,2842,506,1,sdxeb9y0b3,True,16.59
+Kassala,1231,252,1,sf9rmy5yz7,True,21.265
+Khartoum,1818,271,1,sdzht8b78s,True,13.52
+North Darfur,3078,784,1,sd9b707rxx,False,551.415
+North Kordofan,4017,1017,1,sdmmwej5x4,False,57.14
+Northern,1345,137,1,semwk8ych9,True,8.99
+Red Sea,431,72,1,sg6hwnrz1t,True,25.9
+River Nile,2072,331,1,sepcj9qp2p,True,9.7
+Sennar,1101,226,1,sf2e3tpr68,True,18.98
+South Darfur,3003,474,1,sd173jy9kq,False,587.895
+South Kordofan,1679,380,1,sdnjnjrcw1,False,84.46000000000001
+West Darfur,882,175,1,sd2j10mehv,False,790.75
+West Kordofan,3972,875,1,sdhpnc53gy,False,165.3
+White Nile,2090,510,1,sdq91cupv2,True,14.455

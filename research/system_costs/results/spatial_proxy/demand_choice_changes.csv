@@ -1,0 +1,37 @@
+geohash,state,grid_case,atlas_proxy_choice,recovery_2_choice,choice_changes,grid_assessed
+sd173jy9kq,South Darfur,continuous,standalone,mini_grid,True,False
+sd173jy9kq,South Darfur,evening_interruption,standalone,mini_grid,True,False
+sd2g41z66t,Central Darfur,continuous,standalone,mini_grid,True,False
+sd2g41z66t,Central Darfur,evening_interruption,standalone,mini_grid,True,False
+sd2j10mehv,West Darfur,continuous,standalone,mini_grid,True,False
+sd2j10mehv,West Darfur,evening_interruption,standalone,mini_grid,True,False
+sd42qskjwv,East Darfur,continuous,standalone,mini_grid,True,False
+sd42qskjwv,East Darfur,evening_interruption,standalone,mini_grid,True,False
+sd9b707rxx,North Darfur,continuous,standalone,standalone,False,False
+sd9b707rxx,North Darfur,evening_interruption,standalone,standalone,False,False
+sdhpnc53gy,West Kordofan,continuous,standalone,mini_grid,True,False
+sdhpnc53gy,West Kordofan,evening_interruption,standalone,mini_grid,True,False
+sdmmwej5x4,North Kordofan,continuous,standalone,mini_grid,True,False
+sdmmwej5x4,North Kordofan,evening_interruption,standalone,mini_grid,True,False
+sdnjnjrcw1,South Kordofan,continuous,standalone,mini_grid,True,False
+sdnjnjrcw1,South Kordofan,evening_interruption,standalone,mini_grid,True,False
+sdq91cupv2,White Nile,continuous,standalone,mini_grid,True,True
+sdq91cupv2,White Nile,evening_interruption,standalone,mini_grid,True,True
+sdxeb9y0b3,Gezira,continuous,standalone,mini_grid,True,True
+sdxeb9y0b3,Gezira,evening_interruption,standalone,mini_grid,True,True
+sdzht8b78s,Khartoum,continuous,standalone,standalone,False,True
+sdzht8b78s,Khartoum,evening_interruption,standalone,standalone,False,True
+semwk8ych9,Northern,continuous,standalone,mini_grid,True,True
+semwk8ych9,Northern,evening_interruption,standalone,mini_grid,True,True
+sepcj9qp2p,River Nile,continuous,standalone,mini_grid,True,True
+sepcj9qp2p,River Nile,evening_interruption,standalone,mini_grid,True,True
+sf08v5b9z9,Blue Nile,continuous,standalone,mini_grid,True,True
+sf08v5b9z9,Blue Nile,evening_interruption,standalone,mini_grid,True,True
+sf2e3tpr68,Sennar,continuous,standalone,mini_grid,True,True
+sf2e3tpr68,Sennar,evening_interruption,standalone,mini_grid,True,True
+sf2q2xxtwf,Gedaref,continuous,standalone,mini_grid,True,True
+sf2q2xxtwf,Gedaref,evening_interruption,standalone,mini_grid,True,True
+sf9rmy5yz7,Kassala,continuous,standalone,mini_grid,True,True
+sf9rmy5yz7,Kassala,evening_interruption,standalone,mini_grid,True,True
+sg6hwnrz1t,Red Sea,continuous,standalone,standalone,False,True
+sg6hwnrz1t,Red Sea,evening_interruption,standalone,standalone,False,True

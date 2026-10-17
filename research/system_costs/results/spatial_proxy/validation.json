@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "selected_clusters": 18,
+  "states": 18,
+  "unique_hourly_cases": 168,
+  "checked_case_hours": 1471680,
+  "grid_assessed_clusters": 10,
+  "grid_not_assessed_clusters": 8,
+  "atlas_formula_reconstructed": true,
+  "full_atlas_selection_rechecked": true,
+  "equal_service": true,
+  "lifecycle_costs_reconstructed": true,
+  "measured_settlement_demand_used": false,
+  "national_extrapolation": false,
+  "field_validated": false
+}

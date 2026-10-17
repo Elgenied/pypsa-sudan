@@ -5,6 +5,7 @@ on:
       - 'data/system_costs/**'
       - 'data/electrification_pilot/**'
       - 'data/electrification_uncertainty/**'
+      - 'data/spatial_proxy_study/**'
       - 'research/system_costs/**'
       - '.github/workflows/system-costs.yml'
   pull_request:
@@ -12,6 +13,7 @@ on:
       - 'data/system_costs/**'
       - 'data/electrification_pilot/**'
       - 'data/electrification_uncertainty/**'
+      - 'data/spatial_proxy_study/**'
       - 'research/system_costs/**'
       - '.github/workflows/system-costs.yml'
   workflow_dispatch:
@@ -29,3 +31,4 @@ jobs:
       - run: python research/system_costs/run_notebook.py --kernel python3
       - run: python research/system_costs/check_pilot.py
       - run: python research/system_costs/check_uncertainty.py
+      - run: python research/system_costs/check_spatial_proxy.py

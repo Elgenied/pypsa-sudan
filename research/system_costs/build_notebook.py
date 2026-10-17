@@ -8,21 +8,21 @@ def code(text): cells.append(nbf.v4.new_code_cell(text.strip()))
 
 md('''# Sudan electrification: system costs and hourly pilot study
 
-**A working cost model and optimized three-cluster pilot for grid extension, mini-grids and standalone supply.** [Hourly pilot](#optimized-pilot) · **[Uncertainty and break-even study](#uncertainty-study)**.
+**A working cost model and electrification scenario study for grid extension, mini-grids and standalone supply.** [Hourly pilot](#optimized-pilot) · [Uncertainty and break-even](#uncertainty-study) · **[Available-data spatial study: 18 states](#spatial-proxy-study)**.
 
 This notebook assembles equipment, installed networks, connections, delivery, installation, project development, tax allowances, annual operation, replacements, disposal and finance. It is the cost layer for the post-war electrification study, separate from the existing 2022 dispatch model.
 
-**Sections 1–6 explain provisional budgets for fixed example designs. Section 7 optimizes capacities and dispatch for three real atlas clusters. Section 8 tests uncertainty, break-even thresholds and decision stability.** We have dated Sudan equipment/fuel evidence, but no complete, comparable supplier quotations. Every numeric USD modelling input is an editable analyst assumption. Historical regional benchmarks are retained separately. No observed Sudan price is silently converted to USD, and no damage is inferred from a conflict-risk category.
+**Sections 1–6 explain provisional budgets for fixed example designs. Section 7 optimizes three real atlas clusters. Section 8 tests uncertainty and break-even thresholds. Section 9 expands to one selected cluster in each of 18 states, using atlas-demand proxies and recovery-service scenarios.** We proceed with available public evidence; measured settlement demand is not required to run these explicitly conditional scenarios. Monetary inputs remain editable analyst assumptions; no observed Sudan price is silently converted to USD, and no damage is inferred from a conflict-risk category.
 
 | Available and checked | Still needed |
 |---|---|
-| Four fixed cost examples and an 18-run hourly pilot; lifecycle costs, source register and numerical tests | Verified settlement design, routes, quotations, dated FX and finance offers |
+| Fixed cost examples, hourly pilot, uncertainty/break-even and an 18-state spatial sample; source register and numerical tests | Better settlement, route and procurement evidence to refine the conditional results |
 | Fixed budgets use 100 homes; the pilot uses source cluster sizes and checks identical hourly service across options | Measured diversity/peaks, critical and productive loads, field reliability and multiple weather years |
-| Transparent upfront and 20-year costs | A validated least-cost technology recommendation or national budget |
+| Transparent upfront and 20-year costs; point maps across proxy-demand scenarios | A validated construction recommendation or integrated national budget |
 
 The fixed examples in sections 1–6 are **not optimized**. Section 7 separately matches assumed demand across options and checks hourly adequacy. Its conditional rankings depend on provisional routes, equipment prices, service profiles and grid availability; they are not field-validated recommendations.
 
-**Reading order:** 1 Fixed budgets → 2 Cost breakdown → 3 Cash flows and finance → 4 Fixed-design sensitivities → 5 Evidence and assumptions → 6 Accounting checks → **7 Optimized settlement pilot → 8 Re-optimized uncertainty, break-even points and data priorities**.
+**Reading order:** 1 Fixed budgets → 2 Cost breakdown → 3 Cash flows and finance → 4 Fixed-design sensitivities → 5 Evidence and assumptions → 6 Accounting checks → **7 Hourly pilot → 8 Uncertainty and break-even → 9 Spatial proxy-demand scenarios across 18 states**.
 
 [Project map](https://github.com/Elgenied/pypsa-sudan) · [Editable inputs and accounting rules](../../data/system_costs/README.md) · [Study plan](https://github.com/Elgenied/pypsa-sudan/blob/main/docs/STUDY_PLAN.md)
 ''')
@@ -243,6 +243,8 @@ from pilot_notebook_sections import sections
 cells.extend(sections())
 from uncertainty_notebook_sections import sections as uncertainty_sections
 cells.extend(uncertainty_sections())
+from spatial_proxy_notebook_sections import sections as spatial_sections
+cells.extend(spatial_sections())
 nb=nbf.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python (pypsa)','language':'python','name':'pypsa'},'language_info':{'name':'python'}})
 nbf.write(nb,ROOT/'Sudan_System_Costs.ipynb')
 print('Built',ROOT/'Sudan_System_Costs.ipynb')
