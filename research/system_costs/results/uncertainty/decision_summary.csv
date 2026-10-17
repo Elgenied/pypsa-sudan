@@ -1,0 +1,97 @@
+geohash,axis,value,winner,lowest_USD_kWh,runner_up_premium_percent,within_5_percent
+scbmu9pc3u,battery_cost_factor,0.6,standalone,0.6862213807052915,8.689453286628957,standalone
+scbmu9pc3u,battery_cost_factor,1.0,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,battery_cost_factor,1.4,grid_extension,0.745850267024538,41.6508583807627,grid_extension
+scbmu9pc3u,daily_kWh,0.5,standalone,0.988266308583692,35.44970743835159,standalone
+scbmu9pc3u,daily_kWh,1.0,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,daily_kWh,2.0,grid_extension,0.449473488692603,61.50230482473016,grid_extension
+scbmu9pc3u,daily_kWh,3.0,grid_extension,0.3701819331005551,74.86625678957361,grid_extension
+scbmu9pc3u,diesel_price,1.0,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,diesel_price,1.5,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,diesel_price,3.0,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,discount_rate,0.06,grid_extension,0.6260718802630392,23.18527224645026,grid_extension
+scbmu9pc3u,discount_rate,0.1,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,discount_rate,0.18,grid_extension,1.018913117251855,22.903795603201928,grid_extension
+scbmu9pc3u,grid_price,0.08,grid_extension,0.681642445552759,35.5421091900799,grid_extension
+scbmu9pc3u,grid_price,0.15,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,grid_price,0.3,grid_extension,0.8764588685036561,5.4142505756614945,grid_extension
+scbmu9pc3u,lv_length_factor,0.7,grid_extension,0.6575780961572889,32.82044221404179,grid_extension
+scbmu9pc3u,lv_length_factor,1.0,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,lv_length_factor,1.5,grid_extension,0.892970551803286,3.4650634302867633,standalone; grid_extension
+scbmu9pc3u,mv_cost_factor,0.6,grid_extension,0.7089352839768536,30.323961681559773,grid_extension
+scbmu9pc3u,mv_cost_factor,1.0,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,mv_cost_factor,1.6,grid_extension,0.8012227415960651,15.312821250752794,grid_extension
+scbmu9pc3u,outage_hours,0.0,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,outage_hours,3.0,standalone,0.9239125478370516,2.912909833629773,standalone; mini_grid; grid_extension
+scbmu9pc3u,outage_hours,6.0,standalone,0.9239125478370516,4.086724261660835,standalone; mini_grid
+scbmu9pc3u,outage_hours,9.0,standalone,0.9239125478370516,4.086724261660835,standalone; mini_grid
+scbmu9pc3u,pv_cost_factor,0.7,grid_extension,0.7395260952909006,6.9682536292747566,grid_extension
+scbmu9pc3u,pv_cost_factor,1.0,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,pv_cost_factor,1.3,grid_extension,0.7513501671187184,31.665325220536445,grid_extension
+scbmu9pc3u,standalone_markup,1.0,grid_extension,0.745850267024538,0.8246324585989173,standalone; grid_extension
+scbmu9pc3u,standalone_markup,1.25,grid_extension,0.745850267024538,23.87373024921842,grid_extension
+scbmu9pc3u,standalone_markup,1.5,grid_extension,0.745850267024538,28.93610803713753,grid_extension
+sdxk3ns4zh,battery_cost_factor,0.6,standalone,0.5244075208676058,17.18586104449478,standalone
+sdxk3ns4zh,battery_cost_factor,1.0,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,battery_cost_factor,1.4,standalone,0.8071178847260925,2.4207604665503313,standalone; mini_grid
+sdxk3ns4zh,daily_kWh,0.5,standalone,0.7301164635434887,36.75679560044325,standalone
+sdxk3ns4zh,daily_kWh,1.0,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,daily_kWh,2.0,mini_grid,0.5964560095247933,6.22507147313649,mini_grid
+sdxk3ns4zh,daily_kWh,3.0,mini_grid,0.5517862461727315,12.880703343490406,mini_grid
+sdxk3ns4zh,diesel_price,1.0,standalone,0.665762702796849,5.588244256747088,standalone
+sdxk3ns4zh,diesel_price,1.5,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,diesel_price,3.0,standalone,0.665762702796849,12.367273452388062,standalone
+sdxk3ns4zh,discount_rate,0.06,standalone,0.5674098194624128,10.657992304807129,standalone
+sdxk3ns4zh,discount_rate,0.1,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,discount_rate,0.18,standalone,0.8944675699411073,6.396702469079685,standalone
+sdxk3ns4zh,grid_price,0.08,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,grid_price,0.15,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,grid_price,0.3,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,lv_length_factor,0.7,standalone,0.665762702796849,6.3806735918824575,standalone
+sdxk3ns4zh,lv_length_factor,1.0,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,lv_length_factor,1.5,standalone,0.665762702796849,15.281723662250869,standalone
+sdxk3ns4zh,mv_cost_factor,0.6,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,mv_cost_factor,1.0,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,mv_cost_factor,1.6,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,outage_hours,0.0,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,outage_hours,3.0,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,outage_hours,6.0,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,outage_hours,9.0,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,pv_cost_factor,0.7,standalone,0.6089348820555265,15.368740621547117,standalone
+sdxk3ns4zh,pv_cost_factor,1.0,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,pv_cost_factor,1.3,standalone,0.722590523538172,4.805288040046496,standalone; mini_grid
+sdxk3ns4zh,standalone_markup,1.0,standalone,0.5454809143868069,33.912164535054345,standalone
+sdxk3ns4zh,standalone_markup,1.25,standalone,0.665762702796849,9.71856736827057,standalone
+sdxk3ns4zh,standalone_markup,1.5,mini_grid,0.7304652995809798,7.6087381095026885,mini_grid
+sfcc38ee31,battery_cost_factor,0.6,standalone,0.6411171830065346,29.524527118822096,standalone
+sfcc38ee31,battery_cost_factor,1.0,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,battery_cost_factor,1.4,standalone,0.9468737096361308,10.045659288667853,standalone
+sfcc38ee31,daily_kWh,0.5,standalone,0.8702414718514269,63.72778413069493,standalone
+sfcc38ee31,daily_kWh,1.0,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,daily_kWh,2.0,mini_grid,0.7057584997842183,9.628269580603654,mini_grid
+sfcc38ee31,daily_kWh,3.0,mini_grid,0.6258619910437219,21.909496799440518,mini_grid
+sfcc38ee31,diesel_price,1.0,standalone,0.8058877111047876,13.839242740174873,standalone
+sfcc38ee31,diesel_price,1.5,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,diesel_price,3.0,standalone,0.8058877111047876,19.903513368614224,standalone
+sfcc38ee31,discount_rate,0.06,standalone,0.6780026132746295,17.619592070089517,standalone
+sfcc38ee31,discount_rate,0.1,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,discount_rate,0.18,standalone,1.101732953068007,15.416956030985585,standalone
+sfcc38ee31,grid_price,0.08,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,grid_price,0.15,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,grid_price,0.3,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,lv_length_factor,0.7,standalone,0.8058877111047876,6.830970838352646,standalone
+sfcc38ee31,lv_length_factor,1.0,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,lv_length_factor,1.5,standalone,0.8058877111047876,34.795283715847724,standalone
+sfcc38ee31,mv_cost_factor,0.6,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,mv_cost_factor,1.0,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,mv_cost_factor,1.6,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,outage_hours,0.0,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,outage_hours,3.0,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,outage_hours,6.0,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,outage_hours,9.0,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,pv_cost_factor,0.7,standalone,0.7085198774874496,29.54371152168016,standalone
+sfcc38ee31,pv_cost_factor,1.0,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,pv_cost_factor,1.3,standalone,0.9017006118846664,7.837511982068879,standalone
+sfcc38ee31,standalone_markup,1.0,standalone,0.6575809210331576,43.7766814341676,standalone
+sfcc38ee31,standalone_markup,1.25,standalone,0.8058877111047876,17.31758816741329,standalone
+sfcc38ee31,standalone_markup,1.5,mini_grid,0.9454480260057082,0.9251143299394471,standalone; mini_grid

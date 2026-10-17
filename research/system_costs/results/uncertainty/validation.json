@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "unique_hourly_cases": 201,
+  "fresh_solves": 192,
+  "checked_case_hours": 1760760,
+  "one_at_a_time_comparisons": 288,
+  "joint_option_comparisons": 72,
+  "equal_service": true,
+  "lifecycle_costs_reconstructed": true,
+  "scenario_probabilities_assigned": false,
+  "field_validated": false,
+  "any_artificial_design_bound_binding": false
+}

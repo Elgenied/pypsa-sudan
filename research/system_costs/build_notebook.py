@@ -8,11 +8,11 @@ def code(text): cells.append(nbf.v4.new_code_cell(text.strip()))
 
 md('''# Sudan electrification: system costs and hourly pilot study
 
-**A working cost model and optimized three-cluster pilot for grid extension, mini-grids and standalone supply.** [Jump to the new hourly study](#optimized-pilot).
+**A working cost model and optimized three-cluster pilot for grid extension, mini-grids and standalone supply.** [Hourly pilot](#optimized-pilot) · **[Uncertainty and break-even study](#uncertainty-study)**.
 
 This notebook assembles equipment, installed networks, connections, delivery, installation, project development, tax allowances, annual operation, replacements, disposal and finance. It is the cost layer for the post-war electrification study, separate from the existing 2022 dispatch model.
 
-**Sections 1–6 explain provisional budgets for fixed example designs. Section 7 optimizes capacities and dispatch for three real atlas clusters.** We have dated Sudan equipment/fuel evidence, but no complete, comparable supplier quotations. Every numeric USD modelling input is an editable analyst assumption. Historical regional benchmarks are retained separately. No observed Sudan price is silently converted to USD, and no damage is inferred from a conflict-risk category.
+**Sections 1–6 explain provisional budgets for fixed example designs. Section 7 optimizes capacities and dispatch for three real atlas clusters. Section 8 tests uncertainty, break-even thresholds and decision stability.** We have dated Sudan equipment/fuel evidence, but no complete, comparable supplier quotations. Every numeric USD modelling input is an editable analyst assumption. Historical regional benchmarks are retained separately. No observed Sudan price is silently converted to USD, and no damage is inferred from a conflict-risk category.
 
 | Available and checked | Still needed |
 |---|---|
@@ -22,7 +22,7 @@ This notebook assembles equipment, installed networks, connections, delivery, in
 
 The fixed examples in sections 1–6 are **not optimized**. Section 7 separately matches assumed demand across options and checks hourly adequacy. Its conditional rankings depend on provisional routes, equipment prices, service profiles and grid availability; they are not field-validated recommendations.
 
-**Reading order:** 1 Fixed budgets → 2 Cost breakdown → 3 Cash flows and finance → 4 Sensitivities → 5 Evidence and assumptions → 6 Accounting checks → **7 Optimized settlement pilot, recovery stresses and findings**.
+**Reading order:** 1 Fixed budgets → 2 Cost breakdown → 3 Cash flows and finance → 4 Fixed-design sensitivities → 5 Evidence and assumptions → 6 Accounting checks → **7 Optimized settlement pilot → 8 Re-optimized uncertainty, break-even points and data priorities**.
 
 [Project map](https://github.com/Elgenied/pypsa-sudan) · [Editable inputs and accounting rules](../../data/system_costs/README.md) · [Study plan](https://github.com/Elgenied/pypsa-sudan/blob/main/docs/STUDY_PLAN.md)
 ''')
@@ -119,11 +119,11 @@ The cash-flow ledger records initial investment at year 0 and operations at each
 
 Baseline residual value is zero. The API can test a straight-line remaining-value credit; that accounting convention is not a resale guarantee. Construction is treated as occurring at commissioning: multi-year construction, interest during construction and working-capital timing require a later dated funding schedule.
 
-$$NPC=C_0+sum_{t=1}^{T}rac{O_t+R_t+D_t-S_t}{(1+r)^t},qquad EAC=NPCrac{r}{1-(1+r)^{-T}}$$
+$$NPC=C_0+\sum_{t=1}^{T}\frac{O_t+R_t+D_t-S_t}{(1+r)^t},\qquad EAC=NPC\frac{r}{1-(1+r)^{-T}}$$
 
 $O$ is operation, $R$ replacements, $D$ disposal and $S$ residual credit. At zero discount, $EAC=NPC/T$.
 
-The displayed cost per target kWh is $NPC/sum_t E_{target,t}/(1+r)^t$. **It becomes an LCOE only if that delivery is feasible and the operating cost assumptions are consistent with dispatch.** Here demand is constant, hence it also equals EAC/annual target energy. It is not a measured tariff or customer bill.
+The displayed cost per target kWh is $\frac{NPC}{\sum_{t=1}^{T} E_{target,t}/(1+r)^t}$. **It becomes an LCOE only if that delivery is feasible and the operating cost assumptions are consistent with dispatch.** Here demand is constant, hence it also equals EAC/annual target energy. It is not a measured tariff or customer bill.
 ''')
 code('''ledger=pd.DataFrame(mg['ledger'])
 annual=ledger.pivot_table(index='year',columns='kind',values='cost_USD',aggfunc='sum',fill_value=0)
@@ -241,6 +241,8 @@ At the central fuel assumptions, diesel's simple variable electric-output cost i
 ''')
 from pilot_notebook_sections import sections
 cells.extend(sections())
+from uncertainty_notebook_sections import sections as uncertainty_sections
+cells.extend(uncertainty_sections())
 nb=nbf.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python (pypsa)','language':'python','name':'pypsa'},'language_info':{'name':'python'}})
 nbf.write(nb,ROOT/'Sudan_System_Costs.ipynb')
 print('Built',ROOT/'Sudan_System_Costs.ipynb')

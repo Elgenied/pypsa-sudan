@@ -4,12 +4,14 @@ on:
     paths:
       - 'data/system_costs/**'
       - 'data/electrification_pilot/**'
+      - 'data/electrification_uncertainty/**'
       - 'research/system_costs/**'
       - '.github/workflows/system-costs.yml'
   pull_request:
     paths:
       - 'data/system_costs/**'
       - 'data/electrification_pilot/**'
+      - 'data/electrification_uncertainty/**'
       - 'research/system_costs/**'
       - '.github/workflows/system-costs.yml'
   workflow_dispatch:
@@ -26,3 +28,4 @@ jobs:
       - run: python research/system_costs/check_costs.py
       - run: python research/system_costs/run_notebook.py --kernel python3
       - run: python research/system_costs/check_pilot.py
+      - run: python research/system_costs/check_uncertainty.py

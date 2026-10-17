@@ -1,0 +1,4 @@
+geohash,source_name,lower_kWh_day,upper_kWh_day,lower_mini_minus_standalone_USD_kWh,upper_mini_minus_standalone_USD_kWh,status
+scbmu9pc3u,Al Kurumuk,1.09375,1.109375,0.002857749923606989,-0.0023854438154176094,sign_change_bracket
+sdxk3ns4zh,Ash Shiqeyyab,1.453125,1.46875,0.001194212250729465,-0.00029681365174183405,sign_change_bracket
+sfcc38ee31,Al Gash,1.5,1.515625,0.0012185510021407442,-0.0016338565009261785,sign_change_bracket

@@ -1,0 +1,4 @@
+geohash,lower_hours_per_day,upper_hours_per_day,status
+scbmu9pc3u,0.0,3.0,crossing_between_tested_outage_schedules
+sdxk3ns4zh,0.0,9.0,no_crossing_between_tested_schedules
+sfcc38ee31,0.0,9.0,no_crossing_between_tested_schedules

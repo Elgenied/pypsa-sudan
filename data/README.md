@@ -24,6 +24,8 @@ The [DRE Atlas notebook](../research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb)
 
 The grid / mini-grid / standalone **cost accounting** in [system_costs](system_costs/README.md) is now used by an [hourly three-cluster pilot](electrification_pilot/README.md). Section 7 of the [same notebook](../research/system_costs/Sudan_System_Costs.ipynb) optimizes local capacities and dispatch, with explicit proxy routes and assumed service targets. It does not implement joint national route planning or field-validated option selection. The 131 historical localities and 33,891 DRE clusters are different spatial units; there is no validated crosswalk or post-war access inventory.
 
+The [uncertainty experiment](electrification_uncertainty/README.md) supplies section 8 of that notebook: editable test ranges and joint scenarios for re-optimized comparisons, route and demand thresholds, and data priorities. These inputs are analyst assumptions, not additional observations or probability distributions.
+
 ## Maintain or update historical data
 
 1. Change the extraction script or source data with an explicit source/page reference. Preserve missing values and distinguish observations, assumptions and forecasts.
