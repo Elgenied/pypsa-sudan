@@ -6,13 +6,11 @@
     "Northern",
     "River Nile",
     "Khartoum",
-    "Gezira"
-  ],
-  "optional_extension_states": [
+    "Gezira",
     "White Nile",
     "Sennar"
   ],
-  "core_clusters": 8077,
+  "core_clusters": 11268,
   "selection": "All source clusters in the declared states; no size, distance, nightlight or risk exclusion.",
   "interpretation": "Counts describe atlas coverage, not verified households, access deficits or new connections. Atlas formula demand is not added to national demand.",
   "regional_optimization_completed": false

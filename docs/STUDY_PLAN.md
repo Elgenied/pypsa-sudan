@@ -4,7 +4,7 @@
 
 ## The question and intended output
 
-The proposed next geographic scope is [the northern–central regional study](NORTH_CENTRAL_STUDY.md): Northern, River Nile, Khartoum and Gezira, with existing-service recovery and additional access accounted for separately. The 8,077-cluster source inventory is prepared; regional optimization remains to be implemented.
+The agreed next geographic scope is [the northern–central regional study](NORTH_CENTRAL_STUDY.md): Northern, River Nile, Khartoum, Gezira, White Nile and Sennar, with existing-service recovery and additional access accounted for separately. The 11,268-cluster source inventory is prepared; regional optimization remains to be implemented.
 
 **For a defined recovery horizon and electricity service target, which combination of grid rehabilitation/extension, mini-grids and standalone systems supplies existing and newly served demand in Sudan at the lowest system cost?**
 

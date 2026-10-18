@@ -8,7 +8,7 @@ The question is: **Where should Sudan rehabilitate or extend the grid, where sho
 
 The repository also retains the nationally calibrated 2022 dispatch prototype, historical/report evidence, settlement atlas, complete cost ledger, three-cluster pilot, uncertainty/break-even analysis and 18-state sample. Measured settlement demand is not a prerequisite for conditional planning. Multi-region access allocation, national asset investment, sequencing and field-validated recommendations remain future work.
 
-**Next regional research study:** [northern–central Sudan study design and coverage](docs/NORTH_CENTRAL_STUDY.md). The proposed core is Northern, River Nile, Khartoum and Gezira, containing 8,077 source atlas clusters. The coverage inventory is prepared; the regional optimization has not yet been run. Section 11 remains the latest completed result.
+**Next regional research study:** [northern–central Sudan study design and coverage](docs/NORTH_CENTRAL_STUDY.md). The agreed core is Northern, River Nile, Khartoum, Gezira, White Nile and Sennar, containing 11,268 source atlas clusters. The coverage inventory is prepared; the regional optimization has not yet been run. Section 11 remains the latest completed result.
 
 ## Start here
 
