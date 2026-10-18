@@ -1,0 +1,22 @@
+{
+  "scenario": "constrained",
+  "equivalent_annual_access_cost_USD": 313260.76928029803,
+  "lifecycle_access_NPC_USD": 2666965.5201684036,
+  "initial_local_investment_USD": 1840393.5524914504,
+  "incremental_national_dispatch_cost_USD": 0.0,
+  "shared_EAC_USD": 0.0,
+  "repair_spend_USD": 0.0,
+  "national_import_MWh": 0.0,
+  "lower_bound_USD": 313260.76928029803,
+  "feasible_upper_bound_USD": 313260.76928029803,
+  "certified_absolute_gap_USD": 0,
+  "certified_relative_gap": 0,
+  "iterations": 1,
+  "numerical_charge_penalty_USD": 0.0,
+  "delivered_MWh": 356.96999999999997,
+  "new_route_km": 0.0,
+  "grid_connections": 0,
+  "mini_grid_connections": 481,
+  "standalone_connections": 497,
+  "selected_iteration": "iteration_00"
+}

@@ -49,3 +49,7 @@ For a DRE update, follow [the spatial collection's rebuild instructions](../rese
 ## Latest modelling inputs: joint recovery planning
 
 [`recovery_planning/`](recovery_planning/) supplies the four neighbouring Blue Nile source clusters, six candidate shared routes, three explicit recovery conditions and shared 2022 weather for section 10 of the existing system-cost notebook. Read the [method and input interpretation](../docs/RECOVERY_MODEL.md). Demand, repairability, capacities and budgets are planning assumptions; the source coordinates and potential connection counts are retained from the atlas. This folder does not contain observed war-damage data.
+
+## Current study inputs: national supply coupling
+
+[`national_coupling/`](national_coupling/) extends the sample to eight clusters and 11 candidate edges, and freezes the existing national NetCDF reference plus annual totals. Section 11 couples local imports to national hourly dispatch. Its source register identifies the original files; annual hydro constraints are recreated explicitly, and the national synthetic clock is aligned to UTC. The three cases describe local feeder recovery with a fixed 2022 national fleet. [Method, cost bounds and limitations](../docs/NATIONAL_COUPLING.md).

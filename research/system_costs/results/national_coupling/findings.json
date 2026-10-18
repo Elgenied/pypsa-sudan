@@ -1,0 +1,19 @@
+{
+  "potential_connections": 978,
+  "allocation": {
+    "constrained": {
+      "mini_grid": 481,
+      "standalone": 497
+    },
+    "partial": {
+      "grid": 677,
+      "standalone": 301
+    },
+    "broad": {
+      "grid": 880,
+      "standalone": 98
+    }
+  },
+  "maximum_coupling_gap_USD": 0.0,
+  "scope": "Eight-cluster access allocation coupled to national fixed-fleet dispatch, not national universal access"
+}

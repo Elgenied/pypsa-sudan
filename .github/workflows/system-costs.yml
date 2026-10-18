@@ -7,6 +7,7 @@ on:
       - 'data/electrification_uncertainty/**'
       - 'data/spatial_proxy_study/**'
       - 'data/recovery_planning/**'
+      - 'data/national_coupling/**'
       - 'research/system_costs/**'
       - '.github/workflows/system-costs.yml'
   pull_request:
@@ -16,6 +17,7 @@ on:
       - 'data/electrification_uncertainty/**'
       - 'data/spatial_proxy_study/**'
       - 'data/recovery_planning/**'
+      - 'data/national_coupling/**'
       - 'research/system_costs/**'
       - '.github/workflows/system-costs.yml'
   workflow_dispatch:
@@ -35,3 +37,4 @@ jobs:
       - run: python research/system_costs/check_uncertainty.py
       - run: python research/system_costs/check_spatial_proxy.py
       - run: python research/system_costs/check_recovery.py
+      - run: python research/system_costs/check_coupled.py

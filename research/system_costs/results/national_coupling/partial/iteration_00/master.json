@@ -1,0 +1,8 @@
+{
+  "objective": 295002.05737590976,
+  "lower_bound": 295002.05737590976,
+  "mip_gap": 0.0,
+  "repair": 1.0,
+  "national_cost_estimate": 17176.138497805565,
+  "charge_penalty": 0.10500650728021331
+}

@@ -1,0 +1,7 @@
+{
+  "mip_time_limit_seconds": 3600.0,
+  "default_seconds": 1200,
+  "mip_lp_solver": "hipo",
+  "highs_version": "1.15.1",
+  "model_and_gap_tolerances_unchanged": true
+}

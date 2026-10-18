@@ -1,0 +1,56 @@
+{
+  "study": "Eight-cluster planning coupled to the 19-node Sudan reference",
+  "daily_kWh_per_connection": 1,
+  "national_bus": "Roseires",
+  "national_reference_year": 2022,
+  "national_time_conversion": "Periodic annual series shifted from local UTC+2 to UTC; last two UTC hours use first two local-year hours.",
+  "national_cost_basis": "Existing illustrative national variable costs assigned constant-2025 USD for this scenario, not converted observed prices.",
+  "national_scope": "Fixed 2022 reference fleet, fixed imports/other generation, annual hydro budgets and schematic corridors; no national investment or war-damage inference.",
+  "incremental_demand_note": "Selected clusters are assumed additional access demand, excluded from the existing aggregate consumer total by construction; actual overlap is unverified.",
+  "common_feeder_repair_km": 2.0020000000000002,
+  "repair_fraction_of_new_line": 0.35,
+  "common_feeder_capacity_MW": 0.4,
+  "common_feeder_efficiency": 0.98,
+  "feeder_mapping": "Assumed access to the Roseires regional bus through the atlas-proximity feeder; no surveyed long-distance route or new line from Roseires city is claimed.",
+  "candidate_graph": "Union of two-nearest-neighbour edges and geometric minimum spanning tree; all lengths great-circle x1.3, not surveyed.",
+  "weather_note": "Shared existing Al Kurumuk NASA POWER 2022 series; maximum anchor separation 9.601 km.",
+  "grid_hub": "All grid-side PV/storage/diesel offered only at S1; non-root nodes may transit power while locally off-grid.",
+  "scenario_order": [
+    "constrained",
+    "partial",
+    "broad"
+  ],
+  "scenarios": {
+    "constrained": {
+      "label": "Constrained local recovery",
+      "repair_budget_USD": 0,
+      "outage_local_hours": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    "partial": {
+      "label": "Partial local recovery",
+      "repair_budget_USD": 30000,
+      "outage_local_hours": [
+        19,
+        20,
+        21
+      ]
+    },
+    "broad": {
+      "label": "Broad local recovery",
+      "repair_budget_USD": 100000,
+      "outage_local_hours": []
+    }
+  },
+  "master_mip_gap": 5e-05,
+  "coupling_relative_tolerance": 0.0001,
+  "coupling_absolute_tolerance_USD": 1.0,
+  "maximum_iterations": 8,
+  "money_basis": "Constant 2025 USD; 20 years; 10% real discount; zero tax transfer; existing national assets sunk."
+}

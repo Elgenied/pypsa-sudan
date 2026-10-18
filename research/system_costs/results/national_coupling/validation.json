@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "clusters": 8,
+  "potential_connections": 978,
+  "scenarios": 3,
+  "hours": 8760,
+  "national_buses": 19,
+  "national_corridors": 13,
+  "offgrid_designs": 16,
+  "all_hourly_service_met": true,
+  "national_shortage_allowed": false,
+  "coupling_bounds_checked": true,
+  "national_allocation": false,
+  "field_validated": false
+}

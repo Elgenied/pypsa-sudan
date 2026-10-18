@@ -1,0 +1,2 @@
+iteration,master_objective,master_lower_bound,national_delta_USD,national_estimate_USD,candidate_upper_bound,best_upper_bound,lower_bound,gap_USD,relative_gap
+1,313260.76928029803,313260.76928029803,0.0,-0.0,313260.76928029803,313260.76928029803,313260.76928029803,0,0.0

@@ -1,0 +1,11 @@
+{
+  "atlas_url": "https://energydata.info/dataset/sudan-distributed-renewable-energy-dre",
+  "atlas_license": "World Bank Group / VIDA CC BY 4.0",
+  "atlas_sha256": "0e07b95eebd88a65e5483b069b472c20bd91cc7fd936476921c009f486716643",
+  "weather_source": "data/electrification_pilot/weather_scbmu9pc3u_2022.csv.gz",
+  "weather_provenance": "data/electrification_pilot/source_manifest.json",
+  "national_reference_source": "results/sudan_2022.nc",
+  "national_reference_sha256": "fd63813b6de41b2ee942b11b63c78d5e53a92eb785210a31ec9c788fb7175d53",
+  "national_method": "Sudan_2022.ipynb; annual hydro budgets recreated from national_2022.csv because NetCDF does not retain custom constraints.",
+  "selection": "Eight nearest eligible Blue Nile clusters to the existing Al Kurumuk anchor, 20\u2013500 connections, positive area, no detected nightlight; ties by geohash. Selected before solving."
+}

@@ -1,0 +1,4 @@
+scenario,hours,settlements,local_balance_error_MW,national_balance_error_MW,storage_error_MWh,cost_reconstruction_error_USD,coupling_gap_USD
+constrained,8760,8,0.0,2.8588146960828453e-08,0.0,1.641456037759781e-08,0
+partial,8760,8,4.111294638065033e-16,2.854153535736259e-08,9.454242944073599e-17,1.5541445463895798e-08,0
+broad,8760,8,1.9758500391375833e-15,4.547473508864641e-13,0.0,-4.368484951555729e-08,0

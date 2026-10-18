@@ -4,9 +4,9 @@
 
 The question is: **Where should Sudan rehabilitate or extend the grid, where should it build mini-grids, and where are standalone systems more economical—at a specified level of service?**
 
-**Start with section 10 of the [electrification notebook](research/system_costs/Sudan_System_Costs.ipynb): joint recovery planning.** Four neighbouring Blue Nile clusters are optimized together under three recovery conditions, with shared routes, repair budgets, finite regional supply and hourly service. This is the first integrated regional demonstration, not yet a national allocation. [Formulation, evidence and reproduction](docs/RECOVERY_MODEL.md).
+**Start with section 11 of the [electrification notebook](research/system_costs/Sudan_System_Costs.ipynb): national supply coupling.** Eight neighbouring Blue Nile clusters (978 potential connections) are linked to the 19-node national dispatch model under three local recovery conditions. Shared routes, repairs, hourly service and additional national supply costs are optimized with checked upper/lower cost bounds. This is a nationally supplied regional access plan, not yet a country-wide allocation. [Formulation, evidence and reproduction](docs/NATIONAL_COUPLING.md). Section 10 retains the earlier four-cluster demonstration.
 
-The repository also retains the nationally calibrated 2022 dispatch prototype, historical/report evidence, settlement atlas, complete cost ledger, three-cluster pilot, uncertainty/break-even analysis and 18-state sample. Measured settlement demand is not a prerequisite for conditional planning. National supply coupling and field-validated recommendations remain future work.
+The repository also retains the nationally calibrated 2022 dispatch prototype, historical/report evidence, settlement atlas, complete cost ledger, three-cluster pilot, uncertainty/break-even analysis and 18-state sample. Measured settlement demand is not a prerequisite for conditional planning. Multi-region access allocation, national asset investment, sequencing and field-validated recommendations remain future work.
 
 ## Start here
 
@@ -18,7 +18,7 @@ The repository also retains the nationally calibrated 2022 dispatch prototype, h
 | **4. [Historical evidence notebook](research/forecasting_2012/Sudan_Forecasting_Replication.ipynb)** | Recovered 2012-report data, replicated calculations, regional sector pies and source conflicts |
 | **5. [Settlement atlas notebook](research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb)** | Settlement maps, source formula checks, state summaries, grid-distance screens and spatial gaps |
 | **6. [Report evidence and usage guide](data/report_evidence/README.md)** | October 2026 review: dated equipment/fuel prices, plant status, sector sales, published assumptions, source conflicts and modelling uses |
-| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | **Read section 10 first: joint recovery plans, shared routes, connections pies, capacities and costs.** Sections 1–9 retain accounting, pilots and supporting scenario work. |
+| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | **Read section 11 first: eight-cluster plans coupled to national dispatch, maps, connection shares, costs and bounds.** Sections 1–10 retain accounting and supporting studies. |
 
 There are **four notebooks with different jobs**. Each begins with a reader guide and ends with its role in the next study. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html), [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html), [settlement HTML](research/dre_atlas_2025/Sudan_DRE_Settlements.html) and [cost HTML](research/system_costs/Sudan_System_Costs.html) are browser reading copies of those notebooks.
 
@@ -35,6 +35,7 @@ There are **four notebooks with different jobs**. Each begins with a reader guid
 | **Uncertainty and break-even** | Ten single-input sensitivities; eight joint scenarios per cluster; refined demand crossings and exact fixed-loss MV route thresholds | Saved hourly outputs and lifecycle costs independently reconstructed; scenario counts are not probabilities | Which assumptions can overturn local rankings; where to target evidence collection; no fixed-design robustness or national optimum |
 | **Spatial proxy-demand study** | 18 clusters, one per source state; location-specific 2022 hourly weather; atlas/1/2 kWh daily service cases; 168 distinct hourly solves | Source building formula, selection, equal service, hourly balances and lifecycle costs checked; no measured demand or national extrapolation | Cheapest assessed option at each selected point; grid considered conditionally at ten sites and not assessed at eight beyond the 50 km local-study scope |
 | **Joint recovery planning** | Four neighbouring Blue Nile clusters, 880 potential connections; shared routes, repair budgets, regional supply and three full-year mixed-integer solves | Saved binary choices, route connectivity, hourly operation, lifecycle costs, budgets and optimality gap checked | Conditional local repair/connect/off-grid plans; aggregate regional boundary, not yet a national allocation |
+| **National supply coupling** | Eight neighbouring clusters, 978 potential connections, 11 candidate edges and a 19-node national supply model; three local recovery cases | Local/national hourly balances, hydro budgets, clock alignment, costs and coupling bounds checked | Conditional access choices supplied by the national fixed-fleet reference; not national universal access or national rehabilitation investment |
 
 **Calibration is not independent validation.** Matching inputs does not confirm the network or operation. The 2012 report's forecasts for 2022 are not observations. The 2025 Atlas combines inputs from different years: demand is a building formula and conflict labels describe 2020–2022, not current safety.
 
@@ -57,6 +58,7 @@ data/
   electrification_uncertainty/   Experiment ranges, joint scenarios and interpretation rules
   spatial_proxy_study/           18-state sample, building-demand scenarios, cached weather and coverage
   recovery_planning/            Four neighbouring clusters, candidate routes and three recovery conditions
+  national_coupling/            Eight clusters, sparse route graph and frozen national reference
 research/forecasting_2012/
   Sudan_Forecasting_Replication.ipynb   Historical analysis notebook
   data/                          Canonical extracted historical CSVs
@@ -75,6 +77,7 @@ research/system_costs/
   uncertainty_model.py           Cached re-optimization and break-even calculations
   spatial_proxy_model.py         Full-year comparison across selected state-spanning source clusters
   recovery_model.py              Joint hourly service, route, repair and shared-hub optimization
+  coupled_model.py               National dispatch coupling with checked cost bounds
   results/                       Budgets, annual ledger, sensitivities and numerical checks
 scripts/                         Catalog maintenance
 .github/workflows/               Automated execution and integrity checks

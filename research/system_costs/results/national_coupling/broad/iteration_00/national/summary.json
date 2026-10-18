@@ -1,0 +1,9 @@
+{
+  "cost_USD": 788379345.8084482,
+  "objective_USD": 788379345.8090227,
+  "status": "optimal",
+  "imports_to_access_MWh": 300.76634816731166,
+  "hydro_budget_MWh": 11282490.102551872,
+  "max_primal_infeasibility": 4.547473508864641e-13,
+  "max_dual_infeasibility": 6.142852508642381e-08
+}

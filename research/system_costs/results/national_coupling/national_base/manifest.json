@@ -1,0 +1,36 @@
+{
+  "inputs": {
+    "data/electrification_pilot/config.json": "60f0a0331cfbb26bf73e35d2b8fa98a9a11515556e5da3cec1dda391dd6c23c1",
+    "data/national_coupling/candidate_routes.csv": "6f07e812c6f3813e79b63a45318b75f5774e981fa701275c34081d0ef983c51c",
+    "data/national_coupling/config.json": "6ad1d746fd8c6e616d91cd782ee6875b41f476a2e1c736a5808d6b26f8e8d3dd",
+    "data/national_coupling/national_2022.csv": "4f7eb0e29f19e1f35e7ff17555165a9c12915c8f1531e84b9e311327c7105279",
+    "data/national_coupling/national_reference.nc": "fd63813b6de41b2ee942b11b63c78d5e53a92eb785210a31ec9c788fb7175d53",
+    "data/national_coupling/sites.csv": "a3cca6794f99bb8c1f014355ee42b4a25714129ec8b87106d079564afdbb9c6b",
+    "data/national_coupling/sources.json": "d21b41260c98baab33095e1808f1f8c42b336986f0b6e6b86f2c66adc045da78",
+    "data/national_coupling/weather_scbmtj02uk_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/national_coupling/weather_scbmtjnn4g_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/national_coupling/weather_scbmu9pc3u_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/national_coupling/weather_scbmv04bqy_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/national_coupling/weather_scbmv17n61_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/national_coupling/weather_scbmv4uebe_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/national_coupling/weather_scbqjpuq0f_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/national_coupling/weather_scbqm24701_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/recovery_planning/config.json": "1b8bf2a7e4d5b11c2d34bfb9e38e5d3c64a83033f497ade2b1972e50cbde6220",
+    "data/system_costs/benchmark_evidence.csv": "c2daf9742665f47fd1b2f22074b09eb833e7304bb6ec97829525809393126e84",
+    "data/system_costs/bill_of_quantities.csv": "6e0b6087e241626f5186f3c31983c7b0de3f0c4e960c1c91c840486fe355b3bc",
+    "data/system_costs/case_designs.csv": "a81f79ae0b17e1224fae3219e053014c6f867ea78a055cf6667897b07f4dbc97",
+    "data/system_costs/components.csv": "cff939d8f241783bf8248b2fa270c861763276a8768402227748d35979f61163",
+    "data/system_costs/coverage.csv": "ab582deb88d49f77a5d852e587ba8dc6787042361dc8fc124c63df7f0001e4cf",
+    "data/system_costs/scenario_parameters.csv": "5192f55254c749c4a94148fcc5b5f5bdf903a014dbb897a68eb64d305d21c96f",
+    "research/system_costs/cost_model.py": "5d5c43a74530f6ac5d2513d0800abd9905d69db9880591d8496b8505408100cf",
+    "research/system_costs/coupled_model.py": "728c912149ec52682d888c221515bcc60be3765e6ea3d5faf12a56d0dee4ab2e",
+    "research/system_costs/pilot_model.py": "30ca1f63fbd5329b630af3007478035077ebecbf25a64ab8d8029050386f12c3",
+    "research/system_costs/recovery_model.py": "38f3b990d87cac607d04e0c8022f7e65d672c29c4861f318d10f0b55853c023c"
+  },
+  "outputs": {
+    "network.nc": "2083030b284e43823967120c949d57f49add1944ddcb5c1d5bd2198c68b9ec5a",
+    "interface.csv.gz": "c19587b2d326e15611c2bf3190831d2514c8ab87c3fdfb9073c9f5ab74a98da7",
+    "generation.csv": "906d4e7500e1407dae4d23fa08cacc74970151af65bb0e8ed6ae51808fc9913d",
+    "summary.json": "1fb16be20b3aaba5f3941bef448e3310f5659b7d5af4f42262b8c6424d6fdbfa"
+  }
+}
