@@ -1,0 +1,19 @@
+{
+  "status": "scope_inventory_only_not_optimized",
+  "source": "research/dre_atlas_2025/data/settlement_attributes.csv.gz",
+  "source_sha256": "0e07b95eebd88a65e5483b069b472c20bd91cc7fd936476921c009f486716643",
+  "core_states": [
+    "Northern",
+    "River Nile",
+    "Khartoum",
+    "Gezira"
+  ],
+  "optional_extension_states": [
+    "White Nile",
+    "Sennar"
+  ],
+  "core_clusters": 8077,
+  "selection": "All source clusters in the declared states; no size, distance, nightlight or risk exclusion.",
+  "interpretation": "Counts describe atlas coverage, not verified households, access deficits or new connections. Atlas formula demand is not added to national demand.",
+  "regional_optimization_completed": false
+}

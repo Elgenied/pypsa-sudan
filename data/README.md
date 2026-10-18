@@ -53,3 +53,7 @@ For a DRE update, follow [the spatial collection's rebuild instructions](../rese
 ## Current study inputs: national supply coupling
 
 [`national_coupling/`](national_coupling/) extends the sample to eight clusters and 11 candidate edges, and freezes the existing national NetCDF reference plus annual totals. Section 11 couples local imports to national hourly dispatch. Its source register identifies the original files; annual hydro constraints are recreated explicitly, and the national synthetic clock is aligned to UTC. The three cases describe local feeder recovery with a fixed 2022 national fleet. [Method, cost bounds and limitations](../docs/NATIONAL_COUPLING.md).
+
+## Proposed regional study inventory
+
+[`north_central_study/`](north_central_study/) contains state coverage, source-ID membership and a status/provenance manifest for the proposed Northern–River Nile–Khartoum–Gezira core and optional White Nile/Sennar extension. It does **not** contain regional optimization results. See the [study design](../docs/NORTH_CENTRAL_STUDY.md); rebuild with `research/system_costs/prepare_regional_scope.py` using the existing full atlas.
