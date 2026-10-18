@@ -4,7 +4,9 @@
 
 The question is: **Where should Sudan rehabilitate or extend the grid, where should it build mini-grids, and where are standalone systems more economical—at a specified level of service?**
 
-**Current stage:** a nationally calibrated 2022 dispatch prototype, historical/report evidence, a checked 2025-release settlement atlas, and an available-data electrification scenario study in one cost notebook. Section 7 contains the three-cluster pilot; section 8 adds uncertainty/break-even analysis; **section 9 expands to 18 selected clusters, one per state, using atlas building-demand proxies and recovery-service targets**. Measured settlement demand is not a prerequisite for these conditional scenarios. A coupled national electrification optimizer and field-validated recommendation map have **not yet been built**.
+**Start with section 10 of the [electrification notebook](research/system_costs/Sudan_System_Costs.ipynb): joint recovery planning.** Four neighbouring Blue Nile clusters are optimized together under three recovery conditions, with shared routes, repair budgets, finite regional supply and hourly service. This is the first integrated regional demonstration, not yet a national allocation. [Formulation, evidence and reproduction](docs/RECOVERY_MODEL.md).
+
+The repository also retains the nationally calibrated 2022 dispatch prototype, historical/report evidence, settlement atlas, complete cost ledger, three-cluster pilot, uncertainty/break-even analysis and 18-state sample. Measured settlement demand is not a prerequisite for conditional planning. National supply coupling and field-validated recommendations remain future work.
 
 ## Start here
 
@@ -16,7 +18,7 @@ The question is: **Where should Sudan rehabilitate or extend the grid, where sho
 | **4. [Historical evidence notebook](research/forecasting_2012/Sudan_Forecasting_Replication.ipynb)** | Recovered 2012-report data, replicated calculations, regional sector pies and source conflicts |
 | **5. [Settlement atlas notebook](research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb)** | Settlement maps, source formula checks, state summaries, grid-distance screens and spatial gaps |
 | **6. [Report evidence and usage guide](data/report_evidence/README.md)** | October 2026 review: dated equipment/fuel prices, plant status, sector sales, published assumptions, source conflicts and modelling uses |
-| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | Cost accounting; section 7 hourly pilot; section 8 uncertainty/break-even; **section 9 point maps and demand scenarios for 18 state-spanning clusters** |
+| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | **Read section 10 first: joint recovery plans, shared routes, connections pies, capacities and costs.** Sections 1–9 retain accounting, pilots and supporting scenario work. |
 
 There are **four notebooks with different jobs**. Each begins with a reader guide and ends with its role in the next study. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html), [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html), [settlement HTML](research/dre_atlas_2025/Sudan_DRE_Settlements.html) and [cost HTML](research/system_costs/Sudan_System_Costs.html) are browser reading copies of those notebooks.
 
@@ -32,6 +34,7 @@ There are **four notebooks with different jobs**. Each begins with a reader guid
 | **Electrification pilot** | Three real DRE clusters; complete 2022 NASA POWER weather; 18 full-year PyPSA sizing/dispatch cases in the cost notebook | Hourly balance, SOC, operating limits, service equality and lifecycle-objective reconciliation checked; no field validation | Conditional local sizing and option rankings; tests grid interruption, unavailable diesel and higher demand |
 | **Uncertainty and break-even** | Ten single-input sensitivities; eight joint scenarios per cluster; refined demand crossings and exact fixed-loss MV route thresholds | Saved hourly outputs and lifecycle costs independently reconstructed; scenario counts are not probabilities | Which assumptions can overturn local rankings; where to target evidence collection; no fixed-design robustness or national optimum |
 | **Spatial proxy-demand study** | 18 clusters, one per source state; location-specific 2022 hourly weather; atlas/1/2 kWh daily service cases; 168 distinct hourly solves | Source building formula, selection, equal service, hourly balances and lifecycle costs checked; no measured demand or national extrapolation | Cheapest assessed option at each selected point; grid considered conditionally at ten sites and not assessed at eight beyond the 50 km local-study scope |
+| **Joint recovery planning** | Four neighbouring Blue Nile clusters, 880 potential connections; shared routes, repair budgets, regional supply and three full-year mixed-integer solves | Saved binary choices, route connectivity, hourly operation, lifecycle costs, budgets and optimality gap checked | Conditional local repair/connect/off-grid plans; aggregate regional boundary, not yet a national allocation |
 
 **Calibration is not independent validation.** Matching inputs does not confirm the network or operation. The 2012 report's forecasts for 2022 are not observations. The 2025 Atlas combines inputs from different years: demand is a building formula and conflict labels describe 2020–2022, not current safety.
 
@@ -53,6 +56,7 @@ data/
   electrification_pilot/         Three source clusters, cached hourly weather, provenance and pilot assumptions
   electrification_uncertainty/   Experiment ranges, joint scenarios and interpretation rules
   spatial_proxy_study/           18-state sample, building-demand scenarios, cached weather and coverage
+  recovery_planning/            Four neighbouring clusters, candidate routes and three recovery conditions
 research/forecasting_2012/
   Sudan_Forecasting_Replication.ipynb   Historical analysis notebook
   data/                          Canonical extracted historical CSVs
@@ -70,6 +74,7 @@ research/system_costs/
   pilot_model.py                 Hourly capacity optimization using full lifecycle costs
   uncertainty_model.py           Cached re-optimization and break-even calculations
   spatial_proxy_model.py         Full-year comparison across selected state-spanning source clusters
+  recovery_model.py              Joint hourly service, route, repair and shared-hub optimization
   results/                       Budgets, annual ledger, sensitivities and numerical checks
 scripts/                         Catalog maintenance
 .github/workflows/               Automated execution and integrity checks

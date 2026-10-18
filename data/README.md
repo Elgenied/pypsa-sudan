@@ -46,3 +46,6 @@ The [spatial proxy-demand study](spatial_proxy_study/README.md) supplies section
 The `Check historical data and replication` workflow verifies file integrity and reruns the notebook on relevant changes. These checks detect catalog drift and calculation regressions; they do not prove the source's historical accuracy or automatically fetch new data. New evidence requires a reviewed update.
 
 For a DRE update, follow [the spatial collection's rebuild instructions](../research/dre_atlas_2025/README.md), review changes to original checksums and source definitions, then rerun the spatial notebook. Its workflow checks committed data and notebook output without downloading the original large files.
+## Latest modelling inputs: joint recovery planning
+
+[`recovery_planning/`](recovery_planning/) supplies the four neighbouring Blue Nile source clusters, six candidate shared routes, three explicit recovery conditions and shared 2022 weather for section 10 of the existing system-cost notebook. Read the [method and input interpretation](../docs/RECOVERY_MODEL.md). Demand, repairability, capacities and budgets are planning assumptions; the source coordinates and potential connection counts are retained from the atlas. This folder does not contain observed war-damage data.

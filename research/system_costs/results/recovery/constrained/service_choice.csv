@@ -1,0 +1,13 @@
+choice,value
+S1_standalone,1.0
+S1_mini_grid,0.0
+S1_grid,0.0
+S2_standalone,1.0
+S2_mini_grid,0.0
+S2_grid,0.0
+S3_standalone,0.0
+S3_mini_grid,1.0
+S3_grid,0.0
+S4_standalone,1.0
+S4_mini_grid,0.0
+S4_grid,0.0

@@ -1,0 +1,18 @@
+{
+  "scope": "Four neighbouring atlas clusters, not a national allocation",
+  "potential_connections": 880,
+  "annual_cost_reduction_constrained_to_broad_USD": 77165.95490131632,
+  "allocation": {
+    "constrained": {
+      "mini_grid": 481,
+      "standalone": 399
+    },
+    "partial": {
+      "grid": 677,
+      "standalone": 203
+    },
+    "broad": {
+      "grid": 880
+    }
+  }
+}

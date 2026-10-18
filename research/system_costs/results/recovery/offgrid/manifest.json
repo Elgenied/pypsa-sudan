@@ -1,0 +1,33 @@
+{
+  "inputs": {
+    "data/electrification_pilot/config.json": "60f0a0331cfbb26bf73e35d2b8fa98a9a11515556e5da3cec1dda391dd6c23c1",
+    "data/recovery_planning/candidate_routes.csv": "77b64bd0efcf100154f5b7b611c31754f6a8414e026fd1ebe2904ab64fb2ac8d",
+    "data/recovery_planning/config.json": "1b8bf2a7e4d5b11c2d34bfb9e38e5d3c64a83033f497ade2b1972e50cbde6220",
+    "data/recovery_planning/sites.csv": "a055553f152709be5891aaaf7537db6fcd2172525ba1266bea23fcedd749ecdd",
+    "data/recovery_planning/sources.json": "95055e663e3941697ae2b6fb568ce93575ea85aa9900380788dba3afe0ecd45d",
+    "data/recovery_planning/weather_scbmu9pc3u_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/recovery_planning/weather_scbmv04bqy_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/recovery_planning/weather_scbmv17n61_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/recovery_planning/weather_scbmv4uebe_2022.csv.gz": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+    "data/system_costs/benchmark_evidence.csv": "c2daf9742665f47fd1b2f22074b09eb833e7304bb6ec97829525809393126e84",
+    "data/system_costs/bill_of_quantities.csv": "6e0b6087e241626f5186f3c31983c7b0de3f0c4e960c1c91c840486fe355b3bc",
+    "data/system_costs/case_designs.csv": "a81f79ae0b17e1224fae3219e053014c6f867ea78a055cf6667897b07f4dbc97",
+    "data/system_costs/components.csv": "cff939d8f241783bf8248b2fa270c861763276a8768402227748d35979f61163",
+    "data/system_costs/coverage.csv": "ab582deb88d49f77a5d852e587ba8dc6787042361dc8fc124c63df7f0001e4cf",
+    "data/system_costs/scenario_parameters.csv": "5192f55254c749c4a94148fcc5b5f5bdf903a014dbb897a68eb64d305d21c96f",
+    "research/system_costs/cost_model.py": "5d5c43a74530f6ac5d2513d0800abd9905d69db9880591d8496b8505408100cf",
+    "research/system_costs/pilot_model.py": "30ca1f63fbd5329b630af3007478035077ebecbf25a64ab8d8029050386f12c3",
+    "research/system_costs/recovery_model.py": "38f3b990d87cac607d04e0c8022f7e65d672c29c4861f318d10f0b55853c023c"
+  },
+  "outputs": {
+    "summary.csv": "e726479d2379cf5b3e8b23e9aee65fab9da36c52ed421d25e7f33ae2e755fa7a",
+    "scbmu9pc3u_mini_grid_base_hourly.csv.gz": "0c0a1d0b3daca1e9db327d5b95fcd401e867450fc96326dd1f6bd4c15ec4790f",
+    "scbmu9pc3u_standalone_base_hourly.csv.gz": "89eb7729b6614d6daae623d321fc39f39febaedf86ae97453c7c6baa72a0817b",
+    "scbmv04bqy_mini_grid_base_hourly.csv.gz": "f60b0aeaa07fce7932e76c2362353ac33e4f608201fe8a220762cc5f24a3bdb9",
+    "scbmv04bqy_standalone_base_hourly.csv.gz": "23acc04baee96394e8a8c00ee5d2a29cbfc3cf7301cae585e6fa1fe0912142bf",
+    "scbmv17n61_mini_grid_base_hourly.csv.gz": "a8af66236179af945082aae1db8d1b9abc90e2af28caeaaa52d67cc2cf8c040b",
+    "scbmv17n61_standalone_base_hourly.csv.gz": "7498333b7784b3d9f564205a1bf2bdaddadccbd5bfb83dcf437f6b8bd5599695",
+    "scbmv4uebe_mini_grid_base_hourly.csv.gz": "857688b43309b1f85ccfceafb9c8e973e303155a557f40c227a4c04adbe53567",
+    "scbmv4uebe_standalone_base_hourly.csv.gz": "01edcc45861357891c57e3f1b39f0b7418df22640daf7dee598b9f2c3529db82"
+  }
+}

@@ -1,0 +1,7 @@
+edge_id,from_site,to_site,route_km,capacity_MW,efficiency,evidence
+S1_S2,S1,S2,2.217811959064557,0.4,0.98,Candidate straight-line distance x1.3; unsurveyed new feeder
+S1_S3,S1,S3,2.3240259105848167,0.4,0.98,Candidate straight-line distance x1.3; unsurveyed new feeder
+S1_S4,S1,S4,2.8711655479586877,0.4,0.98,Candidate straight-line distance x1.3; unsurveyed new feeder
+S2_S3,S2,S3,1.137216203147188,0.4,0.98,Candidate straight-line distance x1.3; unsurveyed new feeder
+S2_S4,S2,S4,1.1659781035712102,0.4,0.98,Candidate straight-line distance x1.3; unsurveyed new feeder
+S3_S4,S3,S4,2.2881983945571323,0.4,0.98,Candidate straight-line distance x1.3; unsurveyed new feeder

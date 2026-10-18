@@ -6,7 +6,7 @@
 
 **For a defined recovery horizon and electricity service target, which combination of grid rehabilitation/extension, mini-grids and standalone systems supplies existing and newly served demand in Sudan at the lowest system cost?**
 
-The intended result is a **map of demand clusters and preferred service options**, with connection routes, capacity, costs, households/people served, reliability and uncertainty. Section 9 now provides conditional point maps for 18 sampled clusters across demand/grid scenarios. A national allocation map, surveyed routes and an integrated recovery plan do not yet exist.
+The intended result is a **map of demand clusters and preferred service options**, with connection routes, capacity, costs, households/people served, reliability and uncertainty. Section 10 now provides a jointly optimized four-cluster recovery demonstration with shared candidate routes and explicit repair decisions. Section 9 retains the broader 18-state independent sample. A national allocation map, surveyed routes and an integrated national recovery plan do not yet exist.
 
 The 2022 system is a pre-war reference. Recovery scenarios transform that reference into alternative starting conditions; they do not imply a known date for the end of the war. A five- or ten-year recovery horizon can be an explicit study assumption, with calendar dates assigned when the scenario is defined.
 
@@ -34,7 +34,7 @@ Two scales must connect: the **national/regional electricity system** and **loca
 
 A mini-grid has its own local network. Standalone means separate household/facility systems. Grid-connected places may also use local PV or batteries. Classification describes the primary service arrangement without banning hybrid supply or later grid connection.
 
-Do not assign an option in advance because a district is remote, populous or sunny. These characteristics affect feasibility/costs; the comparison determines the result. We have not established which named locations belong in each category.
+Do not assign an option in advance because a district is remote, populous or sunny. These characteristics affect feasibility/costs; the comparison determines the result. Section 10 reports conditional choices for four named source clusters; these do not establish district-wide recommendations.
 
 ## Can PyPSA do this?
 
@@ -51,7 +51,7 @@ I recommend a **GIS and demand layer feeding PyPSA**, with an explicit option-se
 | **Energy and capacity** | Generation, storage, imports, transfers and hourly adequacy | PyPSA investment/dispatch model extending the fixed-capacity prototype |
 | **Evaluation** | Access, reliability, costs, sequencing and uncertainty | Reproducible scenario tables, maps and validation sections |
 
-This is proposed architecture, not a description of functionality already implemented in the notebooks.
+Section 10 implements these layers for a four-cluster candidate graph and a single shared grid-side hub. The national coupling, geographic expansion and investment sequencing described here remain proposed work.
 
 ## A fair economic comparison
 
@@ -72,8 +72,8 @@ A staged approach can iterate local choices with regional supply/network costs. 
 | **0. Make the project readable** | Project map, evidence register and notebook guides | Evidence, calibrated results, assumptions and proposed work are visibly distinguished | **Available** |
 | **1. Prepare reference and pilot inputs** | Reconciled 2022 fleet; hydro-seasonality upgrade; mapped settlement sample; service and cost tables | Years/definitions/units agree; unknowns have bounds; assets and demand are not double counted | **In progress: DRE and full-scope cost accounting available; cost quotations, routes and service inputs still need validation** |
 | **2. Demonstrate a fair comparison** | Representative clusters with grid, mini-grid and standalone alternatives | Feasible options meet service targets; costs reconcile; limiting cases behave plausibly; shared routes and upstream assumptions are exposed | **Three-cluster hourly prototype available; field inputs and engineering validation remain** |
-| **3. Couple access and regional supply** | Repair, capacity, network and connection decisions | Balances, service, capacity and budgets pass; small cases are checked independently; screening is distinguished from joint optimization | **Planned** |
-| **4. Scale and stress-test** | Regional/national maps across recovery, demand, fuel, hydro, cost and finance cases | Robust/uncertain choices are visible; chronological storage and seasonal adequacy are checked; spatial coverage is reported | **Uncertainty study and 18-state proxy-demand sample available; national weighting/shared routes and weather/structural uncertainty remain planned** |
+| **3. Couple access and regional supply** | Repair, capacity, network and connection decisions | Balances, service, capacity and budgets pass; small cases are checked independently; screening is distinguished from joint optimization | **Four-cluster joint model available in section 10; aggregate regional interface, not yet national generation/transmission coupling** |
+| **4. Scale and stress-test** | Regional/national maps across recovery, demand, fuel, hydro, cost and finance cases | Robust/uncertain choices are visible; chronological storage and seasonal adequacy are checked; spatial coverage is reported | **Shared-route demonstration, uncertainty study and 18-state sample available; national geographic scaling remains next** |
 | **5. Paper release** | Archived data/version, methods, validation and reproducible notebook | Claims match evidence; holdout/local checks, uncertainty, limitations and source rights are documented | **Planned** |
 
 Choose pilot clusters from the DRE atlas after reviewing actual locations and coverage. Near-grid, dense remote and dispersed rural are useful **case types**, not conclusions about named regions. The source grid-distance column is straight-line proximity to mixed/unknown-voltage grid data, not a verified route. The 2020–2022 conflict categories are historical exposure, not current safety. Synthetic cases can test software but must be labelled and cannot validate geographic recommendations.
@@ -87,7 +87,7 @@ Choose pilot clusters from the DRE atlas after reviewing actual locations and co
 - Reliability, fuel/import dependence and emissions where supported.
 - Choices stable across uncertainty, and locations needing better evidence.
 
-The immediate computational goal is **testing alternative hourly demand shapes and fixed designs across multiple weather years using public inputs and explicit scenarios**. Measured settlement demand is not a prerequisite for the conditional scenario study. The thresholds identify which assumptions most deserve additional evidence if it becomes available; recommendations for construction still require local engineering.
+The immediate direction is **joint recovery planning, followed by geographic scaling and national supply coupling**. The user prioritizes the core research question over further assumption sweeps. Section 10 now implements a four-cluster Blue Nile demonstration with shared route activation, repair budgets, finite regional supply, binary service choices and full-year hourly operation. See [the formulation and scope](RECOVERY_MODEL.md). Measured settlement demand is not a prerequisite for this conditional study.
 
 The [system-cost notebook](../research/system_costs/Sudan_System_Costs.ipynb) contains both the accounting layer and an **18-run hourly pilot** in section 7. It selects three real DRE clusters, retrieves 2022 NASA POWER weather, matches assumed delivered service and optimizes capacities with lifecycle costs. Numerical feasibility and cost reconciliation pass under those assumptions. Stage 2 still needs field-verified service points/loads, routes, scoped quotations, distribution engineering and multi-year weather checks. The four earlier 100-home budgets remain synthetic examples and all USD prices remain provisional.
 
@@ -95,4 +95,4 @@ The [system-cost notebook](../research/system_costs/Sudan_System_Costs.ipynb) co
 
 **Section 9 continues using available data:** one deterministic small cluster per state, source building-demand proxies plus 1/2 kWh-per-connection service targets, location-specific 2022 weather and 168 hourly optimizations. Grid is conditionally assessed only within a declared 50 km line-proximity screen; it is not assessed at the other eight sites. Point maps show choices among considered alternatives, not state-wide technology allocation. This is a defensible scoped scenario experiment, not a validated national plan. [Spatial experiment design](../data/spatial_proxy_study/README.md).
 
-The national 2022 pies show capacity or dispatch. The pilot adds conditional local architecture rankings and supply mixes, while the DRE maps remain settlement evidence rather than a national cheapest-option map. The report's projected access is not an optimized result. There is currently no measured post-war damage inventory or joint settlement-level choice optimizer in this repository. The uncompleted stages above describe future work.
+The national 2022 pies show capacity or dispatch. Section 10 adds a **joint settlement-level choice optimizer**, using an assumed regional interface and candidate shared routes. There is still no measured post-war damage inventory or integrated national allocation. The report's projected access is not an optimized result. The next scope extension is to connect regional graphs to the national generation/transmission model, without extrapolating the four-cluster budget to Sudan.

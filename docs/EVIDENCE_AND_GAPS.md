@@ -69,6 +69,8 @@ The **6.277 million kWh/day** atlas total would be about **2.291 TWh/year** if r
 
 ### Notebook D: system costs
 
+**Section 10 is the current study:** four neighbouring Blue Nile clusters are optimized jointly, with a shared grid-side hub, binary service/route/repair choices and three recovery conditions. All 8,760 hours are retained. Demand, repairable infrastructure and regional supply conditions are declared scenarios. Numerical checks cover connected routes, equal delivered service, hourly feasibility, cost accounting and repair budgets. Geographic scaling and coupling to the national model are the next implementation steps. [Joint recovery method](RECOVERY_MODEL.md).
+
 **Section 9 continues with available public proxies, without requiring measured settlement demand.** Eighteen clusters (one per state) receive location-specific 2022 hourly weather, atlas-derived daily energy and two explicit recovery-service targets. Source selection/building arithmetic, matched service, hourly operation and lifecycle costs are checked. Ten sites have conditional grid comparisons; eight outside the declared local-extension distance scope have off-grid comparisons only. No probability weights, nationwide budget or state-wide recommendation is inferred. The source atlas and weather have different vintages; this is not observed 2022 settlement demand. [Spatial proxy-demand method](../data/spatial_proxy_study/README.md).
 
 **Section 8 adds exploratory uncertainty and break-even analysis.** Ten individual drivers and eight joint corners per cluster test conditional rankings. Operational cases are re-optimized for all 8,760 hours; geometry-only cost changes use exact fixed-cost adjustments under constant losses. Independent reconstruction checks hourly feasibility and complete lifecycle costs. Route thresholds and demand crossing brackets identify evidence priorities. Counts of scenario wins are not probabilities; capacities adapt separately, and no fixed-design, multi-weather-year or empirical validation is claimed. [Experiment assumptions](../data/electrification_uncertainty/README.md).
@@ -98,7 +100,7 @@ Missing exact damage records do not prevent scenario analysis. The claim becomes
 
 ## Claims today
 
-**Supported:** a reproducible, nationally calibrated regional dispatch prototype; traceable historical datasets; mapped DRE clusters and reproducible source arithmetic; full lifecycle-cost accounting; conditional technology rankings and hourly capacity/dispatch optimization for three atlas clusters under documented assumptions.
+**Supported:** a reproducible, nationally calibrated regional dispatch prototype; traceable historical datasets; mapped DRE clusters and reproducible source arithmetic; full lifecycle-cost accounting; local pilot and 18-state sample comparisons; and a four-cluster **joint recovery optimizer** with binary service/route/repair decisions, full-year operation and constrained regional supply. Section 10's hypothetical repair decisions are conditional on the declared candidate assets, not identified damaged infrastructure. See [scope and formulation](RECOVERY_MODEL.md).
 
 **Not yet supported:** field-validated settlement recommendations, universal-access cost, joint national investment optimality, optimal repair priorities, a validated post-war grid map, distribution/security certification or treating 2012 projections as observations.
 

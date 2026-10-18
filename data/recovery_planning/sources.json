@@ -1,0 +1,10 @@
+{
+  "atlas_url": "https://energydata.info/dataset/sudan-distributed-renewable-energy-dre",
+  "atlas_licence": "World Bank Group / VIDA, CC BY 4.0",
+  "atlas_source_sha256": "0e07b95eebd88a65e5483b069b472c20bd91cc7fd936476921c009f486716643",
+  "weather_source": "data\\electrification_pilot\\weather_scbmu9pc3u_2022.csv.gz",
+  "weather_sha256": "8605a430acbd8c1210aaae4ce34562fe63e045e71858e65b91159b9a467f31e0",
+  "weather_provenance": "data/electrification_pilot/source_manifest.json",
+  "selection": "Existing near-grid pilot anchor plus three nearest eligible Blue Nile clusters: 20-500 connections, positive area, no detected nightlight; ties geohash. No optimization outcome used.",
+  "maximum_weather_anchor_distance_km": 2.2085888830451443
+}

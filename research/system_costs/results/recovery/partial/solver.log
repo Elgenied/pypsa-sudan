@@ -1,0 +1,52 @@
+ERROR:   getOptionIndex: Option "include_objective_constant" is unknown
+Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
+MIP linopy-problem-_1ghyf0h has 1217750 rows; 455572 cols; 2356318 nonzeros; 20 integer variables (20 binary)
+Coefficient ranges:
+  Matrix  [6e-04, 2e+04]
+  Cost    [1e-03, 2e+05]
+  Bound   [1e+00, 1e+00]
+  RHS     [7e-04, 3e+04]
+Presolving model
+227997 rows, 184179 cols, 780358 nonzeros  1s
+172257 rows, 171145 cols, 684989 nonzeros  2s
+172256 rows, 171144 cols, 684986 nonzeros  3s
+Presolve reductions: rows 172256(-1045494); columns 171144(-284428); nonzeros 684986(-1671332) 
+
+Solving MIP model with:
+   172256 rows
+   171144 cols (11 binary, 0 integer, 0 implied int., 171133 continuous, 0 domain fixed)
+   684986 nonzeros
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+ J       0       0         0   0.00%   -inf            310292.002132      Large        0      0      0         0     7.0s
+ R       0       0         0   0.00%   293722.850224   299292.183073      1.86%        0      0      0         0   100.1s
+ T       0       0         0   0.00%   293722.850224   294729.345808      0.34%     5964    350      0      1466   105.2s
+         1       0         1 100.00%   294729.345808   294729.345808      0.00%     5964    350      0      1466   105.2s
+
+Solving report
+  Model             linopy-problem-_1ghyf0h
+  Status            Optimal
+  Primal bound      294729.345808
+  Dual bound        294729.345808
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      42.632042105
+  Solution status   feasible
+                    294729.345808 (objective)
+                    0 (bound viol.)
+                    5.77315972805e-15 (int. viol.)
+                    0 (row viol.)
+  Timing            105.16
+  Max sub-MIP depth 0
+  Nodes             1
+  Repair LPs        0
+  LP iterations     1466
+                    0 (strong br.)
+                    1466 (separation)
+                    0 (heuristics)

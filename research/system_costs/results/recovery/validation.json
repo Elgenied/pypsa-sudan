@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "scenarios": 3,
+  "settlements": 4,
+  "potential_connections": 880,
+  "hours_per_scenario": 8760,
+  "settlement_service_hours": 105120,
+  "offgrid_designs_checked": 8,
+  "discrete_choices_checked": true,
+  "shared_routes_costed_once": true,
+  "repair_budgets_checked": true,
+  "lifecycle_and_hourly_balances_checked": true,
+  "zero_budget_limiting_case_checked": true,
+  "nested_recovery_cost_monotonicity_checked": true,
+  "national_model": false,
+  "field_validated": false,
+  "measured_damage_used": false
+}

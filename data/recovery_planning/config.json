@@ -1,0 +1,56 @@
+{
+  "study": "Integrated Blue Nile recovery demonstration; not national allocation",
+  "daily_kWh_per_connection": 1,
+  "weather_year": 2022,
+  "weather_anchor_geohash": "scbmu9pc3u",
+  "weather_note": "All four sites use the existing NASA POWER series at Al Kurumuk; maximum separation 2.21 km. No invented independent weather retrieval.",
+  "background_peak_MW": 0.03,
+  "background_note": "Assumed separate existing feeder load, excluding all four candidate clusters; not an estimate of Blue Nile total demand.",
+  "upstream_repaired_capacity_MW": 0.15,
+  "common_feeder_capacity_MW": 0.4,
+  "common_feeder_efficiency": 0.98,
+  "common_feeder_repair_km": 2.0020000000000002,
+  "repair_fraction_of_new_line": 0.35,
+  "repair_note": "Hypothetical repairable common feeder length from anchor atlas proximity x1.3. Neither an identified damaged line nor verified MV route.",
+  "regional_supply_cost_note": "Existing ledger bulk-supply resource-service allowance at regional boundary. Additional repair cost restores access; historical sunk construction costs are excluded. No explicit national plant dispatch.",
+  "money_basis": "constant 2025 USD, 20-year stationary service, 10% real discount; nonrecoverable tax set to zero for resource-cost comparison",
+  "scenario_order": [
+    "constrained",
+    "partial",
+    "broad"
+  ],
+  "scenarios": {
+    "constrained": {
+      "label": "Constrained recovery",
+      "repair_budget_USD": 0,
+      "existing_supply_MW": 0.04,
+      "outage_local_hours": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    "partial": {
+      "label": "Partial recovery",
+      "repair_budget_USD": 30000,
+      "existing_supply_MW": 0.06,
+      "outage_local_hours": [
+        19,
+        20,
+        21
+      ]
+    },
+    "broad": {
+      "label": "Broad recovery",
+      "repair_budget_USD": 100000,
+      "existing_supply_MW": 0.08,
+      "outage_local_hours": []
+    }
+  },
+  "selection": "Existing near-grid pilot anchor plus three nearest eligible Blue Nile clusters: 20-500 connections, positive area, no detected nightlight; ties geohash. No optimization outcome used.",
+  "reliability": "Zero unmet modelled hourly load; no probabilistic outage or field reliability claim",
+  "mip_relative_gap": 0.0001
+}

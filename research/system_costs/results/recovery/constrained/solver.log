@@ -1,0 +1,41 @@
+ERROR:   getOptionIndex: Option "include_objective_constant" is unknown
+Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
+MIP linopy-problem-3dt3ovhb has 1217750 rows; 455572 cols; 2355223 nonzeros; 20 integer variables (20 binary)
+Coefficient ranges:
+  Matrix  [6e-04, 2e+04]
+  Cost    [1e-03, 2e+05]
+  Bound   [1e+00, 1e+00]
+  RHS     [7e-04, 3e+01]
+Presolving model
+118454 rows, 74652 cols, 289646 nonzeros  1s
+0 rows, 0 cols, 0 nonzeros  1s
+Presolve reductions: rows 0(-1217750); columns 0(-455572); nonzeros 0(-2355223) - Reduced to empty
+Presolve: Optimal
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   306396.745882   306396.745882      0.00%        0      0      0         0     1.8s
+
+Solving report
+  Model             linopy-problem-3dt3ovhb
+  Status            Optimal
+  Primal bound      306396.745882
+  Dual bound        306396.745882
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      0
+  Solution status   feasible
+                    306396.745882 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            1.80
+  Max sub-MIP depth 0
+  Nodes             0
+  Repair LPs        0
+  LP iterations     0

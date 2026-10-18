@@ -1,0 +1,4 @@
+scenario,hours,max_bus_balance_error_MW,max_storage_error_MWh,cost_reconstruction_error_USD,repair_spend_USD,connected_grid_sites,mip_relative_gap
+constrained,8760,3.469446951953614e-18,0.0,0.0,0.0,0,0.0
+partial,8760,1.6514567491299204e-15,2.914335439641036e-16,0.0,16648.631999999907,2,0.0
+broad,8760,5.551115123125783e-17,0.0,0.0,40408.632,4,0.0

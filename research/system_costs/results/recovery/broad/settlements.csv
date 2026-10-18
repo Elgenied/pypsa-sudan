@@ -1,0 +1,5 @@
+scenario,site_id,geohash,source_name,connections,choice,annual_delivered_kWh,local_equipment_and_operation_EAC_USD,local_initial_USD,pv_kWp,diesel_kW,battery_nominal_kWh,converter_AC_kW
+broad,S1,scbmu9pc3u,Al Kurumuk,196,grid,71539.99999999999,42449.644044993736,277357.6756633471,50.90399910531336,-0.0,-0.0,-0.0
+broad,S2,scbmv17n61,Location #10663,131,grid,47815.0,26205.6562846901,167907.12671773112,-0.0,-0.0,-0.0,-0.0
+broad,S3,scbmv04bqy,Kubbaka,481,grid,175565.0,69121.38076432439,437044.019707794,-0.0,-0.0,-0.0,-0.0
+broad,S4,scbmv4uebe,Radona,72,grid,26280.0,15017.588767009674,94052.89942999255,-0.0,-0.0,-0.0,-0.0

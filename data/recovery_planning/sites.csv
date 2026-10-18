@@ -1,0 +1,5 @@
+site_id,geohash,village_name,admin_cgaz_1,admin_cgaz_2,lat,lon,num_connections,hull_area,demand,distance_to_existing_transmission_lines,distance_to_anchor_km,pv_value,pilot_type
+S1,scbmu9pc3u,Al Kurumuk,Blue Nile,Al Kurmuk,10.860225,34.310041,196,0.492,65.7,1.54,0.0,1674.352,neighbouring_recovery_cluster
+S2,scbmv17n61,Location #10663,Blue Nile,Al Kurmuk,10.862438,34.3255,131,0.366,43.9,3.28,1.7060091992804283,1665.54,neighbouring_recovery_cluster
+S3,scbmv04bqy,Kubbaka,Blue Nile,Al Kurmuk,10.854572,34.325366,481,0.706,167.5,2.67,1.7877122389113975,1670.873,neighbouring_recovery_cluster
+S4,scbmv4uebe,Radona,Blue Nile,Al Kurmuk,10.870263,34.327493,72,0.137,24.1,3.46,2.2085888830451443,1661.34,neighbouring_recovery_cluster
