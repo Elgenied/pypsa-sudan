@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "full_year_cases": 12,
+  "feasible_cases": 9,
+  "infeasible_benchmarks": 3,
+  "normalized_local_designs": 30,
+  "clusters": 11268,
+  "states": 6,
+  "hours": 8760,
+  "primary_zones": 36,
+  "resolution_check_zones": 48,
+  "field_validated": false,
+  "unrestricted_design_optimum": false,
+  "interpretation": "Fixed-capacity hourly operations checked; infeasible benchmarks explicitly diagnose unserved energy and have no feasible cost reported"
+}

@@ -8,7 +8,7 @@ def code(text): cells.append(nbf.v4.new_code_cell(text.strip()))
 
 md('''# PyPSA-Sudan: least-cost electrification under recovery conditions
 
-**Start with [section 11: national supply coupling](#national-coupling)** for eight neighbouring clusters linked to the 19-node Sudan dispatch model, with shared routes, local recovery conditions and checked cost bounds. Supporting work: [Four-cluster demonstration](#recovery-planning) · [Hourly pilot](#optimized-pilot) · [Uncertainty and break-even](#uncertainty-study) · [18-state sample](#spatial-proxy-study).
+**Start with [section 12: six-state regional study](#regional-study)** for all 11,268 atlas clusters in Northern, River Nile, Khartoum, Gezira, White Nile and Sennar, grouped into 36 planning zones. Regional service portfolios and backbone repair scenarios are linked to national hourly dispatch. Supporting work: [Eight-cluster coupling](#national-coupling) · [Four-cluster demonstration](#recovery-planning) · [Hourly pilot](#optimized-pilot) · [Uncertainty and break-even](#uncertainty-study) · [18-state sample](#spatial-proxy-study).
 
 This notebook assembles equipment, installed networks, connections, delivery, installation, project development, tax allowances, annual operation, replacements, disposal and finance. It is the cost layer for the post-war electrification study, separate from the existing 2022 dispatch model.
 
@@ -16,13 +16,13 @@ This notebook assembles equipment, installed networks, connections, delivery, in
 
 | Available and checked | Still needed |
 |---|---|
-| National dispatch coupling for eight neighbouring clusters, plus the earlier local demonstrations and evidence | Multiple geographic interfaces, national asset investment and sequencing; better route and procurement evidence |
+| Six-state finite-portfolio planning with national dispatch, four candidate backbone repairs and full-year service checks | Broader design options, surveyed grid/routes, more weather locations, improved demand/access allocation and sequencing |
 | Fixed budgets use 100 homes; the pilot uses source cluster sizes and checks identical hourly service across options | Measured diversity/peaks, critical and productive loads, field reliability and multiple weather years |
 | Transparent upfront and 20-year costs; point maps across proxy-demand scenarios | A validated construction recommendation or integrated national budget |
 
 The fixed examples in sections 1–6 are **not optimized**. Section 7 separately matches assumed demand across options and checks hourly adequacy. Its conditional rankings depend on provisional routes, equipment prices, service profiles and grid availability; they are not field-validated recommendations.
 
-**Current results: section 11 first.** Supporting reading: 1 Fixed budgets → 2 Cost breakdown → 3 Cash flows and finance → 4 Fixed-design sensitivities → 5 Evidence and assumptions → 6 Accounting checks → 7 Hourly pilot → 8 Uncertainty and break-even → 9 Spatial proxy-demand scenarios across 18 states → 10 Four-cluster joint recovery demonstration. Section 11 adds national dispatch coupling for eight clusters; a country-wide access allocation and field-verified rehabilitation plan remain outside its scope.
+**Current results: section 12 first.** Supporting reading: 1 Fixed budgets → 2 Cost breakdown → 3 Cash flows and finance → 4 Fixed-design sensitivities → 5 Evidence and assumptions → 6 Accounting checks → 7 Hourly pilot → 8 Uncertainty and break-even → 9 Spatial proxy-demand scenarios across 18 states → 10 Four-cluster joint recovery demonstration → 11 Eight-cluster national dispatch coupling. Section 12 adds the six-state regional scenario study; a country-wide allocation and field-verified rehabilitation plan remain outside its scope.
 
 [Project map](https://github.com/Elgenied/pypsa-sudan) · [Editable inputs and accounting rules](../../data/system_costs/README.md) · [Study plan](https://github.com/Elgenied/pypsa-sudan/blob/main/docs/STUDY_PLAN.md)
 ''')
@@ -249,6 +249,8 @@ from recovery_notebook_sections import sections as recovery_sections
 cells.extend(recovery_sections())
 from coupled_notebook_sections import sections as coupled_sections
 cells.extend(coupled_sections())
+from regional_notebook_sections import sections as regional_sections
+cells.extend(regional_sections())
 nb=nbf.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python (pypsa)','language':'python','name':'pypsa'},'language_info':{'name':'python'}})
 nbf.write(nb,ROOT/'Sudan_System_Costs.ipynb')
 print('Built',ROOT/'Sudan_System_Costs.ipynb')

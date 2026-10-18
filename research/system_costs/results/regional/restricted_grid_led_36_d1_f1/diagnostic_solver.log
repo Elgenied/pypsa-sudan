@@ -1,0 +1,51 @@
+Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
+MIP linopy-problem-3t57js_z has 1585696 rows; 674568 cols; 2431614 nonzeros; 40 integer variables (40 binary)
+Coefficient ranges:
+  Matrix  [2e-05, 3e+07]
+  Cost    [5e+00, 4e+09]
+  Bound   [1e+00, 1e+00]
+  RHS     [5e-03, 7e+06]
+WARNING: Problem has some excessively large costs
+WARNING: Problem has some excessively large row bounds
+WARNING:    Consider scaling the objective by 1e-4, or setting the user_objective_scale option to -12
+WARNING:    Consider scaling the    bounds by 1e-1, or setting the user_bound_scale option to -3
+Presolving model
+218725 rows, 319585 cols, 644082 nonzeros  5s
+69782 rows, 208851 cols, 341642 nonzeros  9s
+61012 rows, 165568 cols, 285011 nonzeros  14s
+Presolve reductions: rows 61012(-1524684); columns 165568(-509000); nonzeros 285011(-2146603) 
+
+Solving MIP model with:
+   61012 rows
+   165568 cols (0 binary, 0 integer, 0 implied int., 165568 continuous, 0 domain fixed)
+   285011 nonzeros
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   2.43053587e+11  inf                  inf        0      0      0         0    20.3s
+ T       0       0         0   0.00%   2.43053587e+11  2.43125556e+11     0.03%        0      0      0         0    31.2s
+         1       0         1 100.00%   2.43125556e+11  2.43125556e+11     0.00%        0      0      0         0    31.2s
+
+Solving report
+  Model             linopy-problem-3t57js_z
+  Status            Optimal
+  Primal bound      243125556303
+  Dual bound        243125556303
+  Gap               0% (tolerance: 0.05%)
+  P-D integral      8.51833352687e-06
+  Solution status   feasible
+                    243125556303 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            31.23
+  Max sub-MIP depth 0
+  Nodes             1
+  Repair LPs        0
+  LP iterations     0

@@ -1,0 +1,54 @@
+{
+  "states": 6,
+  "clusters": 11268,
+  "primary_zones": 36,
+  "regional_cases": 12,
+  "maximum_mip_gap": 0.0004464896179783,
+  "mixed_results": [
+    {
+      "scenario": "restricted",
+      "annual_system_cost_USD": 4197799513.341919,
+      "repair_investment_USD": 0.0,
+      "grid_connections": 3679962,
+      "mini_grid_connections": 4292620,
+      "standalone_connections": 2106084,
+      "unserved_MWh": 0.0
+    },
+    {
+      "scenario": "selective",
+      "annual_system_cost_USD": 3633110350.274101,
+      "repair_investment_USD": 32953727.70822917,
+      "grid_connections": 3797469,
+      "mini_grid_connections": 3923586,
+      "standalone_connections": 2357611,
+      "unserved_MWh": 0.0
+    },
+    {
+      "scenario": "restored",
+      "annual_system_cost_USD": 2088847977.2036765,
+      "repair_investment_USD": 104709475.16820514,
+      "grid_connections": 5858406,
+      "mini_grid_connections": 1100797,
+      "standalone_connections": 3119463,
+      "unserved_MWh": 0.0
+    }
+  ],
+  "infeasible_benchmarks": [
+    {
+      "case": "restricted_grid_led_36_d1_f1",
+      "unserved_MWh": 239102.5548957435,
+      "shortfall_hours": 550
+    },
+    {
+      "case": "selective_grid_led_36_d1_f1",
+      "unserved_MWh": 308468.78758259886,
+      "shortfall_hours": 807
+    },
+    {
+      "case": "restored_grid_led_36_d1_f1",
+      "unserved_MWh": 365862.8765625644,
+      "shortfall_hours": 1095
+    }
+  ],
+  "interpretation": "Zone-wide choices from finite candidate portfolios; 2022 reference with dated hydro shapes, state weather proxies and hypothetical recovery projects"
+}

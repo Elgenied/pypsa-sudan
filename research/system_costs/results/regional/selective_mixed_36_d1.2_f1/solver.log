@@ -1,0 +1,94 @@
+Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
+MIP linopy-problem-6_0f133_ has 1252780 rows; 508128 cols; 1949838 nonzeros; 40 integer variables (40 binary)
+Coefficient ranges:
+  Matrix  [2e-05, 3e+07]
+  Cost    [5e+00, 4e+09]
+  Bound   [1e+00, 1e+00]
+  RHS     [5e-03, 4e+07]
+WARNING: Problem has some excessively large costs
+WARNING: Problem has some excessively large row bounds
+WARNING:    Consider scaling the objective by 1e-4, or setting the user_objective_scale option to -13
+WARNING:    Consider scaling the    bounds by 1e-2, or setting the user_bound_scale option to -6
+Presolving model
+193802 rows, 186124 cols, 622140 nonzeros  4s
+147790 rows, 140112 cols, 658586 nonzeros  6s
+99717 rows, 125224 cols, 488556 nonzeros  9s
+99661 rows, 125170 cols, 486689 nonzeros  15s
+Presolve reductions: rows 99661(-1153119); columns 125170(-382958); nonzeros 486689(-1463149) 
+
+Solving MIP model with:
+   99661 rows
+   125170 cols (39 binary, 0 integer, 0 implied int., 125131 continuous, 0 domain fixed)
+   486689 nonzeros
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   4135707758.855  inf                  inf        0      0      0         0    26.1s
+ R       0       0         0   0.00%   4246711607.676  4657037337.893     8.81%        0      0      0         0   111.0s
+         0       0         0   0.00%   4258746354.561  4657037337.893     8.55%    40035      5      0      9450   128.0s
+         0       0         0   0.00%   4258751292.426  4657037337.893     8.55%    66552     16      0      9460   137.0s
+         0       0         0   0.00%   4258755611.033  4657037337.893     8.55%    70933     24      0      9473   147.3s
+         0       0         0   0.00%   4258763858.622  4657037337.893     8.55%    71719     32      0      9490   157.1s
+         0       0         0   0.00%   4258779436.31   4657037337.893     8.55%    72159     40      0      9518   183.9s
+         0       0         0   0.00%   4258779436.31   4657037337.893     8.55%    72401     47      0      9532   193.8s
+         0       0         0   0.00%   4258784164.124  4657037337.893     8.55%    72469     55      0      9554   202.9s
+         0       0         0   0.00%   4258784297.639  4657037337.893     8.55%    72558     62      0      9566   212.0s
+         0       0         0   0.00%   4258784297.639  4657037337.893     8.55%    91087     69      0      9574   220.3s
+         0       0         0   0.00%   4258784297.639  4657037337.893     8.55%    93101     76      0      9587   229.7s
+         0       0         0   0.00%   4258784297.639  4657037337.893     8.55%   105711     83      0      9596   238.4s
+ L       0       0         0   0.00%   4258784297.639  4279995915.754     0.50%   105711     83      0      9596   914.4s
+         0       0         0   0.00%   4258802131.571  4279995915.754     0.50%   141143     92      0    318710   925.2s
+
+23.1% inactive integer columns, restarting
+Model after restart has 81242 rows, 112389 cols (30 bin., 0 int., 0 impl., 112359 cont., 0 dom.fix.), and 462678 nonzeros
+
+         0       0         0   0.00%   4258802131.571  4279995915.754     0.50%       76      0      0    318710   930.6s
+         0       0         0   0.00%   4259155217.529  4279995915.754     0.49%       76     22      0    381177   974.8s
+         0       0         0   0.00%   4259167146.757  4279995915.754     0.49%    44607     27      0    381200   986.3s
+         0       0         0   0.00%   4259170285.219  4279995915.754     0.49%    48528     35      0    381212   997.7s
+         0       0         0   0.00%   4259178893.15   4279995915.754     0.49%    49711     40      0    381233  1010.9s
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   4259178893.15   4279995915.754     0.49%    50366     45      0    381242  1024.6s
+         0       0         0   0.00%   4259178893.15   4279995915.754     0.49%    50703     50      0    381247  1036.2s
+         0       0         0   0.00%   4259178893.15   4279995915.754     0.49%    50926     55      0    381255  1048.7s
+         0       0         0   0.00%   4259178893.15   4279995915.754     0.49%    51091     60      0    381263  1060.7s
+         0       0         0   0.00%   4259185554.467  4279995915.754     0.49%    51201     65      0    381289  1071.8s
+         0       0         0   0.00%   4259185554.467  4279995915.754     0.49%    51378     70      0    381299  1083.1s
+         0       0         0   0.00%   4259185554.467  4279995915.754     0.49%    51484     75      0    381310  1094.2s
+         0       0         0   0.00%   4259192183.86   4279995915.754     0.49%    51553     80      0    381332  1107.2s
+
+Symmetry detection completed in 0.1s
+No symmetry present
+
+         1       0         1 100.00%   4278084942.012  4279995915.754     0.04%    51550     75     23    473284  1203.9s
+         1       0         1 100.00%   4278084942.012  4279995915.754     0.04%    51550     75     23    473284  1203.9s
+
+Solving report
+  Model             linopy-problem-6_0f133_
+  Status            Optimal
+  Primal bound      4279995915.75
+  Dual bound        4278084942.01
+  Gap               0.0446% (tolerance: 0.05%)
+  P-D integral      70.1474194243
+  Solution status   feasible
+                    4279995915.75 (objective)
+                    0 (bound viol.)
+                    1.38516532888e-16 (int. viol.)
+                    0 (row viol.)
+  Timing            1203.92
+  Max sub-MIP depth 3
+  Nodes             1
+  Repair LPs        0
+  LP iterations     473284
+                    80734 (strong br.)
+                    9764 (separation)
+                    309100 (heuristics)

@@ -4,11 +4,11 @@
 
 The question is: **Where should Sudan rehabilitate or extend the grid, where should it build mini-grids, and where are standalone systems more economical—at a specified level of service?**
 
-**Start with section 11 of the [electrification notebook](research/system_costs/Sudan_System_Costs.ipynb): national supply coupling.** Eight neighbouring Blue Nile clusters (978 potential connections) are linked to the 19-node national dispatch model under three local recovery conditions. Shared routes, repairs, hourly service and additional national supply costs are optimized with checked upper/lower cost bounds. This is a nationally supplied regional access plan, not yet a country-wide allocation. [Formulation, evidence and reproduction](docs/NATIONAL_COUPLING.md). Section 10 retains the earlier four-cluster demonstration.
+**Start with section 12 of the [electrification notebook](research/system_costs/Sudan_System_Costs.ipynb): the six-state regional study.** All 11,268 atlas clusters in Northern, River Nile, Khartoum, Gezira, White Nile and Sennar are represented in 36 planning zones. The model selects fixed local service portfolios and candidate backbone repairs alongside national hourly dispatch, compares three recovery conditions and policy benchmarks, and checks a 48-zone case. [Implemented formulation, assumptions and reproduction](docs/REGIONAL_MODEL.md). Sections 10–11 retain the earlier local demonstrations.
 
-The repository also retains the nationally calibrated 2022 dispatch prototype, historical/report evidence, settlement atlas, complete cost ledger, three-cluster pilot, uncertainty/break-even analysis and 18-state sample. Measured settlement demand is not a prerequisite for conditional planning. Multi-region access allocation, national asset investment, sequencing and field-validated recommendations remain future work.
+The repository also retains the nationally calibrated 2022 dispatch prototype, historical/report evidence, settlement atlas, complete cost ledger, three-cluster pilot, uncertainty/break-even analysis and 18-state sample. Measured settlement demand is not a prerequisite for conditional planning. National generation expansion, investment sequencing and field-validated recommendations remain future work.
 
-**Next regional research study:** [northern–central Sudan study design and coverage](docs/NORTH_CENTRAL_STUDY.md). The agreed core is Northern, River Nile, Khartoum, Gezira, White Nile and Sennar, containing 11,268 source atlas clusters. The coverage inventory is prepared; the regional optimization has not yet been run. Section 11 remains the latest completed result.
+The [regional research design](docs/NORTH_CENTRAL_STUDY.md) distinguishes the first implemented finite-portfolio study from the broader research objectives. Whole-zone choices, one weather point per state, hypothetical repair costs and assumed demand allocation remain material limitations; these are not field-verified settlement recommendations.
 
 ## Start here
 
@@ -20,7 +20,7 @@ The repository also retains the nationally calibrated 2022 dispatch prototype, h
 | **4. [Historical evidence notebook](research/forecasting_2012/Sudan_Forecasting_Replication.ipynb)** | Recovered 2012-report data, replicated calculations, regional sector pies and source conflicts |
 | **5. [Settlement atlas notebook](research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb)** | Settlement maps, source formula checks, state summaries, grid-distance screens and spatial gaps |
 | **6. [Report evidence and usage guide](data/report_evidence/README.md)** | October 2026 review: dated equipment/fuel prices, plant status, sector sales, published assumptions, source conflicts and modelling uses |
-| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | **Read section 11 first: eight-cluster plans coupled to national dispatch, maps, connection shares, costs and bounds.** Sections 1–10 retain accounting and supporting studies. |
+| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | **Read section 12 first: six-state regional plans, state pies, recovery projects, policy benchmarks and numerical checks.** Sections 1–11 retain accounting and supporting studies. |
 
 There are **four notebooks with different jobs**. Each begins with a reader guide and ends with its role in the next study. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html), [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html), [settlement HTML](research/dre_atlas_2025/Sudan_DRE_Settlements.html) and [cost HTML](research/system_costs/Sudan_System_Costs.html) are browser reading copies of those notebooks.
 
@@ -38,6 +38,7 @@ There are **four notebooks with different jobs**. Each begins with a reader guid
 | **Spatial proxy-demand study** | 18 clusters, one per source state; location-specific 2022 hourly weather; atlas/1/2 kWh daily service cases; 168 distinct hourly solves | Source building formula, selection, equal service, hourly balances and lifecycle costs checked; no measured demand or national extrapolation | Cheapest assessed option at each selected point; grid considered conditionally at ten sites and not assessed at eight beyond the 50 km local-study scope |
 | **Joint recovery planning** | Four neighbouring Blue Nile clusters, 880 potential connections; shared routes, repair budgets, regional supply and three full-year mixed-integer solves | Saved binary choices, route connectivity, hourly operation, lifecycle costs, budgets and optimality gap checked | Conditional local repair/connect/off-grid plans; aggregate regional boundary, not yet a national allocation |
 | **National supply coupling** | Eight neighbouring clusters, 978 potential connections, 11 candidate edges and a 19-node national supply model; three local recovery cases | Local/national hourly balances, hydro budgets, clock alignment, costs and coupling bounds checked | Conditional access choices supplied by the national fixed-fleet reference; not national universal access or national rehabilitation investment |
+| **Six-state regional study** | 11,268 clusters in 36 zones, three recovery conditions, four candidate backbone repairs, policy benchmarks and three focused checks | Full-year operations, demand accounting, cost reconstruction and finite-library optimization bounds checked; infeasible benchmarks explicitly reported | Conditional whole-zone service choices and assumed backbone repairs; not unrestricted design optimality or verified damage-based recommendations |
 
 **Calibration is not independent validation.** Matching inputs does not confirm the network or operation. The 2012 report's forecasts for 2022 are not observations. The 2025 Atlas combines inputs from different years: demand is a building formula and conflict labels describe 2020–2022, not current safety.
 
@@ -61,6 +62,7 @@ data/
   spatial_proxy_study/           18-state sample, building-demand scenarios, cached weather and coverage
   recovery_planning/            Four neighbouring clusters, candidate routes and three recovery conditions
   national_coupling/            Eight clusters, sparse route graph and frozen national reference
+  regional_model/               Six-state zones, crosswalks, weather proxies and recovery assumptions
 research/forecasting_2012/
   Sudan_Forecasting_Replication.ipynb   Historical analysis notebook
   data/                          Canonical extracted historical CSVs
@@ -80,16 +82,17 @@ research/system_costs/
   spatial_proxy_model.py         Full-year comparison across selected state-spanning source clusters
   recovery_model.py              Joint hourly service, route, repair and shared-hub optimization
   coupled_model.py               National dispatch coupling with checked cost bounds
+  regional_model.py              Six-state finite-portfolio selection and backbone recovery
   results/                       Budgets, annual ledger, sensitivities and numerical checks
 scripts/                         Catalog maintenance
 .github/workflows/               Automated execution and integrity checks
 ```
 
-Use the [data collection](data/README.md) for input evidence. Use [2022 results](results/) or [historical results](research/forecasting_2012/results/) for calculated outputs. **Historical and DRE inputs are not yet coupled to the 2022 model.** The evidence register identifies the remaining reconciliation work.
+Use the [data collection](data/README.md) for input evidence. Use [2022 results](results/) or [historical results](research/forecasting_2012/results/) for calculated outputs. Section 12 combines DRE cluster counts, a reported 2017 residential sales share, historical hydro seasonality and the 2022 national reference. These are declared proxy allocations; remaining fleet, geography and demand reconciliation is recorded in the evidence register.
 
 ## Next milestone
 
-The [spatial proxy-demand study](data/spatial_proxy_study/README.md) now continues with available evidence across 18 states, following the [pilot](data/electrification_pilot/README.md) and [uncertainty analysis](data/electrification_uncertainty/README.md). Next computational steps are alternative hourly activity profiles at matched daily energy, multi-year weather/fixed-design tests, and larger spatial strata with shared-route decisions. These can proceed without measured settlement demand. Local demand, quotations and engineering evidence can strengthen later claims; their absence must remain explicit. See the [milestones and completion criteria](docs/STUDY_PLAN.md#milestones-and-completion-criteria).
+Use the six-state results to prioritize improved weather coverage, alternative local designs and usable tie-in/route evidence. Then assess fixed investments against additional weather years and hourly activity profiles. This can proceed with transparent demand scenarios; measured settlement demand is not a prerequisite. Comparable quotations and independent engineering review are needed for stronger construction claims. See the [milestones and completion criteria](docs/STUDY_PLAN.md#milestones-and-completion-criteria).
 
 ## Run
 
@@ -123,6 +126,8 @@ python research/system_costs/run_notebook.py --kernel pypsa
 python research/system_costs/check_pilot.py
 python research/system_costs/check_uncertainty.py
 python research/system_costs/check_spatial_proxy.py
+python research/system_costs/regional_model.py
+python research/system_costs/check_regional.py
 ```
 
 For a new environment, use Python 3.13 and install `requirements.txt` plus the [spatial notebook requirements](research/dre_atlas_2025/requirements.txt); extracting a local PDF also needs the historical package's requirements. Add `--export-only` to a notebook runner to refresh its HTML after a markdown-only notebook edit. See [dataset maintenance](data/README.md) for data updates.

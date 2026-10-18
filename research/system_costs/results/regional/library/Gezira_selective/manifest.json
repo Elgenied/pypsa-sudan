@@ -1,0 +1,33 @@
+{
+  "inputs": {
+    "data/regional_model/config.json": "2ce099e2499fc4f63feb097918787f7a5d9a3c0dde07687d6a14580de5ebc189",
+    "data/regional_model/corridor_register.csv": "04fb6d4d6edae66d35b1c42a504cdaebf768e32953877c01ab7156a1bde2ca2c",
+    "data/regional_model/crosswalk_36.csv.gz": "6f03b90edf0de20bd7e580626ce4516ea2c571be6be002e0fec73e04fadfca89",
+    "data/regional_model/crosswalk_48.csv.gz": "e9067758a0c37a813705ddd575678e30ef8ec6162eecf059eb531b6cc893c0cd",
+    "data/regional_model/sources.json": "7ab40e83529ecc409ca99cf60826c9dd7477bb2a601d1abbe174112544c1cc34",
+    "data/regional_model/weather_proxies.csv": "ca62d915769245c83481b3e2678d8d288c0420563516ddcf8260c32921855cf8",
+    "data/regional_model/weather_sdq91cupv2_2022.csv.gz": "2620b5b769d78afb5b13c5bd246574bd9b30cfdecd8af5261543ce4a918afd8d",
+    "data/regional_model/weather_sdxeb9y0b3_2022.csv.gz": "cd603b9163cf29e55542039e38d4a4b5d33510878bbd911ef585c4681fef9dde",
+    "data/regional_model/weather_sdzht8b78s_2022.csv.gz": "9d320e6dcdb9fe74a032d9ff231668b408b5e3ceea09eafd990d549acb90e6e8",
+    "data/regional_model/weather_semwk8ych9_2022.csv.gz": "7896653f30df683cf0eb996fef2fcb96420345a699bef05806d400f5b367ac76",
+    "data/regional_model/weather_sepcj9qp2p_2022.csv.gz": "7a61a6f62e79d59a349f9b6237c2111fd5d76b1b7bb48be8253530f9dc9e0bbc",
+    "data/regional_model/weather_sf2e3tpr68_2022.csv.gz": "be944e093cb6ac10d3868e37b7f46dad30ab3d72516deea9f1ee83394e194bff",
+    "data/regional_model/zones_36.csv": "d45754e0276a29888160293f9cd1a3a624dc8bac317d541680592ae3486873cd",
+    "data/regional_model/zones_48.csv": "9d0d8517ca1cc0e09a31ddd20e122bc881ffb73c152aa4b4b05fc49b9f3086e4",
+    "research/system_costs/regional_library.py": "dfe7f39089000b20419f53bee4e8800b7e80b3d7ebe838de7f4286b731f5d0c6",
+    "research/system_costs/pilot_model.py": "30ca1f63fbd5329b630af3007478035077ebecbf25a64ab8d8029050386f12c3",
+    "research/system_costs/cost_model.py": "5d5c43a74530f6ac5d2513d0800abd9905d69db9880591d8496b8505408100cf",
+    "research/system_costs/recovery_model.py": "38f3b990d87cac607d04e0c8022f7e65d672c29c4861f318d10f0b55853c023c",
+    "data/electrification_pilot/config.json": "60f0a0331cfbb26bf73e35d2b8fa98a9a11515556e5da3cec1dda391dd6c23c1",
+    "data/system_costs/benchmark_evidence.csv": "c2daf9742665f47fd1b2f22074b09eb833e7304bb6ec97829525809393126e84",
+    "data/system_costs/bill_of_quantities.csv": "6e0b6087e241626f5186f3c31983c7b0de3f0c4e960c1c91c840486fe355b3bc",
+    "data/system_costs/case_designs.csv": "a81f79ae0b17e1224fae3219e053014c6f867ea78a055cf6667897b07f4dbc97",
+    "data/system_costs/components.csv": "cff939d8f241783bf8248b2fa270c861763276a8768402227748d35979f61163",
+    "data/system_costs/coverage.csv": "ab582deb88d49f77a5d852e587ba8dc6787042361dc8fc124c63df7f0001e4cf",
+    "data/system_costs/scenario_parameters.csv": "5192f55254c749c4a94148fcc5b5f5bdf903a014dbb897a68eb64d305d21c96f"
+  },
+  "outputs": {
+    "record.json": "1a0001f6163629b822db03e55af114bc5dfc397bfc0ca7378d6a2551c26b63b4",
+    "sdxeb9y0b3_grid_extension_evening_outage_hourly.csv.gz": "a9dd901d528413df5696590e36c3f2f79f9f30507b92e46774d019635114e072"
+  }
+}

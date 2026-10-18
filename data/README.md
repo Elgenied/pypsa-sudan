@@ -57,3 +57,7 @@ For a DRE update, follow [the spatial collection's rebuild instructions](../rese
 ## Proposed regional study inventory
 
 [`north_central_study/`](north_central_study/) contains state coverage, source-ID membership and a status/provenance manifest for the agreed six-state core: Northern, River Nile, Khartoum, Gezira, White Nile and Sennar (11,268 source clusters). It does **not** contain regional optimization results. See the [study design](../docs/NORTH_CENTRAL_STUDY.md); rebuild with `research/system_costs/prepare_regional_scope.py` using the existing full atlas.
+
+## Regional model inputs
+
+[`regional_model/`](regional_model/) supplies 36/48-zone tables and complete source crosswalks, six cached weather profiles, the schematic corridor/repair register, demand allocation and scenario parameters for section 12. Output choices and diagnostics are in `research/system_costs/results/regional/`. Read the [implemented method](../docs/REGIONAL_MODEL.md) before interpreting the zone maps or costs.

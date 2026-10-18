@@ -1,0 +1,55 @@
+{
+  "states": [
+    "Northern",
+    "River Nile",
+    "Khartoum",
+    "Gezira",
+    "White Nile",
+    "Sennar"
+  ],
+  "reference_year": 2022,
+  "base_zones": 36,
+  "resolution_check_zones": 48,
+  "residential_share": 0.5661606533988531,
+  "residential_share_source": "R19 Annex 3, 2017 sector shares, applied as an allocation assumption to 2022 regional totals",
+  "daily_service_floor_kWh_per_potential_connection": 1.0,
+  "existing_distribution_rehabilitation_fraction": 0.35,
+  "bulk_price_for_candidate_sizing_USD_MWh": 140.0,
+  "repair_life_years": 20,
+  "repair_annual_om_fraction": 0.02,
+  "hv_repair_USD_per_proxy_km": 70000.0,
+  "terminal_repair_USD_per_corridor": 2000000.0,
+  "weather": "One cached 2022 NASA POWER profile per state; explicit spatial proxy, not independent zone weather",
+  "hydro": "2012 monthly generation shapes normalized to 2022 annual hydro limits; scenario seasonality, not 2022 measured inflows",
+  "scenarios": {
+    "restricted": {
+      "repair_budget_USD": 0,
+      "outage_local_hours": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "force_repairs": false
+    },
+    "selective": {
+      "repair_budget_USD": 45000000,
+      "outage_local_hours": [
+        19,
+        20,
+        21
+      ],
+      "force_repairs": false
+    },
+    "restored": {
+      "repair_budget_USD": 1000000000000.0,
+      "outage_local_hours": [],
+      "force_repairs": true
+    }
+  },
+  "candidate_scope": "Binary zone choice from independently sized fixed hourly portfolios; national dispatch and four corridor repairs jointly optimized. No unrestricted joint local capacity optimum.",
+  "mip_gap": 0.0005,
+  "time_limit_seconds": 1800
+}

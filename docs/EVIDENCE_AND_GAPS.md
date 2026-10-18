@@ -2,7 +2,7 @@
 
 [Start here](../README.md) · [Study plan](STUDY_PLAN.md) · [Data catalog](../data/README.md)
 
-Evidence and model inventory updated **18 October 2026**. Historical studies retain their earlier results; section 11 adds the national supply coupling. This page distinguishes evidence quality from successful software execution. For current run status see [GitHub Actions](https://github.com/Elgenied/pypsa-sudan/actions).
+Evidence and model inventory updated **18 October 2026**. Historical studies retain their earlier results; section 12 adds the six-state regional study. This page distinguishes evidence quality from successful software execution. For current run status see [GitHub Actions](https://github.com/Elgenied/pypsa-sudan/actions).
 
 ## The four labels we use
 
@@ -23,14 +23,14 @@ The current notebooks have sourced inputs, calibration and numerical checks. **T
 | 2022 regional fleet | Historical plant weights reconciled to national net-capacity totals | Assumed regional allocation | Not a verified unit inventory; rental/autoproducer coverage and gross/net basis need reconciliation |
 | Plant engineering | 19 unit-group/configuration records with coordinates, fuels, heat rates, O&M and capacities | Historical CSVs, separate from baseline | 2012 vintage; committed projects and replacement configurations require checks; some values conflict |
 | Transmission | 13 schematic baseline corridors; historical route/voltage information and 37 planned routes | Baseline MW limits are assumed; historical routes document plans | No complete validated network, ratings, damage or repair costs; voltage is not a MW rating |
-| Regional demand | 2011 state-sector consumption; assumed 2022 node shares | Historical data not yet integrated | Historical 15-state geography differs from the 19 regional proxies and modern states |
-| Hydro | Annual budget in baseline; monthly characteristics for eight historical configurations | Monthly data available for a future upgrade | Not measured 2022 inflows; gross/net and annual/monthly conflicts; no reservoir model |
+| Regional demand | 2011 state-sector consumption; assumed 2022 node shares | Section 12 uses a reported 2017 national residential share and DRE building counts; 2011 state data not reconciled | Proxy allocation, not measured consumption/access; historical geography differs from study zones |
+| Hydro | Annual budget in baseline; monthly characteristics for eight historical configurations | Section 12 uses historical monthly shapes normalized to 2022 annual limits | Not measured 2022 inflows; gross/net and annual/monthly conflicts; no reservoir model |
 | Local access | 131 historical localities, 2008 demographics, 2012 grid status and estimated distances | Starting evidence for spatial work | No locality coordinates in this table; localities are not individual settlements; proximity is not household access |
 | Spatial settlements | World Bank/VIDA DRE release: 33,891 georeferenced clusters; potential building connections, modeled demand, polygons, roads, PV, distance to grid and nightlights | Source files checked and mapped in [Notebook C](../research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb) | Mixed layer vintages; no metered access, feasible routes, post-war line status or hourly loads |
 | Historical conflict exposure | DRE 2020–2022 ACLED fatality buffers at 25 and 50 km | Category formula reproduced for all 33,891 settlements | **Not a current security or damage assessment** |
 | Demand projections | Three 2012–2031 scenarios, 60 national scenario-years and 720 monthly records | Published outputs plus partial arithmetic replication | Not actual 2022 or post-war demand; not an optimal investment plan |
 | Economic inputs | Historical O&M; dated Sudan quotations and [full-scope system-cost accounting](../data/system_costs/README.md) with four illustrative designs | Original evidence separate from provisional USD assumptions; no automatic replacement of baseline costs | Comparable quotations, dated FX/price normalization, repair and distribution prices, battery specifications, finance and feasible supply still needed |
-| Recovery and service targets | August 2024 status for 20 plant records; five electricity-related NDC measures; programme outputs and qualitative mechanisms | Dated evidence available; no implemented recovery optimization | Asset repair cost/time, present condition, hourly service requirements and demand displacement still require explicit evidence/assumptions |
+| Recovery and service targets | August 2024 status for 20 plant records; five electricity-related NDC measures; programme outputs and qualitative mechanisms | Sections 10–12 implement conditional recovery optimization; section 12 includes four hypothetical backbone repairs | Asset repair cost/time, present condition, hourly service requirements and demand displacement still require explicit evidence/assumptions |
 
 ## What passed, and what that proves
 
@@ -69,7 +69,9 @@ The **6.277 million kWh/day** atlas total would be about **2.291 TWh/year** if r
 
 ### Notebook D: system costs
 
-**Section 11 is the current study:** eight neighbouring clusters (978 potential connections) are coupled to national 19-node hourly dispatch. National supply capacity, schematic corridors and annual hydro budgets are enforced, the national clock is aligned to UTC, and additional dispatch cost replaces the bulk-price allowance. The three local feeder-recovery cases retain a fixed 2022 national fleet. Supporting cost cuts and national re-dispatch provide checked bounds within the candidate architecture. This is neither universal access nor national asset rehabilitation investment. [National coupling method](NATIONAL_COUPLING.md).
+**Section 12 is the current regional study:** all 11,268 source clusters in Northern, River Nile, Khartoum, Gezira, White Nile and Sennar are represented in 36 zones. Thirty full-year local designs feed a national dispatch/portfolio/repair optimization. Policy benchmarks and three focused checks test recovery, spatial resolution, demand and fuel costs. Infeasible benchmarks have explicitly diagnosed shortfalls and no feasible cost. Numerical checks establish consistency for the finite library; they do not validate asset damage, demand allocation, route feasibility or the one-weather-point-per-state approximation. [Regional method and limitations](REGIONAL_MODEL.md).
+
+**Section 11 is the supporting national-coupling study:** eight neighbouring clusters (978 potential connections) are coupled to national 19-node hourly dispatch. National supply capacity, schematic corridors and annual hydro budgets are enforced, the national clock is aligned to UTC, and additional dispatch cost replaces the bulk-price allowance. The three local feeder-recovery cases retain a fixed 2022 national fleet. Supporting cost cuts and national re-dispatch provide checked bounds within the candidate architecture. This is neither universal access nor national asset rehabilitation investment. [National coupling method](NATIONAL_COUPLING.md).
 
 **Section 10 is the supporting regional demonstration:** four neighbouring Blue Nile clusters are optimized jointly, with a shared grid-side hub, binary service/route/repair choices and three recovery conditions. All 8,760 hours are retained. Demand, repairable infrastructure and regional supply conditions are declared scenarios. Numerical checks cover connected routes, equal delivered service, hourly feasibility, cost accounting and repair budgets. [Joint recovery method](RECOVERY_MODEL.md).
 
@@ -103,6 +105,8 @@ Missing exact damage records do not prevent scenario analysis. The claim becomes
 ## Claims today
 
 **Supported:** a reproducible, nationally calibrated regional dispatch prototype; traceable historical datasets; mapped DRE clusters and reproducible source arithmetic; full lifecycle-cost accounting; local pilot and 18-state sample comparisons; a four-cluster joint recovery demonstration; and an eight-cluster **nationally coupled access optimizer** with binary service/route/repair decisions, full-year operation and checked cost bounds. Hypothetical repairs are conditional on declared candidate assets, not identified damaged infrastructure. See [scope and formulation](NATIONAL_COUPLING.md).
+
+**Also supported:** a reproducible six-state, full-year finite-portfolio scenario study with whole-zone service choices, four hypothetical backbone repair decisions, policy comparisons and cost/operation checks. It includes the national background operating bill and cannot be read as an incremental universal-access budget.
 
 **Not yet supported:** field-validated settlement recommendations, universal-access cost, joint national investment optimality, optimal repair priorities, a validated post-war grid map, distribution/security certification or treating 2012 projections as observations.
 
