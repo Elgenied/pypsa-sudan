@@ -1,7 +1,7 @@
 Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
-MIP linopy-problem-oh3gdh6t has 1252780 rows; 508128 cols; 1949838 nonzeros; 40 integer variables (40 binary)
+MIP linopy-problem-keh69s3c has 1760947 rows; 762197 cols; 2986754 nonzeros; 40 integer variables (40 binary)
 Coefficient ranges:
-  Matrix  [2e-05, 3e+07]
+  Matrix  [4e-06, 3e+07]
   Cost    [5e+00, 4e+09]
   Bound   [1e+00, 1e+00]
   RHS     [5e-03, 4e+07]
@@ -10,16 +10,16 @@ WARNING: Problem has some excessively large row bounds
 WARNING:    Consider scaling the objective by 1e-4, or setting the user_objective_scale option to -12
 WARNING:    Consider scaling the    bounds by 1e-2, or setting the user_bound_scale option to -6
 Presolving model
-193802 rows, 186124 cols, 622140 nonzeros  3s
-147790 rows, 140112 cols, 658586 nonzeros  4s
-99536 rows, 125043 cols, 488196 nonzeros  7s
-99085 rows, 124594 cols, 488699 nonzeros  11s
-Presolve reductions: rows 99085(-1153695); columns 124594(-383534); nonzeros 488699(-1461139) 
+473451 rows, 328433 cols, 1318749 nonzeros  10s
+256290 rows, 281796 cols, 926910 nonzeros  22s
+104955 rows, 130460 cols, 621310 nonzeros  24s
+104759 rows, 130268 cols, 620648 nonzeros  29s
+Presolve reductions: rows 104759(-1656188); columns 130268(-631929); nonzeros 620648(-2366106) 
 
 Solving MIP model with:
-   99085 rows
-   124594 cols (39 binary, 0 integer, 0 implied int., 124555 continuous, 0 domain fixed)
-   488699 nonzeros
+   104759 rows
+   130268 cols (39 binary, 0 integer, 0 implied int., 130229 continuous, 0 domain fixed)
+   620648 nonzeros
 
 Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
      I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
@@ -29,68 +29,62 @@ Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristi
         Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
 Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
 
-         0       0         0   0.00%   3492222849.924  inf                  inf        0      0      0         0    23.5s
- R       0       0         0   0.00%   3598401129.369  3977622453.661     9.53%        0      0      0         0   108.7s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    49588      5      0      7857   121.0s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    74461     11      0      7864   127.7s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    80197     17      0      7873   134.6s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    80975     23      0      7880   140.9s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    81217     29      0      7889   157.7s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    81342     35      0      7897   164.0s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    81427     41      0      7905   169.8s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    81491     46      0      7910   175.4s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    81529     51      0      7915   180.8s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    81551     56      0      7922   186.6s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    81570     61      0      7927   192.6s
-         0       0         0   0.00%   3608076073.13   3977622453.661     9.29%    81590     66      0      7932   198.2s
- L       0       0         0   0.00%   3608076073.13   3633420620.635     0.70%    81590     66      0      7932   223.8s
-         0       0         0   0.00%   3608079949.889  3633420620.635     0.70%   128576     77      0     32789   230.2s
+         0       0         0   0.00%   3488603270.354  inf                  inf        0      0      0         0    45.1s
+ R       0       0         0   0.00%   3583877691.817  3959967905.445     9.50%        0      0      0         0   272.9s
+         0       0         0   0.00%   3586527541.604  3959967905.445     9.43%    30313      5      0      2424   279.9s
+         0       0         0   0.00%   3586527541.604  3959967905.445     9.43%    57033     14      0      2446   288.7s
+         0       0         0   0.00%   3586527541.604  3959967905.445     9.43%    58123     22      0      2467   314.0s
+         0       0         0   0.00%   3586527541.604  3959967905.445     9.43%    58395     29      0      2489   323.5s
+         0       0         0   0.00%   3586527541.604  3959967905.445     9.43%    58751     35      0      2502   332.8s
+         0       0         0   0.00%   3586527541.604  3959967905.445     9.43%    59296     41      0      2520   342.2s
+ L       0       0         0   0.00%   3586527541.604  3616794117.1       0.84%    59464     45      0      2530   386.2s
 
-12.8% inactive integer columns, restarting
-Model after restart has 81242 rows, 112162 cols (34 bin., 0 int., 0 impl., 112128 cont., 0 dom.fix.), and 462453 nonzeros
+7.7% inactive integer columns, restarting
+Model after restart has 86160 rows, 117217 cols (36 bin., 0 int., 0 impl., 117181 cont., 0 dom.fix.), and 606648 nonzeros
 
-         0       0         0   0.00%   3608079949.889  3633420620.635     0.70%       62      0      0     32789   235.0s
-         0       0         0   0.00%   3608265093.537  3633420620.635     0.69%       62     14      0     85597   283.3s
-         0       0         0   0.00%   3608278273.31   3633420620.635     0.69%    45265     21      0     85632   290.0s
-         0       0         0   0.00%   3608280493.796  3633420620.635     0.69%    49413     29      0     85672   296.8s
+         0       0         0   0.00%   3586527541.604  3616794117.1       0.84%       46      0      0     30971   397.9s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%       46     10      0     64587   435.7s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%    38124     14      0     64593   441.0s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%    39091     18      0     64609   446.9s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%    39431     22      0     64627   453.0s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%    39761     26      0     64640   459.3s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%    39932     30      0     64657   465.3s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%    40141     34      0     64680   471.6s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%    40313     38      0     64691   477.4s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%    40361     42      0     64701   483.5s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%    40395     46      0     64708   489.2s
 
         Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
 Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
 
-         0       0         0   0.00%   3608282728.998  3633420620.635     0.69%    50797     36      0     85707   303.3s
-         0       0         0   0.00%   3608283632.978  3633420620.635     0.69%    51654     43      0     85726   309.9s
-         0       0         0   0.00%   3608285073.591  3633420620.635     0.69%    52062     50      0     85754   316.3s
-         0       0         0   0.00%   3608286682.607  3633420620.635     0.69%    52415     57      0     85783   323.0s
-         0       0         0   0.00%   3608286682.607  3633420620.635     0.69%    52776     64      0     85800   330.0s
-         0       0         0   0.00%   3608287437.823  3633420620.635     0.69%    53002     71      0     85830   337.1s
-         0       0         0   0.00%   3608288460.07   3633420620.635     0.69%    53232     78      0     85861   344.1s
-         0       0         0   0.00%   3608288460.07   3633420620.635     0.69%    53427     87      0     85877   350.9s
-         0       0         0   0.00%   3608294849.571  3633420620.635     0.69%    53523     92      0     85891   357.4s
+         0       0         0   0.00%   3586560087.619  3616794117.1       0.84%    40422     50      0     64729   495.1s
+         0       0         0   0.00%   3586616631.898  3616794117.1       0.83%    40468     54      0     64737   501.6s
+         0       0         0   0.00%   3586616631.898  3616794117.1       0.83%    40482     58      0     64767   508.1s
 
-Symmetry detection completed in 0.1s
+Symmetry detection completed in 0.2s
 No symmetry present
 
-         2       0         1  50.00%   3608294849.571  3633420620.635     0.69%    53519     86     29    189466   444.7s
- T       2       0         1  50.00%   3608294849.571  3633110350.274     0.68%    53522     86     52    189466   506.3s
-         3       0         2 100.00%   3633110350.274  3633110350.274     0.00%    53523     86     52    244793   506.5s
+         2       0         1  50.00%   3586616631.898  3616794117.1       0.83%    40481     56      2     97800   592.9s
+         3       0         1 100.00%   3616740109.464  3616794117.1       0.00%    40481     56     35    108811   706.3s
+         3       0         1 100.00%   3616740109.464  3616794117.1       0.00%    40481     56     35    108811   706.3s
 
 Solving report
-  Model             linopy-problem-oh3gdh6t
+  Model             linopy-problem-keh69s3c
   Status            Optimal
-  Primal bound      3633110350.27
-  Dual bound        3633110350.27
-  Gap               0% (tolerance: 0.05%)
-  P-D integral      12.6781940063
+  Primal bound      3616794117.1
+  Dual bound        3616740109.46
+  Gap               0.00149% (tolerance: 0.05%)
+  P-D integral      13.3586684366
   Solution status   feasible
-                    3633110350.27 (objective)
+                    3616794117.1 (objective)
                     0 (bound viol.)
-                    1.11022302463e-16 (int. viol.)
+                    0 (int. viol.)
                     0 (row viol.)
-  Timing            506.53
+  Timing            706.34
   Max sub-MIP depth 1
   Nodes             3
   Repair LPs        0
-  LP iterations     244793
-                    120431 (strong br.)
-                    8243 (separation)
-                    24840 (heuristics)
+  LP iterations     108811
+                    22022 (strong br.)
+                    2717 (separation)
+                    28430 (heuristics)

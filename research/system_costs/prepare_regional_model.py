@@ -1,4 +1,4 @@
-"""Freeze six-state zones, accounting, weather proxies and candidate repairs."""
+"""Freeze six-state zones, accounting, state weather proxies and candidate repairs; prepare_regional_weather.py adds the zone points."""
 from pathlib import Path
 import json, shutil
 import numpy as np
@@ -52,7 +52,7 @@ def prepare():
         shutil.copy2(ROOT/'data/spatial_proxy_study'/name,DATA/name)
         wrows.append(dict(state=state,geohash=w.geohash,lat=w.lat,lon=w.lon,file=name,
                           maximum_cluster_distance_km=float(km(atlas.loc[atlas.admin_cgaz_1.eq(state),'lon'],atlas.loc[atlas.admin_cgaz_1.eq(state),'lat'],w.lon,w.lat).max())))
-    pd.DataFrame(wrows).to_csv(DATA/'weather_proxies.csv',index=False,lineterminator='\n')
+    pd.DataFrame(wrows).to_csv(DATA/'weather_proxies_state.csv',index=False,lineterminator='\n')
     for count in [6,8]:
         a=zones(atlas,n,count);rows=[]
         for zid,g in a.groupby('zone_id',sort=False):
@@ -83,7 +83,7 @@ def prepare():
         daily_service_floor_kWh_per_potential_connection=1.,existing_distribution_rehabilitation_fraction=.35,
         bulk_price_for_candidate_sizing_USD_MWh=140.,repair_life_years=20,repair_annual_om_fraction=.02,
         hv_repair_USD_per_proxy_km=70000.,terminal_repair_USD_per_corridor=2000000.,
-        weather='One cached 2022 NASA POWER profile per state; explicit spatial proxy, not independent zone weather',
+        weather='One cached 2022 NASA POWER hourly point per planning zone at its connection-weighted centroid, for the 36- and 48-zone sets; the six state points of the earlier run are kept in weather_proxies_state.csv for comparison',
         hydro='2012 monthly generation shapes normalized to 2022 annual hydro limits; scenario seasonality, not 2022 measured inflows',
         scenarios={'restricted':dict(repair_budget_USD=0,outage_local_hours=[18,19,20,21,22,23],force_repairs=False),
                    'selective':dict(repair_budget_USD=45000000,outage_local_hours=[19,20,21],force_repairs=False),

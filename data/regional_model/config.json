@@ -19,7 +19,7 @@
   "repair_annual_om_fraction": 0.02,
   "hv_repair_USD_per_proxy_km": 70000.0,
   "terminal_repair_USD_per_corridor": 2000000.0,
-  "weather": "One cached 2022 NASA POWER profile per state; explicit spatial proxy, not independent zone weather",
+  "weather": "One cached 2022 NASA POWER hourly point per planning zone at its connection-weighted centroid, for the 36- and 48-zone sets; the six state points of the earlier run are kept in weather_proxies_state.csv for comparison",
   "hydro": "2012 monthly generation shapes normalized to 2022 annual hydro limits; scenario seasonality, not 2022 measured inflows",
   "scenarios": {
     "restricted": {

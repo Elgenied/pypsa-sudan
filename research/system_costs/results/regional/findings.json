@@ -3,52 +3,138 @@
   "clusters": 11268,
   "primary_zones": 36,
   "regional_cases": 12,
-  "maximum_mip_gap": 0.0004464896179783,
+  "maximum_mip_gap": 0.0003372936425498,
   "mixed_results": [
     {
       "scenario": "restricted",
-      "annual_system_cost_USD": 4197799513.341919,
+      "annual_system_cost_USD": 4185362574.730813,
       "repair_investment_USD": 0.0,
-      "grid_connections": 3679962,
-      "mini_grid_connections": 4292620,
-      "standalone_connections": 2106084,
+      "grid_connections": 3524397,
+      "mini_grid_connections": 3581856,
+      "standalone_connections": 2972413,
       "unserved_MWh": 0.0
     },
     {
       "scenario": "selective",
-      "annual_system_cost_USD": 3633110350.274101,
-      "repair_investment_USD": 32953727.70822917,
-      "grid_connections": 3797469,
-      "mini_grid_connections": 3923586,
-      "standalone_connections": 2357611,
+      "annual_system_cost_USD": 3616794117.099591,
+      "repair_investment_USD": 44642150.03156049,
+      "grid_connections": 4769764,
+      "mini_grid_connections": 3361231,
+      "standalone_connections": 1947671,
       "unserved_MWh": 0.0
     },
     {
       "scenario": "restored",
-      "annual_system_cost_USD": 2088847977.2036765,
+      "annual_system_cost_USD": 2069847750.797075,
       "repair_investment_USD": 104709475.16820514,
-      "grid_connections": 5858406,
-      "mini_grid_connections": 1100797,
-      "standalone_connections": 3119463,
+      "grid_connections": 5956157,
+      "mini_grid_connections": 464137,
+      "standalone_connections": 3658372,
       "unserved_MWh": 0.0
     }
   ],
   "infeasible_benchmarks": [
     {
       "case": "restricted_grid_led_36_d1_f1",
-      "unserved_MWh": 239102.5548957435,
-      "shortfall_hours": 550
+      "unserved_MWh": 218399.2466513273,
+      "shortfall_hours": 494
     },
     {
       "case": "selective_grid_led_36_d1_f1",
-      "unserved_MWh": 308468.78758259886,
-      "shortfall_hours": 807
+      "unserved_MWh": 296322.03079786483,
+      "shortfall_hours": 778
     },
     {
       "case": "restored_grid_led_36_d1_f1",
-      "unserved_MWh": 365862.8765625644,
+      "unserved_MWh": 365905.0925392218,
       "shortfall_hours": 1095
     }
   ],
-  "interpretation": "Zone-wide choices from finite candidate portfolios; 2022 reference with dated hydro shapes, state weather proxies and hypothetical recovery projects"
+  "weather_resolution": [
+    {
+      "case": "restricted_mixed_36_d1_f1",
+      "cost_change_percent": -0.296272810828091,
+      "potential_connections_changing_mode": 1026055,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "restricted_grid_led_36_d1_f1",
+      "cost_change_percent": NaN,
+      "potential_connections_changing_mode": 0,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "restricted_decentralized_36_d1_f1",
+      "cost_change_percent": -0.4916433033664402,
+      "potential_connections_changing_mode": 1214238,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "selective_mixed_36_d1_f1",
+      "cost_change_percent": -0.4490981996536081,
+      "potential_connections_changing_mode": 2153714,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "selective_grid_led_36_d1_f1",
+      "cost_change_percent": NaN,
+      "potential_connections_changing_mode": 0,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "selective_decentralized_36_d1_f1",
+      "cost_change_percent": -0.5390272557252662,
+      "potential_connections_changing_mode": 1214238,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "restored_mixed_36_d1_f1",
+      "cost_change_percent": -0.909603121622904,
+      "potential_connections_changing_mode": 1026055,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "restored_grid_led_36_d1_f1",
+      "cost_change_percent": NaN,
+      "potential_connections_changing_mode": 0,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "restored_decentralized_36_d1_f1",
+      "cost_change_percent": -0.5378444403860594,
+      "potential_connections_changing_mode": 1214238,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "selective_mixed_48_d1_f1",
+      "cost_change_percent": -0.511308292230439,
+      "potential_connections_changing_mode": 1151073,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "selective_mixed_36_d1.2_f1",
+      "cost_change_percent": -0.0731528163847028,
+      "potential_connections_changing_mode": 2174747,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    },
+    {
+      "case": "selective_mixed_36_d1_f1.25",
+      "cost_change_percent": -0.2476312641176203,
+      "potential_connections_changing_mode": 831590,
+      "maximum_cluster_distance_state_weather_km": 591.4269095429407,
+      "maximum_cluster_distance_zone_weather_km": 559.2959291249948
+    }
+  ],
+  "interpretation": "Zone-wide choices from finite candidate portfolios; 2022 reference with dated hydro shapes, one NASA POWER point per zone and hypothetical recovery projects"
 }

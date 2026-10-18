@@ -8,7 +8,7 @@ Each zone chooses either a grid portfolio or its cheapest independent off-grid p
 
 The objective is local annualized lifecycle resource cost plus national generation operating cost plus annualized backbone repairs. The feasible-set boundary matters: the solver certifies a **finite-portfolio, whole-zone choice problem**. Local capacities are not re-optimized against endogenous national marginal costs, and unsurveyed routes are not optimized. This is a regional scenario comparison rather than an unrestricted least-cost engineering design.
 
-For zone `z`, the binary `g_z` selects grid service. Each off-grid column serves the same target and has no shared fuel, land or investment constraints. Eliminating the more expensive of its two off-grid columns therefore preserves the finite-library optimum. The national bus receives the sum of `g_z × grid_import_z(t)`. In implementation, a fixed-profile accounting generator cancels the unselected grid load exactly; its output is **not physical generation**. The independent checker reconstructs actual imports from selected portfolios and verifies this equality hour by hour.
+For zone `z`, the binary `g_z` selects grid service. Each off-grid column serves the same target and has no shared fuel, land or investment constraints. Eliminating the more expensive of its two off-grid columns therefore preserves the finite-library optimum. The national bus receives the sum of `g_z × grid_import_z(t)`. In implementation, one fixed-profile accounting generator per zone cancels the unselected grid load exactly; its output is **not physical generation**. The independent checker reconstructs actual imports from selected portfolios and verifies this equality hour by hour.
 
 ## Coverage and demand conservation
 
@@ -22,11 +22,13 @@ The original national synthetic clock is shifted from Sudan local time to UTC wi
 
 ## Local candidate library and costs
 
-Thirty normalized designs are optimized using PyPSA: six states × standalone, mini-grid and three grid-availability cases. Each normalized design supplies 1,000 kWh/day over 2022. Equipment and its feasible physical schedule scale linearly with each zone's annual service. Power limits, SOC limits, cyclic storage and the local diesel energy ceiling scale with them. Each state uses one existing NASA POWER point; the maximum source-cluster distances range from about 138 to 591 km. This is a substantial weather-resolution limitation, exposed in `weather_proxies.csv`.
+Four hundred and twenty normalized designs are optimized using PyPSA: one standalone, one mini-grid and three grid-availability designs for each of the 36 primary zones and each of the 48 resolution-check zones. Each normalized design supplies 1,000 kWh/day over 2022. Equipment and its feasible physical schedule scale linearly with each zone's annual service. Power limits, SOC limits, cyclic storage and the local diesel energy ceiling scale with them.
+
+Each zone uses a 2022 NASA POWER hourly point fetched at its connection-weighted centroid: 60 distinct points serve the 84 zone rows of `weather_proxies.csv`, which also records each zone's farthest source cluster from its own point and from the earlier state point. The median zone's farthest cluster is about 70 km away at 36 zones and 60 km at 48, against 138–591 km for the one-point-per-state proxies of the earlier run, kept in `weather_proxies_state.csv` with their six files. Northern_03 still reaches 559 km because of outlying desert clusters. NASA POWER is a gridded reanalysis/satellite product (MERRA-2 and SYN1DEG sources) sampled at one point per zone for one year; it is not settlement weather, and a single weather year remains a limitation.
 
 The assessed local technologies are PV and batteries, with diesel backup for mini-grids and grid imports for grid portfolios. Standalone and grid portfolios do not include local diesel generators. Mini-grid diesel energy is capped at 20% of delivered annual service. Local wind, small hydro, demand response and alternative storage technologies are outside this candidate set.
 
-Common weather and demand shapes allow the normalized schedule to be distributed proportionally across clusters. No electricity is transported between disconnected settlements by an aggregate local store. Mini-grid equipment represents systems replicated across the member clusters; **inter-cluster mini-grid routes are not selected**. Equipment is continuously divisible; household inverter module sizes, minimum generator units and electrical distribution engineering are not represented.
+Common weather and demand shapes within a zone allow the normalized schedule to be distributed proportionally across its clusters. No electricity is transported between disconnected settlements by an aggregate local store. Mini-grid equipment represents systems replicated across the member clusters; **inter-cluster mini-grid routes are not selected**. Equipment is continuously divisible; household inverter module sizes, minimum generator units and electrical distribution engineering are not represented.
 
 Local costs are rebuilt from the existing complete lifecycle ledger after scaling equipment. LV route proxy is the sum of `1.3 × sqrt(connections × hull_area_km2)` for source clusters. Grid MV proxy is the sum of `1.3 × source distance to grid`, without sharing overlapping routes. Transformer counts use the common profile peak, distribution loss and 80 kW per nominal 100 kVA unit. Civil/site and applicable tank allowances are counted per source cluster. These are screening quantities, not installed-network observations.
 
@@ -54,7 +56,11 @@ Monthly hydro upper budgets take the historical 2012 report's mean daily generat
 
 ## Experiment set and infeasibility
 
-The run has nine main combinations (three recovery conditions × mixed/grid-led/decentralized policies) plus selective mixed cases with 48 zones, +20% residential service, and +25% fuel price. Service targets are identical within each policy comparison. The 48-zone case preserves the base target and source coverage. Differences in whole-zone grouping can alter choices and costs; exported checks quantify changes by source IDs and potential connections.
+The run has nine main combinations (three recovery conditions × mixed/grid-led/decentralized policies) plus selective mixed cases with 48 zones, +20% residential service, and +25% fuel price. Service targets are identical within each policy comparison. The 48-zone case preserves the base target and source coverage but has its own 48 weather points, so it changes both grouping and weather sampling; it is a resolution check, not a nested refinement, and no non-increase bound is asserted for it. Exported checks quantify changes by source IDs and potential connections.
+
+## Weather-resolution comparison
+
+The reader-facing outputs of the earlier state-proxy run (commit c509ef0) are frozen in `data/regional_model/state_weather_reference/`. `weather_resolution_check.csv` compares the same twelve cases, with identical service targets, under state and zone weather: annual system cost, grid and mini-grid connection shares, zones/clusters/potential connections whose inherited mode changes, and the maximum and median farthest-cluster distances before and after. The checker verifies that the frozen reference covers the same cases and targets. In this run the nine feasible cases cost 0.1–0.9% less with zone weather than with state proxies, and between 8% and 21% of potential connections inherit a different mode; the selective mixed case also switches its repair selection from Merowe–Khartoum to Atbara–Khartoum plus Khartoum–Wad Medani, which illustrates that discrete repair priorities are not robust to this input change. This isolates the weather-sampling change; it does not test other weather years or products.
 
 Feasible plans prohibit load shedding. An infeasible policy benchmark receives a separate diagnostic solve with explicitly labelled `unserved_diagnostic` generators at a 1 million USD/MWh penalty. This estimates supply shortfall for that fixed portfolio and network; it is not a physical supply asset or a value-of-lost-load estimate. The result retains an infeasible status, reports unserved energy/hours, and has a blank feasible annual system cost. Its diagnostic objective is not used to rank it as a feasible plan. Another grid-led design with more backup or different investments might be feasible outside the candidate library.
 
@@ -65,8 +71,9 @@ All local sizing and national selection use 8,760 chronological hours. Verificat
 ## Reproduction and files
 
 ```bash
-python research/system_costs/prepare_regional_model.py  # only to refresh frozen inputs
-python research/system_costs/regional_library.py
+python research/system_costs/prepare_regional_model.py    # only to refresh frozen inputs
+python research/system_costs/prepare_regional_weather.py  # only to refresh cached zone weather (NASA POWER)
+python research/system_costs/regional_library.py --workers 8
 python research/system_costs/regional_model.py
 python research/system_costs/check_regional.py
 python research/system_costs/regional_analysis.py
@@ -76,6 +83,6 @@ python research/system_costs/run_notebook.py --kernel pypsa
 
 Inputs: `data/regional_model/`; results: `research/system_costs/results/regional/`. Hash-checked caches reuse identical solved cases. The study uses PyPSA 1.0.6 and HiGHS 1.12.0. Custom choices and constraints are exported separately because [PyPSA's network export does not preserve the optimization model](https://docs.pypsa.org/v1.0.6/user-guide/optimization/custom-constraints/). Rebuild with the Python model rather than re-optimizing the NetCDF alone.
 
-Reader-facing outputs include `state_allocations.csv`, `state_capacities.csv`, `state_energy.csv`, `national_physical_generation.csv`, `focused_checks.csv` and the numerical validation report. Maps, state connection pies and cost comparisons are saved as PNG and SVG figures. Raw case `generation.csv` includes accounting variables; use `national_physical_generation.csv` for physical supply totals, and retain its feasibility-status column when interpreting benchmarks.
+Reader-facing outputs include `state_allocations.csv`, `state_capacities.csv`, `state_energy.csv`, `national_physical_generation.csv`, `focused_checks.csv`, `weather_resolution_check.csv` and the numerical validation report. Maps, state connection pies and cost comparisons are saved as PNG and SVG figures. Raw case `generation.csv` includes accounting variables; use `national_physical_generation.csv` for physical supply totals, and retain its feasibility-status column when interpreting benchmarks.
 
-This is an executed regional scenario framework with numerical checks. Better local weather, access/demand allocation, usable tie-ins, feasible shared routes, repair quotations and candidate design diversity remain material evidence/model gaps. Field reliability, construction recommendations, national universal-access cost and optimal multi-period reconstruction timing are outside its claims.
+This is an executed regional scenario framework with numerical checks. Additional weather years and sub-zone weather, access/demand allocation, usable tie-ins, feasible shared routes, repair quotations and candidate design diversity remain material evidence/model gaps. Field reliability, construction recommendations, national universal-access cost and optimal multi-period reconstruction timing are outside its claims.

@@ -1,0 +1,42 @@
+{
+  "geohash": "semc4kbr1f",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=ALLSKY_SFC_SW_DWN%2CT2M&community=RE&longitude=30.685239&latitude=18.484339&start=20220101&end=20221231&format=JSON&time-standard=UTC",
+  "raw_sha256": "3cf19cde03cd0cdb2a2dfe57def36ebdd7838c00663669f4cff03fe8b246f473",
+  "file": "weather_semc4kbr1f_2022.csv.gz",
+  "file_sha256": "65ecee3e41edb000f8c47d8a0eacf4effcaf842c05cc4a0c4459e782f6a1dcdd",
+  "rows": 8760,
+  "parameters": {
+    "ALLSKY_SFC_SW_DWN": {
+      "units": "Wh/m^2",
+      "longname": "All Sky Surface Shortwave Downward Irradiance"
+    },
+    "T2M": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters"
+    }
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      30.685,
+      18.484,
+      259.43
+    ]
+  },
+  "header": {
+    "title": "NASA/POWER Source Native Resolution Hourly Data",
+    "api": {
+      "version": "v2.10.3",
+      "name": "POWER Hourly API"
+    },
+    "sources": [
+      "MERRA2",
+      "SYN1DEG"
+    ],
+    "fill_value": -999.0,
+    "time_standard": "UTC",
+    "start": "20220101",
+    "end": "20221231"
+  },
+  "downloaded": "2026-10-18"
+}

@@ -1,7 +1,7 @@
 Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
-MIP linopy-problem-oly7t5lj has 1252816 rows; 508128 cols; 1949874 nonzeros; 40 integer variables (40 binary)
+MIP linopy-problem-ybylhkdg has 1760983 rows; 762197 cols; 2986790 nonzeros; 40 integer variables (40 binary)
 Coefficient ranges:
-  Matrix  [2e-05, 3e+07]
+  Matrix  [4e-06, 3e+07]
   Cost    [5e+00, 4e+09]
   Bound   [1e+00, 1e+00]
   RHS     [5e-03, 4e+07]
@@ -10,7 +10,7 @@ WARNING: Problem has some excessively large row bounds
 WARNING:    Consider scaling the objective by 1e-4, or setting the user_objective_scale option to -12
 WARNING:    Consider scaling the    bounds by 1e-2, or setting the user_bound_scale option to -6
 Presolving model
-193795 rows, 186081 cols, 555727 nonzeros  3s
+473451 rows, 328397 cols, 977699 nonzeros  12s
 Presolve: Infeasible
 
 Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
@@ -21,17 +21,17 @@ Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristi
         Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
 Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
 
-         0       0         0   0.00%   -inf            inf                  inf        0      0      0         0     4.2s
+         0       0         0   0.00%   -inf            inf                  inf        0      0      0         0    15.1s
 
 Solving report
-  Model             linopy-problem-oly7t5lj
+  Model             linopy-problem-ybylhkdg
   Status            Infeasible
   Primal bound      inf
   Dual bound        -inf
   Gap               inf
   P-D integral      0
   Solution status   -
-  Timing            4.17
+  Timing            15.05
   Max sub-MIP depth 0
   Nodes             0
   Repair LPs        0

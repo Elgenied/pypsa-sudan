@@ -1,7 +1,85 @@
-state,geohash,lat,lon,file,maximum_cluster_distance_km
-Northern,semwk8ych9,19.384185,30.441598,weather_semwk8ych9_2022.csv.gz,591.4269095429407
-River Nile,sepcj9qp2p,17.058933,33.648381,weather_sepcj9qp2p_2022.csv.gz,470.29878536308826
-Khartoum,sdzht8b78s,16.264513,32.585823,weather_sdzht8b78s_2022.csv.gz,146.2752048480806
-Gezira,sdxeb9y0b3,14.731428,33.0771,weather_sdxeb9y0b3_2022.csv.gz,138.19093290919093
-White Nile,sdq91cupv2,12.84298,31.723258,weather_sdq91cupv2_2022.csv.gz,276.49123291743797
-Sennar,sf2e3tpr68,13.256252,34.529113,weather_sf2e3tpr68_2022.csv.gz,192.20318572938967
+zones,zone_id,state,point_rule,geohash,lat,lon,file,maximum_cluster_distance_km,state_proxy_geohash,state_proxy_maximum_cluster_distance_km
+36,Northern_01,Northern,connection_weighted_zone_centroid,semc4kbr1f,18.484339,30.685239,weather_semc4kbr1f_2022.csv.gz,83.67156574884132,semwk8ych9,164.55671365454933
+36,Northern_02,Northern,connection_weighted_zone_centroid,semtv546x3,19.308911,30.457505,weather_semtv546x3_2022.csv.gz,168.1971834129518,semwk8ych9,159.82988011188874
+36,Northern_03,Northern,connection_weighted_zone_centroid,set94vgmnf,19.895741,30.359982,weather_set94vgmnf_2022.csv.gz,559.2959291249948,semwk8ych9,591.4269095429407
+36,Northern_04,Northern,connection_weighted_zone_centroid,setggzw6g7,20.388369,30.759457,weather_setggzw6g7_2022.csv.gz,195.32869694101194,semwk8ych9,311.3201502933191
+36,Northern_05,Northern,connection_weighted_zone_centroid,senq9y3gg0,18.052556,31.368508,weather_senq9y3gg0_2022.csv.gz,169.18164124690446,semwk8ych9,340.5362146864063
+36,Northern_06,Northern,connection_weighted_zone_centroid,seq9h0uyhm,18.462209,31.823113,weather_seq9h0uyhm_2022.csv.gz,81.04518709832914,semwk8ych9,246.62444571519143
+36,River_Nile_01,River Nile,connection_weighted_zone_centroid,sdzmetxw3g,16.466849,32.859502,weather_sdzmetxw3g_2022.csv.gz,40.50376330022292,sepcj9qp2p,133.12667112451064
+36,River_Nile_02,River Nile,connection_weighted_zone_centroid,sdzybrs00z,16.69651,33.414956,weather_sdzybrs00z_2022.csv.gz,65.28204350261751,sepcj9qp2p,106.94714615934404
+36,River_Nile_03,River Nile,connection_weighted_zone_centroid,sg03gysp9d,17.219622,34.271923,weather_sg03gysp9d_2022.csv.gz,148.56235622492025,sepcj9qp2p,194.68127004086367
+36,River_Nile_04,River Nile,connection_weighted_zone_centroid,sepcr00ebk,17.095392,33.70676,weather_sepcr00ebk_2022.csv.gz,94.94084279199498,sepcj9qp2p,90.95939457213679
+36,River_Nile_05,River Nile,connection_weighted_zone_centroid,sg0jm5efcp,17.81759,33.974927,weather_sg0jm5efcp_2022.csv.gz,117.82561073811917,sepcj9qp2p,183.60591898778915
+36,River_Nile_06,River Nile,connection_weighted_zone_centroid,serw5rdz9p,19.378463,33.193526,weather_serw5rdz9p_2022.csv.gz,209.784369327907,sepcj9qp2p,470.29878536308826
+36,Khartoum_01,Khartoum,connection_weighted_zone_centroid,sdz0ev8856,15.586866,32.509379,weather_sdz0ev8856_2022.csv.gz,46.38993056082884,sdzht8b78s,121.43609227945466
+36,Khartoum_02,Khartoum,connection_weighted_zone_centroid,sdz85bvdjk,15.473236,33.219459,weather_sdz85bvdjk_2022.csv.gz,38.36945577092404,sdzht8b78s,131.77782109517022
+36,Khartoum_03,Khartoum,connection_weighted_zone_centroid,sdz24de35e,15.482671,32.809799,weather_sdz24de35e_2022.csv.gz,95.29165475610607,sdzht8b78s,118.47894241082463
+36,Khartoum_04,Khartoum,connection_weighted_zone_centroid,sdzfq52xkr,15.883398,33.662986,weather_sdzfq52xkr_2022.csv.gz,65.4916692718497,sdzht8b78s,146.2752048480806
+36,Khartoum_05,Khartoum,connection_weighted_zone_centroid,sdz4629c4x,15.867214,32.445147,weather_sdz4629c4x_2022.csv.gz,103.00763683924517,sdzht8b78s,88.60946175250956
+36,Khartoum_06,Khartoum,connection_weighted_zone_centroid,sdz5jy9td3,16.032754,32.598601,weather_sdz5jy9td3_2022.csv.gz,34.15104975057477,sdzht8b78s,59.604130229032506
+36,Gezira_01,Gezira,connection_weighted_zone_centroid,sdrzgb2bft,14.020086,33.56438,weather_sdrzgb2bft_2022.csv.gz,52.58800398450194,sdxeb9y0b3,138.19093290919093
+36,Gezira_02,Gezira,connection_weighted_zone_centroid,sdx2u4r56f,14.207267,32.880832,weather_sdx2u4r56f_2022.csv.gz,71.30705748846702,sdxeb9y0b3,132.10673573282813
+36,Gezira_03,Gezira,connection_weighted_zone_centroid,sdxcu131hg,14.377174,33.575796,weather_sdxcu131hg_2022.csv.gz,49.636145771759814,sdxeb9y0b3,114.30842036533988
+36,Gezira_04,Gezira,connection_weighted_zone_centroid,sdxex89rmt,14.681757,33.378418,weather_sdxex89rmt_2022.csv.gz,43.076591805485336,sdxeb9y0b3,75.90976894672973
+36,Gezira_05,Gezira,connection_weighted_zone_centroid,sdxmh6g2dx,14.95664,32.886661,weather_sdxmh6g2dx_2022.csv.gz,69.48642357015899,sdxeb9y0b3,84.5225850394769
+36,Gezira_06,Gezira,connection_weighted_zone_centroid,sdxtqw4bv4,15.018451,33.336515,weather_sdxtqw4bv4_2022.csv.gz,44.023626649843244,sdxeb9y0b3,78.95765904820779
+36,White_Nile_01,White Nile,connection_weighted_zone_centroid,sdpqf78km7,12.456496,32.794761,weather_sdpqf78km7_2022.csv.gz,56.41058814272685,sdq91cupv2,157.0699687448059
+36,White_Nile_02,White Nile,connection_weighted_zone_centroid,sdqc27xuyj,12.89605,32.014083,weather_sdqc27xuyj_2022.csv.gz,87.56338942545656,sdq91cupv2,101.4534545613102
+36,White_Nile_03,White Nile,connection_weighted_zone_centroid,sdr689zk1u,13.106025,32.727326,weather_sdr689zk1u_2022.csv.gz,53.23241418694667,sdq91cupv2,148.75482357456107
+36,White_Nile_04,White Nile,connection_weighted_zone_centroid,sdrj8fvq5j,13.639212,32.384053,weather_sdrj8fvq5j_2022.csv.gz,66.99170318603721,sdq91cupv2,155.56409056650006
+36,White_Nile_05,White Nile,connection_weighted_zone_centroid,sdwc7bn7uk,14.282893,32.165755,weather_sdwc7bn7uk_2022.csv.gz,67.66835862883876,sdq91cupv2,201.80043003457564
+36,White_Nile_06,White Nile,connection_weighted_zone_centroid,sdwuquzdzg,14.836154,32.299451,weather_sdwuquzdzg_2022.csv.gz,78.81149329906589,sdq91cupv2,276.49123291743797
+36,Sennar_01,Sennar,connection_weighted_zone_centroid,sf229pf6eu,12.787165,34.148762,weather_sf229pf6eu_2022.csv.gz,119.44618150753521,sf2e3tpr68,97.51895167255385
+36,Sennar_02,Sennar,connection_weighted_zone_centroid,sf24mrntum,13.091229,33.989828,weather_sf24mrntum_2022.csv.gz,69.0411166342922,sf2e3tpr68,102.61279849776561
+36,Sennar_03,Sennar,connection_weighted_zone_centroid,sf23zypfxv,12.997285,34.453121,weather_sf23zypfxv_2022.csv.gz,126.60497042867023,sf2e3tpr68,129.19885195545837
+36,Sennar_04,Sennar,connection_weighted_zone_centroid,sdrgt071h2,13.273032,33.622473,weather_sdrgt071h2_2022.csv.gz,151.73587378355992,sf2e3tpr68,192.20318572938967
+36,Sennar_05,Sennar,connection_weighted_zone_centroid,sf2jsbbupc,13.627859,33.960109,weather_sf2jsbbupc_2022.csv.gz,41.979953021200814,sf2e3tpr68,106.45440612907578
+36,Sennar_06,Sennar,connection_weighted_zone_centroid,sdry783hpq,13.756978,33.553937,weather_sdry783hpq_2022.csv.gz,54.00099966140581,sf2e3tpr68,172.9023976549822
+48,Northern_01,Northern,connection_weighted_zone_centroid,sejzmhwtu9,18.175131,30.814793,weather_sejzmhwtu9_2022.csv.gz,36.13526549251987,semwk8ych9,164.55671365454933
+48,Northern_02,Northern,connection_weighted_zone_centroid,semf2jkscr,18.706451,30.592177,weather_semf2jkscr_2022.csv.gz,58.00866717275594,semwk8ych9,113.77310468567624
+48,Northern_03,Northern,connection_weighted_zone_centroid,semtv546x3,19.308911,30.457505,weather_semtv546x3_2022.csv.gz,168.1971834129518,semwk8ych9,159.82988011188874
+48,Northern_04,Northern,connection_weighted_zone_centroid,semwyrw8he,19.508991,30.518161,weather_semwyrw8he_2022.csv.gz,58.26541256296244,semwk8ych9,73.11049609970453
+48,Northern_05,Northern,connection_weighted_zone_centroid,set94vgmnf,19.895741,30.359982,weather_set94vgmnf_2022.csv.gz,559.2959291249948,semwk8ych9,591.4269095429407
+48,Northern_06,Northern,connection_weighted_zone_centroid,setyzjtwh6,20.905281,30.901295,weather_setyzjtwh6_2022.csv.gz,137.0384664976207,semwk8ych9,311.3201502933191
+48,Northern_07,Northern,connection_weighted_zone_centroid,senq9y3gg0,18.052556,31.368508,weather_senq9y3gg0_2022.csv.gz,169.18164124690446,semwk8ych9,340.5362146864063
+48,Northern_08,Northern,connection_weighted_zone_centroid,seq9h0uyhm,18.462209,31.823113,weather_seq9h0uyhm_2022.csv.gz,81.04518709832914,semwk8ych9,246.62444571519143
+48,River_Nile_01,River Nile,connection_weighted_zone_centroid,sdzmetxw3g,16.466849,32.859502,weather_sdzmetxw3g_2022.csv.gz,40.50376330022292,sepcj9qp2p,133.12667112451064
+48,River_Nile_02,River Nile,connection_weighted_zone_centroid,sdzybrs00z,16.69651,33.414956,weather_sdzybrs00z_2022.csv.gz,65.28204350261751,sepcj9qp2p,106.94714615934404
+48,River_Nile_03,River Nile,connection_weighted_zone_centroid,sg03gysp9d,17.219622,34.271923,weather_sg03gysp9d_2022.csv.gz,148.56235622492025,sepcj9qp2p,194.68127004086367
+48,River_Nile_04,River Nile,connection_weighted_zone_centroid,sepcr00ebk,17.095392,33.70676,weather_sepcr00ebk_2022.csv.gz,94.94084279199498,sepcj9qp2p,90.95939457213679
+48,River_Nile_05,River Nile,connection_weighted_zone_centroid,sg0jjduwb8,17.770176,33.997901,weather_sg0jjduwb8_2022.csv.gz,114.59047112598064,sepcj9qp2p,163.41429314860628
+48,River_Nile_06,River Nile,connection_weighted_zone_centroid,sg0nfhjbqn,18.083575,33.846052,weather_sg0nfhjbqn_2022.csv.gz,74.23590000340343,sepcj9qp2p,183.60591898778915
+48,River_Nile_07,River Nile,connection_weighted_zone_centroid,sers689tdj,19.03204,33.158892,weather_sers689tdj_2022.csv.gz,94.08065748778849,sepcj9qp2p,263.6518375420807
+48,River_Nile_08,River Nile,connection_weighted_zone_centroid,serx5eynf3,19.533483,33.209025,weather_serx5eynf3_2022.csv.gz,192.56782983600144,sepcj9qp2p,470.29878536308826
+48,Khartoum_01,Khartoum,connection_weighted_zone_centroid,sdxp58ktns,15.295222,32.504023,weather_sdxp58ktns_2022.csv.gz,33.86952095006121,sdzht8b78s,121.43609227945466
+48,Khartoum_02,Khartoum,connection_weighted_zone_centroid,sdxrf7q7p0,15.443177,32.803074,weather_sdxrf7q7p0_2022.csv.gz,28.612033126420226,sdzht8b78s,118.47894241082463
+48,Khartoum_03,Khartoum,connection_weighted_zone_centroid,sdz85bvdjk,15.473236,33.219459,weather_sdz85bvdjk_2022.csv.gz,38.36945577092404,sdzht8b78s,131.77782109517022
+48,Khartoum_04,Khartoum,connection_weighted_zone_centroid,sdz0gc0ggv,15.606753,32.509744,weather_sdz0gc0ggv_2022.csv.gz,39.00461115675826,sdzht8b78s,96.28865385348402
+48,Khartoum_05,Khartoum,connection_weighted_zone_centroid,sdz3exp4vr,15.771388,32.858964,weather_sdz3exp4vr_2022.csv.gz,64.87571170090783,sdzht8b78s,86.29944189000636
+48,Khartoum_06,Khartoum,connection_weighted_zone_centroid,sdzfq52xkr,15.883398,33.662986,weather_sdzfq52xkr_2022.csv.gz,65.4916692718497,sdzht8b78s,146.2752048480806
+48,Khartoum_07,Khartoum,connection_weighted_zone_centroid,sdz4629c4x,15.867214,32.445147,weather_sdz4629c4x_2022.csv.gz,103.00763683924517,sdzht8b78s,88.60946175250956
+48,Khartoum_08,Khartoum,connection_weighted_zone_centroid,sdz5jy9td3,16.032754,32.598601,weather_sdz5jy9td3_2022.csv.gz,34.15104975057477,sdzht8b78s,59.604130229032506
+48,Gezira_01,Gezira,connection_weighted_zone_centroid,sdrzgb2bft,14.020086,33.56438,weather_sdrzgb2bft_2022.csv.gz,52.58800398450194,sdxeb9y0b3,138.19093290919093
+48,Gezira_02,Gezira,connection_weighted_zone_centroid,sdx25f063x,14.073912,32.860521,weather_sdx25f063x_2022.csv.gz,56.36183869908322,sdxeb9y0b3,132.10673573282813
+48,Gezira_03,Gezira,connection_weighted_zone_centroid,sdxcu131hg,14.377174,33.575796,weather_sdxcu131hg_2022.csv.gz,49.636145771759814,sdxeb9y0b3,114.30842036533988
+48,Gezira_04,Gezira,connection_weighted_zone_centroid,sdx3uuegzp,14.395521,32.909506,weather_sdx3uuegzp_2022.csv.gz,53.35683613680679,sdxeb9y0b3,79.2320740762011
+48,Gezira_05,Gezira,connection_weighted_zone_centroid,sdxex89rmt,14.681757,33.378418,weather_sdxex89rmt_2022.csv.gz,43.076591805485336,sdxeb9y0b3,75.90976894672973
+48,Gezira_06,Gezira,connection_weighted_zone_centroid,sdx7u563dj,14.739822,32.874274,weather_sdx7u563dj_2022.csv.gz,56.702487428575076,sdxeb9y0b3,78.01705232291472
+48,Gezira_07,Gezira,connection_weighted_zone_centroid,sdxtqw4bv4,15.018451,33.336515,weather_sdxtqw4bv4_2022.csv.gz,44.023626649843244,sdxeb9y0b3,78.95765904820779
+48,Gezira_08,Gezira,connection_weighted_zone_centroid,sdxqk8updj,15.166568,32.898654,weather_sdxqk8updj_2022.csv.gz,41.44216340149639,sdxeb9y0b3,84.5225850394769
+48,White_Nile_01,White Nile,connection_weighted_zone_centroid,sdpqf78km7,12.456496,32.794761,weather_sdpqf78km7_2022.csv.gz,56.41058814272685,sdq91cupv2,157.0699687448059
+48,White_Nile_02,White Nile,connection_weighted_zone_centroid,sdnzbhp2ht,12.634307,32.002344,weather_sdnzbhp2ht_2022.csv.gz,63.81030979046316,sdq91cupv2,101.4534545613102
+48,White_Nile_03,White Nile,connection_weighted_zone_centroid,sdr689zk1u,13.106025,32.727326,weather_sdr689zk1u_2022.csv.gz,53.23241418694667,sdq91cupv2,148.75482357456107
+48,White_Nile_04,White Nile,connection_weighted_zone_centroid,sdqf0d5vxx,13.019781,32.019633,weather_sdqf0d5vxx_2022.csv.gz,49.47912282398492,sdq91cupv2,86.37523941158797
+48,White_Nile_05,White Nile,connection_weighted_zone_centroid,sdrjh2ffx8,13.539709,32.534625,weather_sdrjh2ffx8_2022.csv.gz,55.96258335300441,sdq91cupv2,155.56409056650006
+48,White_Nile_06,White Nile,connection_weighted_zone_centroid,sdqyhzxwgf,13.75331,32.211393,weather_sdqyhzxwgf_2022.csv.gz,61.901816174685564,sdq91cupv2,145.9121043174895
+48,White_Nile_07,White Nile,connection_weighted_zone_centroid,sdwc7bn7uk,14.282893,32.165755,weather_sdwc7bn7uk_2022.csv.gz,67.66835862883876,sdq91cupv2,201.80043003457564
+48,White_Nile_08,White Nile,connection_weighted_zone_centroid,sdwuquzdzg,14.836154,32.299451,weather_sdwuquzdzg_2022.csv.gz,78.81149329906589,sdq91cupv2,276.49123291743797
+48,Sennar_01,Sennar,connection_weighted_zone_centroid,sdrb4xyveu,12.69979,33.517742,weather_sdrb4xyveu_2022.csv.gz,87.0042723802922,sf2e3tpr68,192.20318572938967
+48,Sennar_02,Sennar,connection_weighted_zone_centroid,sf229pf6eu,12.787165,34.148762,weather_sf229pf6eu_2022.csv.gz,119.44618150753521,sf2e3tpr68,97.51895167255385
+48,Sennar_03,Sennar,connection_weighted_zone_centroid,sf24mrntum,13.091229,33.989828,weather_sf24mrntum_2022.csv.gz,69.0411166342922,sf2e3tpr68,102.61279849776561
+48,Sennar_04,Sennar,connection_weighted_zone_centroid,sf23zypfxv,12.997285,34.453121,weather_sf23zypfxv_2022.csv.gz,126.60497042867023,sf2e3tpr68,129.19885195545837
+48,Sennar_05,Sennar,connection_weighted_zone_centroid,sdrum9vf1e,13.413296,33.648099,weather_sdrum9vf1e_2022.csv.gz,78.329177467874,sf2e3tpr68,172.03843723298633
+48,Sennar_06,Sennar,connection_weighted_zone_centroid,sf2jsbbupc,13.627859,33.960109,weather_sf2jsbbupc_2022.csv.gz,41.979953021200814,sf2e3tpr68,106.45440612907578
+48,Sennar_07,Sennar,connection_weighted_zone_centroid,sdry0jvbdk,13.742634,33.406433,weather_sdry0jvbdk_2022.csv.gz,41.41312305013417,sf2e3tpr68,172.9023976549822
+48,Sennar_08,Sennar,connection_weighted_zone_centroid,sdryre2z2j,13.774007,33.729061,weather_sdryre2z2j_2022.csv.gz,32.611369731477396,sf2e3tpr68,128.1303530569663

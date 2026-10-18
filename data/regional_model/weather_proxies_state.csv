@@ -1,0 +1,7 @@
+state,geohash,lat,lon,file,maximum_cluster_distance_km
+Northern,semwk8ych9,19.384185,30.441598,weather_semwk8ych9_2022.csv.gz,591.4269095429407
+River Nile,sepcj9qp2p,17.058933,33.648381,weather_sepcj9qp2p_2022.csv.gz,470.29878536308826
+Khartoum,sdzht8b78s,16.264513,32.585823,weather_sdzht8b78s_2022.csv.gz,146.2752048480806
+Gezira,sdxeb9y0b3,14.731428,33.0771,weather_sdxeb9y0b3_2022.csv.gz,138.19093290919093
+White Nile,sdq91cupv2,12.84298,31.723258,weather_sdq91cupv2_2022.csv.gz,276.49123291743797
+Sennar,sf2e3tpr68,13.256252,34.529113,weather_sf2e3tpr68_2022.csv.gz,192.20318572938967

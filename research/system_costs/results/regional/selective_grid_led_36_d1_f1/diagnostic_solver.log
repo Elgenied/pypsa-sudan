@@ -58,3 +58,62 @@ Solving report
                     0 (strong br.)
                     0 (separation)
                     0 (heuristics)
+Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
+MIP linopy-problem-z1f7iv36 has 2093863 rows; 928637 cols; 3486110 nonzeros; 40 integer variables (40 binary)
+Coefficient ranges:
+  Matrix  [4e-06, 3e+07]
+  Cost    [5e+00, 4e+09]
+  Bound   [1e+00, 1e+00]
+  RHS     [5e-03, 4e+07]
+WARNING: Problem has some excessively large costs
+WARNING: Problem has some excessively large row bounds
+WARNING:    Consider scaling the objective by 1e-4, or setting the user_objective_scale option to -12
+WARNING:    Consider scaling the    bounds by 1e-2, or setting the user_bound_scale option to -6
+Presolving model
+512414 rows, 468653 cols, 1156918 nonzeros  13s
+133161 rows, 254976 cols, 676405 nonzeros  17s
+131450 rows, 250850 cols, 673800 nonzeros  26s
+Presolve reductions: rows 131450(-1962413); columns 250850(-677787); nonzeros 673800(-2812310) 
+
+Solving MIP model with:
+   131450 rows
+   250850 cols (4 binary, 0 integer, 0 implied int., 250846 continuous, 0 domain fixed)
+   673800 nonzeros
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   5429682267.267  inf                  inf        0      0      0         0    38.8s
+ R       0       0         0   0.00%   2.906464e+11    2.9933379e+11      2.90%        0      0      0         0   234.9s
+
+50.0% inactive integer columns, restarting
+Model after restart has 112221 rows, 242293 cols (2 bin., 0 int., 0 impl., 242291 cont., 0 dom.fix.), and 560936 nonzeros
+
+         0       0         0   0.00%   2.906464e+11    2.9933379e+11      2.90%        0      0      0         0   242.4s
+         1       0         1 100.00%   2.9933379e+11   2.9933379e+11      0.00%        0      0      0     26937   278.1s
+
+Solving report
+  Model             linopy-problem-z1f7iv36
+  Status            Optimal
+  Primal bound      299333790231
+  Dual bound        299333790231
+  Gap               0% (tolerance: 0.05%)
+  P-D integral      1.2564896764
+  Solution status   feasible
+                    299333790231 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            278.12
+  Max sub-MIP depth 0
+  Nodes             1
+  Repair LPs        0
+  LP iterations     26937
+                    0 (strong br.)
+                    0 (separation)
+                    0 (heuristics)

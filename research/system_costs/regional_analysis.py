@@ -11,6 +11,27 @@ import regional_model as m
 COLORS={'grid':'#426BA7','mini_grid':'#1C8D82','standalone':'#E0A324'}
 LABELS={'grid':'Grid + local support','mini_grid':'Mini-grid','standalone':'Standalone'}
 
+def weather_resolution(summary):
+    """Same twelve cases, same targets: the frozen state-proxy run (commit c509ef0) against per-zone weather points."""
+    ref=m.DATA/'state_weather_reference';old=pd.read_csv(ref/'summary.csv').set_index('case');proxies=m.lib.weather();rows=[]
+    for r in summary.itertuples():
+        o=old.loc[r.case];p=proxies[proxies.zones.eq(r.zones)]
+        new=pd.read_csv(m.OUT/r.case/'zone_choices.csv')[['zone_id','mode','connections','clusters']]
+        previous=pd.read_csv(ref/f'zone_choices_{r.case}.csv')[['zone_id','mode']].rename(columns={'mode':'mode_state_weather'})
+        both=new.merge(previous,on='zone_id',validate='one_to_one');changed=both['mode'].ne(both.mode_state_weather)
+        feasible=r.status=='optimal_candidate_portfolio'
+        rows.append(dict(case=r.case,status=r.status,
+            annual_system_cost_state_weather_USD=o.annual_system_cost_USD,annual_system_cost_zone_weather_USD=r.annual_system_cost_USD,
+            cost_change_percent=100*(r.annual_system_cost_USD/o.annual_system_cost_USD-1) if feasible else np.nan,
+            unserved_state_weather_MWh=o.unserved_MWh,unserved_zone_weather_MWh=r.unserved_MWh,
+            grid_share_state_weather_percent=100*o.grid_connections/o.potential_connections,grid_share_zone_weather_percent=100*r.grid_connections/r.potential_connections,
+            mini_grid_share_state_weather_percent=100*o.mini_grid_connections/o.potential_connections,mini_grid_share_zone_weather_percent=100*r.mini_grid_connections/r.potential_connections,
+            zones_changing_mode=int(changed.sum()),clusters_changing_mode=int(both.loc[changed,'clusters'].sum()),
+            potential_connections_changing_mode=int(both.loc[changed,'connections'].sum()),connection_change_percent=100*both.loc[changed,'connections'].sum()/both.connections.sum(),
+            maximum_cluster_distance_state_weather_km=float(p.state_proxy_maximum_cluster_distance_km.max()),maximum_cluster_distance_zone_weather_km=float(p.maximum_cluster_distance_km.max()),
+            median_zone_maximum_distance_state_weather_km=float(p.state_proxy_maximum_cluster_distance_km.median()),median_zone_maximum_distance_zone_weather_km=float(p.maximum_cluster_distance_km.median())))
+    return pd.DataFrame(rows)
+
 def make():
     plt.rcParams.update({'font.size':10,'figure.dpi':150,'axes.spines.top':False,'axes.spines.right':False,'svg.hashsalt':'pypsa-sudan-regional-v1'})
     summary=pd.read_csv(m.OUT/'summary.csv');zones=pd.read_csv(m.DATA/'zones_36.csv').set_index('zone_id')
@@ -55,7 +76,7 @@ def make():
         ax.set(title=sc.capitalize()+' recovery',xlabel='Longitude',xlim=(cross.lon.min()-.3,cross.lon.max()+.3),ylim=(cross.lat.min()-.3,cross.lat.max()+.3));ax.set_aspect(1/np.cos(np.radians(17)))
     axes[0].set_ylabel('Latitude')
     fig.legend(handles=[Patch(color=v,label=LABELS[k]) for k,v in COLORS.items()],loc='lower center',ncol=3,bbox_to_anchor=(.5,.04),frameon=False)
-    fig.suptitle('Six-state coverage: 11,268 source clusters, choices assigned by 36 planning zones',fontsize=13)
+    fig.suptitle('Six-state coverage: 11,268 source clusters, choices assigned by 36 planning zones with zone weather points',fontsize=13)
     fig.text(.5,.015,'Colours inherit whole-zone decisions; points are not independently optimized connection recommendations. Grey corridors are schematic.',ha='center',fontsize=8)
     fig.tight_layout(rect=(0,.1,1,.93));fig.savefig(m.OUT/'regional_choices_map.png',bbox_inches='tight');fig.savefig(m.OUT/'regional_choices_map.svg',bbox_inches='tight',metadata={'Date':None});plt.close(fig)
     fig,axes=plt.subplots(3,6,figsize=(15,8))
@@ -97,10 +118,12 @@ def make():
         checks.loc[i,'potential_connections_changing_mode']=int(reference_points.loc[changed,'num_connections'].sum())
         checks.loc[i,'connection_change_percent']=100*reference_points.loc[changed,'num_connections'].sum()/reference_points.num_connections.sum()
     checks.to_csv(m.OUT/'focused_checks.csv',index=False,lineterminator='\n')
+    weather_resolution(summary).to_csv(m.OUT/'weather_resolution_check.csv',index=False,lineterminator='\n')
     findings=dict(states=6,clusters=11268,primary_zones=36,regional_cases=len(summary),maximum_mip_gap=float(summary.mip_gap.max()),
         mixed_results=base[base.policy.eq('mixed')][['scenario','annual_system_cost_USD','repair_investment_USD','grid_connections','mini_grid_connections','standalone_connections','unserved_MWh']].to_dict('records'),
         infeasible_benchmarks=summary[summary.status.eq('infeasible_benchmark_diagnostic')][['case','unserved_MWh','shortfall_hours']].to_dict('records'),
-        interpretation='Zone-wide choices from finite candidate portfolios; 2022 reference with dated hydro shapes, state weather proxies and hypothetical recovery projects')
+        weather_resolution=pd.read_csv(m.OUT/'weather_resolution_check.csv')[['case','cost_change_percent','potential_connections_changing_mode','maximum_cluster_distance_state_weather_km','maximum_cluster_distance_zone_weather_km']].to_dict('records'),
+        interpretation='Zone-wide choices from finite candidate portfolios; 2022 reference with dated hydro shapes, one NASA POWER point per zone and hypothetical recovery projects')
     (m.OUT/'findings.json').write_text(json.dumps(findings,indent=2)+'\n');print(json.dumps(findings));return findings
 
 if __name__=='__main__':make()

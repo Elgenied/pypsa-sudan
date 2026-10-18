@@ -16,7 +16,7 @@ This notebook assembles equipment, installed networks, connections, delivery, in
 
 | Available and checked | Still needed |
 |---|---|
-| Six-state finite-portfolio planning with national dispatch, four candidate backbone repairs and full-year service checks | Broader design options, surveyed grid/routes, more weather locations, improved demand/access allocation and sequencing |
+| Six-state finite-portfolio planning with national dispatch, four candidate backbone repairs and full-year service checks | Broader design options, surveyed grid/routes, additional weather years, improved demand/access allocation and sequencing |
 | Fixed budgets use 100 homes; the pilot uses source cluster sizes and checks identical hourly service across options | Measured diversity/peaks, critical and productive loads, field reliability and multiple weather years |
 | Transparent upfront and 20-year costs; point maps across proxy-demand scenarios | A validated construction recommendation or integrated national budget |
 

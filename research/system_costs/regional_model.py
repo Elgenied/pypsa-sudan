@@ -1,6 +1,6 @@
 """Six-state, full-year candidate-portfolio selection and national corridor recovery.
 
-Local portfolios are fixed before the MIP. The bound certifies this finite library,
+Local portfolios are sized per zone with that zone's own weather point and fixed before the MIP. The bound certifies this finite library,
 not unrestricted local equipment, routing, electricity-access status or war damage.
 """
 from pathlib import Path
@@ -54,18 +54,18 @@ def build(scenario,policy,zones,opts,library,fuel_factor=1):
     for name,e in repair.iterrows():n.links.at[name,'p_nom']=e.reference_MW # gates below apply to signed transfers
     fixed=opts[opts['mode'].ne('grid')].sort_values(['local_EAC_USD','mode']).drop_duplicates('zone_id').set_index('zone_id')
     grid=opts[opts['mode'].eq('grid')].set_index('zone_id')
-    interface={}
-    for (state,bus),zs in zones.groupby(['state','supply_bus']):
-        key=state.replace(' ','_')+'_'+scenario
-        row=library.set_index('key').loc[key]
+    # Each zone has its own weather point, hence its own grid-import shape: one accounting generator per zone.
+    interface={};service={}
+    for z in zones.itertuples():
+        row=library.set_index('key').loc[grid.at[z.zone_id,'key']]
         hourly=pd.read_csv(lib.OUT/row.hourly_file,index_col=0,parse_dates=True)
-        series=pd.Series(hourly.grid_MW.to_numpy(),index=n.snapshots)
-        maximum=float(series.max());total_scale=float(grid.loc[zs.zone_id,'scale'].sum())
-        name='service_'+bus
-        n.add('Load',name,bus=bus,p_set=series*total_scale)
-        n.add('Generator','cancel_'+bus,bus=bus,carrier='portfolio_accounting',p_nom_extendable=True,p_nom_max=maximum*total_scale,
+        series=pd.Series(hourly.grid_MW.to_numpy(),index=n.snapshots);maximum=float(series.max());scale=float(grid.at[z.zone_id,'scale'])
+        assert maximum>0,z.zone_id
+        service[z.supply_bus]=service.get(z.supply_bus,0.)+series*scale
+        n.add('Generator','cancel_'+z.zone_id,bus=z.supply_bus,carrier='portfolio_accounting',p_nom_extendable=True,p_nom_max=maximum*scale,
               p_max_pu=series/maximum,p_min_pu=series/maximum)
-        interface[bus]=dict(zones=list(zs.zone_id),peak=maximum)
+        interface[z.zone_id]=dict(bus=z.supply_bus,peak=maximum,scale=scale)
+    for bus,series in service.items():n.add('Load','service_'+bus,bus=bus,p_set=series)
     budgets=monthly_budgets(n);projects=repair[repair.candidate_repair].copy()
     params={k:float(v['central']) for k,v in lib.inputs()[1].items()}
     annual_factor=annuity(params['real_discount_rate'],CONFIG['repair_life_years'])+CONFIG['repair_annual_om_fraction']
@@ -81,9 +81,8 @@ def build(scenario,policy,zones,opts,library,fuel_factor=1):
             limit=e.reference_MW*(e.available_fraction+(1-e.available_fraction)*r.sel(project=name))
             m.add_constraints(m.variables['Link-p'].sel(name=name)<=limit,name=name+'_upper_recovery')
             m.add_constraints(m.variables['Link-p'].sel(name=name)>=-limit,name=name+'_lower_recovery')
-        for bus,values in interface.items():
-            cap=sum(grid.at[zid,'scale']*(one-z.sel(zone=zid))*values['peak'] for zid in values['zones'])
-            m.add_constraints(m.variables['Generator-p_nom'].sel(name='cancel_'+bus)==cap,name=bus+'_service_accounting')
+        for zid,values in interface.items():
+            m.add_constraints(m.variables['Generator-p_nom'].sel(name='cancel_'+zid)==values['scale']*values['peak']*(one-z.sel(zone=zid)),name=zid+'_service_accounting')
         for b in budgets.itertuples():
             snapshots=sns[sns.month==b.month]
             m.add_constraints(m.variables['Generator-p'].sel(name=b.generator,snapshot=snapshots).sum()<=b.budget_MWh,name=b.generator.replace(' ','_')+f'_month_{b.month}')
@@ -95,7 +94,7 @@ def case(scenario,policy='mixed',zone_count=36,demand_factor=1.,fuel_factor=1.):
     key=f'{scenario}_{policy}_{zone_count}_d{demand_factor:g}_f{fuel_factor:g}';folder=OUT/key
     if valid(folder):return json.loads((folder/'summary.json').read_text())
     folder.mkdir(parents=True,exist_ok=True)
-    library=lib.run();zones=pd.read_csv(DATA/f'zones_{zone_count}.csv')
+    library=lib.run();zones=lib.zones(zone_count)
     opts=options(zones,scenario,library,demand_factor,fuel_factor)
     n,extra,off,grid,projects,budgets,annual_factor=build(scenario,policy,zones,opts,library,fuel_factor)
     print('Solving regional case',key,flush=True)
@@ -136,7 +135,7 @@ def case(scenario,policy='mixed',zone_count=36,demand_factor=1.,fuel_factor=1.):
         local_diesel_MWh=float(selected.diesel_MWh.sum()),mip_gap=float(info.mip_gap),lower_bound_USD=float(info.mip_dual_bound),
         objective_USD=float(n.objective),hours=8760,source_clusters=int(selected.clusters.sum()),potential_connections=int(selected.connections.sum()),
         **{m+'_connections':int(selected.loc[selected['mode'].eq(m),'connections'].sum()) for m in ['grid','mini_grid','standalone']},
-        scope='Finite-portfolio, whole-zone choice under schematic network and recovery assumptions; not unrestricted design optimality')
+        weather='one NASA POWER point per zone',scope='Finite-portfolio, whole-zone choice under schematic network and recovery assumptions; not unrestricted design optimality')
     opts.to_csv(folder/'options.csv',index=False,lineterminator='\n');selected.to_csv(folder/'zone_choices.csv',index=False,lineterminator='\n')
     repairs.to_csv(folder/'repairs.csv',lineterminator='\n');budgets.to_csv(folder/'hydro_budgets.csv',index=False,lineterminator='\n')
     n.generators_t.p.sum().groupby(n.generators.carrier).sum().rename('MWh').to_csv(folder/'generation.csv',lineterminator='\n')

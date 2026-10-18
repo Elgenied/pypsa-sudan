@@ -9,7 +9,14 @@ from check_coupled import load_network,electrical_checks,require,TOL
 def library_checks():
     lib=m.lib;require(lib.valid(lib.OUT),'Library hashes')
     table=pd.read_csv(lib.OUT/'summary.csv');records={}
+    proxies=lib.weather().set_index(['zones','zone_id']);require(proxies.index.is_unique and len(proxies)==36+48,'One weather point per zone in both zone sets')
+    state=pd.read_csv(lib.DATA/'weather_proxies_state.csv')
+    for w in [proxies.reset_index(),state]:
+        for f in w.file:require((lib.DATA/f).exists(),'Cached weather file '+f)
     for r in table.itertuples():
+        # PV availability is rebuilt from the weather file of the zone this design serves, not from the record's own label.
+        proxy=proxies.loc[(r.zones,r.zone_id)]
+        require(r.key==lib.key_for(r.zones,r.zone_id,r.mode,r.key.rsplit('_',1)[1]) and r.geohash==proxy.geohash,'Design keyed to its zone and weather point')
         h=pd.read_csv(lib.OUT/r.hourly_file,index_col=0,parse_dates=True)
         require(len(h)==8760 and h.index.equals(pd.date_range('2022-01-01',periods=8760,freq='h')),'Library chronology')
         require(abs(h.target_delivered_MW.sum()-365)<1e-6,'Normalized portfolio service')
@@ -19,7 +26,8 @@ def library_checks():
         require(np.max(abs(h.pv_MW+h.diesel_MW+h.grid_MW+h.discharge_MW-h.charge_MW-h.bus_load_MW))<TOL,'Local power balance')
         require(np.max(abs(h.battery_MWh-np.roll(h.battery_MWh,1)-.95*h.charge_MW+h.discharge_MW/.95))<TOL,'Cyclic storage')
         require(h[['pv_MW','diesel_MW','grid_MW','charge_MW','discharge_MW','battery_MWh']].min().min()>-TOL,'Nonnegative operation')
-        w=pd.read_csv(lib.DATA/f'weather_{r.geohash}_2022.csv.gz');ghi=w.ALLSKY_SFC_SW_DWN.clip(lower=0)
+        w=pd.read_csv(lib.DATA/proxy.file);ghi=w.ALLSKY_SFC_SW_DWN.clip(lower=0)
+        require(len(w)==8760 and abs(h.pv_available_pu.sum()-r.pv_yield_proxy_kWh_per_kWp)<1e-6,'Zone weather year')
         cf=(ghi/1000*.9*.96*(1-.004*(w.T2M+25*ghi/800-25))).clip(0,1)
         require(np.max(h.pv_MW.to_numpy()-cf.to_numpy()*r.pv_kWp/1000)<TOL,'PV availability')
         require(np.max(h.charge_MW+h.discharge_MW-r.converter_AC_kW/1000)<TOL,'Converter power')
@@ -34,7 +42,7 @@ def library_checks():
             if hours:require(h.loc[((h.index.hour+2)%24).isin(hours),'grid_MW'].abs().max()<TOL,'Local outage service')
         if r.mode=='standalone':require(h.diesel_MW.abs().max()<TOL,'Standalone diesel prohibition')
         records[r.key]=h
-    require(len(table)==30,'Thirty pre-sized portfolios')
+    require(len(table)==5*len(proxies)==420 and table.key.is_unique,'Five pre-sized portfolios per zone for 36 and 48 zones')
     return table,records
 
 def evaluate(only=None):
@@ -51,8 +59,8 @@ def evaluate(only=None):
         for mode in ['grid','mini_grid','standalone']:
             totals=[]
             for count in [36,48]:
-                zz=pd.read_csv(m.DATA/f'zones_{count}.csv')
-                totals.append(sum(m.lib.package(z,mode,'selective',library)['local_EAC_USD'] for z in zz.itertuples()))
+                zz=m.lib.zones(count)
+                totals.append(sum(m.lib.package(z,mode,'selective',library,equipment=0)['local_EAC_USD'] for z in zz.itertuples()))
             require(abs(totals[0]-totals[1])<.1,'Aggregation-neutral site accounting '+mode)
     reference=m.coupled.national_network(np.zeros(8760));rows=[]
     for result in summary.itertuples():
@@ -65,7 +73,7 @@ def evaluate(only=None):
         require(abs(unmet-result.unserved_MWh)<.01,'Explicit unserved energy')
         if not diagnostic:require(len(deficit)==0 and unmet<.01,'Feasible cases have no shortage generator')
         else:require(result.policy!='mixed' and pd.isna(result.annual_system_cost_USD),'Infeasible benchmark is not a feasible-cost comparison')
-        zones=pd.read_csv(m.DATA/f'zones_{result.zones}.csv').set_index('zone_id')
+        zones=m.lib.zones(result.zones).set_index('zone_id')
         cross=pd.read_csv(m.DATA/f'crosswalk_{result.zones}.csv.gz')
         source=pd.read_csv(m.ROOT/'research/dre_atlas_2025/data/settlement_attributes.csv.gz')
         source=source[source.admin_cgaz_1.isin(m.CONFIG['states'])]
@@ -85,7 +93,9 @@ def evaluate(only=None):
             expected=np.zeros(8760)
             for zid,z in chosen[chosen.supply_bus.eq(bus)].iterrows():
                 if z['mode']=='grid':expected+=hourly[z.key].grid_MW.to_numpy()*z.scale
-            observed=n.loads_t.p_set['service_'+bus]-n.generators_t.p['cancel_'+bus]
+            cancel=['cancel_'+zid for zid in zones.index[zones.supply_bus.eq(bus)]]
+            require(set(cancel)<=set(n.generators.index[n.generators.carrier.eq('portfolio_accounting')]),'One accounting generator per zone')
+            observed=n.loads_t.p_set['service_'+bus]-n.generators_t.p[cancel].sum(axis=1)
             require(np.max(abs(expected-observed))<TOL,'Chosen local/national interface')
         other=[x for x in reference.loads.index if reference.loads.at[x,'bus'] not in zones.supply_bus.unique() and x!='additional_access']
         require(np.max(abs(n.loads_t.p_set[other]-reference.loads_t.p_set[other]).to_numpy())<TOL,'Outside-region background unchanged')
@@ -95,6 +105,7 @@ def evaluate(only=None):
             local_error=max(local_error,float(np.max(abs((h.pv_MW+h.diesel_MW+h.grid_MW+h.discharge_MW-h.charge_MW-h.bus_load_MW)*z.scale))))
             require(local_error<TOL,'Scaled local hourly balance')
             require(np.max(abs((h.battery_MWh-np.roll(h.battery_MWh,1)-.95*h.charge_MW+h.discharge_MW/.95)*z.scale))<TOL,'Scaled cyclic storage')
+            require(z.key==m.lib.key_for(result.zones,zid,z['mode'],result.scenario) and z.weather_geohash==zones.at[zid,'weather_geohash'],'Zone served by its own weather design')
             original=options[(options.zone_id==zid)&(options['mode']==z['mode'])].iloc[0]
             require(abs(original.local_EAC_USD-z.local_EAC_USD)<.01,'Selected option cost')
             from types import SimpleNamespace
@@ -138,11 +149,14 @@ def evaluate(only=None):
         for sc,g in base.groupby('scenario'):
             mixed=g[g.policy.eq('mixed')].iloc[0]
             require(mixed.annual_system_cost_USD<=g.annual_system_cost_USD.min()+abs(mixed.objective_USD)*m.CONFIG['mip_gap']+1,'Mixed includes benchmark choices')
-        fine=summary[summary.zones.eq(48)].iloc[0]
-        coarse=base[base.scenario.eq('selective')&base.policy.eq('mixed')].iloc[0]
-        require(fine.annual_system_cost_USD<=coarse.annual_system_cost_USD+abs(fine.objective_USD)*m.CONFIG['mip_gap']+1,'Refinement cannot materially increase optimal candidate cost')
+        # The 48-zone case now changes weather points as well as grouping, so the nested non-increase bound of the state-proxy run no longer applies.
+        reference=pd.read_csv(m.DATA/'state_weather_reference/summary.csv').set_index('case')
+        require(set(reference.index)==set(summary['case']),'Frozen state-proxy reference covers the same cases')
+        for result in summary.itertuples():
+            require(abs(reference.at[result.case,'target_residential_MWh']-result.target_residential_MWh)<.01,'Weather comparison keeps the service target')
         pd.DataFrame(rows).to_csv(m.OUT/'independent_checks.csv',index=False,lineterminator='\n')
-        facts=dict(passed=True,full_year_cases=len(rows),feasible_cases=sum(r['hourly_service_met'] for r in rows),infeasible_benchmarks=sum(not r['hourly_service_met'] for r in rows),normalized_local_designs=30,clusters=11268,states=6,
+        facts=dict(passed=True,full_year_cases=len(rows),feasible_cases=sum(r['hourly_service_met'] for r in rows),infeasible_benchmarks=sum(not r['hourly_service_met'] for r in rows),normalized_local_designs=len(library),
+            weather_points=int(m.lib.weather().geohash.nunique()),clusters=11268,states=6,
             hours=8760,primary_zones=36,resolution_check_zones=48,field_validated=False,unrestricted_design_optimum=False,
             interpretation='Fixed-capacity hourly operations checked; infeasible benchmarks explicitly diagnose unserved energy and have no feasible cost reported')
         (m.OUT/'validation.json').write_text(json.dumps(facts,indent=2)+'\n');print(json.dumps(facts));return facts

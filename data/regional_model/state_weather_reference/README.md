@@ -1,0 +1,3 @@
+# Frozen state-proxy reference run
+
+Reader-facing outputs of the regional run that used one NASA POWER point per state (repository commit c509ef0, 18 October 2026): the twelve-case `summary.csv`, each case's `zone_choices_<case>.csv`, the thirty-design `library_summary.csv`, the six-row `weather_proxies.csv` and that run's `focused_checks.csv`. They are inputs to the weather-resolution comparison in `regional_analysis.py` only; the current solve does not read them. The six state weather files remain in `data/regional_model/` so the earlier run stays reproducible from `weather_proxies_state.csv`.

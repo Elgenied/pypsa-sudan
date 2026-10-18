@@ -1,7 +1,7 @@
 Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
-MIP linopy-problem-4ey_ht0o has 1252816 rows; 508128 cols; 1949874 nonzeros; 40 integer variables (40 binary)
+MIP linopy-problem-1ktd06fo has 1760983 rows; 762197 cols; 2986790 nonzeros; 40 integer variables (40 binary)
 Coefficient ranges:
-  Matrix  [2e-05, 3e+07]
+  Matrix  [4e-06, 3e+07]
   Cost    [5e+00, 4e+09]
   Bound   [1e+00, 1e+00]
   RHS     [5e-03, 4e+07]
@@ -10,15 +10,15 @@ WARNING: Problem has some excessively large row bounds
 WARNING:    Consider scaling the objective by 1e-4, or setting the user_objective_scale option to -12
 WARNING:    Consider scaling the    bounds by 1e-2, or setting the user_bound_scale option to -6
 Presolving model
-193795 rows, 186081 cols, 555727 nonzeros  3s
-87378 rows, 112849 cols, 466844 nonzeros  5s
-85257 rows, 110731 cols, 464660 nonzeros  7s
-Presolve reductions: rows 85257(-1167559); columns 110731(-397397); nonzeros 464660(-1485214) 
+473451 rows, 328397 cols, 977699 nonzeros  10s
+88830 rows, 114301 cols, 467766 nonzeros  14s
+85257 rows, 110731 cols, 465582 nonzeros  18s
+Presolve reductions: rows 85257(-1675726); columns 110731(-651466); nonzeros 465582(-2521208) 
 
 Solving MIP model with:
    85257 rows
    110731 cols (4 binary, 0 integer, 0 implied int., 110727 continuous, 0 domain fixed)
-   464660 nonzeros
+   465582 nonzeros
 
 Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
      I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
@@ -28,23 +28,23 @@ Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristi
         Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
 Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
 
-         0       0         0   0.00%   3917771639.414  inf                  inf        0      0      0         0    18.3s
- R       0       0         0   0.00%   3960141448.167  3961470424.588     0.03%        0      0      0         0   102.7s
-         1       0         1 100.00%   3960141448.167  3961470424.588     0.03%        0      0      0         0   102.7s
+         0       0         0   0.00%   3896418234.098  inf                  inf        0      0      0         0    30.9s
+ R       0       0         0   0.00%   3938788042.851  3940117019.272     0.03%        0      0      0         0   179.7s
+         1       0         1 100.00%   3938788042.851  3940117019.272     0.03%        0      0      0         0   179.7s
 
 Solving report
-  Model             linopy-problem-4ey_ht0o
+  Model             linopy-problem-1ktd06fo
   Status            Optimal
-  Primal bound      3961470424.59
-  Dual bound        3960141448.17
-  Gap               0.0335% (tolerance: 0.05%)
-  P-D integral      6.02208783331e-06
+  Primal bound      3940117019.27
+  Dual bound        3938788042.85
+  Gap               0.0337% (tolerance: 0.05%)
+  P-D integral      5.37838323508e-06
   Solution status   feasible
-                    3961470424.59 (objective)
+                    3940117019.27 (objective)
                     0 (bound viol.)
                     0 (int. viol.)
                     0 (row viol.)
-  Timing            102.68
+  Timing            179.70
   Max sub-MIP depth 0
   Nodes             1
   Repair LPs        0

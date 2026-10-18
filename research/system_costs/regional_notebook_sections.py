@@ -28,7 +28,7 @@ REGIONAL_OUT=regional.OUT
 regional_zones=pd.read_csv(regional.DATA/'zones_36.csv')
 regional_choices=pd.read_csv(REGIONAL_OUT/'all_zone_choices.csv')
 regional_base=regional_summary.query("zones == 36 and demand_factor == 1 and thermal_cost_factor == 1")
-display(Markdown(f"**Completed:** {len(regional_summary)} full-year regional cases: {regional_validation['feasible_cases']} feasible plans and {regional_validation['infeasible_benchmarks']} explicitly labelled infeasible benchmarks. Thirty normalized local designs, all six states and all source cluster IDs are covered. Independent saved-output checks passed."))
+display(Markdown(f"**Completed:** {len(regional_summary)} full-year regional cases: {regional_validation['feasible_cases']} feasible plans and {regional_validation['infeasible_benchmarks']} explicitly labelled infeasible benchmarks. {regional_validation['normalized_local_designs']} normalized local designs sized with {regional_validation['weather_points']} zone weather points cover all six states and all source cluster IDs. Independent saved-output checks passed."))
 for r in regional_base.query("policy == 'mixed'").itertuples():
     shares=[f"{label} {100*getattr(r,mode+'_connections')/r.potential_connections:.1f}%" for mode,label in [('grid','grid with local support'),('mini_grid','mini-grid'),('standalone','standalone')]]
     display(Markdown(f"**{r.scenario.capitalize()}:** {', '.join(shares)} of potential building connections; **{r.annual_system_cost_USD/1e9:.3f} billion USD/year** including national background operation. All modelled hourly demand is served."))
@@ -42,10 +42,11 @@ The 2017 report's residential share of listed sector sales is applied to the 202
 
 We remove the allocated residential share and its proportional historical accounting losses from the national loads, then serve the complete local target using the selected portfolio and its explicit losses. Other-sector demand and all outside-region loads stay in the national model. The same target is used for all policy comparisons. A separate +20% target run is clearly labelled.
 
-Local hourly shapes are synthetic; existing national demand is aligned from Sudan local time to UTC as in section 11. Weather uses one previously downloaded 2022 NASA POWER location per state. The distance table below exposes this spatial approximation; it is not a claim to have fetched weather for every settlement.
+Local hourly shapes are synthetic; existing national demand is aligned from Sudan local time to UTC as in section 11. Weather uses one 2022 NASA POWER hourly point per planning zone, fetched at the zone's connection-weighted centroid; the earlier run used one point per state. The table below gives each zone's farthest source cluster from its own point and from the earlier state point. This is a gridded product sampled once per zone for one year, not weather for every settlement, and Northern_03 still contains outlying desert clusters far from its point.
 ''')
     code('''display(regional_zones.groupby('state').agg(zones=('zone_id','size'),source_clusters=('clusters','sum'),potential_connections=('connections','sum'),allocated_existing_residential_MWh=('baseline_residential_MWh','sum'),target_MWh=('target_MWh','sum'),uplift_MWh=('uplift_MWh','sum')).reindex(regional.CONFIG['states']).style.format(precision=1,thousands=','))
-display(pd.read_csv(regional.DATA/'weather_proxies.csv'))
+regional_weather=pd.read_csv(regional.DATA/'weather_proxies.csv')
+display(regional_weather.query('zones == 36')[['zone_id','geohash','lat','lon','maximum_cluster_distance_km','state_proxy_geohash','state_proxy_maximum_cluster_distance_km']].style.format(precision=1).hide(axis='index'))
 display(Image(filename=str(REGIONAL_OUT/'regional_choices_map.png')))
 ''')
     md('''### 12.2 Recovery projects and fair comparisons
@@ -64,7 +65,7 @@ The three cases alter both backbone opportunities and local availability; their 
 
 Diagnostic shortfall is system-wide, including national background loads; it is not allocated to particular households or interpreted as observed outages. The penalty-based diagnostic estimates shortfall with resource costs present, rather than solving a separate exact lexicographic minimum-unserved-energy problem.
 
-Local grid and mini-grid distribution costs sum each source cluster's length proxy; they do not assume one enormous state-wide mini-grid or free shared feeders. Local physical schedules can be divided proportionally among the member clusters because weather and service shape are common within each state. Shared inter-cluster mini-grid routing is not optimized. A 35% refurbishment allowance is applied to the demand-weighted existing share of applicable wiring/grid assets; this is not observed infrastructure condition.
+Local grid and mini-grid distribution costs sum each source cluster's length proxy; they do not assume one enormous state-wide mini-grid or free shared feeders. Local physical schedules can be divided proportionally among the member clusters because weather and service shape are common within each zone. Shared inter-cluster mini-grid routing is not optimized. A 35% refurbishment allowance is applied to the demand-weighted existing share of applicable wiring/grid assets; this is not observed infrastructure condition.
 
 Civil works, applicable fuel tanks and the provisional 1,000 USD/year network-site protection allowance are counted per source cluster. The protection allowance is not a current security assessment; it is zero for standalone systems.
 ''')
@@ -100,13 +101,17 @@ display(regional_summary[['case','status','mip_gap','lower_bound_USD','objective
 ''')
     md('''### 12.4 Focused robustness checks and research use
 
-The selective mixed case is rerun at 48 zones, at +20% residential service, and at +25% thermal/delivered diesel fuel price (local diesel O&M unchanged). The fuel-price case re-prices the fixed local candidate designs; it does not create newly optimized local designs. These are three focused checks, not probability estimates. The table reports both cost changes and the potential connections whose inherited technology changes.
+The selective mixed case is rerun at 48 zones, at +20% residential service, and at +25% thermal/delivered diesel fuel price (local diesel O&M unchanged). The fuel-price case re-prices the fixed local candidate designs; it does not create newly optimized local designs. The 48-zone case uses its own 48 weather points, so it changes grouping and weather sampling together. These are three focused checks, not probability estimates. The first table reports both cost changes and the potential connections whose inherited technology changes.
+
+The second table is the weather-resolution comparison: the same twelve cases and service targets solved with the earlier one-point-per-state weather (frozen reference run, commit c509ef0) and with one NASA POWER point per zone. It reports the cost change, the connection shares, the zones and potential connections whose inherited mode changes, and the farthest-cluster distances before and after. It isolates the weather-sampling change only; other weather years and products are untested.
 
 It also reports the chosen repair projects: similar total costs do not guarantee stable discrete investment choices, and a small solver gap is not evidence that an individual repair priority is robust.
 
 This is an executed six-state **scenario study** with complete source coverage and a reproducible finite-portfolio comparison. Before making construction recommendations or claiming a definitive least-cost regional plan, refine the grid/tie-in evidence, weather coverage, demand/access allocation, candidate design diversity and local routes. The results can support a methodological paper with these limits explicit; running the model alone does not establish publication readiness.
 ''')
     code('''display(pd.read_csv(REGIONAL_OUT/'focused_checks.csv')[['case','annual_system_cost_USD','cost_change_percent','selected_repairs','clusters_changing_mode','potential_connections_changing_mode','connection_change_percent']].style.format(precision=2,thousands=','))
+display(Markdown('**State-proxy versus per-zone weather.** Blank costs are infeasible benchmarks, compared by diagnostic unserved energy instead.'))
+display(pd.read_csv(REGIONAL_OUT/'weather_resolution_check.csv')[['case','annual_system_cost_state_weather_USD','annual_system_cost_zone_weather_USD','cost_change_percent','unserved_state_weather_MWh','unserved_zone_weather_MWh','grid_share_state_weather_percent','grid_share_zone_weather_percent','zones_changing_mode','potential_connections_changing_mode','connection_change_percent','maximum_cluster_distance_state_weather_km','maximum_cluster_distance_zone_weather_km','median_zone_maximum_distance_state_weather_km','median_zone_maximum_distance_zone_weather_km']].style.format(precision=1,thousands=',',na_rep='—').hide(axis='index'))
 display(Markdown('[Regional method and source assumptions](../../docs/REGIONAL_MODEL.md). Inputs: `data/regional_model`; outputs: `research/system_costs/results/regional`. Run `regional_model.py` and `check_regional.py`, or Run All here. Cached results are hash-checked; edited inputs require re-solving.'))
 ''')
     return cells

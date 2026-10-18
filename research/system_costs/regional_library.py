@@ -1,8 +1,9 @@
-"""Full-year candidate portfolios; scalable operations, explicit per-cluster fixed costs."""
+"""Full-year candidate portfolios per planning zone; scalable operations, explicit per-cluster fixed costs."""
 from pathlib import Path
 from types import SimpleNamespace
 from contextlib import contextmanager
-import copy,json
+from concurrent.futures import ProcessPoolExecutor
+import argparse,copy,json
 import numpy as np
 import pandas as pd
 import pilot_model as p
@@ -10,6 +11,7 @@ import recovery_model as r
 
 ROOT=p.ROOT;DATA=ROOT/'data/regional_model';OUT=Path(__file__).resolve().parent/'results/regional/library'
 CONFIG=json.loads((DATA/'config.json').read_text())
+MODES=[('standalone',None),('mini_grid',None)]+[('grid_extension',s) for s in CONFIG['scenarios']]
 
 def inputs():
     x=r.inputs();x[1]['bulk_grid_supply']['central']=str(CONFIG['bulk_price_for_candidate_sizing_USD_MWh']/1000);return x
@@ -36,30 +38,47 @@ def valid(folder):
 def stamp(folder,files):
     (folder/'manifest.json').write_text(json.dumps(dict(inputs=fingerprints(),outputs={x.relative_to(folder).as_posix():r.sha(x) for x in files}),indent=2)+'\n')
 
-def run():
+def key_for(zone_count,zone_id,mode,scenario=None):
+    return f'z{zone_count}_{zone_id}_'+(scenario if mode in ('grid','grid_extension') else mode)
+
+def weather():
+    """One cached NASA POWER point per zone for both zone sets; the state proxies stay in weather_proxies_state.csv."""
+    return pd.read_csv(DATA/'weather_proxies.csv')
+
+def zones(zone_count):
+    z=pd.read_csv(DATA/f'zones_{zone_count}.csv');w=weather();w=w[w.zones.eq(zone_count)]
+    z=z.merge(w[['zone_id','geohash','file','maximum_cluster_distance_km']].rename(columns={'geohash':'weather_geohash','file':'weather_file','maximum_cluster_distance_km':'weather_distance_km'}),on='zone_id',validate='one_to_one')
+    z.insert(0,'zones',zone_count);return z
+
+def tasks():
+    return [dict(zones=int(w.zones),zone_id=w.zone_id,state=w.state,geohash=w.geohash,mode=mode,scenario=sc) for w in weather().itertuples() for mode,sc in MODES]
+
+def size(task):
+    key=key_for(task['zones'],task['zone_id'],task['mode'],task['scenario']);folder=OUT/key
+    if valid(folder):return json.loads((folder/'record.json').read_text())
+    site=SimpleNamespace(geohash=task['geohash'],village_name=task['zone_id'],admin_cgaz_1=task['state'],num_connections=1000,hull_area=1.,distance_to_existing_transmission_lines=0.,pv_value=1800.,pilot_type='regional_normalized_library')
+    print('Sizing full-year portfolio:',key,flush=True)
+    with context(folder,task['scenario']):
+        record,_,_=p.solve(site,task['mode'],'evening_outage' if task['scenario'] else 'base')
+    hourly=next(folder.glob('*hourly.csv.gz'))
+    record.update(key=key,zones=task['zones'],zone_id=task['zone_id'],hourly_file=hourly.relative_to(OUT).as_posix())
+    (folder/'record.json').write_text(json.dumps(record,indent=2)+'\n')
+    stamp(folder,[folder/'record.json',hourly]);return record
+
+def run(workers=1):
     OUT.mkdir(parents=True,exist_ok=True)
     if valid(OUT):return pd.read_csv(OUT/'summary.csv')
-    rows=[]
-    for w in pd.read_csv(DATA/'weather_proxies.csv').itertuples():
-        site=SimpleNamespace(geohash=w.geohash,village_name=w.state,admin_cgaz_1=w.state,num_connections=1000,hull_area=1.,distance_to_existing_transmission_lines=0.,pv_value=1800.,pilot_type='regional_normalized_library')
-        for mode,sc in [('standalone',None),('mini_grid',None)]+[('grid_extension',s) for s in CONFIG['scenarios']]:
-            key=w.state.replace(' ','_')+'_'+(sc if sc else mode);folder=OUT/key
-            if valid(folder):record=json.loads((folder/'record.json').read_text())
-            else:
-                print('Sizing full-year portfolio:',key,flush=True)
-                with context(folder,sc):
-                    record,_,_=p.solve(site,mode,'evening_outage' if sc else 'base')
-                hourly=next(folder.glob('*hourly.csv.gz'))
-                record.update(key=key,hourly_file=hourly.relative_to(OUT).as_posix())
-                (folder/'record.json').write_text(json.dumps(record,indent=2)+'\n')
-                stamp(folder,[folder/'record.json',hourly])
-            rows.append(record)
+    todo=tasks()
+    if workers>1:
+        with ProcessPoolExecutor(max_workers=workers) as pool:rows=list(pool.map(size,todo))
+    else:rows=[size(t) for t in todo]
     result=pd.DataFrame(rows);result.to_csv(OUT/'summary.csv',index=False,lineterminator='\n')
     stamp(OUT,[OUT/'summary.csv',*[x for x in OUT.rglob('*hourly.csv.gz')],*[x for x in OUT.rglob('record.json')]])
     return result
 
-def package(zone,mode,scenario,library,demand_factor=1.,fuel_factor=1.):
-    key=zone.state.replace(' ','_')+'_'+(scenario if mode=='grid' else mode)
+def package(zone,mode,scenario,library,demand_factor=1.,fuel_factor=1.,equipment=1.):
+    """Scale one zone's normalized design; equipment=0 isolates the per-cluster network and site accounting."""
+    key=key_for(zone.zones,zone.zone_id,mode,scenario)
     row=library.set_index('key').loc[key];scale=zone.target_MWh*demand_factor/365.
     site=SimpleNamespace(num_connections=zone.connections,hull_area=1.,distance_to_existing_transmission_lines=0.)
     pmode='grid_extension' if mode=='grid' else mode
@@ -74,18 +93,19 @@ def package(zone,mode,scenario,library,demand_factor=1.,fuel_factor=1.):
                      civil_site=zone.clusters,land_right=zone.clusters,fuel_tank_ats=zone.clusters if mode=='mini_grid' else 0)
         if mode=='grid':
             q.update(mv_line=zone.mv_km*rehabilitation,transformer_100kVA=zone.transformer_units*demand_factor*rehabilitation,grid_protection=zone.clusters*rehabilitation)
-        caps={k:float(row[k])*scale for k in ['pv_kWp','battery_nominal_kWh','converter_AC_kW','diesel_kW']}
+        caps={k:float(row[k])*scale*equipment for k in ['pv_kWp','battery_nominal_kWh','converter_AC_kW','diesel_kW']}
         for asset,col in [('pv','pv_kWp'),('battery','battery_nominal_kWh'),('converter','converter_AC_kW'),('diesel','diesel_kW')]:
             for item in groups[asset]:q[item]=caps[col]
         actual=ledger(q)
     params={k:float(v['central']) for k,v in inputs()[1].items()}
-    diesel_cost=row.diesel_generation_kWh*scale*(params['diesel_delivered_price']*params['diesel_specific_fuel']*fuel_factor+params['diesel_variable_om'])
+    diesel_cost=row.diesel_generation_kWh*scale*equipment*(params['diesel_delivered_price']*params['diesel_specific_fuel']*fuel_factor+params['diesel_variable_om'])
     # The base ledger charges one network site. A zone contains separate cluster sites.
     site_security=0. if mode=='standalone' else zone.clusters*params['annual_security_network']
     extra_security=site_security-actual['operating']['security_allowance']
-    return dict(zone_id=zone.zone_id,state=zone.state,supply_bus=zone.supply_bus,mode=mode,key=key,scale=scale,
+    return dict(zone_id=zone.zone_id,state=zone.state,supply_bus=zone.supply_bus,mode=mode,key=key,weather_geohash=zone.weather_geohash,scale=scale,
         connections=zone.connections,clusters=zone.clusters,target_MWh=zone.target_MWh*demand_factor,
         local_EAC_USD=r.fixed_eac(actual)+diesel_cost+extra_security,initial_USD=actual['summary']['initial_budget_USD'],annual_site_security_USD=site_security,
         grid_import_MWh=row.grid_import_kWh*scale/1000,diesel_MWh=row.diesel_generation_kWh*scale/1000,**caps)
 
-if __name__=='__main__':run()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--workers',type=int,default=1);args=parser.parse_args();run(args.workers)

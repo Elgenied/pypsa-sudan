@@ -8,7 +8,7 @@ The question is: **Where should Sudan rehabilitate or extend the grid, where sho
 
 The repository also retains the nationally calibrated 2022 dispatch prototype, historical/report evidence, settlement atlas, complete cost ledger, three-cluster pilot, uncertainty/break-even analysis and 18-state sample. Measured settlement demand is not a prerequisite for conditional planning. National generation expansion, investment sequencing and field-validated recommendations remain future work.
 
-The [regional research design](docs/NORTH_CENTRAL_STUDY.md) distinguishes the first implemented finite-portfolio study from the broader research objectives. Whole-zone choices, one weather point per state, hypothetical repair costs and assumed demand allocation remain material limitations; these are not field-verified settlement recommendations.
+The [regional research design](docs/NORTH_CENTRAL_STUDY.md) distinguishes the first implemented finite-portfolio study from the broader research objectives. Whole-zone choices, one weather point per zone for a single 2022 year, hypothetical repair costs and assumed demand allocation remain material limitations; these are not field-verified settlement recommendations.
 
 ## Start here
 
@@ -38,7 +38,7 @@ There are **four notebooks with different jobs**. Each begins with a reader guid
 | **Spatial proxy-demand study** | 18 clusters, one per source state; location-specific 2022 hourly weather; atlas/1/2 kWh daily service cases; 168 distinct hourly solves | Source building formula, selection, equal service, hourly balances and lifecycle costs checked; no measured demand or national extrapolation | Cheapest assessed option at each selected point; grid considered conditionally at ten sites and not assessed at eight beyond the 50 km local-study scope |
 | **Joint recovery planning** | Four neighbouring Blue Nile clusters, 880 potential connections; shared routes, repair budgets, regional supply and three full-year mixed-integer solves | Saved binary choices, route connectivity, hourly operation, lifecycle costs, budgets and optimality gap checked | Conditional local repair/connect/off-grid plans; aggregate regional boundary, not yet a national allocation |
 | **National supply coupling** | Eight neighbouring clusters, 978 potential connections, 11 candidate edges and a 19-node national supply model; three local recovery cases | Local/national hourly balances, hydro budgets, clock alignment, costs and coupling bounds checked | Conditional access choices supplied by the national fixed-fleet reference; not national universal access or national rehabilitation investment |
-| **Six-state regional study** | 11,268 clusters in 36 zones, three recovery conditions, four candidate backbone repairs, policy benchmarks and three focused checks | Full-year operations, demand accounting, cost reconstruction and finite-library optimization bounds checked; infeasible benchmarks explicitly reported | Conditional whole-zone service choices and assumed backbone repairs; not unrestricted design optimality or verified damage-based recommendations |
+| **Six-state regional study** | 11,268 clusters in 36 zones with one NASA POWER weather point per zone, three recovery conditions, four candidate backbone repairs, policy benchmarks, three focused checks and a state-versus-zone weather comparison | Full-year operations, demand accounting, cost reconstruction and finite-library optimization bounds checked; infeasible benchmarks explicitly reported | Conditional whole-zone service choices and assumed backbone repairs; not unrestricted design optimality or verified damage-based recommendations |
 
 **Calibration is not independent validation.** Matching inputs does not confirm the network or operation. The 2012 report's forecasts for 2022 are not observations. The 2025 Atlas combines inputs from different years: demand is a building formula and conflict labels describe 2020–2022, not current safety.
 
@@ -62,7 +62,7 @@ data/
   spatial_proxy_study/           18-state sample, building-demand scenarios, cached weather and coverage
   recovery_planning/            Four neighbouring clusters, candidate routes and three recovery conditions
   national_coupling/            Eight clusters, sparse route graph and frozen national reference
-  regional_model/               Six-state zones, crosswalks, weather proxies and recovery assumptions
+  regional_model/               Six-state zones, crosswalks, per-zone weather points, frozen state-weather reference and recovery assumptions
 research/forecasting_2012/
   Sudan_Forecasting_Replication.ipynb   Historical analysis notebook
   data/                          Canonical extracted historical CSVs
@@ -92,7 +92,7 @@ Use the [data collection](data/README.md) for input evidence. Use [2022 results]
 
 ## Next milestone
 
-Use the six-state results to prioritize improved weather coverage, alternative local designs and usable tie-in/route evidence. Then assess fixed investments against additional weather years and hourly activity profiles. This can proceed with transparent demand scenarios; measured settlement demand is not a prerequisite. Comparable quotations and independent engineering review are needed for stronger construction claims. See the [milestones and completion criteria](docs/STUDY_PLAN.md#milestones-and-completion-criteria).
+Use the six-state results to prioritize additional weather years, alternative local designs and usable tie-in/route evidence. Then assess fixed investments against additional weather years and hourly activity profiles. This can proceed with transparent demand scenarios; measured settlement demand is not a prerequisite. Comparable quotations and independent engineering review are needed for stronger construction claims. See the [milestones and completion criteria](docs/STUDY_PLAN.md#milestones-and-completion-criteria).
 
 ## Run
 
