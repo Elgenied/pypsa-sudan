@@ -1,0 +1,66 @@
+Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
+LP linopy-problem-_ajstax6 has 1761027 rows; 762197 cols; 3179140 nonzeros
+Coefficient ranges:
+  Matrix  [4e-07, 3e+07]
+  Cost    [5e+00, 4e+09]
+  Bound   [1e+00, 1e+00]
+  RHS     [5e-03, 1e+12]
+WARNING: Problem has some excessively large costs
+WARNING: Problem has some excessively large row bounds
+WARNING:    Consider scaling the objective by 1e-4, or setting the user_objective_scale option to -12
+WARNING:    Consider scaling the    bounds by 1e-6, or setting the user_bound_scale option to -20
+Presolving model
+600868 rows, 429738 cols, 1136378 nonzeros  6s
+41459 rows, 137007 cols, 284238 nonzeros  8s
+Dependent equations search running on 36866 equations with time limit of 18.00s
+Dependent equations search removed 0 rows and 0 nonzeros in 0.01s (limit = 18.00s)
+36934 rows, 119197 cols, 253143 nonzeros  10s
+Presolve reductions: rows 36934(-1724093); columns 119197(-643000); nonzeros 253143(-2925997) 
+Solving the presolved LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0     0.0000000000e+00 Ph1: 0(0) 10s
+      54718     2.0698477508e+09 Pr: 0(0) 13s
+
+Performed postsolve
+Solving the original LP from the solution after postsolve
+
+Model name          : linopy-problem-_ajstax6
+Model status        : Optimal
+Simplex   iterations: 54718
+Objective value     :  2.0698477508e+09
+P-D objective error :  3.5995790474e-14
+HiGHS run time      :         14.80
+Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
+LP linopy-problem-dxq83mht has 1761027 rows; 762197 cols; 3179140 nonzeros
+Coefficient ranges:
+  Matrix  [4e-07, 3e+07]
+  Cost    [5e+00, 4e+09]
+  Bound   [1e+00, 1e+00]
+  RHS     [5e-03, 1e+12]
+WARNING: Problem has some excessively large costs
+WARNING: Problem has some excessively large row bounds
+WARNING:    Consider scaling the objective by 1e-4, or setting the user_objective_scale option to -12
+WARNING:    Consider scaling the    bounds by 1e-6, or setting the user_bound_scale option to -20
+Presolving model
+600868 rows, 429738 cols, 1136378 nonzeros  9s
+41459 rows, 137007 cols, 284238 nonzeros  11s
+Dependent equations search running on 36866 equations with time limit of 18.00s
+Dependent equations search removed 0 rows and 0 nonzeros in 0.01s (limit = 18.00s)
+36934 rows, 119197 cols, 253143 nonzeros  13s
+Presolve reductions: rows 36934(-1724093); columns 119197(-643000); nonzeros 253143(-2925997) 
+Solving the presolved LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0     0.0000000000e+00 Ph1: 0(0) 14s
+      54718     2.0698477508e+09 Pr: 0(0) 17s
+
+Performed postsolve
+Solving the original LP from the solution after postsolve
+
+Model name          : linopy-problem-dxq83mht
+Model status        : Optimal
+Simplex   iterations: 54718
+Objective value     :  2.0698477508e+09
+P-D objective error :  3.5995790474e-14
+HiGHS run time      :         20.16

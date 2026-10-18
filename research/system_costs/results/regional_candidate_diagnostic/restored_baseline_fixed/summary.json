@@ -1,0 +1,18 @@
+{
+  "case": "restored_baseline_fixed",
+  "scenario": "restored",
+  "expanded": false,
+  "force_gezira": false,
+  "fixed_choices": true,
+  "annual_system_cost_USD": 2069847750.7970715,
+  "local_annual_cost_USD": 1577292615.9876535,
+  "national_operating_cost_USD": 478161809.64266634,
+  "annual_repair_cost_USD": 14393325.166751675,
+  "grid_import_MWh": 4451587.455444066,
+  "grid_candidates": 36,
+  "offgrid_candidates": 72,
+  "hours": 8760,
+  "mip_gap": 0.0,
+  "lower_bound_USD": 2069847750.7970715,
+  "gezira_grid_connections": 0
+}

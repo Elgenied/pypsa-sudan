@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "max_bus_balance_error_MW": 1.390603188156092e-10,
+  "hours": 8760,
+  "no_unserved_generator": true,
+  "grid_availability_checked": true,
+  "objective_reconstructed": true,
+  "field_validated": false
+}

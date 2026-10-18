@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "restored_baseline_fixed",
+      "hours": 8760,
+      "candidates": 108,
+      "max_bus_balance_error_MW": 4.547473508864641e-13,
+      "cost_reconstructed": true,
+      "passed": true
+    },
+    {
+      "case": "selective_expanded",
+      "hours": 8760,
+      "candidates": 144,
+      "max_bus_balance_error_MW": 1.1368683772161603e-12,
+      "cost_reconstructed": true,
+      "passed": true
+    },
+    {
+      "case": "restored_expanded",
+      "hours": 8760,
+      "candidates": 180,
+      "max_bus_balance_error_MW": 2.0463630789890885e-12,
+      "cost_reconstructed": true,
+      "passed": true
+    },
+    {
+      "case": "restored_expanded_gezira_grid",
+      "hours": 8760,
+      "candidates": 180,
+      "max_bus_balance_error_MW": 1.390603188156092e-10,
+      "cost_reconstructed": true,
+      "passed": true
+    }
+  ],
+  "local_library_designs_checked": 420,
+  "field_validated": false,
+  "claim": "Nested finite-library robustness experiment; no unrestricted joint sizing or route optimization"
+}

@@ -41,3 +41,4 @@ jobs:
       - run: python research/system_costs/check_recovery.py
       - run: python research/system_costs/check_coupled.py
       - run: python research/system_costs/check_regional.py
+      - run: python research/system_costs/check_regional_candidates.py

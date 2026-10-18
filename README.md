@@ -8,6 +8,8 @@ The question is: **Where should Sudan rehabilitate or extend the grid, where sho
 
 The repository also retains the nationally calibrated 2022 dispatch prototype, historical/report evidence, settlement atlas, complete cost ledger, three-cluster pilot, uncertainty/break-even analysis and 18-state sample. Measured settlement demand is not a prerequisite for conditional planning. National generation expansion, investment sequencing and field-validated recommendations remain future work.
 
+**Read section 13 before interpreting the regional switches.** It expands the grid-design choice set while retaining the original options, compares before/after maps, and diagnoses the Gezira result with a constrained counterfactual. The original section-12 maps remain an auditable baseline; section 13 reports which findings survive this specific candidate-set test.
+
 The [regional research design](docs/NORTH_CENTRAL_STUDY.md) distinguishes the first implemented finite-portfolio study from the broader research objectives. Whole-zone choices, one weather point per zone for a single 2022 year, hypothetical repair costs and assumed demand allocation remain material limitations; these are not field-verified settlement recommendations.
 
 ## Start here

@@ -2,6 +2,8 @@
 
 Open [Sudan_System_Costs.ipynb](Sudan_System_Costs.ipynb) or the [HTML reading copy](Sudan_System_Costs.html). All cost analysis is in this single notebook, supported by editable [data/system_costs](../../data/system_costs/README.md).
 
+**Latest experiment: section 13 diagnoses regional technology switches with a cumulative grid-design library.** Read its before/after maps and numerical checks alongside the original six-state results in section 12. It preserves every original option, permits earlier battery-backed grid designs under improved recovery, and tests a grid-service requirement for Gezira. Supporting scripts are `regional_candidate_diagnostic.py`, `check_regional_candidates.py` and `regional_candidate_analysis.py`; the experiment remains a conditional finite-library study.
+
 Sections 1–6 cost four fixed illustrative designs. **Section 7 now optimizes supply for three real DRE clusters**, using 8,760 hourly NASA POWER weather observations per site, matched assumed demand and the complete lifecycle costs. Eighteen solves compare base options, grid interruption, no diesel and higher demand. Prices, routes and demand remain provisional. Conditional local rankings are reported; there is no field-validated recommendation or national total.
 
 Run from the repository root:

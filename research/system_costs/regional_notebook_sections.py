@@ -8,6 +8,8 @@ def sections():
     md('''<a id="regional-study"></a>
 ## 12. Northern–central Sudan: six-state recovery study
 
+**Candidate-design robustness:** section 13 tests these original maps with a broader, cumulative grid-design library. Read that comparison before treating a regional switch as a policy finding.
+
 **Start here for the regional run.** Northern, River Nile, Khartoum, Gezira, White Nile and Sennar contain **11,268 source atlas clusters and 10,078,666 potential building connections**. All are represented in 36 planning zones; a separate 48-zone run checks spatial aggregation. These are source building counts, not observed households or newly connected customers.
 
 **Question:** where, and under which recovery conditions, do grid restoration with local support, mini-grids or standalone systems provide the required electricity service at least modelled lifecycle cost?

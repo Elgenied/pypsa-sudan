@@ -13,4 +13,5 @@ research/system_costs/results/** linguist-generated=true
 research/system_costs/results/recovery/**/solver.log text -whitespace
 research/system_costs/results/national_coupling/**/solver.log text -whitespace
 research/system_costs/results/regional/**/*.log text -whitespace
+research/system_costs/results/regional_candidate_diagnostic/**/*.log text -whitespace
 research/system_costs/Sudan_System_Costs.html linguist-generated=true

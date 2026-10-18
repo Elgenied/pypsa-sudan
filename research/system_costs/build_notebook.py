@@ -8,6 +8,8 @@ def code(text): cells.append(nbf.v4.new_code_cell(text.strip()))
 
 md('''# PyPSA-Sudan: least-cost electrification under recovery conditions
 
+**Latest robustness test: [section 13](#candidate-diagnostic)** compares the regional choices with a broader, cumulative grid-design library. Read it alongside the original section-12 maps before drawing geographic conclusions.
+
 **Start with [section 12: six-state regional study](#regional-study)** for all 11,268 atlas clusters in Northern, River Nile, Khartoum, Gezira, White Nile and Sennar, grouped into 36 planning zones. Regional service portfolios and backbone repair scenarios are linked to national hourly dispatch. Supporting work: [Eight-cluster coupling](#national-coupling) · [Four-cluster demonstration](#recovery-planning) · [Hourly pilot](#optimized-pilot) · [Uncertainty and break-even](#uncertainty-study) · [18-state sample](#spatial-proxy-study).
 
 This notebook assembles equipment, installed networks, connections, delivery, installation, project development, tax allowances, annual operation, replacements, disposal and finance. It is the cost layer for the post-war electrification study, separate from the existing 2022 dispatch model.
@@ -251,6 +253,8 @@ from coupled_notebook_sections import sections as coupled_sections
 cells.extend(coupled_sections())
 from regional_notebook_sections import sections as regional_sections
 cells.extend(regional_sections())
+from regional_candidate_notebook_sections import sections as candidate_sections
+cells.extend(candidate_sections())
 nb=nbf.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python (pypsa)','language':'python','name':'pypsa'},'language_info':{'name':'python'}})
 nbf.write(nb,ROOT/'Sudan_System_Costs.ipynb')
 print('Built',ROOT/'Sudan_System_Costs.ipynb')

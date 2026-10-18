@@ -1,0 +1,28 @@
+{
+  "selective": {
+    "cost_reduction_USD": 0.0,
+    "cost_change_percent": 0.0,
+    "changed_zones": 0,
+    "changed_connections_percent": 0.0,
+    "gezira_grid_original": 1667019,
+    "gezira_grid_expanded": 1667019,
+    "minimum_cost_reduction_USD": 0,
+    "maximum_cost_reduction_USD": 0
+  },
+  "restored": {
+    "cost_reduction_USD": 100565623.70158935,
+    "cost_change_percent": -4.85860004258104,
+    "changed_zones": 8,
+    "changed_connections_percent": 16.526859804660656,
+    "gezira_grid_original": 0,
+    "gezira_grid_expanded": 1063794,
+    "minimum_cost_reduction_USD": 99898451.6538415,
+    "maximum_cost_reduction_USD": 100699858.00175524
+  },
+  "force_all_gezira_grid": {
+    "additional_annual_cost_USD": 23790673.132682562,
+    "minimum_regret_USD": 23598086.154684544,
+    "maximum_regret_USD": 23924907.432848454,
+    "interpretation": "System-wide reoptimization; bounded by incumbent and solver lower bounds, not an observed tariff or local willingness to pay."
+  }
+}
