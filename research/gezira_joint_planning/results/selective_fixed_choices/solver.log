@@ -1,0 +1,41 @@
+Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
+LP linopy-problem-ocuuw9rq has 1901112 rows; 814723 cols; 3367122 nonzeros
+Coefficient ranges:
+  Matrix  [3e-04, 2e+04]
+  Cost    [1e-03, 3e+09]
+  Bound   [1e+00, 1e+00]
+  RHS     [5e-03, 7e+06]
+WARNING: Problem has some excessively large costs
+WARNING: Problem has some excessively large row bounds
+WARNING:    Consider scaling the objective by 1e-4, or setting the user_objective_scale option to -12
+WARNING:    Consider scaling the    bounds by 1e-1, or setting the user_bound_scale option to -3
+Presolving model
+358748 rows, 335667 cols, 1081440 nonzeros  2s
+292977 rows, 269714 cols, 1005836 nonzeros  3s
+Dependent equations search running on 86486 equations with time limit of 36.00s
+Dependent equations search removed 0 rows and 0 nonzeros in 0.01s (limit = 36.00s)
+275502 rows, 238232 cols, 962428 nonzeros  4s
+Presolve reductions: rows 275502(-1625610); columns 238232(-576491); nonzeros 962428(-2404694) 
+Solving the presolved LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0     8.5574732135e-08 Ph1: 70080(7.0045e+07); Du: 0(9.4326e-09) 5s
+      70169     3.5262345331e+09 Pr: 51885(2.77042e+08); Du: 0(2.86952e-06) 10s
+      73183     3.5262345338e+09 Pr: 51887(2.67911e+08); Du: 0(4.18569e-06) 16s
+      76979     3.5262345368e+09 Pr: 51888(2.91129e+08); Du: 0(2.89982e-06) 22s
+      89598     3.5599737489e+09 Pr: 50247(6.54687e+07); Du: 0(3.79856e-06) 27s
+      94908     3.5687344712e+09 Pr: 49205(6.09242e+06); Du: 0(3.10863e-06) 34s
+     101508     3.5687345100e+09 Pr: 52657(1.79121e+08); Du: 0(3.60616e-06) 40s
+     117684     3.5753739738e+09 Pr: 40467(1.69749e+06); Du: 0(3.94854e-06) 45s
+     167411     3.5938482406e+09 Pr: 26401(851811); Du: 0(4.46803e-06) 50s
+     198181     3.6047208605e+09 Pr: 0(0); Du: 0(1.40192e-10) 55s
+
+Performed postsolve
+Solving the original LP from the solution after postsolve
+
+Model name          : linopy-problem-ocuuw9rq
+Model status        : Optimal
+Simplex   iterations: 198181
+Objective value     :  3.6047208605e+09
+P-D objective error :  2.3479930581e-14
+HiGHS run time      :         56.32

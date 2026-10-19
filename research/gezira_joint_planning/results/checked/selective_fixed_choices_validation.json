@@ -1,0 +1,12 @@
+{
+  "case": "selective_fixed_choices",
+  "passed": true,
+  "hours": 8760,
+  "gezira_zones": 6,
+  "potential_connections": 2663000,
+  "max_bus_balance_error_MW": 2.2737367544323206e-13,
+  "max_storage_balance_error_MWh": 4.263256414560601e-14,
+  "simultaneous_charge_discharge_MWh": 0.0,
+  "independent_ledger_reconstruction": true,
+  "field_validated": false
+}

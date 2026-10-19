@@ -10,6 +10,8 @@ The repository also retains the nationally calibrated 2022 dispatch prototype, h
 
 **Read section 13 before interpreting the regional switches.** It expands the grid-design choice set while retaining the original options, compares before/after maps, and diagnoses the Gezira result with a constrained counterfactual. The original section-12 maps remain an auditable baseline; section 13 reports which findings survive this specific candidate-set test.
 
+**Next study step, in a separate notebook: [Section 14 — Gezira joint grid, solar and battery planning](research/gezira_joint_planning/Sudan_Gezira_Joint_Planning.ipynb).** It sizes grid-connected equipment jointly with national dispatch, then allows Gezira's service choices to change. Other regional portfolios and backbone repairs remain fixed at section 13, making this a controlled local extension rather than a new unrestricted regional optimum.
+
 The [regional research design](docs/NORTH_CENTRAL_STUDY.md) distinguishes the first implemented finite-portfolio study from the broader research objectives. Whole-zone choices, one weather point per zone for a single 2022 year, hypothetical repair costs and assumed demand allocation remain material limitations; these are not field-verified settlement recommendations.
 
 ## Start here

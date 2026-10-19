@@ -10,6 +10,7 @@ on:
       - 'data/national_coupling/**'
       - 'data/regional_model/**'
       - 'research/system_costs/**'
+      - 'research/gezira_joint_planning/**'
       - '.github/workflows/system-costs.yml'
   pull_request:
     paths:
@@ -21,6 +22,7 @@ on:
       - 'data/national_coupling/**'
       - 'data/regional_model/**'
       - 'research/system_costs/**'
+      - 'research/gezira_joint_planning/**'
       - '.github/workflows/system-costs.yml'
   workflow_dispatch:
 jobs:
@@ -42,3 +44,6 @@ jobs:
       - run: python research/system_costs/check_coupled.py
       - run: python research/system_costs/check_regional.py
       - run: python research/system_costs/check_regional_candidates.py
+      - run: python research/gezira_joint_planning/check.py
+      - run: python research/gezira_joint_planning/analysis.py
+      - run: python research/gezira_joint_planning/build_notebook.py --execute --kernel python3

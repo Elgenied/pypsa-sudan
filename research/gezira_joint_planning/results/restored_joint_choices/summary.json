@@ -1,0 +1,28 @@
+{
+  "case": "restored_joint_choices",
+  "solver": "gurobi",
+  "solver_options": {
+    "Threads": 4,
+    "MIPGap": 0.0001,
+    "TimeLimit": 3600,
+    "LogToConsole": 0,
+    "LogFile": "C:\\Users\\eelqu\\Documents\\Codex\\2026-09-05\\i\\work\\github-publish\\research\\gezira_joint_planning\\results\\restored_joint_choices\\solver.log"
+  },
+  "scenario": "restored",
+  "free_service_choice": true,
+  "annual_system_cost_USD": 1924300246.731034,
+  "baseline_annual_system_cost_USD": 1969282127.0954857,
+  "annual_cost_saving_USD": 44981880.36445165,
+  "gezira_local_annual_cost_USD": 398465499.54115677,
+  "outside_local_annual_cost_USD": 954673393.0917667,
+  "national_operating_cost_USD": 556768028.931359,
+  "annual_repair_cost_USD": 14393325.166751675,
+  "grid_connections": 2663000,
+  "potential_connections": 2663000,
+  "grid_import_MWh": 677825.7284649912,
+  "mip_gap": 5.067338366092971e-12,
+  "resource_cost_lower_bound_USD": 1924183804.3739355,
+  "cycling_tiebreak_USD": 197.0526662356091,
+  "hours": 8760,
+  "scope": "Gezira joint grid/PV/battery capacities and dispatch; other regional choices and repairs fixed at section 13; independent off-grid columns retained"
+}

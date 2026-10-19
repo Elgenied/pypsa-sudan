@@ -15,3 +15,6 @@ research/system_costs/results/national_coupling/**/solver.log text -whitespace
 research/system_costs/results/regional/**/*.log text -whitespace
 research/system_costs/results/regional_candidate_diagnostic/**/*.log text -whitespace
 research/system_costs/Sudan_System_Costs.html linguist-generated=true
+research/gezira_joint_planning/results/** linguist-generated=true
+research/gezira_joint_planning/results/**/*.log text -whitespace
+research/gezira_joint_planning/Sudan_Gezira_Joint_Planning.html linguist-generated=true

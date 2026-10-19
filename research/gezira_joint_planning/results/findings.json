@@ -1,0 +1,42 @@
+{
+  "selective": {
+    "joint_pv_MW": 0.0,
+    "joint_battery_MWh": 1324.6084560059146,
+    "national_import_share_of_local_supply_percent": 100.0,
+    "resizing_saving_USD": 12073511.691243172,
+    "additional_service_choice_saving_USD": 14196134.41979599,
+    "gezira_local_cost_reduction_USD": 76226403.33028162,
+    "national_operating_cost_increase_USD": 49956757.219242185,
+    "original_cost_USD": 3616794117.099591,
+    "joint_cost_USD": 3590524470.9885516,
+    "saving_USD": 26269646.11103916,
+    "saving_percent": 0.7263240665771026,
+    "grid_share_original_percent": 62.599286518963574,
+    "grid_share_joint_percent": 100.0,
+    "changed_zones": 2,
+    "changed_connections": 995981,
+    "mip_gap": 0.0,
+    "minimum_saving_vs_saved_reference_USD": 26269646.11103916,
+    "maximum_saving_vs_saved_reference_USD": 26385878.01391077
+  },
+  "restored": {
+    "joint_pv_MW": 243.97378589914797,
+    "joint_battery_MWh": 695.2009213126195,
+    "national_import_share_of_local_supply_percent": 61.664971156616964,
+    "resizing_saving_USD": 9844418.06921029,
+    "additional_service_choice_saving_USD": 35137462.295241356,
+    "gezira_local_cost_reduction_USD": 86639857.02853519,
+    "national_operating_cost_increase_USD": 41657976.66408342,
+    "original_cost_USD": 1969282127.0954857,
+    "joint_cost_USD": 1924300246.731034,
+    "saving_USD": 44981880.36445165,
+    "saving_percent": 2.2841765405546988,
+    "grid_share_original_percent": 39.947202403304544,
+    "grid_share_joint_percent": 100.0,
+    "changed_zones": 3,
+    "changed_connections": 1599206,
+    "mip_gap": 5.067338366092971e-12,
+    "minimum_saving_vs_saved_reference_USD": 44981880.36445165,
+    "maximum_saving_vs_saved_reference_USD": 45098322.721550226
+  }
+}

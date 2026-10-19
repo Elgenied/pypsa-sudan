@@ -1,0 +1,29 @@
+{
+  "case": "restored_fixed_choices",
+  "solver": "highs",
+  "solver_options": {
+    "threads": 4,
+    "mip_rel_gap": 0.0001,
+    "time_limit": 3600,
+    "log_to_console": false,
+    "log_file": "C:\\Users\\eelqu\\Documents\\Codex\\2026-09-05\\i\\work\\github-publish\\research\\gezira_joint_planning\\results\\restored_fixed_choices\\solver.log",
+    "solver": "simplex"
+  },
+  "scenario": "restored",
+  "free_service_choice": false,
+  "annual_system_cost_USD": 1959437709.0262754,
+  "baseline_annual_system_cost_USD": 1969282127.0954857,
+  "annual_cost_saving_USD": 9844418.06921029,
+  "gezira_local_annual_cost_USD": 470472001.4315044,
+  "outside_local_annual_cost_USD": 954673393.0917667,
+  "national_operating_cost_USD": 519898989.3362526,
+  "annual_repair_cost_USD": 14393325.166751675,
+  "grid_connections": 1063794,
+  "potential_connections": 2663000,
+  "grid_import_MWh": 327176.97639470943,
+  "mip_gap": 0.0,
+  "resource_cost_lower_bound_USD": 1959321089.1952689,
+  "cycling_tiebreak_USD": 19.568913825414054,
+  "hours": 8760,
+  "scope": "Gezira joint grid/PV/battery capacities and dispatch; other regional choices and repairs fixed at section 13; independent off-grid columns retained"
+}

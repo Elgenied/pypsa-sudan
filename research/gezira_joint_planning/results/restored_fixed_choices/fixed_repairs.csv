@@ -1,0 +1,5 @@
+asset_id,bus0,bus1,reference_MW,available_fraction,candidate_repair,route_proxy_km,repair_initial_USD,evidence,selected
+merowe_khartoum,Merowe,Khartoum,700.0,0.1,True,442.1961101175596,32953727.70822917,"Schematic 2022 corridor; 10% availability and repair cost are analyst scenarios, not surveyed damage",1.0
+atbara_khartoum,Atbara,Khartoum,450.0,0.1,True,355.6313212787536,26894192.48951276,"Schematic 2022 corridor; 10% availability and repair cost are analyst scenarios, not surveyed damage",1.0
+khartoum_kosti,Khartoum,Kosti,300.0,0.1,True,358.7656775487925,27113597.42841548,"Schematic 2022 corridor; 10% availability and repair cost are analyst scenarios, not surveyed damage",1.0
+khartoum_medani,Khartoum,WadMedani,300.0,0.1,True,224.9708220292533,17747957.54204773,"Schematic 2022 corridor; 10% availability and repair cost are analyst scenarios, not surveyed damage",1.0

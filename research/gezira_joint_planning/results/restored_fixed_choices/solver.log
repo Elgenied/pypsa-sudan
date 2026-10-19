@@ -1,0 +1,41 @@
+Running HiGHS 1.12.0 (git hash: n/a): Copyright (c) 2025 HiGHS under MIT licence terms
+LP linopy-problem-uixmp7hi has 1901112 rows; 814723 cols; 3373692 nonzeros
+Coefficient ranges:
+  Matrix  [3e-04, 2e+04]
+  Cost    [1e-03, 2e+09]
+  Bound   [1e+00, 1e+00]
+  RHS     [5e-03, 7e+06]
+WARNING: Problem has some excessively large costs
+WARNING: Problem has some excessively large row bounds
+WARNING:    Consider scaling the objective by 1e-4, or setting the user_objective_scale option to -11
+WARNING:    Consider scaling the    bounds by 1e-1, or setting the user_bound_scale option to -3
+Presolving model
+285215 rows, 301932 cols, 916737 nonzeros  2s
+236111 rows, 252828 cols, 872333 nonzeros  2s
+Dependent equations search running on 84929 equations with time limit of 36.00s
+Dependent equations search removed 0 rows and 0 nonzeros in 0.01s (limit = 36.00s)
+229984 rows, 233942 cols, 850225 nonzeros  4s
+Presolve reductions: rows 229984(-1671128); columns 233942(-580781); nonzeros 850225(-2523467) 
+Solving the presolved LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0    -6.0830449852e-09 Ph1: 52560(5.25337e+07); Du: 0(7.47039e-09) 5s
+      95333     1.9347839568e+09 Pr: 52998(587977); Du: 0(4.09993e-06) 10s
+     121141     1.9474979660e+09 Pr: 24997(398318); Du: 0(2.28457e-06) 15s
+     135007     1.9513141514e+09 Pr: 81902(1.57404e+06); Du: 0(2.74079e-06) 21s
+     158199     1.9555218030e+09 Pr: 59269(6.3935e+06); Du: 0(2.02165e-06) 26s
+     167779     1.9569072925e+09 Pr: 82506(1.15583e+06); Du: 0(1.83687e-06) 31s
+     173122     1.9574751485e+09 Pr: 57574(2.33272e+06); Du: 0(2.00042e-06) 37s
+     180249     1.9586322172e+09 Pr: 33709(1.40306e+06); Du: 0(1.92115e-06) 43s
+     187055     1.9593273913e+09 Pr: 40996(407447); Du: 0(2.07742e-06) 49s
+     192367     1.9594377286e+09 Pr: 0(0); Du: 0(5.70356e-10) 54s
+
+Performed postsolve
+Solving the original LP from the solution after postsolve
+
+Model name          : linopy-problem-uixmp7hi
+Model status        : Optimal
+Simplex   iterations: 192367
+Objective value     :  1.9594377286e+09
+P-D objective error :  9.8497562294e-14
+HiGHS run time      :         55.46
