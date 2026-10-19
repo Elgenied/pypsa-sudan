@@ -1,0 +1,44 @@
+[
+  {
+    "scenario": "restricted",
+    "annual_system_cost_USD": 3887769217.0407553,
+    "initial_USD": 17966142622.900917,
+    "grid_share_percent": 70.92311621399102,
+    "saving_vs_grid_led_USD": 187863505.41258097,
+    "saving_vs_decentralized_USD": 434149251.74641705,
+    "repair_spend_USD": 0.0,
+    "gap": 2.6291352801105427e-12,
+    "grid_led_minimum_saving_USD": 187043789.56460953,
+    "grid_led_maximum_saving_USD": 188683993.86310863,
+    "decentralized_minimum_saving_USD": 433324916.4830475,
+    "decentralized_maximum_saving_USD": 434969740.1969447
+  },
+  {
+    "scenario": "selective",
+    "annual_system_cost_USD": 2979788391.3218627,
+    "initial_USD": 14891119326.058851,
+    "grid_share_percent": 79.09731307694886,
+    "saving_vs_grid_led_USD": 135102040.09210157,
+    "saving_vs_decentralized_USD": 960328627.9505377,
+    "repair_spend_USD": 32953727.70822917,
+    "gap": 1.6923554119054776e-06,
+    "grid_led_minimum_saving_USD": 134280913.50707483,
+    "grid_led_maximum_saving_USD": 135928641.3745184,
+    "decentralized_minimum_saving_USD": 959504292.6875157,
+    "decentralized_maximum_saving_USD": 961155229.2329545
+  },
+  {
+    "scenario": "restored",
+    "annual_system_cost_USD": 1893306574.3559406,
+    "initial_USD": 7740034630.837783,
+    "grid_share_percent": 92.96328502204557,
+    "saving_vs_grid_led_USD": 113252143.50477147,
+    "saving_vs_decentralized_USD": 2055522421.153618,
+    "repair_spend_USD": 104709475.16820514,
+    "gap": 8.20411129489e-05,
+    "grid_led_minimum_saving_USD": 112428360.50743985,
+    "grid_led_maximum_saving_USD": 114231387.82915783,
+    "decentralized_minimum_saving_USD": 2054698085.8905942,
+    "decentralized_maximum_saving_USD": 2056501665.4780045
+  }
+]

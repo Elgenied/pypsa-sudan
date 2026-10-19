@@ -1,0 +1,27 @@
+{
+  "case": "restricted_grid_led_36_d1_f1",
+  "passed": true,
+  "source_clusters": 11268,
+  "potential_connections": 10078666,
+  "phases": [
+    {
+      "phase": "investment",
+      "hours": 8760,
+      "unserved_MWh": 0.0,
+      "max_bus_balance_error_MW": 5.9969806898152456e-12,
+      "max_storage_balance_error_MWh": 1.1368683772161603e-12,
+      "simultaneous_charge_discharge_MWh": 0.0,
+      "passed": true
+    },
+    {
+      "phase": "replay",
+      "hours": 8760,
+      "unserved_MWh": 0.0,
+      "max_bus_balance_error_MW": 4.547473508864641e-13,
+      "max_storage_balance_error_MWh": 6.821210263296962e-13,
+      "simultaneous_charge_discharge_MWh": 0.0,
+      "passed": true
+    }
+  ],
+  "field_validated": false
+}

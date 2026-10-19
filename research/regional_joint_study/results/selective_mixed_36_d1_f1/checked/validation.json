@@ -1,0 +1,27 @@
+{
+  "case": "selective_mixed_36_d1_f1",
+  "passed": true,
+  "source_clusters": 11268,
+  "potential_connections": 10078666,
+  "phases": [
+    {
+      "phase": "investment",
+      "hours": 8760,
+      "unserved_MWh": 0.0,
+      "max_bus_balance_error_MW": 1.7621459846850485e-12,
+      "max_storage_balance_error_MWh": 2.5011104298755527e-12,
+      "simultaneous_charge_discharge_MWh": 0.0,
+      "passed": true
+    },
+    {
+      "phase": "replay",
+      "hours": 8760,
+      "unserved_MWh": 0.0,
+      "max_bus_balance_error_MW": 5.684341886080801e-13,
+      "max_storage_balance_error_MWh": 5.115907697472721e-13,
+      "simultaneous_charge_discharge_MWh": 0.0,
+      "passed": true
+    }
+  ],
+  "field_validated": false
+}

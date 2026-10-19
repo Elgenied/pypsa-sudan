@@ -1,0 +1,60 @@
+
+Gurobi 13.0.1 (win64) logging started Mon Oct 19 17:18:16 2026
+
+Set parameter LogFile to value "C:\Users\eelqu\Documents\Codex\2026-09-05\i\work\github-publish\research\regional_joint_study\results\selective_decentralized_36_d1_f1\replay\solver.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (win64 - Windows 11+.0 (26200.2))
+
+CPU model: AMD Ryzen 9 5950X 16-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 16 physical cores, 32 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  7200
+LogToConsole  0
+Threads  4
+
+Optimize a model with 6105798 rows, 2654280 columns and 9758640 nonzeros (Min)
+Model fingerprint: 0x440c466d
+Model has 481800 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [9e-01, 1e+00]
+  Objective range  [1e-03, 2e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [5e-03, 7e+06]
+
+Presolve removed 5308570 rows and 744 columns (presolve time = 5s)...
+Presolve removed 6081578 rows and 2569070 columns (presolve time = 11s)...
+Presolve removed 6081578 rows and 2569070 columns
+Presolve time: 11.60s
+Presolved: 24220 rows, 85210 columns, 174999 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.01s
+
+Barrier statistics:
+ AA' NZ     : 8.644e+04
+ Factor NZ  : 2.447e+05 (roughly 50 MB of memory)
+ Factor Ops : 2.551e+06 (less than 1 second per iteration)
+ Threads    : 3
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   9.88946592e+10 -1.40263235e+08  5.57e+08 0.00e+00  2.40e+06    12s
+   1   1.08718116e+10 -1.76756291e+08  6.11e+07 1.90e+01  2.69e+05    12s
+   2   7.70829271e+08 -1.92172037e+08  3.14e+06 8.94e+00  1.65e+04    12s
+   3   2.52590244e+08 -1.17529419e+08  4.40e+05 4.97e+00  3.65e+03    12s
+   4   1.84901514e+08  3.01508707e+07  1.45e+05 1.32e+00  1.21e+03    12s
+   5   1.57145619e+08  5.23984402e+07  4.24e+04 1.00e+00  7.08e+02    12s
+   6   1.51855005e+08  1.26387927e+08  2.20e+04 1.54e-01  1.62e+02    12s
+
+Barrier performed 6 iterations in 11.96 seconds (3.71 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   17723    1.4667263e+08   0.000000e+00   0.000000e+00     21s
+
+Solved in 17723 iterations and 20.51 seconds (5.97 work units)
+Optimal objective  1.466726250e+08

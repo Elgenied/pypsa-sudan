@@ -1,0 +1,7 @@
+{
+  "corrected_UTC": "2026-10-19T16:12:05.177689+00:00",
+  "original_execution_model_sha": "7ada2a1d8754ed9c50e0f726d18605d2242b184f90b7cc1384dee56529c7612a",
+  "current_export_model_sha": "2286be589ba0cf2db7a1fbb72414444bd290a1bd0db5debbc14f92fa9f3c4db6",
+  "original_manifest_sha": "fe1a8139a7097069e27934dc2a88cf04ba19ec6a2d6f9b54761fa52c1540b033",
+  "change": "Restore omitted zone_id metadata for off-grid CSV rows using their verified option keys and source-zone ordering. No investment, dispatch, cost or solver result was changed. Independent full physical validation is required after this correction."
+}

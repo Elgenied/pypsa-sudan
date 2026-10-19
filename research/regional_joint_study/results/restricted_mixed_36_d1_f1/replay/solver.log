@@ -1,0 +1,85 @@
+
+Gurobi 13.0.1 (win64) logging started Mon Oct 19 17:51:37 2026
+
+Set parameter LogFile to value "C:\Users\eelqu\Documents\Codex\2026-09-05\i\work\github-publish\research\regional_joint_study\results\restricted_mixed_36_d1_f1\replay\solver.log"
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (win64 - Windows 11+.0 (26200.2))
+
+CPU model: AMD Ryzen 9 5950X 16-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 16 physical cores, 32 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  7200
+LogToConsole  0
+Threads  4
+
+Optimize a model with 6105798 rows, 2654280 columns and 9758640 nonzeros (Min)
+Model fingerprint: 0xa9097cfc
+Model has 481800 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [9e-01, 1e+00]
+  Objective range  [1e-03, 2e+02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [5e-03, 7e+06]
+
+Presolve removed 4940650 rows and 744 columns (presolve time = 6s)...
+Presolve removed 5294336 rows and 1566050 columns (presolve time = 10s)...
+Presolve removed 5586920 rows and 1862821 columns (presolve time = 15s)...
+Presolve removed 5602250 rows and 1878151 columns (presolve time = 20s)...
+Presolve removed 5646569 rows and 1940353 columns (presolve time = 26s)...
+Presolve removed 5646569 rows and 1940353 columns
+Presolve time: 28.83s
+Presolved: 459229 rows, 713927 columns, 1668429 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 1.09s
+
+Barrier statistics:
+ AA' NZ     : 8.164e+05
+ Factor NZ  : 5.577e+06 (roughly 500 MB of memory)
+ Factor Ops : 8.844e+07 (less than 1 second per iteration)
+ Threads    : 3
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   5.32632458e+11 -2.52637026e+10  1.80e+09 6.04e+01  2.09e+07    33s
+   1   6.34825095e+10 -2.73395863e+10  1.73e+08 2.86e+01  2.10e+06    33s
+   2   5.48271296e+09 -2.51426792e+10  1.36e+07 1.80e+01  1.79e+05    34s
+   3   2.64920953e+09 -1.92770759e+10  5.49e+06 8.91e+00  7.67e+04    35s
+   4   2.04205064e+09 -1.77676146e+10  3.48e+06 7.65e+00  5.18e+04    36s
+   5   1.90452985e+09 -1.74970270e+10  2.78e+06 7.33e+00  4.34e+04    37s
+   6   1.47728867e+09 -1.30844763e+10  1.30e+06 4.89e+00  2.28e+04    38s
+   7   1.44240645e+09 -1.03209557e+10  1.20e+06 3.49e+00  1.90e+04    38s
+   8   1.07530677e+09 -8.31057348e+09  1.91e+05 2.63e+00  7.75e+03    38s
+   9   9.44075393e+08 -1.95630019e+09  4.90e+04 4.87e-01  2.10e+03    40s
+  10   8.50053855e+08 -4.80207068e+08  2.85e+04 1.70e-01  9.27e+02    41s
+  11   7.59726906e+08  2.08927943e+08  1.46e+04 4.56e-02  3.71e+02    41s
+  12   6.99023597e+08  5.19641477e+08  6.19e+03 9.26e-03  1.19e+02    42s
+  13   6.80551965e+08  5.86228527e+08  3.36e+03 9.12e-03  6.18e+01    43s
+  14   6.71926401e+08  6.18411468e+08  1.98e+03 4.31e-03  3.49e+01    43s
+  15   6.65427513e+08  6.33578989e+08  8.62e+02 2.52e-03  2.07e+01    44s
+  16   6.62645680e+08  6.44416966e+08  3.93e+02 1.44e-03  1.18e+01    47s
+  17   6.61787898e+08  6.50916190e+08  2.48e+02 8.43e-04  7.03e+00    49s
+  18   6.61319767e+08  6.54409801e+08  1.69e+02 5.21e-04  4.47e+00    51s
+  19   6.60874616e+08  6.56504359e+08  9.84e+01 3.19e-04  2.82e+00    53s
+  20   6.60586653e+08  6.58386513e+08  5.59e+01 1.53e-04  1.42e+00    55s
+  21   6.60372848e+08  6.59541106e+08  2.74e+01 4.97e-05  5.39e-01    58s
+  22   6.60263798e+08  6.59759137e+08  1.33e+01 3.11e-05  3.26e-01    59s
+  23   6.60204529e+08  6.60070203e+08  5.32e+00 6.02e-06  8.71e-02    61s
+  24   6.60171582e+08  6.60158579e+08  1.10e+00 8.73e-08  8.55e-03    63s
+  25   6.60163615e+08  6.60162079e+08  1.05e-01 1.71e-13  1.00e-03    65s
+  26   6.60162851e+08  6.60162619e+08  1.70e-02 2.92e-11  1.52e-04    66s
+  27   6.60162720e+08  6.60162688e+08  2.29e-03 8.63e-12  2.09e-05    67s
+  28   6.60162702e+08  6.60162698e+08  3.24e-04 1.38e-10  2.53e-06    68s
+
+Barrier performed 28 iterations in 68.27 seconds (12.18 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+  209572    6.6016270e+08   0.000000e+00   0.000000e+00     78s
+
+Solved in 209572 iterations and 78.07 seconds (13.24 work units)
+Optimal objective  6.601626992e+08

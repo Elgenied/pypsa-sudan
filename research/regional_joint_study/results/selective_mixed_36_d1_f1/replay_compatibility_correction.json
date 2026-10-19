@@ -1,0 +1,7 @@
+{
+  "corrected_UTC": "2026-10-19T16:15:31.008806+00:00",
+  "previous_model_sha": "2286be589ba0cf2db7a1fbb72414444bd290a1bd0db5debbc14f92fa9f3c4db6",
+  "current_model_sha": "ab58f74f50b4adc47a04019ec2a0bea28f5968fa5c3cc385ded83daf549078e5",
+  "previous_manifest_sha": "60718965c2745d644664fe067c70b103d2975d67caca54e7407149a896e2a11b",
+  "change": "Remove unsupported include_objective_constant keyword from fixed-investment replay call for installed PyPSA. Verified investment functions and all existing investment outputs are unchanged. No successful replay existed. Replay and independent checks must run against the updated code."
+}

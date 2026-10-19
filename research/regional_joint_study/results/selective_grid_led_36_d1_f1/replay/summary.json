@@ -1,0 +1,7 @@
+{
+  "status": "optimal_fixed_investments",
+  "hours": 8760,
+  "unserved_MWh": 0.0,
+  "national_operating_cost_USD": 340016523.4153129,
+  "capacity_and_service_choices_fixed": true
+}

@@ -1,0 +1,13 @@
+{
+  "inputs": {
+    "checker": "605c02e258a368923f2c49ce03fbae182013b045ae71d9a531ac0c00c7601779",
+    "investment": "e802a1de0f731a3e480065f8b31dd9373a929b2f1e03658c1533382655991d90",
+    "replay": "7624bacbf0c33d7d27c49c5b0ac368bf16ba3550c022f1023a715fc914a29caf"
+  },
+  "outputs": {
+    "zone_energy.csv": "b59e204c3ffdbb3c11e95fe4f75ae86e118ec6a1b1be4bc706bb2441d16fcb17",
+    "state_hourly.csv.gz": "14e9b258a93b5d076d3dda3af2a113c56c31672c9c425805c52e2dfdeab3be2a",
+    "national_generation.csv": "ffef35e8d1da621967b70aa4b1f5203dd08e940075cef769471d20271a0d8b27",
+    "validation.json": "455c6a8ff95051e88d471fe73c1416592ea20b72f5d5a4065f15ddde672c1a7c"
+  }
+}

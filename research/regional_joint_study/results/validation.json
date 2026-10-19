@@ -1,0 +1,329 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "restricted_mixed_36_d1_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 6.984635092521785e-12,
+          "max_storage_balance_error_MWh": 1.3642420526593924e-12,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 3.410605131648481e-13,
+          "max_storage_balance_error_MWh": 6.821210263296962e-13,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "restricted_grid_led_36_d1_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 5.9969806898152456e-12,
+          "max_storage_balance_error_MWh": 1.1368683772161603e-12,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 4.547473508864641e-13,
+          "max_storage_balance_error_MWh": 6.821210263296962e-13,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "restricted_decentralized_36_d1_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 2.0605739337042905e-13,
+          "max_storage_balance_error_MWh": 0.0,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 1.1368683772161603e-13,
+          "max_storage_balance_error_MWh": 0.0,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "selective_mixed_36_d1_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 1.7621459846850485e-12,
+          "max_storage_balance_error_MWh": 2.5011104298755527e-12,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 5.684341886080801e-13,
+          "max_storage_balance_error_MWh": 5.115907697472721e-13,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "selective_grid_led_36_d1_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 2.1032064978498966e-12,
+          "max_storage_balance_error_MWh": 1.3073986337985843e-12,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 4.547473508864641e-13,
+          "max_storage_balance_error_MWh": 5.115907697472721e-13,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "selective_decentralized_36_d1_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 1.7053025658242404e-12,
+          "max_storage_balance_error_MWh": 0.0,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 2.2737367544323206e-13,
+          "max_storage_balance_error_MWh": 0.0,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "restored_mixed_36_d1_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 1.7257661966141313e-10,
+          "max_storage_balance_error_MWh": 8.112834848361672e-10,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 6.821210263296962e-13,
+          "max_storage_balance_error_MWh": 7.105427357601002e-14,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "restored_grid_led_36_d1_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 8.668621376273222e-13,
+          "max_storage_balance_error_MWh": 2.4069635173873394e-13,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 6.821210263296962e-13,
+          "max_storage_balance_error_MWh": 1.1368683772161603e-13,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "restored_decentralized_36_d1_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 3.254854163969867e-10,
+          "max_storage_balance_error_MWh": 0.0,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 4.547473508864641e-13,
+          "max_storage_balance_error_MWh": 0.0,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "selective_mixed_48_d1_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 5.058353735876153e-11,
+          "max_storage_balance_error_MWh": 1.6484591469634324e-12,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 4.547473508864641e-13,
+          "max_storage_balance_error_MWh": 6.821210263296962e-13,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "selective_mixed_36_d1.2_f1",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 9.890754881780595e-12,
+          "max_storage_balance_error_MWh": 1.1823431123048067e-11,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 4.547473508864641e-13,
+          "max_storage_balance_error_MWh": 9.094947017729282e-13,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    },
+    {
+      "case": "selective_mixed_36_d1_f1.25",
+      "passed": true,
+      "source_clusters": 11268,
+      "potential_connections": 10078666,
+      "phases": [
+        {
+          "phase": "investment",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 1.1583267678361153e-10,
+          "max_storage_balance_error_MWh": 2.1600499167107046e-12,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        },
+        {
+          "phase": "replay",
+          "hours": 8760,
+          "unserved_MWh": 0.0,
+          "max_bus_balance_error_MW": 4.547473508864641e-13,
+          "max_storage_balance_error_MWh": 5.115907697472721e-13,
+          "simultaneous_charge_discharge_MWh": 0.0,
+          "passed": true
+        }
+      ],
+      "field_validated": false
+    }
+  ]
+}

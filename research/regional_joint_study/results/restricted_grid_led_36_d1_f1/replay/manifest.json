@@ -1,0 +1,11 @@
+{
+  "inputs": {
+    "investment_manifest": "b6bc7046394f7afcefd4e162af7b574906d4ff709284ce4d23539ee38c3f1e80",
+    "model": "ab58f74f50b4adc47a04019ec2a0bea28f5968fa5c3cc385ded83daf549078e5"
+  },
+  "outputs": {
+    "network.nc": "1d023772e383b055c9b900a5e8845fc72ab7ea3864b9eb5441b299e7ee056300",
+    "summary.json": "9f9ccfea3dd6ac6da99b5a94b56b64f4291cba5288a3c0b27768d54da66ea9b0",
+    "solver.log": "eda1c859da76c542b448c4c1a635c6070de228860dbb9941d667f77571ebdb32"
+  }
+}

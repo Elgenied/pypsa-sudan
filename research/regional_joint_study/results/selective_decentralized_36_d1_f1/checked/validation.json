@@ -1,0 +1,27 @@
+{
+  "case": "selective_decentralized_36_d1_f1",
+  "passed": true,
+  "source_clusters": 11268,
+  "potential_connections": 10078666,
+  "phases": [
+    {
+      "phase": "investment",
+      "hours": 8760,
+      "unserved_MWh": 0.0,
+      "max_bus_balance_error_MW": 1.7053025658242404e-12,
+      "max_storage_balance_error_MWh": 0.0,
+      "simultaneous_charge_discharge_MWh": 0.0,
+      "passed": true
+    },
+    {
+      "phase": "replay",
+      "hours": 8760,
+      "unserved_MWh": 0.0,
+      "max_bus_balance_error_MW": 2.2737367544323206e-13,
+      "max_storage_balance_error_MWh": 0.0,
+      "simultaneous_charge_discharge_MWh": 0.0,
+      "passed": true
+    }
+  ],
+  "field_validated": false
+}
