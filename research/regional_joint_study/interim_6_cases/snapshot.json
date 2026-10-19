@@ -1,0 +1,56 @@
+{
+  "created_UTC": "2026-10-19T20:28:48.043548+00:00",
+  "scope": "Frozen interim snapshot: restricted and selective recovery, three policies each; 6 of 12 planned cases.",
+  "cases": [
+    "restricted_mixed_36_d1_f1",
+    "restricted_grid_led_36_d1_f1",
+    "restricted_decentralized_36_d1_f1",
+    "selective_mixed_36_d1_f1",
+    "selective_grid_led_36_d1_f1",
+    "selective_decentralized_36_d1_f1"
+  ],
+  "source_manifests": {
+    "restricted_mixed_36_d1_f1": {
+      "manifest.json": "204662516df7528822caf36a0aec610aff70ea7b02ba69eeedad91c9e7c91653",
+      "replay/manifest.json": "264e0cff6674c6fd0a82ecd85ab7983850d0a3a7dafb239dde060d42b9897520",
+      "checked/manifest.json": "30fa0cbf63259889e4deddd7a6be2cfd1f2d9194ad3a96a9f342ccc7dc3bb669"
+    },
+    "restricted_grid_led_36_d1_f1": {
+      "manifest.json": "b6bc7046394f7afcefd4e162af7b574906d4ff709284ce4d23539ee38c3f1e80",
+      "replay/manifest.json": "f2345ab772aa9e417ef1b1b34807517cab3a2178206d592d9f3ca061b6a40a9f",
+      "checked/manifest.json": "2c8a241ab933ef4b7fee7dcd2ccd8bd32f96e1c41c9b8bedd3c88507c5e45677"
+    },
+    "restricted_decentralized_36_d1_f1": {
+      "manifest.json": "d8aa585d8a6760e9531b0c0b6cb1eb27f2ecef47a3bc03bfe0e50ef37ae13b22",
+      "replay/manifest.json": "3ae3619bf27f697b76781c0fb9ec99bdfef2e117e28bcf12c1970444c4b2ad63",
+      "checked/manifest.json": "6466814cf5fcc4a506fad9056468cd3426c026f8917b21a2af421bdc12306370"
+    },
+    "selective_mixed_36_d1_f1": {
+      "manifest.json": "55db7c983e04362b6e93e38177d94343fe3b3f93d7e4f8876e02c8affa7761bd",
+      "replay/manifest.json": "e9a6e256e7f83977d4ac4e5d005badb38337731d58b9157f6817ccf8502ef05b",
+      "checked/manifest.json": "ed4392f7dc8e188fadac766580433adebbd8b03a878e9c7b5bd6ea14b283c0e7"
+    },
+    "selective_grid_led_36_d1_f1": {
+      "manifest.json": "e802a1de0f731a3e480065f8b31dd9373a929b2f1e03658c1533382655991d90",
+      "replay/manifest.json": "7624bacbf0c33d7d27c49c5b0ac368bf16ba3550c022f1023a715fc914a29caf",
+      "checked/manifest.json": "64300e902a91898c6ed666690af9911d6d9d5825b24bf7b16a1b39cb4ff4cf0c"
+    },
+    "selective_decentralized_36_d1_f1": {
+      "manifest.json": "b491cd6641f9f67c168a19b79dbe469026e44756f25f857ff59bc20881400f66",
+      "replay/manifest.json": "082c6a453b2db191d4f43ee59376af5cec3a41a796b231715535805e17f21351",
+      "checked/manifest.json": "849dbe3b72ec3a6f56ecf9e9302a6dcf97999fcc7abd6e6a8be82c11372c2bbc"
+    }
+  },
+  "field_validated": false,
+  "outputs": {
+    "choices.csv": "6a55d36aee5bf5c1ceac0ef240322c67d0355916aae263b44e2c331eacf83be1",
+    "crosswalk_36.csv.gz": "6f03b90edf0de20bd7e580626ce4516ea2c571be6be002e0fec73e04fadfca89",
+    "energy.csv": "870e4192fb909d1860e95f63177f8e6547a20829cb11e62424f6d7d611f011da",
+    "repairs.csv": "59ec658741ada647781c1a36fb4cd17805ff0d6baf6e17dad7a15b8155f8a48e",
+    "restricted_hourly.csv.gz": "18be1169859564761aa402673b35ebf4dc301e2ab487b8327cadbf73856e304f",
+    "selective_hourly.csv.gz": "1140ae86d5dfdab3eca3c62fde671d30c8642a3ec1e58116e69d9584e666f88c",
+    "summary.csv": "9ec0e4ff5bb2b34f7e693b5a068a812673809923574727a0fb96d3c8a8de0cbf",
+    "validation.csv": "e5b9cbcca3c36008ddd230b3603c2a702620a4317f18f5b6dfcfa062b5efcc05",
+    "zones_36.csv": "d45754e0276a29888160293f9cd1a3a624dc8bac317d541680592ae3486873cd"
+  }
+}

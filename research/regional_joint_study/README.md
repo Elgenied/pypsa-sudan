@@ -2,6 +2,8 @@
 
 **Scope:** Northern, River Nile, Khartoum, Gezira, White Nile and Sennar; all 11,268 source clusters and 10,078,666 potential building connections. These are not verified households or counts of customers needing new connections.
 
+**Read the six completed cases now:** [executed interim notebook](interim_6_cases/Sudan_Regional_Interim.ipynb) or [HTML reading copy](interim_6_cases/Sudan_Regional_Interim.html). This frozen snapshot compares all three policies under restricted and selective recovery, with maps, state pies, costs, equipment, hourly operation and validation. Restored recovery and the three robustness checks remain outside this interim report. Rebuild it with `python research/regional_joint_study/interim_report.py`; this does not run optimization.
+
 This is the full-region continuation of the separate Gezira experiment. Grid-connected equipment and permitted corridor repairs are selected together with national hourly dispatch. Independent mini-grid and standalone alternatives retain their own least-cost full-year designs; the fuel check reoptimizes mini-grids at the changed fuel price.
 
 ## Run without an active chat
