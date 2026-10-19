@@ -47,3 +47,7 @@ The first regional paper can use a **single defined recovery-stage design** with
 ## Scope files
 
 Run `python research/system_costs/prepare_regional_scope.py` to regenerate [coverage](../data/north_central_study/coverage.csv), [source-ID membership](../data/north_central_study/scope_membership.csv) and [provenance/status](../data/north_central_study/scope_manifest.json). These are an inventory, not modelled electrification results. The membership table points back to the existing atlas rather than copying its full attributes.
+
+## Full-region joint investment extension
+
+`research/regional_joint_study/` implements the fixed 12-case experiment set: nine recovery/policy comparisons and three selective-recovery checks (48 zones, +20% residential service, +25% fuel prices). Grid-connected capacities, full-year national/local dispatch and permitted repairs are optimized together across every zone; independent off-grid systems remain separable, and mini-grids are reoptimized for the fuel check. Every case must pass a separate fixed-investment hourly replay and independent physical/cost/coverage checks before the final notebook is generated. The computation runs as resumable local Python jobs without language-model calls. The local status file is the authority on whether the run has finished; the presence of source code alone does not establish completed results.

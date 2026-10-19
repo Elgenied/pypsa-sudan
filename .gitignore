@@ -7,3 +7,11 @@ __pycache__/
 research/forecasting_2012/raw_tables_unverified/
 research/forecasting_2012/data/raw_table_inventory.csv
 research/forecasting_2012/data/plant_geometric_rows_unverified.csv
+
+research/regional_joint_study/logs/
+research/regional_joint_study/STATUS.json
+research/regional_joint_study/RUN_STATUS.html
+research/regional_joint_study/batch.lock
+research/regional_joint_study/batch_*.log
+research/regional_joint_study/STATUS.tmp
+research/regional_joint_study/results/**/failure.json

@@ -18,3 +18,6 @@ research/system_costs/Sudan_System_Costs.html linguist-generated=true
 research/gezira_joint_planning/results/** linguist-generated=true
 research/gezira_joint_planning/results/**/*.log text -whitespace
 research/gezira_joint_planning/Sudan_Gezira_Joint_Planning.html linguist-generated=true
+research/regional_joint_study/results/** linguist-generated=true
+research/regional_joint_study/results/**/*.log text -whitespace
+research/regional_joint_study/Sudan_Regional_Joint_Study.html linguist-generated=true

@@ -11,6 +11,7 @@ on:
       - 'data/regional_model/**'
       - 'research/system_costs/**'
       - 'research/gezira_joint_planning/**'
+      - 'research/regional_joint_study/**'
       - '.github/workflows/system-costs.yml'
   pull_request:
     paths:
@@ -23,6 +24,7 @@ on:
       - 'data/regional_model/**'
       - 'research/system_costs/**'
       - 'research/gezira_joint_planning/**'
+      - 'research/regional_joint_study/**'
       - '.github/workflows/system-costs.yml'
   workflow_dispatch:
 jobs:
@@ -47,3 +49,9 @@ jobs:
       - run: python research/gezira_joint_planning/check.py
       - run: python research/gezira_joint_planning/analysis.py
       - run: python research/gezira_joint_planning/build_notebook.py --execute --kernel python3
+      - name: Check completed regional joint study
+        if: ${{ hashFiles('research/regional_joint_study/results/validation.json') != '' }}
+        run: python research/regional_joint_study/check.py
+      - name: Rebuild completed regional joint notebook
+        if: ${{ hashFiles('research/regional_joint_study/results/validation.json') != '' }}
+        run: python research/regional_joint_study/report.py

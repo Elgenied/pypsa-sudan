@@ -12,6 +12,8 @@ The repository also retains the nationally calibrated 2022 dispatch prototype, h
 
 **Next study step, in a separate notebook: [Section 14 — Gezira joint grid, solar and battery planning](research/gezira_joint_planning/Sudan_Gezira_Joint_Planning.ipynb).** It sizes grid-connected equipment jointly with national dispatch, then allows Gezira's service choices to change. Other regional portfolios and backbone repairs remain fixed at section 13, making this a controlled local extension rather than a new unrestricted regional optimum.
 
+**Full-region continuation:** [six-state joint recovery study](research/regional_joint_study/README.md). The resumable batch workflow covers 12 full-year investment/replay cases, with automatic regional maps, state pies, policy comparisons and a separate results notebook. Its local `STATUS.json` distinguishes running, failed and completed work; results are available only after the full validation gate passes.
+
 The [regional research design](docs/NORTH_CENTRAL_STUDY.md) distinguishes the first implemented finite-portfolio study from the broader research objectives. Whole-zone choices, one weather point per zone for a single 2022 year, hypothetical repair costs and assumed demand allocation remain material limitations; these are not field-verified settlement recommendations.
 
 ## Start here
@@ -26,7 +28,7 @@ The [regional research design](docs/NORTH_CENTRAL_STUDY.md) distinguishes the fi
 | **6. [Report evidence and usage guide](data/report_evidence/README.md)** | October 2026 review: dated equipment/fuel prices, plant status, sector sales, published assumptions, source conflicts and modelling uses |
 | **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | **Read section 12 first: six-state regional plans, state pies, recovery projects, policy benchmarks and numerical checks.** Sections 1–11 retain accounting and supporting studies. |
 
-There are **four notebooks with different jobs**. Each begins with a reader guide and ends with its role in the next study. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html), [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html), [settlement HTML](research/dre_atlas_2025/Sudan_DRE_Settlements.html) and [cost HTML](research/system_costs/Sudan_System_Costs.html) are browser reading copies of those notebooks.
+The notebooks serve different stages of the research. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html), [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html), [settlement HTML](research/dre_atlas_2025/Sudan_DRE_Settlements.html), [cost HTML](research/system_costs/Sudan_System_Costs.html) and [Gezira HTML](research/gezira_joint_planning/Sudan_Gezira_Joint_Planning.html) are browser reading copies. The full-region continuation generates its own notebook and HTML only after all 12 cases pass validation.
 
 ## What exists today
 
