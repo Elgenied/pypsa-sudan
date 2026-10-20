@@ -3,6 +3,11 @@
 This is the active handover to the Zambia-aligned approach. **It prepares inputs;
 it is not a new solved national model or a completed recovery study.**
 
+**Execution update, 20 October 2026:** the user configured CDS credentials and
+the native Sudan workflow has been launched. See [the run record](RUN_LAUNCH.md).
+Open local `RUN_STATUS.html` for live status; this runtime file is not on GitHub.
+The saved handover notebook records the earlier input checks, not solve completion.
+
 Open the executed [handover notebook](Sudan_Earth_Handover.ipynb) or
 [HTML reading copy](Sudan_Earth_Handover.html) for the demand chart, candidate
 plant-location plot, evidence table and validation summary.
@@ -90,9 +95,9 @@ checks and the cost file hash. This does not certify the cost assumptions.
 
 Before a meaningful baseline solve:
 
-1. Obtain the full 2022 ERA5 cutout. No CDS credentials were configured in the WSL
-   home at inspection. Configure them privately and accept the required dataset
-   terms; never commit credentials. Existing NASA POWER point profiles are useful
+1. Obtain the full 2022 ERA5 cutout. CDS credentials have now been configured
+   privately and a test request was accepted. Actual retrieval still depends on
+   the server queue and applicable dataset access. Existing NASA POWER point profiles are useful
    cross-checks but are not a replacement for an atlite weather cutout.
 2. Retrieve standard geography/resource inputs and build the OSM network. These
    are present-day open-data routes, not a certified 2022 or post-war asset register.

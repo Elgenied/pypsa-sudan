@@ -15,4 +15,5 @@ research/regional_joint_study/RUN_STATUS.html
 research/regional_joint_study/batch.lock
 research/regional_joint_study/batch_*.log
 research/regional_joint_study/STATUS.tmp
+integration/pypsa_earth/RUN_STATUS.*
 research/regional_joint_study/results/**/failure.json
