@@ -1,0 +1,20 @@
+{
+  "onsset_commit": "486c26039ecbf8614d68da90c7b4968b2f4a5b13",
+  "source_clusters": 11268,
+  "atlas_population_type": "VIDA/GHSL modeled, not a census",
+  "connection_type": "buildings >=15m2, not metered customers",
+  "demand_type": "DRE atlas low-service synthetic demand; raised to 1 kWh/day per potential connection",
+  "observed_access_status": false,
+  "observed_war_damage": false,
+  "grid_line_voltage_verified": false,
+  "hourly_local_reliability_verified": false,
+  "screen_only": true,
+  "restricted_to_restored_switches": 1304,
+  "grid_max_distance_km": 50,
+  "backup_energy_price_USD_kWh": 0.45,
+  "onsset_options": [
+    "grid",
+    "mini_grid",
+    "standalone"
+  ]
+}

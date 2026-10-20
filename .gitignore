@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 .DS_Store
 .venv/
+.cache/
 .extraction_cache/
 research/forecasting_2012/raw_tables_unverified/
 research/forecasting_2012/data/raw_table_inventory.csv

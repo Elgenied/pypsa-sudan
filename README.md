@@ -4,21 +4,15 @@
 
 The question is: **Where should Sudan rehabilitate or extend the grid, where should it build mini-grids, and where are standalone systems more economical—at a specified level of service?**
 
-**Start with section 12 of the [electrification notebook](research/system_costs/Sudan_System_Costs.ipynb): the six-state regional study.** All 11,268 atlas clusters in Northern, River Nile, Khartoum, Gezira, White Nile and Sennar are represented in 36 planning zones. The model selects fixed local service portfolios and candidate backbone repairs alongside national hourly dispatch, compares three recovery conditions and policy benchmarks, and checks a 48-zone case. [Implemented formulation, assumptions and reproduction](docs/REGIONAL_MODEL.md). Sections 10–11 retain the earlier local demonstrations.
+**Start here: [OnSSET–PyPSA settlement recovery notebook](research/onsset_pypsa_recovery/Sudan_OnSSET_PyPSA_Recovery.ipynb)** ([HTML with saved figures](research/onsset_pypsa_recovery/Sudan_OnSSET_PyPSA_Recovery.html)). It screens all 11,268 DRE atlas settlements in Northern, River Nile, Khartoum, Gezira, White Nile and Sennar for grid connection, mini-grid and standalone service under three explicit recovery conditions. It reads the completed PyPSA regional cases for corridor-repair choices and national supply context. This is the **active research workflow**; classifications are conditional, not verified project recommendations.
 
-The repository also retains the nationally calibrated 2022 dispatch prototype, historical/report evidence, settlement atlas, complete cost ledger, three-cluster pilot, uncertainty/break-even analysis and 18-state sample. Measured settlement demand is not a prerequisite for conditional planning. National generation expansion, investment sequencing and field-validated recommendations remain future work.
+The [one-page workspace guide](docs/WORKSPACE_GUIDE.md) explains which notebooks to open, what has been validated and what comes next. The [new study README](research/onsset_pypsa_recovery/README.md) gives exact reproduction commands and limits. The [completed full-year regional PyPSA study](research/regional_joint_study/Sudan_Regional_Joint_Study.ipynb) remains the supply-side comparison. Earlier system-cost sections, the Gezira experiment, historical forecasting and the 2022 dispatch notebook remain as supporting evidence and previous development stages.
 
-**Read section 13 before interpreting the regional switches.** It expands the grid-design choice set while retaining the original options, compares before/after maps, and diagnoses the Gezira result with a constrained counterfactual. The original section-12 maps remain an auditable baseline; section 13 reports which findings survive this specific candidate-set test.
+The current linkage is one-way: OnSSET ranks settlement options; PyPSA supplies recovery-case definitions. A fully iterative, reliability-checked investment model and field validation remain the next research work. The atlas has modeled population and potential connections, but no verified post-war settlement access status or surveyed asset damage.
 
-**Next study step, in a separate notebook: [Section 14 — Gezira joint grid, solar and battery planning](research/gezira_joint_planning/Sudan_Gezira_Joint_Planning.ipynb).** It sizes grid-connected equipment jointly with national dispatch, then allows Gezira's service choices to change. Other regional portfolios and backbone repairs remain fixed at section 13, making this a controlled local extension rather than a new unrestricted regional optimum.
+## Earlier notebooks and supporting evidence
 
-**Full-region continuation:** [six-state joint recovery study](research/regional_joint_study/README.md). The resumable batch workflow covers 12 full-year investment/replay cases, with automatic regional maps, state pies, policy comparisons and a separate results notebook. Its local `STATUS.json` distinguishes running, failed and completed work; results are available only after the full validation gate passes.
-
-The [regional research design](docs/NORTH_CENTRAL_STUDY.md) distinguishes the first implemented finite-portfolio study from the broader research objectives. Whole-zone choices, one weather point per zone for a single 2022 year, hypothetical repair costs and assumed demand allocation remain material limitations; these are not field-verified settlement recommendations.
-
-## Start here
-
-| Read in this order | What it tells you |
+| Supporting artifact | What it tells you |
 |---|---|
 | **1. [Overall study plan](docs/STUDY_PLAN.md)** | Research question, grid / mini-grid / standalone comparison, PyPSA's role and milestones |
 | **2. [Evidence, validation and gaps](docs/EVIDENCE_AND_GAPS.md)** | What we have, what was checked, what is assumed and what is missing |
@@ -26,7 +20,7 @@ The [regional research design](docs/NORTH_CENTRAL_STUDY.md) distinguishes the fi
 | **4. [Historical evidence notebook](research/forecasting_2012/Sudan_Forecasting_Replication.ipynb)** | Recovered 2012-report data, replicated calculations, regional sector pies and source conflicts |
 | **5. [Settlement atlas notebook](research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb)** | Settlement maps, source formula checks, state summaries, grid-distance screens and spatial gaps |
 | **6. [Report evidence and usage guide](data/report_evidence/README.md)** | October 2026 review: dated equipment/fuel prices, plant status, sector sales, published assumptions, source conflicts and modelling uses |
-| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | **Read section 12 first: six-state regional plans, state pies, recovery projects, policy benchmarks and numerical checks.** Sections 1–11 retain accounting and supporting studies. |
+| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | Previous-stage cost and planning experiments; section 12 is the earlier six-state regional plan. The active OnSSET notebook is linked above. |
 
 The notebooks serve different stages of the research. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html), [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html), [settlement HTML](research/dre_atlas_2025/Sudan_DRE_Settlements.html), [cost HTML](research/system_costs/Sudan_System_Costs.html) and [Gezira HTML](research/gezira_joint_planning/Sudan_Gezira_Joint_Planning.html) are browser reading copies. The full-region continuation generates its own notebook and HTML only after all 12 cases pass validation.
 
@@ -34,6 +28,7 @@ The notebooks serve different stages of the research. Saved results can be viewe
 
 | Workstream | Available | Validation status | What it can answer |
 |---|---|---|---|
+| **Current OnSSET–PyPSA settlement screen** | 11,268 settlements × three recovery conditions; three native OnSSET technology cost options; saved maps, state pies and PyPSA case register | Coverage, positive costs, pinned engine and notebook execution checked; access, damage, voltage and hourly local reliability unverified | Which option ranks cheapest under explicit screening assumptions, and which rankings move with recovery conditions |
 | **2022 system reference** | 19 regional nodes, 13 schematic corridors, 8,760 hours; fixed-capacity dispatch | Numerical feasibility checked; national annual totals calibrated; regional/hourly operation not independently validated | How dispatch changes under the stated hydro/corridor assumptions |
 | **Historical evidence** | 20 cataloged datasets; 19 plant/configuration records; 131 historical localities; consumption, hydro, heat rates and forecasts | Ten arithmetic checks passed; source inconsistencies retained | What the report contains, how its visible calculations work and which inputs could improve the baseline |
 | **Settlement atlas** | 33,891 clusters; 41 source attribute columns and display polygons | Source CSV/GeoJSON IDs and values match; demand and 2020–2022 risk rules reproduce; anomalies logged | Where mapped clusters and screening indicators are; no technology choice |
@@ -53,11 +48,13 @@ The notebooks serve different stages of the research. Saved results can be viewe
 ```text
 README.md                         Project map and reading order
 docs/
-  STUDY_PLAN.md                   Research design, PyPSA role and milestones
+  WORKSPACE_GUIDE.md              Current reading order and research sequence
+  STUDY_PLAN.md                   Earlier research design and milestones
   EVIDENCE_AND_GAPS.md            Evidence status, checks and missing inputs
 Sudan_2022.ipynb                  Main 2022 model; inputs embedded here
 Sudan_2022.html                   Reading copy of the same notebook
 results/                         Generated model outputs, not new observations
+research/onsset_pypsa_recovery/  Active settlement study, notebook and code
 data/
   README.md                      Dataset navigation and update instructions
   catalog.json                   Index/checksums; does not duplicate CSVs
@@ -98,7 +95,7 @@ Use the [data collection](data/README.md) for input evidence. Use [2022 results]
 
 ## Next milestone
 
-Use the six-state results to prioritize additional weather years, alternative local designs and usable tie-in/route evidence. Then assess fixed investments against additional weather years and hourly activity profiles. This can proceed with transparent demand scenarios; measured settlement demand is not a prerequisite. Comparable quotations and independent engineering review are needed for stronger construction claims. See the [milestones and completion criteria](docs/STUDY_PLAN.md#milestones-and-completion-criteria).
+Use the OnSSET settlement screen to prioritize field checks on baseline access, feeder voltage/condition, repair bills and locations where option costs are close. Verify representative hourly mini-grid and standalone designs, then iteratively pass grid-load, supply-cost and reliability information between OnSSET and PyPSA. See the [current sequence](docs/WORKSPACE_GUIDE.md#next-study-sequence). The earlier [study plan](docs/STUDY_PLAN.md) is retained for history.
 
 ## Run
 
