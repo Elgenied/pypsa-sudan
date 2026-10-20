@@ -1,5 +1,7 @@
 # Section 14 — Gezira joint grid, solar and battery planning
 
+**Role: completed previous-stage diagnostic.** The [regional joint PyPSA study](../regional_joint_study/README.md) supersedes this single-state experiment for supply-side results; the [OnSSET–PyPSA screen](../onsset_pypsa_recovery/README.md) is the current settlement entry point.
+
 Open `Sudan_Gezira_Joint_Planning.ipynb` (editable, executed notebook) or `Sudan_Gezira_Joint_Planning.html` (reading copy). This is a separate continuation of sections 12–13 in the system-cost notebook.
 
 The controlled experiment keeps all six Gezira zones, 2022 weather, demand proxies, cost coefficients, losses and recovery conditions. It jointly optimizes grid-connected PV, battery energy, converter power and hourly national imports. National generation and transfers respond in the same model. Other regional zones and selected backbone repairs remain fixed at section 13. Mini-grid and standalone alternatives retain their independently optimized hourly schedules and full lifecycle cost.

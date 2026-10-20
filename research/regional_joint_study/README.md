@@ -1,8 +1,10 @@
 # Full six-state joint recovery study
 
+**Status: all 12 cases completed and validated.** Open the [final executed notebook](Sudan_Regional_Joint_Study.ipynb) or [HTML reading copy](Sudan_Regional_Joint_Study.html). This is the national/backbone supply reference for the [active OnSSET–PyPSA settlement screen](../onsset_pypsa_recovery/README.md). The interim six-case notebook below is a frozen historical snapshot; use the final notebook for results.
+
 **Scope:** Northern, River Nile, Khartoum, Gezira, White Nile and Sennar; all 11,268 source clusters and 10,078,666 potential building connections. These are not verified households or counts of customers needing new connections.
 
-**Read the six completed cases now:** [executed interim notebook](interim_6_cases/Sudan_Regional_Interim.ipynb) or [HTML reading copy](interim_6_cases/Sudan_Regional_Interim.html). This frozen snapshot compares all three policies under restricted and selective recovery, with maps, state pies, costs, equipment, hourly operation and validation. Restored recovery and the three robustness checks remain outside this interim report. Rebuild it with `python research/regional_joint_study/interim_report.py`; this does not run optimization.
+**Interim archive:** [six-case notebook](interim_6_cases/Sudan_Regional_Interim.ipynb) and [HTML](interim_6_cases/Sudan_Regional_Interim.html). This frozen snapshot covers restricted and selective recovery only. The final notebook above covers restored recovery and the focused checks too.
 
 This is the full-region continuation of the separate Gezira experiment. Grid-connected equipment and permitted corridor repairs are selected together with national hourly dispatch. Independent mini-grid and standalone alternatives retain their own least-cost full-year designs; the fuel check reoptimizes mini-grids at the changed fuel price.
 

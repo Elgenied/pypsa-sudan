@@ -1,5 +1,7 @@
 # Sudan system-cost and electrification-pilot notebook
 
+**Role: supporting and previous-stage analysis.** The active settlement study is [OnSSET–PyPSA recovery](../onsset_pypsa_recovery/README.md). This notebook retains the cost ledger, pilots, regional diagnostics and provenance; its older "latest experiment" wording below refers to the sequence inside this notebook, not the current project direction.
+
 Open [Sudan_System_Costs.ipynb](Sudan_System_Costs.ipynb) or the [HTML reading copy](Sudan_System_Costs.html). All cost analysis is in this single notebook, supported by editable [data/system_costs](../../data/system_costs/README.md).
 
 **Latest experiment: section 13 diagnoses regional technology switches with a cumulative grid-design library.** Read its before/after maps and numerical checks alongside the original six-state results in section 12. It preserves every original option, permits earlier battery-backed grid designs under improved recovery, and tests a grid-service requirement for Gezira. Supporting scripts are `regional_candidate_diagnostic.py`, `check_regional_candidates.py` and `regional_candidate_analysis.py`; the experiment remains a conditional finite-library study.
