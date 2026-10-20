@@ -5,6 +5,8 @@ it is not a new solved national model or a completed recovery study.**
 
 **Execution update, 20 October 2026:** the user configured CDS credentials and
 the native Sudan workflow has been launched. See [the run record](RUN_LAUNCH.md).
+The first attempt stopped during bundle retrieval; [download diagnosis and repair](DOWNLOAD_REPAIR.md)
+records the fixes, verified basin/CDS downloads and the restart.
 Open local `RUN_STATUS.html` for live status; this runtime file is not on GitHub.
 The saved handover notebook records the earlier input checks, not solve completion.
 

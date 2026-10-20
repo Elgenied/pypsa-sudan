@@ -38,6 +38,13 @@ def main():
         progress = [line for line in text.splitlines() if
                     "steps (" in line or line.startswith("rule ") or
                     "Downloading bundle " in line or "Finished job " in line]
+        cached_partials = list((root / ".cache/sudan-downloads").glob("*.part"))
+        partial_bytes = 0
+        for partial in cached_partials:
+            try:
+                partial_bytes += partial.stat().st_size
+            except FileNotFoundError:
+                pass
         data = {
             "updated_UTC": datetime.now(timezone.utc).isoformat(),
             "observer_started_UTC": started, "workflow_pid": args.pid,
@@ -45,6 +52,7 @@ def main():
             "latest_progress": progress[-8:],
             "temporary_bundle_download_MB": round((root / "tempfile.zip").stat().st_size / 1e6, 1)
             if (root / "tempfile.zip").exists() else None,
+            "active_cached_download_MB": round(partial_bytes / 1e6, 1),
             "weather_cutout_exists": (root / "cutouts/sudan-2022-era5.nc").exists(),
             "network_result_exists": result.exists(),
             "result_path": str(result),
