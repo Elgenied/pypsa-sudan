@@ -1,0 +1,12 @@
+id,Name,Fueltype,Technology,Set,Country,Capacity,Efficiency,Duration,Volume_Mm3,DamHeight_m,StorageCapacity_MWh,DateIn,DateRetrofit,DateOut,lat,lon,EIC,projectID,bus
+0,Merowe,Hydro,Reservoir,PP,Sudan,1250.0,,,,,,,,,18.67,32.06,,plant_inventory_2019_001,
+1,Kosti,Oil,Steam turbine,PP,Sudan,500.0,,,,,,,,,13.16,32.66,,plant_inventory_2019_002,
+2,Garri 1 and 2,Oil,Combined cycle gas turbine,PP,Sudan,469.0,,,,,,,,,16.12,32.69,,plant_inventory_2019_003,
+3,Garri 4,Coal,Steam turbine,PP,Sudan,110.0,,,,,,,,,16.12,32.69,,plant_inventory_2019_004,
+4,Mahmoud Sharif steam,Oil,Steam turbine,PP,Sudan,380.0,,,,,,,,,15.65,32.56,,plant_inventory_2019_005,
+5,Mahmoud Sharif gas,Oil,Gas turbine,PP,Sudan,150.0,,,,,,,,,15.65,32.56,,plant_inventory_2019_006,
+6,Roseires,Hydro,Reservoir,PP,Sudan,280.0,,,,,,,,,11.8,34.39,,plant_inventory_2019_007,
+7,Jabal Awlia,Hydro,Reservoir,PP,Sudan,30.4,,,,,,,,,15.24,32.49,,plant_inventory_2019_009,
+8,Sinnar,Hydro,Reservoir,PP,Sudan,15.0,,,,,,,,,13.55,33.64,,plant_inventory_2019_010,
+9,Khashm El Girba,Hydro,Reservoir,PP,Sudan,17.8,,,,,,,,,14.93,35.91,,plant_inventory_2019_011,
+10,Seitat and Upper Atbara,Hydro,Reservoir,PP,Sudan,320.0,,,,,,,,,14.35,35.86,,plant_inventory_2019_013,

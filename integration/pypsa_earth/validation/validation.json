@@ -1,0 +1,43 @@
+{
+  "status": "passed_input_and_native_interface_checks",
+  "earth_commit": "d7cf8ccf507689566ad2418cae29dee5258c9cb0",
+  "software": {
+    "pypsa": "0.30.3",
+    "snakemake": "7.32.4",
+    "atlite": "0.4.1",
+    "pandas": "2.3.1"
+  },
+  "highs": "1.11.0",
+  "input_checks": {
+    "native_demand_reader": true,
+    "native_candidate_plant_reader": true,
+    "native_country_conversion": true,
+    "native_three_hour_aggregation": true,
+    "energy_and_all_duration_weights_preserved": true,
+    "tutorial_overrides_removed": true,
+    "projection_database_works": true
+  },
+  "demand_GWh": 16913.000000000004,
+  "snapshots_after_aggregation": 2920,
+  "duration_hours": 8760.0,
+  "candidate_plants": 11,
+  "candidate_plants_enabled": false,
+  "snakemake_dry_run_exit_code": 0,
+  "cds_credential_file_present": false,
+  "cds_environment_pair_present": false,
+  "era5_cutout_present": false,
+  "national_solve_performed": false,
+  "native_cost_retrieval": {
+    "file_present": true,
+    "sha256": "df00035867d5a30bae909bf21e4acec85d3fee2b59f6cb374109229073e1094a",
+    "source": "https://raw.githubusercontent.com/PyPSA/technology-data/v0.13.2/outputs/costs_2020.csv",
+    "interpretation": "Generic technology input, not Sudan-calibrated costs"
+  },
+  "unresolved_scientific_inputs": [
+    "2022 reconciled plant fleet and renewable installed capacity",
+    "reservoir storage/seasonality and hydro generation reconciliation",
+    "882 GWh external supply representation",
+    "regional demand allocation and network route/voltage/status validation",
+    "common cost currency/year and explicit recovery asset/cost assumptions"
+  ]
+}

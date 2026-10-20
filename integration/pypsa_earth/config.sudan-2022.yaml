@@ -1,0 +1,94 @@
+# Sudan input-integration baseline, not a completed recovery study.
+# Tested against PyPSA-Earth d7cf8ccf (config schema 0.8.0).
+version: 0.8.0
+tutorial: false
+countries: [SD]
+run:
+  name: sudan-2022-reference
+  shared_cutouts: true
+scenario:
+  simpl: [""]
+  ll: [c1.0]
+  clusters: [10]
+  opts: [3H]
+  planning_horizons: [2020]
+snapshots:
+  start: "2022-01-01"
+  end: "2023-01-01"
+  inclusive: left
+enable:
+  retrieve_databundle: true
+  retrieve_databundle_sector: false
+  download_osm_data: true
+  retrieve_cutout: false
+  build_cutout: true
+  retrieve_cost_data: true
+  build_natura_raster: true
+  download_global_buildings: false
+  progress_bar: false
+load_options:
+  # Standard reader/format only: this is OUR synthetic profile, not GEGIS data.
+  source: gegis
+  weather_year: 2022
+  prediction_year: 2022
+  scale: 1
+atlite:
+  nprocesses: 2
+  default: sudan-2022-era5
+  cutouts:
+    sudan-2022-era5:
+      module: era5
+      dx: 0.3
+      dy: 0.3
+osm:
+  clean_osm_data:
+    threshold_voltage: 51000
+base_network:
+  min_voltage_substation_offshore: 51000
+  min_voltage_rebase_voltage: 51000
+electricity:
+  # Fixed-fleet first baseline: enable investments only in the recovery study.
+  extendable_carriers:
+    Generator: []
+    StorageUnit: []
+    Store: []
+    Link: []
+  renewable_carriers: [solar, onwind, hydro]
+  powerplants_filter: "(DateOut >= 2022 or DateOut != DateOut) and (DateIn <= 2022 or DateIn != DateIn)"
+  custom_powerplants:
+    method: false
+    filepaths: []
+  estimate_renewable_capacities:
+    year: 2022
+renewable:
+  solar:
+    cutout: sudan-2022-era5
+    extendable: false
+  onwind:
+    cutout: sudan-2022-era5
+    extendable: false
+  hydro:
+    cutout: sudan-2022-era5
+    hydrobasins_level: 6
+    resource:
+      hydrobasins: data/hydrobasins/hybas_world.shp
+    normalization:
+      method: irena
+      year: 2022
+    multiplier: 1.0
+    extendable: false
+co2:
+  automatic_emission:
+    enable: false
+costs:
+  # Available technology-data vintage for diagnostic fixed-fleet run.
+  # Not Sudan procurement costs. Recovery cost year must be harmonised later.
+  year: 2020
+solving:
+  solver:
+    name: highs
+    options: highs-default
+  options:
+    noisy_costs: false
+    load_shedding: 100
+    skip_iterations: true

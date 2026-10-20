@@ -6,11 +6,13 @@
 
 The question is: **Where should Sudan rehabilitate or extend the grid, where should it build mini-grids, and where are standalone systems more economical—at a specified level of service?**
 
-**Start here: [OnSSET–PyPSA settlement recovery notebook](research/onsset_pypsa_recovery/Sudan_OnSSET_PyPSA_Recovery.ipynb)** ([HTML with saved figures](research/onsset_pypsa_recovery/Sudan_OnSSET_PyPSA_Recovery.html)). It screens all 11,268 DRE atlas settlements in Northern, River Nile, Khartoum, Gezira, White Nile and Sennar for grid connection, mini-grid and standalone service under three explicit recovery conditions. It reads the completed PyPSA regional cases for corridor-repair choices and national supply context. This is the **active research workflow**; classifications are conditional, not verified project recommendations.
+**Start here: [Sudan → PyPSA-Earth handover notebook](integration/pypsa_earth/Sudan_Earth_Handover.ipynb)** ([HTML](integration/pypsa_earth/Sudan_Earth_Handover.html), [WSL configuration and commands](integration/pypsa_earth/README.md)). The existing WSL engine now has a separate Sudan configuration and staged evidence. Native input/aggregation checks and the workflow dry-run pass; the full 2022 Earth model has not yet been solved.
+
+The [OnSSET–PyPSA settlement screen](research/onsset_pypsa_recovery/Sudan_OnSSET_PyPSA_Recovery.ipynb) remains a **prototype under correction**, not the validated implementation of the revised scope. Its 11,268-settlement coverage remains useful; its recovery ranking switches are not established repair benefits.
 
 The [one-page workspace guide](docs/WORKSPACE_GUIDE.md) explains which notebooks to open, what has been validated and what comes next. The [new study README](research/onsset_pypsa_recovery/README.md) gives exact reproduction commands and limits. The [completed full-year regional PyPSA study](research/regional_joint_study/Sudan_Regional_Joint_Study.ipynb) remains the supply-side comparison. Earlier system-cost sections, the Gezira experiment, historical forecasting and the 2022 dispatch notebook remain as supporting evidence and previous development stages.
 
-The current linkage is one-way: OnSSET ranks settlement options; PyPSA supplies recovery-case definitions. A fully iterative, reliability-checked investment model and field validation remain the next research work. The atlas has modeled population and potential connections, but no verified post-war settlement access status or surveyed asset damage.
+The revised study uses complementary national PyPSA-Earth and settlement OnSSET analyses with consistent demand, service and cost definitions. Mandatory iterative price feedback is outside the agreed scope. The atlas has modeled population and potential connections, but no verified post-war settlement access status or surveyed asset damage.
 
 ## Earlier notebooks and supporting evidence
 
@@ -22,7 +24,7 @@ The current linkage is one-way: OnSSET ranks settlement options; PyPSA supplies 
 | **4. [Historical evidence notebook](research/forecasting_2012/Sudan_Forecasting_Replication.ipynb)** | Recovered 2012-report data, replicated calculations, regional sector pies and source conflicts |
 | **5. [Settlement atlas notebook](research/dre_atlas_2025/Sudan_DRE_Settlements.ipynb)** | Settlement maps, source formula checks, state summaries, grid-distance screens and spatial gaps |
 | **6. [Report evidence and usage guide](data/report_evidence/README.md)** | October 2026 review: dated equipment/fuel prices, plant status, sector sales, published assumptions, source conflicts and modelling uses |
-| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | Previous-stage cost and planning experiments; section 12 is the earlier six-state regional plan. The active OnSSET notebook is linked above. |
+| **7. [System-cost and electrification notebook](research/system_costs/Sudan_System_Costs.ipynb)** | Previous-stage cost and planning experiments; section 12 is the earlier six-state regional plan. The active Earth handover notebook is linked above. |
 
 The notebooks serve different stages of the research. Saved results can be viewed on GitHub without running Python. The [2022 HTML](Sudan_2022.html), [historical HTML](research/forecasting_2012/Sudan_Forecasting_Replication.html), [settlement HTML](research/dre_atlas_2025/Sudan_DRE_Settlements.html), [cost HTML](research/system_costs/Sudan_System_Costs.html) and [Gezira HTML](research/gezira_joint_planning/Sudan_Gezira_Joint_Planning.html) are browser reading copies. The full-region continuation generates its own notebook and HTML only after all 12 cases pass validation.
 
@@ -30,7 +32,8 @@ The notebooks serve different stages of the research. Saved results can be viewe
 
 | Workstream | Available | Validation status | What it can answer |
 |---|---|---|---|
-| **Current OnSSET–PyPSA settlement screen** | 11,268 settlements × three recovery conditions; three native OnSSET technology cost options; saved maps, state pies and PyPSA case register | Coverage, positive costs, pinned engine and notebook execution checked; access, damage, voltage and hourly local reliability unverified | Which option ranks cheapest under explicit screening assumptions, and which rankings move with recovery conditions |
+| **Active Earth integration** | Sudan WSL configuration, native custom demand, plant review crosswalk, checksummed evidence, handover notebook | Native readers, three-hour energy/weight conservation and full DAG dry-run checked; no new national solve | How evidence enters the standard national workflow and what remains to reconcile |
+| **Earlier OnSSET–PyPSA settlement screen** | 11,268 settlements × three recovery conditions; three native OnSSET technology cost options; saved maps, state pies and PyPSA case register | Accounting and recovery-attribution problems identified; under correction | Prototype coverage and methods only; rankings are not validated recovery recommendations |
 | **2022 system reference** | 19 regional nodes, 13 schematic corridors, 8,760 hours; fixed-capacity dispatch | Numerical feasibility checked; national annual totals calibrated; regional/hourly operation not independently validated | How dispatch changes under the stated hydro/corridor assumptions |
 | **Historical evidence** | 20 cataloged datasets; 19 plant/configuration records; 131 historical localities; consumption, hydro, heat rates and forecasts | Ten arithmetic checks passed; source inconsistencies retained | What the report contains, how its visible calculations work and which inputs could improve the baseline |
 | **Settlement atlas** | 33,891 clusters; 41 source attribute columns and display polygons | Source CSV/GeoJSON IDs and values match; demand and 2020–2022 risk rules reproduce; anomalies logged | Where mapped clusters and screening indicators are; no technology choice |
@@ -97,11 +100,13 @@ Use the [data collection](data/README.md) for input evidence. Use [2022 results]
 
 ## Next milestone
 
-Use the OnSSET settlement screen to prioritize field checks on baseline access, feeder voltage/condition, repair bills and locations where option costs are close. Verify representative hourly mini-grid and standalone designs, then iteratively pass grid-load, supply-cost and reliability information between OnSSET and PyPSA. See the [current sequence](docs/WORKSPACE_GUIDE.md#next-study-sequence). The earlier [study plan](docs/STUDY_PLAN.md) is retained for history.
+Obtain the 2022 Earth weather cutout and standard spatial inputs, build and reconcile the national fleet/network/import baseline, then run the three recovery cases and complementary standard OnSSET access analysis. The [Earth integration guide](integration/pypsa_earth/README.md) records concrete prerequisites and WSL commands. The earlier [study plan](docs/STUDY_PLAN.md) is retained for history.
 
 ## Run
 
-With the existing environment:
+For the active WSL PyPSA-Earth workflow, use the [integration commands](integration/pypsa_earth/README.md#reproduce-in-wsl).
+
+To reopen the earlier 2022 reference notebook in the Windows environment:
 
 ```shell
 conda activate pypsa

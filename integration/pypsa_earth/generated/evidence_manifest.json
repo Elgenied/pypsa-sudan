@@ -1,0 +1,121 @@
+{
+  "status": "input_integration_not_a_solved_or_validated_national_model",
+  "demand": {
+    "source": "results/hourly_supply_requirement.csv",
+    "profile_evidence": "synthetic",
+    "annual_reference": "data/national_coupling/national_2022.csv",
+    "clock": "UTC",
+    "clock_conversion": "local UTC+2 cyclic shift of synthetic annual template",
+    "end_use_GWh": 13261.0,
+    "aggregate_losses_GWh": 3652.0,
+    "sent_out_requirement_GWh": 16913.0,
+    "loss_boundary": "Includes technical and nontechnical T&D losses; no additional loss factor.",
+    "source_reader": "gegis is the native CSV reader, NOT the provenance",
+    "hourly_steps": 8760,
+    "three_hour_steps": 2920
+  },
+  "plants": {
+    "review_rows": 32,
+    "format_candidates": 11,
+    "enabled": false,
+    "reason": "Incomplete fleet; nameplate not net MW; dated coordinates and fuel/technology mappings need reconciliation.",
+    "special_cases": [
+      "Kosti and Upper Atbara coordinates were planning entries in 2012; 2019 inventory reports plants.",
+      "Garri 4 Coal is a provisional Earth carrier mapping for sponge coke; not verified fuel equivalence.",
+      "Hydro Reservoir labels need engineering verification; no reservoir energy capacity inferred.",
+      "No 2012 planned retirement dates or 2019 year-as-printed values imported as verified dates."
+    ]
+  },
+  "national_imports_GWh": 882.0,
+  "imports_status": "validation target only; not yet represented by border supply in the SD-only Earth network",
+  "six_state_access_focus": [
+    "Northern",
+    "River Nile",
+    "Khartoum",
+    "Gezira",
+    "White Nile",
+    "Sennar"
+  ],
+  "sources": [
+    {
+      "path": "data/national_coupling/national_2022.csv",
+      "sha256": "4f7eb0e29f19e1f35e7ff17555165a9c12915c8f1531e84b9e311327c7105279"
+    },
+    {
+      "path": "results/hourly_supply_requirement.csv",
+      "sha256": "211cb9be0e07bb5c28185194021412d2cd179ed7ebdef98b6e73b4a0a08c91c3"
+    },
+    {
+      "path": "data/report_evidence/plant_inventory_2019.csv",
+      "sha256": "f598e981b75468f997ee7753cbdb3625a76ffce4549be6e860026e27eb767521"
+    },
+    {
+      "path": "data/report_evidence/plant_status_2024.csv",
+      "sha256": "72f682e7c30e65f1fcdadda0d6df7a9e97864c7d0ba3e0e13634eefb3e8763c6"
+    },
+    {
+      "path": "data/report_evidence/network_evidence.csv",
+      "sha256": "33d7769847391f262948d222c22ec35896d74320c42dec5d02839d43af2e2fba"
+    },
+    {
+      "path": "data/report_evidence/scenario_evidence.csv",
+      "sha256": "802fe9711ef889769b912062174e0da6060c3665c988d81e62dfbb3d2a772842"
+    },
+    {
+      "path": "data/report_evidence/source_register.csv",
+      "sha256": "50a020eec7641bedb221357a2bf584947b68c4290b9e621ad11cdec04ddfbef1"
+    },
+    {
+      "path": "data/report_evidence/source_issues.csv",
+      "sha256": "4417084fdc4a2a962b92c03a7c8cd97e47f853948206e82e5fd3a8deb56bad95"
+    },
+    {
+      "path": "data/report_evidence/fuel_prices_2024.csv",
+      "sha256": "1969fce508543d17d5ce553a4f6f771821e49b70ffd4df30e50c62bb01fa21c3"
+    },
+    {
+      "path": "data/report_evidence/market_prices_2025.csv",
+      "sha256": "f9520d39fb9e2a83cab4998d4b16bee0e4d8de489c01986d0f7587ca78e1db48"
+    },
+    {
+      "path": "data/report_evidence/import_cost_shares_2025.csv",
+      "sha256": "0e9ab4b4c2cf003529cde6864f8e2016d81608b39fb7c1090036b0a80a56d013"
+    },
+    {
+      "path": "data/report_evidence/README.md",
+      "sha256": "a7d2f891969bb5536926cbc1e7fc1f8be389307e1015c6f0dc219a935f25c511"
+    },
+    {
+      "path": "research/forecasting_2012/data/plant_characteristics.csv",
+      "sha256": "aeb6fa460249fb9dda1b615fd1eb960286346bd76623c9733d25412a0f1cbb3c"
+    },
+    {
+      "path": "research/forecasting_2012/data/hydro_monthly_long.csv",
+      "sha256": "be37242ec1e2a6d9f9c4575bd7b741150486a230f2ee264e18f44d66611b323b"
+    },
+    {
+      "path": "research/forecasting_2012/data/source_register.csv",
+      "sha256": "638c718b5f8bebb5e93d0013c3b71cde189da13c17eb6b520517428dc52bd78d"
+    },
+    {
+      "path": "data/system_costs/components.csv",
+      "sha256": "cff939d8f241783bf8248b2fa270c861763276a8768402227748d35979f61163"
+    },
+    {
+      "path": "data/system_costs/scenario_parameters.csv",
+      "sha256": "5192f55254c749c4a94148fcc5b5f5bdf903a014dbb897a68eb64d305d21c96f"
+    },
+    {
+      "path": "data/system_costs/sources.json",
+      "sha256": "5fac8db87075f845af5f449c4ee78144b6abd5fdf782476cf69d3db612a204a6"
+    },
+    {
+      "path": "research/dre_atlas_2025/data/settlement_attributes.csv.gz",
+      "sha256": "0e07b95eebd88a65e5483b069b472c20bd91cc7fd936476921c009f486716643"
+    },
+    {
+      "path": "research/dre_atlas_2025/SOURCE_REGISTER.md",
+      "sha256": "d0f01eebdf95d0c6db4a28ae5647cbdadae870d2472d3c3a497f4f5f71438d29"
+    }
+  ]
+}

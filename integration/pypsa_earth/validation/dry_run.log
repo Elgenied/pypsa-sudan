@@ -1,0 +1,302 @@
+Restricted license - for non-production use only - expires 2026-11-23
+/home/elgenied/miniconda3/envs/pypsa-earth/lib/python3.11/site-packages/pulp/apis/gurobi_api.py:170: UserWarning: GUROBI error: Unknown parameter '_test'.
+  warnings.warn("GUROBI error: {}.".format(e))
+Config file config.default.yaml is extended by additional config specified via the command line.
+Config file configs/plotting.default.yaml is extended by additional config specified via the command line.
+Config file configs/solving.default.yaml is extended by additional config specified via the command line.
+Config file configs/bundle_config.yaml is extended by additional config specified via the command line.
+Config file configs/powerplantmatching_config.yaml is extended by additional config specified via the command line.
+Config file config.yaml is extended by additional config specified via the command line.
+The PyPSA meets Earth initiative also supports dedicated regional models. See the documentation at https://pypsa-earth.readthedocs.io/en/latest/user-guide/customization/basic-setup/
+Demand data folder: data/ssp2-2.6/2022/era5_2022, load path is ['data/ssp2-2.6/2022/era5_2022/Africa.csv'].
+Expected files: Africa.csv
+Building DAG of jobs...
+Job stats:
+job                          count
+-------------------------  -------
+add_electricity                  1
+add_extra_components             1
+base_network                     1
+build_bus_regions                1
+build_cutout                     1
+build_demand_profiles            1
+build_natura_raster              1
+build_osm_network                1
+build_powerplants                1
+build_renewable_profiles         3
+build_shapes                     1
+clean_osm_data                   1
+cluster_network                  1
+download_osm_data                1
+prepare_network                  1
+process_cost_data                1
+retrieve_databundle_light        1
+simplify_network                 1
+solve_all_networks               1
+solve_network                    1
+total                           22
+
+
+[Tue Oct 20 13:59:49 2026]
+rule download_osm_data:
+    output: resources/sudan-2022-reference/osm/raw/all_raw_cables.geojson, resources/sudan-2022-reference/osm/raw/all_raw_generators.geojson, resources/sudan-2022-reference/osm/raw/all_raw_generators.csv, resources/sudan-2022-reference/osm/raw/all_raw_lines.geojson, resources/sudan-2022-reference/osm/raw/all_raw_substations.geojson
+    log: logs/sudan-2022-reference/download_osm_data.log
+    jobid: 16
+    benchmark: benchmarks/sudan-2022-reference/download_osm_data
+    reason: Missing output files: resources/sudan-2022-reference/osm/raw/all_raw_generators.geojson, resources/sudan-2022-reference/osm/raw/all_raw_cables.geojson, resources/sudan-2022-reference/osm/raw/all_raw_lines.geojson, resources/sudan-2022-reference/osm/raw/all_raw_substations.geojson
+    resources: tmpdir=/tmp
+
+[Tue Oct 20 13:59:49 2026]
+rule retrieve_databundle_light:
+    output: data/ssp2-2.6/2030/era5_2013/Asia.nc, data/ssp2-2.6/2030/era5_2013/NorthAmerica.nc, data/gebco/GEBCO_2025_sub_ice.nc, data/demand/forecasts_on_historical_period.parquet, data/ssp2-2.6/2030/era5_2013/SouthAmerica.nc, data/hydrobasins/hybas_world.shp, data/natura/natura.tiff, data/ssp2-2.6/2030/era5_2013/Africa.nc, data/ssp2-2.6/2030/era5_2013/Oceania.nc, data/ssp2-2.6/2030/era5_2013/Europe.nc, data/eez/eez_v11.gpkg, data/IRENA_Statistics_Extract_2025H2.xlsx, data/copernicus/PROBAV_LC100_global_v3.0.1_2019-nrt_Discrete-Classification-map_EPSG-4326.tif, data/landcover
+    log: logs/sudan-2022-reference/retrieve_databundle.log
+    jobid: 9
+    benchmark: benchmarks/sudan-2022-reference/retrieve_databundle_light
+    reason: Missing output files: data/gebco/GEBCO_2025_sub_ice.nc, data/hydrobasins/hybas_world.shp, data/landcover, data/eez/eez_v11.gpkg, data/IRENA_Statistics_Extract_2025H2.xlsx, data/copernicus/PROBAV_LC100_global_v3.0.1_2019-nrt_Discrete-Classification-map_EPSG-4326.tif
+    resources: tmpdir=/tmp
+
+[Tue Oct 20 13:59:49 2026]
+rule build_shapes:
+    input: data/eez/eez_v11.gpkg
+    output: resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, resources/sudan-2022-reference/shapes/extended_country_shape.geojson, resources/sudan-2022-reference/shapes/gadm_shapes.geojson, resources/sudan-2022-reference/shapes/subregion_shapes.geojson, resources/sudan-2022-reference/shapes/subregion_offshore.geojson
+    log: logs/sudan-2022-reference/build_shapes.log
+    jobid: 11
+    benchmark: benchmarks/sudan-2022-reference/build_shapes
+    reason: Missing output files: resources/sudan-2022-reference/shapes/gadm_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, resources/sudan-2022-reference/shapes/extended_country_shape.geojson, resources/sudan-2022-reference/shapes/country_shapes.geojson; Input files updated by another job: data/eez/eez_v11.gpkg
+    resources: tmpdir=/tmp, mem_mb=3096, mem_mib=2953
+
+[Tue Oct 20 13:59:49 2026]
+rule clean_osm_data:
+    input: resources/sudan-2022-reference/osm/raw/all_raw_cables.geojson, resources/sudan-2022-reference/osm/raw/all_raw_generators.geojson, resources/sudan-2022-reference/osm/raw/all_raw_lines.geojson, resources/sudan-2022-reference/osm/raw/all_raw_substations.geojson, resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, resources/sudan-2022-reference/shapes/extended_country_shape.geojson
+    output: resources/sudan-2022-reference/osm/clean/all_clean_generators.geojson, resources/sudan-2022-reference/osm/clean/all_clean_generators.csv, resources/sudan-2022-reference/osm/clean/all_clean_lines.geojson, resources/sudan-2022-reference/osm/clean/all_clean_substations.geojson
+    log: logs/sudan-2022-reference/clean_osm_data.log
+    jobid: 15
+    benchmark: benchmarks/sudan-2022-reference/clean_osm_data
+    reason: Missing output files: resources/sudan-2022-reference/osm/clean/all_clean_generators.geojson, resources/sudan-2022-reference/osm/clean/all_clean_lines.geojson, resources/sudan-2022-reference/osm/clean/all_clean_substations.geojson, resources/sudan-2022-reference/osm/clean/all_clean_generators.csv; Input files updated by another job: resources/sudan-2022-reference/shapes/extended_country_shape.geojson, resources/sudan-2022-reference/osm/raw/all_raw_generators.geojson, resources/sudan-2022-reference/osm/raw/all_raw_substations.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, resources/sudan-2022-reference/osm/raw/all_raw_cables.geojson, resources/sudan-2022-reference/osm/raw/all_raw_lines.geojson, resources/sudan-2022-reference/shapes/country_shapes.geojson
+    resources: tmpdir=/tmp
+
+[Tue Oct 20 13:59:49 2026]
+rule build_cutout:
+    input: resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson
+    output: cutouts/sudan-2022-era5.nc
+    log: logs/sudan-2022-reference/build_cutout/sudan-2022-era5.log
+    jobid: 10
+    benchmark: benchmarks/sudan-2022-reference/build_cutout_sudan-2022-era5
+    reason: Missing output files: cutouts/sudan-2022-era5.nc; Input files updated by another job: resources/sudan-2022-reference/shapes/offshore_shapes.geojson, resources/sudan-2022-reference/shapes/country_shapes.geojson
+    wildcards: cutout=sudan-2022-era5
+    threads: 2
+    resources: tmpdir=/tmp, mem_mb=2000, mem_mib=1908
+
+[Tue Oct 20 13:59:49 2026]
+rule build_osm_network:
+    input: resources/sudan-2022-reference/osm/clean/all_clean_generators.geojson, resources/sudan-2022-reference/osm/clean/all_clean_lines.geojson, resources/sudan-2022-reference/osm/clean/all_clean_substations.geojson, resources/sudan-2022-reference/shapes/country_shapes.geojson
+    output: resources/sudan-2022-reference/base_network/all_lines_build_network.csv, resources/sudan-2022-reference/base_network/all_converters_build_network.csv, resources/sudan-2022-reference/base_network/all_transformers_build_network.csv, resources/sudan-2022-reference/base_network/all_buses_build_network.csv, resources/sudan-2022-reference/base_network/all_lines_build_network.geojson, resources/sudan-2022-reference/base_network/all_converters_build_network.geojson, resources/sudan-2022-reference/base_network/all_transformers_build_network.geojson, resources/sudan-2022-reference/base_network/all_buses_build_network.geojson
+    log: logs/sudan-2022-reference/build_osm_network.log
+    jobid: 14
+    benchmark: benchmarks/sudan-2022-reference/build_osm_network
+    reason: Missing output files: resources/sudan-2022-reference/base_network/all_converters_build_network.csv, resources/sudan-2022-reference/base_network/all_lines_build_network.csv, resources/sudan-2022-reference/base_network/all_transformers_build_network.csv, resources/sudan-2022-reference/base_network/all_buses_build_network.csv; Input files updated by another job: resources/sudan-2022-reference/osm/clean/all_clean_generators.geojson, resources/sudan-2022-reference/osm/clean/all_clean_lines.geojson, resources/sudan-2022-reference/osm/clean/all_clean_substations.geojson, resources/sudan-2022-reference/shapes/country_shapes.geojson
+    resources: tmpdir=/tmp
+
+[Tue Oct 20 13:59:49 2026]
+rule build_natura_raster:
+    input: data/landcover, cutouts/sudan-2022-era5.nc, cutouts/sudan-2022-era5.nc, cutouts/sudan-2022-era5.nc, cutouts/sudan-2022-era5.nc, cutouts/sudan-2022-era5.nc, cutouts/sudan-2022-era5.nc, resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson
+    output: resources/sudan-2022-reference/natura.tiff
+    log: logs/sudan-2022-reference/build_natura_raster.log
+    jobid: 8
+    benchmark: benchmarks/sudan-2022-reference/build_natura_raster
+    reason: Missing output files: resources/sudan-2022-reference/natura.tiff; Input files updated by another job: resources/sudan-2022-reference/shapes/offshore_shapes.geojson, data/landcover, cutouts/sudan-2022-era5.nc, resources/sudan-2022-reference/shapes/country_shapes.geojson
+    resources: tmpdir=/tmp
+
+[Tue Oct 20 13:59:49 2026]
+rule base_network:
+    input: resources/sudan-2022-reference/base_network/all_buses_build_network.csv, resources/sudan-2022-reference/base_network/all_lines_build_network.csv, resources/sudan-2022-reference/base_network/all_converters_build_network.csv, resources/sudan-2022-reference/base_network/all_transformers_build_network.csv, resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson
+    output: networks/sudan-2022-reference/base.nc
+    log: logs/sudan-2022-reference/base_network.log
+    jobid: 13
+    benchmark: benchmarks/sudan-2022-reference/base_network
+    reason: Missing output files: networks/sudan-2022-reference/base.nc; Input files updated by another job: resources/sudan-2022-reference/base_network/all_buses_build_network.csv, resources/sudan-2022-reference/base_network/all_converters_build_network.csv, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, resources/sudan-2022-reference/base_network/all_lines_build_network.csv, resources/sudan-2022-reference/base_network/all_transformers_build_network.csv, resources/sudan-2022-reference/shapes/country_shapes.geojson
+    resources: tmpdir=/tmp, mem_mb=500, mem_mib=477
+
+[Tue Oct 20 13:59:49 2026]
+rule build_bus_regions:
+    input: resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, networks/sudan-2022-reference/base.nc, resources/sudan-2022-reference/shapes/gadm_shapes.geojson
+    output: resources/sudan-2022-reference/bus_regions/regions_onshore.geojson, resources/sudan-2022-reference/bus_regions/regions_offshore.geojson
+    log: logs/sudan-2022-reference/build_bus_regions.log
+    jobid: 12
+    benchmark: benchmarks/sudan-2022-reference/build_bus_regions
+    reason: Missing output files: resources/sudan-2022-reference/bus_regions/regions_offshore.geojson, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson; Input files updated by another job: resources/sudan-2022-reference/shapes/offshore_shapes.geojson, networks/sudan-2022-reference/base.nc, resources/sudan-2022-reference/shapes/gadm_shapes.geojson, resources/sudan-2022-reference/shapes/country_shapes.geojson
+    resources: tmpdir=/tmp, mem_mb=1000, mem_mib=954
+
+[Tue Oct 20 13:59:49 2026]
+rule build_powerplants:
+    input: networks/sudan-2022-reference/base.nc, configs/powerplantmatching_config.yaml, resources/sudan-2022-reference/osm/clean/all_clean_generators.csv, resources/sudan-2022-reference/shapes/gadm_shapes.geojson
+    output: resources/sudan-2022-reference/powerplants.csv, resources/sudan-2022-reference/powerplants_osm2pm.csv
+    log: logs/sudan-2022-reference/build_powerplants.log
+    jobid: 19
+    benchmark: benchmarks/sudan-2022-reference/build_powerplants
+    reason: Missing output files: resources/sudan-2022-reference/powerplants.csv; Input files updated by another job: resources/sudan-2022-reference/shapes/gadm_shapes.geojson, networks/sudan-2022-reference/base.nc, resources/sudan-2022-reference/osm/clean/all_clean_generators.csv
+    resources: tmpdir=/tmp, mem_mb=500, mem_mib=477
+
+[Tue Oct 20 13:59:49 2026]
+rule process_cost_data:
+    input: networks/sudan-2022-reference/base.nc, resources/sudan-2022-reference/costs_2020.csv
+    output: resources/sudan-2022-reference/costs_2020_elec.csv
+    log: logs/sudan-2022-reference/build_cost_data_2020_elec.log
+    jobid: 20
+    benchmark: benchmarks/sudan-2022-reference/build_cost_data_2020_elec
+    reason: Missing output files: resources/sudan-2022-reference/costs_2020_elec.csv; Input files updated by another job: networks/sudan-2022-reference/base.nc
+    wildcards: year=2020, scope=elec
+    resources: tmpdir=/tmp, mem_mb=4000, mem_mib=3815
+
+[Tue Oct 20 13:59:49 2026]
+rule build_demand_profiles:
+    input: networks/sudan-2022-reference/base.nc, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson, data/ssp2-2.6/2022/era5_2022/Africa.csv, resources/sudan-2022-reference/shapes/gadm_shapes.geojson
+    output: resources/sudan-2022-reference/demand_profiles.csv
+    log: logs/sudan-2022-reference/build_demand_profiles.log
+    jobid: 22
+    benchmark: benchmarks/sudan-2022-reference/build_demand_profiles
+    reason: Missing output files: resources/sudan-2022-reference/demand_profiles.csv; Input files updated by another job: resources/sudan-2022-reference/shapes/gadm_shapes.geojson, networks/sudan-2022-reference/base.nc, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson
+    resources: tmpdir=/tmp, mem_mb=3000, mem_mib=2862
+
+[Tue Oct 20 13:59:49 2026]
+rule build_renewable_profiles:
+    input: resources/sudan-2022-reference/natura.tiff, data/copernicus/PROBAV_LC100_global_v3.0.1_2019-nrt_Discrete-Classification-map_EPSG-4326.tif, data/gebco/GEBCO_2025_sub_ice.nc, resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson, cutouts/sudan-2022-era5.nc
+    output: resources/sudan-2022-reference/renewable_profiles/profile_solar.nc
+    log: logs/sudan-2022-reference/build_renewable_profile_solar.log
+    jobid: 7
+    benchmark: benchmarks/sudan-2022-reference/build_renewable_profiles_solar
+    reason: Missing output files: resources/sudan-2022-reference/renewable_profiles/profile_solar.nc; Input files updated by another job: data/copernicus/PROBAV_LC100_global_v3.0.1_2019-nrt_Discrete-Classification-map_EPSG-4326.tif, data/gebco/GEBCO_2025_sub_ice.nc, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, cutouts/sudan-2022-era5.nc, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson, resources/sudan-2022-reference/natura.tiff, resources/sudan-2022-reference/shapes/country_shapes.geojson
+    wildcards: technology=solar
+    threads: 2
+    resources: tmpdir=/tmp, mem_mb=10000, mem_mib=9537
+
+[Tue Oct 20 13:59:49 2026]
+rule build_renewable_profiles:
+    input: resources/sudan-2022-reference/natura.tiff, data/copernicus/PROBAV_LC100_global_v3.0.1_2019-nrt_Discrete-Classification-map_EPSG-4326.tif, data/gebco/GEBCO_2025_sub_ice.nc, resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson, cutouts/sudan-2022-era5.nc
+    output: resources/sudan-2022-reference/renewable_profiles/profile_onwind.nc
+    log: logs/sudan-2022-reference/build_renewable_profile_onwind.log
+    jobid: 17
+    benchmark: benchmarks/sudan-2022-reference/build_renewable_profiles_onwind
+    reason: Missing output files: resources/sudan-2022-reference/renewable_profiles/profile_onwind.nc; Input files updated by another job: data/copernicus/PROBAV_LC100_global_v3.0.1_2019-nrt_Discrete-Classification-map_EPSG-4326.tif, data/gebco/GEBCO_2025_sub_ice.nc, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, cutouts/sudan-2022-era5.nc, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson, resources/sudan-2022-reference/natura.tiff, resources/sudan-2022-reference/shapes/country_shapes.geojson
+    wildcards: technology=onwind
+    threads: 2
+    resources: tmpdir=/tmp, mem_mb=10000, mem_mib=9537
+
+[Tue Oct 20 13:59:49 2026]
+rule build_renewable_profiles:
+    input: data/hydro_capacities.csv, data/eia_hydro_annual_generation.csv, data/IRENA_Statistics_Extract_2025H2.xlsx, resources/sudan-2022-reference/powerplants.csv, data/hydrobasins/hybas_world.shp, resources/sudan-2022-reference/natura.tiff, data/copernicus/PROBAV_LC100_global_v3.0.1_2019-nrt_Discrete-Classification-map_EPSG-4326.tif, data/gebco/GEBCO_2025_sub_ice.nc, resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson, cutouts/sudan-2022-era5.nc
+    output: resources/sudan-2022-reference/renewable_profiles/profile_hydro.nc
+    log: logs/sudan-2022-reference/build_renewable_profile_hydro.log
+    jobid: 18
+    benchmark: benchmarks/sudan-2022-reference/build_renewable_profiles_hydro
+    reason: Missing output files: resources/sudan-2022-reference/renewable_profiles/profile_hydro.nc; Input files updated by another job: resources/sudan-2022-reference/powerplants.csv, data/gebco/GEBCO_2025_sub_ice.nc, data/hydrobasins/hybas_world.shp, cutouts/sudan-2022-era5.nc, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson, resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/shapes/offshore_shapes.geojson, data/IRENA_Statistics_Extract_2025H2.xlsx, data/copernicus/PROBAV_LC100_global_v3.0.1_2019-nrt_Discrete-Classification-map_EPSG-4326.tif, resources/sudan-2022-reference/natura.tiff
+    wildcards: technology=hydro
+    threads: 2
+    resources: tmpdir=/tmp, mem_mb=10000, mem_mib=9537
+
+[Tue Oct 20 13:59:49 2026]
+rule add_electricity:
+    input: resources/sudan-2022-reference/renewable_profiles/profile_solar.nc, resources/sudan-2022-reference/renewable_profiles/profile_onwind.nc, resources/sudan-2022-reference/renewable_profiles/profile_hydro.nc, networks/sudan-2022-reference/base.nc, resources/sudan-2022-reference/costs_2020_elec.csv, resources/sudan-2022-reference/powerplants.csv, resources/sudan-2022-reference/shapes/gadm_shapes.geojson, data/hydro_capacities.csv, resources/sudan-2022-reference/demand_profiles.csv, data/nuclear_p_max_pu.csv
+    output: networks/sudan-2022-reference/elec.nc
+    log: logs/sudan-2022-reference/add_electricity.log
+    jobid: 6
+    benchmark: benchmarks/sudan-2022-reference/add_electricity
+    reason: Missing output files: networks/sudan-2022-reference/elec.nc; Input files updated by another job: resources/sudan-2022-reference/renewable_profiles/profile_onwind.nc, resources/sudan-2022-reference/renewable_profiles/profile_hydro.nc, resources/sudan-2022-reference/renewable_profiles/profile_solar.nc, resources/sudan-2022-reference/powerplants.csv, resources/sudan-2022-reference/shapes/gadm_shapes.geojson, resources/sudan-2022-reference/demand_profiles.csv, networks/sudan-2022-reference/base.nc, resources/sudan-2022-reference/costs_2020_elec.csv
+    resources: tmpdir=/tmp, mem_mb=3000, mem_mib=2862
+
+[Tue Oct 20 13:59:49 2026]
+rule simplify_network:
+    input: networks/sudan-2022-reference/elec.nc, resources/sudan-2022-reference/costs_2020_elec.csv, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson, resources/sudan-2022-reference/bus_regions/regions_offshore.geojson
+    output: networks/sudan-2022-reference/elec_s.nc, resources/sudan-2022-reference/bus_regions/regions_onshore_elec_s.geojson, resources/sudan-2022-reference/bus_regions/regions_offshore_elec_s.geojson, resources/sudan-2022-reference/bus_regions/busmap_elec_s.csv, resources/sudan-2022-reference/bus_regions/connection_costs_s.csv
+    log: logs/sudan-2022-reference/simplify_network/elec_s.log
+    jobid: 5
+    benchmark: benchmarks/sudan-2022-reference/simplify_network/elec_s
+    reason: Missing output files: networks/sudan-2022-reference/elec_s.nc, resources/sudan-2022-reference/bus_regions/regions_offshore_elec_s.geojson, resources/sudan-2022-reference/bus_regions/regions_onshore_elec_s.geojson; Input files updated by another job: resources/sudan-2022-reference/bus_regions/regions_offshore.geojson, networks/sudan-2022-reference/elec.nc, resources/sudan-2022-reference/costs_2020_elec.csv, resources/sudan-2022-reference/bus_regions/regions_onshore.geojson
+    wildcards: simpl=
+    resources: tmpdir=/tmp, mem_mb=4000, mem_mib=3815
+
+[Tue Oct 20 13:59:49 2026]
+rule cluster_network:
+    input: networks/sudan-2022-reference/elec_s.nc, resources/sudan-2022-reference/shapes/country_shapes.geojson, resources/sudan-2022-reference/bus_regions/regions_onshore_elec_s.geojson, resources/sudan-2022-reference/bus_regions/regions_offshore_elec_s.geojson, resources/sudan-2022-reference/shapes/gadm_shapes.geojson, resources/sudan-2022-reference/costs_2020_elec.csv
+    output: networks/sudan-2022-reference/elec_s_10.nc, resources/sudan-2022-reference/bus_regions/regions_onshore_elec_s_10.geojson, resources/sudan-2022-reference/bus_regions/regions_offshore_elec_s_10.geojson, resources/sudan-2022-reference/bus_regions/busmap_elec_s_10.csv, resources/sudan-2022-reference/bus_regions/linemap_elec_s_10.csv
+    log: logs/sudan-2022-reference/cluster_network/elec_s_10.log
+    jobid: 4
+    benchmark: benchmarks/sudan-2022-reference/cluster_network/elec_s_10
+    reason: Missing output files: networks/sudan-2022-reference/elec_s_10.nc; Input files updated by another job: resources/sudan-2022-reference/shapes/gadm_shapes.geojson, resources/sudan-2022-reference/bus_regions/regions_offshore_elec_s.geojson, resources/sudan-2022-reference/shapes/country_shapes.geojson, networks/sudan-2022-reference/elec_s.nc, resources/sudan-2022-reference/costs_2020_elec.csv, resources/sudan-2022-reference/bus_regions/regions_onshore_elec_s.geojson
+    wildcards: simpl=, clusters=10
+    resources: tmpdir=/tmp, mem_mb=3000, mem_mib=2862
+
+[Tue Oct 20 13:59:49 2026]
+rule add_extra_components:
+    input: networks/sudan-2022-reference/elec_s_10.nc, resources/sudan-2022-reference/costs_2020_elec.csv
+    output: networks/sudan-2022-reference/elec_s_10_ec.nc
+    log: logs/sudan-2022-reference/add_extra_components/elec_s_10.log
+    jobid: 3
+    benchmark: benchmarks/sudan-2022-reference/add_extra_components/elec_s_10_ec
+    reason: Missing output files: networks/sudan-2022-reference/elec_s_10_ec.nc; Input files updated by another job: resources/sudan-2022-reference/costs_2020_elec.csv, networks/sudan-2022-reference/elec_s_10.nc
+    wildcards: simpl=, clusters=10
+    resources: tmpdir=/tmp, mem_mb=3000, mem_mib=2862
+
+[Tue Oct 20 13:59:49 2026]
+rule prepare_network:
+    input: networks/sudan-2022-reference/elec_s_10_ec.nc, resources/sudan-2022-reference/costs_2020_elec.csv
+    output: networks/sudan-2022-reference/elec_s_10_ec_lc1.0_3H.nc
+    log: logs/sudan-2022-reference/prepare_network/elec_s_10_ec_lc1.0_3H.log
+    jobid: 2
+    benchmark: benchmarks/sudan-2022-reference/prepare_network/elec_s_10_ec_lc1.0_3H
+    reason: Missing output files: networks/sudan-2022-reference/elec_s_10_ec_lc1.0_3H.nc; Input files updated by another job: resources/sudan-2022-reference/costs_2020_elec.csv, networks/sudan-2022-reference/elec_s_10_ec.nc
+    wildcards: simpl=, clusters=10, ll=c1.0, opts=3H
+    resources: tmpdir=/tmp, mem_mb=4000, mem_mib=3815
+
+[Tue Oct 20 13:59:49 2026]
+rule solve_network:
+    input: networks/sudan-2022-reference/elec_s_10_ec_lc1.0_3H.nc, data/agg_p_nom_minmax.csv
+    output: results/sudan-2022-reference/networks/elec_s_10_ec_lc1.0_3H.nc
+    log: logs/sudan-2022-reference/solve_network/elec_s_10_ec_lc1.0_3H_solver.log, logs/sudan-2022-reference/solve_network/elec_s_10_ec_lc1.0_3H_python.log
+    jobid: 1
+    benchmark: benchmarks/sudan-2022-reference/solve_network/elec_s_10_ec_lc1.0_3H
+    reason: Missing output files: results/sudan-2022-reference/networks/elec_s_10_ec_lc1.0_3H.nc; Input files updated by another job: networks/sudan-2022-reference/elec_s_10_ec_lc1.0_3H.nc
+    wildcards: simpl=, clusters=10, ll=c1.0, opts=3H
+    threads: 2
+    resources: tmpdir=/tmp, mem=11950
+
+[Tue Oct 20 13:59:49 2026]
+localrule solve_all_networks:
+    input: results/sudan-2022-reference/networks/elec_s_10_ec_lc1.0_3H.nc
+    jobid: 0
+    reason: Input files updated by another job: results/sudan-2022-reference/networks/elec_s_10_ec_lc1.0_3H.nc
+    resources: tmpdir=/tmp
+
+Job stats:
+job                          count
+-------------------------  -------
+add_electricity                  1
+add_extra_components             1
+base_network                     1
+build_bus_regions                1
+build_cutout                     1
+build_demand_profiles            1
+build_natura_raster              1
+build_osm_network                1
+build_powerplants                1
+build_renewable_profiles         3
+build_shapes                     1
+clean_osm_data                   1
+cluster_network                  1
+download_osm_data                1
+prepare_network                  1
+process_cost_data                1
+retrieve_databundle_light        1
+simplify_network                 1
+solve_all_networks               1
+solve_network                    1
+total                           22
+
+Reasons:
+    (check individual jobs above for details)
+    input files updated by another job:
+        add_electricity, add_extra_components, base_network, build_bus_regions, build_cutout, build_demand_profiles, build_natura_raster, build_osm_network, build_powerplants, build_renewable_profiles, build_shapes, clean_osm_data, cluster_network, prepare_network, process_cost_data, simplify_network, solve_all_networks, solve_network
+    missing output files:
+        add_electricity, add_extra_components, base_network, build_bus_regions, build_cutout, build_demand_profiles, build_natura_raster, build_osm_network, build_powerplants, build_renewable_profiles, build_shapes, clean_osm_data, cluster_network, download_osm_data, prepare_network, process_cost_data, retrieve_databundle_light, simplify_network, solve_network
+
+This was a dry-run (flag -n). The order of jobs does not reflect the order of execution.
