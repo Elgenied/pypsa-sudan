@@ -2,6 +2,8 @@
 
 **Research direction: least-cost electricity recovery and expansion of access in Sudan.**
 
+**Current methodological decision:** [follow the Zambia study's complementary PyPSA and OnSSET branches](docs/ZAMBIA_ALIGNED_SCOPE.md), using three-hour national time steps. The settlement screen below is a prototype under correction following review; its 1,304 ranking switches should not be treated as measured benefits of grid rehabilitation.
+
 The question is: **Where should Sudan rehabilitate or extend the grid, where should it build mini-grids, and where are standalone systems more economical—at a specified level of service?**
 
 **Start here: [OnSSET–PyPSA settlement recovery notebook](research/onsset_pypsa_recovery/Sudan_OnSSET_PyPSA_Recovery.ipynb)** ([HTML with saved figures](research/onsset_pypsa_recovery/Sudan_OnSSET_PyPSA_Recovery.html)). It screens all 11,268 DRE atlas settlements in Northern, River Nile, Khartoum, Gezira, White Nile and Sennar for grid connection, mini-grid and standalone service under three explicit recovery conditions. It reads the completed PyPSA regional cases for corridor-repair choices and national supply context. This is the **active research workflow**; classifications are conditional, not verified project recommendations.

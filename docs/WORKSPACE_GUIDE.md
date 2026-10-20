@@ -1,5 +1,7 @@
 # PyPSA-Sudan: what to open and what each result means
 
+**Current scope decision:** follow the Zambia paper's two complementary branches, with three-hour national PyPSA steps and standard OnSSET settlement planning. Read [the agreed scope](ZAMBIA_ALIGNED_SCOPE.md) first. The existing settlement screen is a prototype with accounting and interpretation issues identified in review; its maps are not validated recovery recommendations.
+
 ## The current study in one sentence
 
 Map settlement-level grid / mini-grid / standalone options with OnSSET, then test candidate grid repair and bulk-supply plans with PyPSA, under explicit post-conflict recovery conditions. The research question remains: **Where, and under what recovery conditions, are grid rehabilitation, mini-grids or standalone systems the least-cost way to provide reliable electricity in Sudan?**
@@ -28,7 +30,7 @@ The [OnSSET study README](../research/onsset_pypsa_recovery/README.md) contains 
 1. Validate a minimum set of **grid status and repair candidates**: substation and feeder location/voltage, pre-war connection status, usable capacity and observed damage/repair bill. The 2020–22 security layer is not a current damage map.
 2. Define the target year and **service standard** (including evening availability) and calibrate DRE potential-building connections against observed population/access and consumption samples. Keep displacement and return scenarios explicit.
 3. Replace the screen's simple PV/battery packages with hourly designs for a stratified set of grid, mini-grid and standalone settlements; use them to calibrate OnSSET cost curves and test reliability.
-4. Build an iterative OnSSET–PyPSA interface: aggregate candidate grid loads by existing PyPSA bus; run PyPSA investment/repair/dispatch; feed back bus-specific marginal supply cost, outage/reliability and feasible grid capacity; repeat until classifications and costs stabilize.
+4. Follow the Zambia paper's complementary workflow: run national PyPSA recovery/expansion at three-hour resolution and standard OnSSET settlement access scenarios. Use consistent input definitions and explicitly reconcile their different demand and cost scopes. Iterative price feedback is outside the agreed main study.
 5. Only then report robust settlement or administrative-area recommendations, uncertainty bands, investment sequencing and finance requirements. Document source licenses and reproducibility for publication.
 
-This sequence uses OnSSET for its strongest role—geospatial electrification pathways—and PyPSA for network, investment and dispatch interactions. The first executable screen is already in the repository; the later feedback loop is a clearly named research task, not an implied feature of the current run.
+This sequence uses OnSSET for geospatial electrification pathways and PyPSA for network, investment and dispatch interactions. The executable screen is an earlier prototype; the corrected Zambia-aligned runs remain implementation work.
